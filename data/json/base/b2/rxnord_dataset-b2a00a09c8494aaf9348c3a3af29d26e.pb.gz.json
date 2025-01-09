@@ -1,0 +1,400 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([O:8][CH2:9][C:10]1[CH:15]=[CH:14][C:13]([F:16])=[C:12](Br)[CH:11]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.[C:18]1([O-:24])[CH:23]=[CH:22][CH:21]=[CH:20][CH:19]=1.[Na+].O.C1C2C(=CC=CC=2)C=CN=1>C1CCCCC1.[Cu-]=O>[CH2:1]([O:8][CH2:9][C:10]1[CH:15]=[CH:14][C:13]([F:16])=[C:12]([O:24][C:18]2[CH:23]=[CH:22][CH:21]=[CH:20][CH:19]=2)[CH:11]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1 |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2O"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "isoquinoline"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=NC=CC2=CC=CC=C12"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H7N/c1-2-4-9-7-10-6-5-8(9)3-1/h1-7H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cyclohexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H12/c1-2-4-6-5-3-1/h1-6H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m2_m9_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-bromo-4-fluoro-benzyl benzyl ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OCC1=CC(=C(C=C1)F)Br"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H12BrFO/c15-13-8-12(6-7-14(13)16)10-17-9-11-4-2-1-3-5-11/h1-8H,9-10H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium phenolate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6O.Na/c7-6-4-2-1-3-5-6;/h1-5,7H;/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.1,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 80.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "MgCO3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "copper(I) oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cu-]=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Cu.O/q-1;"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.12,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Mg(OH)2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 1 mol of 3-bromo-4-fluoro-benzyl benzyl ether, 1.1 mol of sodium phenolate, 0.12 mol of copper(I) oxide, 80 g of 4 MgCO3.Mg(OH)2.4 H2O and 1,500 ml of isoquinoline was heated to 160\u00b0 C. for 12 hours. The reaction mixture was then cooled, diluted with cyclohexane and filtered. The filtrate was washed with dilute hydrochloric acid and water, dried over sodium sulphate and filtered and the filtrate was distilled. 4-Fluoro-3-phenoxy-benzyl benzyl ether was obtained in the form of a yellow oil of boiling point 135\u00b0 C./1 mbar in a yield of 75% of theory."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction mixture was then cooled"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "The filtrate was washed with dilute hydrochloric acid and water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over sodium sulphate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulphate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "the filtrate was distilled"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-Fluoro-3-phenoxy-benzyl benzyl ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OCC1=CC(=C(C=C1)F)OC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H17FO2/c21-19-12-11-17(15-22-14-16-7-3-1-4-8-16)13-20(19)23-18-9-5-2-6-10-18/h1-13H,14-15H2"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 75.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04381412",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:52:27.155086"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:28:25 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:00 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-a611ca028bdc44739c6288e280ac853d"
+}

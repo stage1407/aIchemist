@@ -1,0 +1,226 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "CCC1C=CC2C(=CC3C(=O)C4C(=C(O)C=CC=4O)C(=O)C=3C=2O)C=1C(OC)=O.CC[C@]1(O)[C@H](C(OC)=O)C2C=C3C(=O)C4C(O)=CC=C(O)C=4C(=O)C3=C(O)C=2[C@@H](O[C@@H]2O[C@@H](C)[C@@H](O[C@@H]3O[C@@H](C)[C@@H](O)[C@@H](O)C3)[C@@H](N(C)C)C2)C1.[CH3:81][CH2:82][C@:83]1([OH:140])[C@H:105]([C:106]([O:108][CH3:109])=[O:107])[C:87]2[CH:88]=[C:89]3[C:101](=[O:102])[C:100]4[C:99]([OH:103])=[CH:98][CH:97]=[C:96]([OH:104])[C:95]=4[C:93](=[O:94])[C:90]3=[C:91]([OH:92])[C:86]=2[C@@H:85]([O:110][C@@H:111]2[O:116][C@@H:115]([CH3:117])[C@@H:114]([O:118][C@@H:119]3[O:124][C@@H:123]([CH3:125])[C@@H:122]([O:126][C@@H:127]4[O:132][C@@H:131]([CH3:133])[C@@H:130]([OH:134])[C@@H:129]([OH:135])[CH2:128]4)[C@@H:121]([OH:136])[CH2:120]3)[C@@H:113]([N:137]([CH3:139])[CH3:138])[CH2:112]2)[CH2:84]1.[CH3:141][CH2:142][C@:143]1([OH:200])[C@H:165]([C:166]([O:168][CH3:169])=[O:167])[C:147]2[CH:148]=[C:149]3[C:161](=[O:162])[C:160]4[C:159]([OH:163])=[CH:158][CH:157]=[C:156]([OH:164])[C:155]=4[C:153](=[O:154])[C:150]3=[C:151]([OH:152])[C:146]=2[C@@H:145]([O:170][C@@H:171]2[O:176][C@H:175]([CH3:177])[C@@H:174]([O:178][C@@H:179]3[O:184][C@H:183]([CH3:185])[C@@H:182]([O:186][C@@H:187]4[O:193][C@@H:192]([CH3:194])[C:190](=[O:191])[CH:189]=[C:188]4[NH2:195])[C@@H:181]([OH:196])[CH2:180]3)[C@@H:173]([N:197]([CH3:199])[CH3:198])[CH2:172]2)[CH2:144]1>>[CH3:141][CH2:142][C@:143]1([OH:200])[C@H:165]([C:166]([O:168][CH3:169])=[O:167])[C:147]2[CH:148]=[C:149]3[C:161](=[O:162])[C:160]4[C:159]([OH:163])=[CH:158][CH:157]=[C:156]([OH:164])[C:155]=4[C:153](=[O:154])[C:150]3=[C:151]([OH:152])[C:146]=2[C@@H:145]([O:170][C@@H:171]2[O:176][C@H:175]([CH3:177])[C@@H:174]([O:178][C@@H:179]3[O:184][C@H:183]([CH3:185])[C@@H:182]([O:186][C@@H:187]4[O:193][C@@H:192]([CH3:194])[C:190](=[O:191])[CH:189]=[C:188]4[NH2:195])[C@@H:181]([OH:196])[CH2:180]3)[C@@H:173]([N:197]([CH3:199])[CH3:198])[CH2:172]2)[CH2:144]1.[CH3:81][CH2:82][C@:83]1([OH:140])[C@H:105]([C:106]([O:108][CH3:109])=[O:107])[C:87]2[CH:88]=[C:89]3[C:101](=[O:102])[C:100]4[C:99]([OH:103])=[CH:98][CH:97]=[C:96]([OH:104])[C:95]=4[C:93](=[O:94])[C:90]3=[C:91]([OH:92])[C:86]=2[C@@H:85]([O:110][C@@H:111]2[O:116][C@@H:115]([CH3:117])[C@@H:114]([O:118][C@@H:119]3[O:124][C@@H:123]([CH3:125])[C@@H:122]([O:126][C@@H:127]4[O:132][C@@H:131]([CH3:133])[C@@H:130]([OH:134])[C@@H:129]([OH:135])[CH2:128]4)[C@@H:121]([OH:136])[CH2:120]3)[C@@H:113]([N:137]([CH3:139])[CH3:138])[CH2:112]2)[CH2:84]1 |f:4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "rudolphomycin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC[C@]1(C[C@@H](C2=C(C=C3C(=C2O)C(=O)C=4C(=CC=C(C4C3=O)O)O)[C@H]1C(=O)OC)O[C@H]5C[C@@H]([C@@H]([C@H](O5)C)O[C@H]6C[C@@H]([C@@H]([C@H](O6)C)O[C@H]7C(=CC(=O)[C@@H](O7)C)N)O)N(C)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C42H52N2O16/c1-8-42(53)15-27(30-19(34(42)40(52)54-7)11-20-31(36(30)50)37(51)33-24(46)10-9-23(45)32(33)35(20)49)58-28-13-22(44(5)6)38(17(3)55-28)59-29-14-26(48)39(18(4)56-29)60-41-21(43)12-25(47)16(2)57-41/h9-12,16-18,22,26-29,34,38-39,41,45-46,48,50,53H,8,13-15,43H2,1-7H3/t16-,17+,18+,22-,26-,27-,28-,29-,34-,38+,39+,41-,42+/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "\u03b7-pyrromycinone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCC1=C(C2=CC3=C(C(=C2C=C1)O)C(=O)C4=C(C=CC(=C4C3=O)O)O)C(=O)OC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H16O7/c1-3-9-4-5-10-11(15(9)22(28)29-2)8-12-16(19(10)25)21(27)18-14(24)7-6-13(23)17(18)20(12)26/h4-8,23-25H,3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "musettamycin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC[C@]1(C[C@@H](C2=C(C=C3C(=C2O)C(=O)C=4C(=CC=C(C4C3=O)O)O)[C@H]1C(=O)OC)O[C@H]5C[C@@H]([C@@H]([C@@H](O5)C)O[C@H]6C[C@@H]([C@@H]([C@@H](O6)C)O)O)N(C)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C36H45NO14/c1-7-36(46)13-22(50-23-11-18(37(4)5)34(15(3)49-23)51-24-12-21(40)30(41)14(2)48-24)25-16(29(36)35(45)47-6)10-17-26(32(25)43)33(44)28-20(39)9-8-19(38)27(28)31(17)42/h8-10,14-15,18,21-24,29-30,34,38-41,43,46H,7,11-13H2,1-6H3/t14-,15-,18-,21-,22-,23-,24-,29-,30+,34+,36+/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "marcellomycin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC[C@]1(C[C@@H](C2=C(C=C3C(=C2O)C(=O)C=4C(=CC=C(C4C3=O)O)O)[C@H]1C(=O)OC)O[C@H]5C[C@@H]([C@@H]([C@@H](O5)C)O[C@H]6C[C@@H]([C@@H]([C@@H](O6)C)O[C@H]7C[C@@H]([C@@H]([C@@H](O7)C)O)O)O)N(C)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C42H55NO17/c1-8-42(53)15-26(30-19(34(42)41(52)54-7)11-20-31(37(30)50)38(51)33-23(45)10-9-22(44)32(33)36(20)49)58-27-12-21(43(5)6)39(17(3)56-27)59-29-14-25(47)40(18(4)57-29)60-28-13-24(46)35(48)16(2)55-28/h9-11,16-18,21,24-29,34-35,39-40,44-48,50,53H,8,12-15H2,1-7H3/t16-,17-,18-,21-,24-,25-,26-,27-,28-,29-,34-,35+,39+,40+,42+/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The solids obtained were chromatographed on Brinkmann 60F254 silica gel thin layer plates using an 80:20 toluene:methanol solvent system. The first band to elute was shown by thin layer chromatography to be a complex inactive mixture. The second band gave a characteristic pinkish red zone at about Rf =0.75. This fraction was also inactive and was found to comprise mainly \u03b7-pyrromycinone. The third fraction to elute gave a single zone with Rf ~0.3. This was determined to be musettamycin and was highly active when tested on both the L1210 and P388 mouse leukemia systems. The final band to elute gave a zone of Rf ~0.3 and comprised mainly marcellomycin but also a minor proportion of rudolphomycin. This component exhibited high activity when tested on L1210 and P388 mouse leukemia systems."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The solids obtained"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "were chromatographed on Brinkmann 60F254 silica gel thin layer plates"
+        },
+        {
+            "type": "WASH",
+            "details": "The first band to elute"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The second band gave a characteristic pinkish red zone at about Rf =0.75"
+        },
+        {
+            "type": "WASH",
+            "details": "The third fraction to elute"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "gave a single zone with Rf ~0.3"
+        },
+        {
+            "type": "WASH",
+            "details": "The final band to elute"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "gave a zone of Rf ~0.3"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Rudolphomycin Marcellomycin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC[C@]1(C[C@@H](C2=C(C=C3C(=C2O)C(=O)C=4C(=CC=C(C4C3=O)O)O)[C@H]1C(=O)OC)O[C@H]5C[C@@H]([C@@H]([C@H](O5)C)O[C@H]6C[C@@H]([C@@H]([C@H](O6)C)O[C@H]7C(=CC(=O)[C@@H](O7)C)N)O)N(C)C)O.CC[C@]1(C[C@@H](C2=C(C=C3C(=C2O)C(=O)C=4C(=CC=C(C4C3=O)O)O)[C@H]1C(=O)OC)O[C@H]5C[C@@H]([C@@H]([C@@H](O5)C)O[C@H]6C[C@@H]([C@@H]([C@@H](O6)C)O[C@H]7C[C@@H]([C@@H]([C@@H](O7)C)O)O)O)N(C)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C42H52N2O16.C42H55NO17/c1-8-42(53)15-27(30-19(34(42)40(52)54-7)11-20-31(36(30)50)37(51)33-24(46)10-9-23(45)32(33)35(20)49)58-28-13-22(44(5)6)38(17(3)55-28)59-29-14-26(48)39(18(4)56-29)60-41-21(43)12-25(47)16(2)57-41;1-8-42(53)15-26(30-19(34(42)41(52)54-7)11-20-31(37(30)50)38(51)33-23(45)10-9-22(44)32(33)36(20)49)58-27-12-21(43(5)6)39(17(3)56-27)59-29-14-25(47)40(18(4)57-29)60-28-13-24(46)35(48)16(2)55-28/h9-12,16-18,22,26-29,34,38-39,41,45-46,48,50,53H,8,13-15,43H2,1-7H3;9-11,16-18,21,24-29,34-35,39-40,44-48,50,53H,8,12-15H2,1-7H3/t16-,17+,18+,22-,26-,27-,28-,29-,34-,38+,39+,41-,42+;16-,17-,18-,21-,24-,25-,26-,27-,28-,29-,34-,35+,39+,40+,42+/m00/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04123608",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:41:56.806612"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:11:12 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:21 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-cf40423c1ac848c3b91a7b3118efcbce"
+}

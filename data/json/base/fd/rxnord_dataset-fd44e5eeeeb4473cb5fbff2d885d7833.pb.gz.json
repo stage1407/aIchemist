@@ -1,0 +1,173 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]([O:14][C:15]([C:17]1[N:18]2[CH:21]([S:22][CH2:23][C:24]=1[C:25]1[S:29][C:28]([NH:30][C:31](=[O:38])[C:32]3[CH:37]=[CH:36][CH:35]=[N:34][CH:33]=3)=[N:27][CH:26]=1)[CH:20]([NH:39]C(OC(C)(C)C)=O)[C:19]2=[O:47])=[O:16])([C:8]1[CH:13]=[CH:12][CH:11]=[CH:10][CH:9]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.C1(C)C=CC(S(O)(=O)=O)=CC=1>C(#N)C>[NH2:39][CH:20]1[C:19](=[O:47])[N:18]2[CH:21]1[S:22][CH2:23][C:24]([C:25]1[S:29][C:28]([NH:30][C:31](=[O:38])[C:32]3[CH:37]=[CH:36][CH:35]=[N:34][CH:33]=3)=[N:27][CH:26]=1)=[C:17]2[C:15]([O:14][CH:1]([C:8]1[CH:9]=[CH:10][CH:11]=[CH:12][CH:13]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1)=[O:16]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-Benzhydryloxycarbonyl-7-t-butoxycarbonylamino-3-(2-nicotinoylamino-thiazol-5-yl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)OC(=O)C=1N2C(C(C2SCC1C1=CN=C(S1)NC(C1=CN=CC=C1)=O)NC(=O)OC(C)(C)C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C34H31N5O6S2/c1-34(2,3)45-33(43)37-25-29(41)39-26(31(42)44-27(20-11-6-4-7-12-20)21-13-8-5-9-14-21)23(19-46-30(25)39)24-18-36-32(47-24)38-28(40)22-15-10-16-35-17-22/h4-18,25,27,30H,19H2,1-3H3,(H,37,43)(H,36,38,40)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 9.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-toluenesulphonic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=C(C=C1)S(=O)(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O3S/c1-6-2-4-7(5-3-6)11(8,9)10/h2-5H,1H3,(H,8,9,10)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 7.6,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 134.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2-Benzhydryloxycarbonyl-7-t-butoxycarbonylamino-3-(2-nicotinoylamino-thiazol-5-yl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene (9 g) in acetonitrile (134 cc) is treated with p-toluenesulphonic acid (7.6 g) according to the working method described in Example 24, to give 7-amino-2-benzhydryloxycarbonyl-3-(2-nicotinoylamino-thiazol-5-yl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene (6.43 g) in the form of a cream powder."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-amino-2-benzhydryloxycarbonyl-3-(2-nicotinoylamino-thiazol-5-yl)-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NC1C2SCC(=C(N2C1=O)C(=O)OC(C1=CC=CC=C1)C1=CC=CC=C1)C1=CN=C(S1)NC(C1=CN=CC=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C29H23N5O4S2/c30-22-26(36)34-23(28(37)38-24(17-8-3-1-4-9-17)18-10-5-2-6-11-18)20(16-39-27(22)34)21-15-32-29(40-21)33-25(35)19-12-7-13-31-14-19/h1-15,22,24,27H,16,30H2,(H,32,33,35)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 6.43,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 84.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04496560",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:56:34.856600"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:35:18 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:09 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-75f8d224c6e8428588f421f5c0573bc5"
+}

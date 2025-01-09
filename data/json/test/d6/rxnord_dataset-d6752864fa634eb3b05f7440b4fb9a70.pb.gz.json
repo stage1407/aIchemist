@@ -1,0 +1,137 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]1[C:6]([OH:7])=[CH:5][CH:4]=[CH:3][C:2]=1[CH3:8].[Cl:9][C:10]1[CH:11]=[C:12]([C:17]([F:20])([F:19])[F:18])[CH:13]=[CH:14][C:15]=1Cl>>[Cl:9][C:10]1[CH:11]=[C:12]([C:17]([F:18])([F:19])[F:20])[CH:13]=[CH:14][C:15]=1[O:7][C:6]1[CH:1]=[C:2]([CH3:8])[CH:3]=[CH:4][CH:5]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "m-cresol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=C(C=CC=C1O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O/c1-6-3-2-4-7(8)5-6/h2-5,8H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3,4-dichlorobenzotrifluoride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC=1C=C(C=CC1Cl)C(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H3Cl2F3/c8-5-2-1-4(3-6(5)9)7(10,11)12/h1-3H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "reacting the salt of m-cresol with 3,4-dichlorobenzotrifluoride to form a 3-(2-chloro-4-trifluoromethylphenoxy)toluene;"
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-(2-chloro-4-trifluoromethylphenoxy)toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=C(OC=2C=C(C=CC2)C)C=CC(=C1)C(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H10ClF3O/c1-9-3-2-4-11(7-9)19-13-6-5-10(8-12(13)15)14(16,17)18/h2-8H,1H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04485254",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:56:11.520781"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:34:39 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:16 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-035f93e5041049d086d1bf0e6dd676ba"
+}

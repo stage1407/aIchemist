@@ -1,0 +1,341 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C1(C(C2C=CC=CC=2)(O)C(O)=O)CCCCC1.[CH3:18][CH2:19][N:20]([CH2:23][C:24]#[C:25][CH2:26][O:27][C:28]([C@:30]([OH:43])([C:37]1[CH:42]=[CH:41][CH:40]=[CH:39][CH:38]=1)[CH:31]1[CH2:36][CH2:35][CH2:34][CH2:33][CH2:32]1)=[O:29])CC.C(OC(Cl)=O)C(C)C.C(O)C#C.C(N(C(C)C#CO)CC1C=CC(OC)=CC=1)C.C1(C(C2CCCCC2)(O)C(OC#CCCN(CC)CC2C=CC(OC)=CC=2)=O)C=CC=CC=1.C(Cl)(=O)OC(Cl)C>>[C:31]1([C@:30]([CH:37]2[CH2:38][CH2:39][CH2:40][CH2:41][CH2:42]2)([OH:43])[C:28]([O:27][CH2:26][C:25]#[C:24][CH2:23][NH:20][CH2:19][CH3:18])=[O:29])[CH:32]=[CH:33][CH:34]=[CH:35][CH:36]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cyclohexylphenyl glycolic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CCCCC1)C(C(=O)O)(O)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H18O3/c15-13(16)14(17,11-7-3-1-4-8-11)12-9-5-2-6-10-12/h1,3-4,7-8,12,17H,2,5-6,9-10H2,(H,15,16)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "\u03b1-chloroethyl carbonochloridate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(OC(C)Cl)(=O)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H4Cl2O2/c1-2(4)7-3(5)6/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "propargyl alcohol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C#C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H4O/c1-2-3-4/h1,4H,3H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "alkyl chloroformate"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "isobutylchloroformate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C(C)C)OC(=O)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H9ClO2/c1-4(2)3-8-5(6)7/h4H,3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( III )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-ethyl-N-(4-methoxybenzyl)aminobutynol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC1=CC=C(C=C1)OC)C(C#CO)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H19NO2/c1-4-15(12(2)9-10-16)11-13-5-7-14(17-3)8-6-13/h5-8,12,16H,4,11H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-ethyl-N-(4-methoxybenzyl)aminobutynyl phenylcyclohexyl-glycolate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C(C(=O)OC#CCCN(CC1=CC=C(C=C1)OC)CC)(O)C1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H35NO4/c1-3-29(22-23-16-18-26(32-2)19-17-23)20-10-11-21-33-27(30)28(31,24-12-6-4-7-13-24)25-14-8-5-9-15-25/h4,6-7,12-13,16-19,25,31H,3,5,8-10,14-15,20,22H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( S )"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(R)-Oxybutynin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(CC)CC#CCOC(=O)[C@@](C1CCCCC1)(C2=CC=CC=C2)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H31NO3/c1-3-23(4-2)17-11-12-18-26-21(24)22(25,19-13-7-5-8-14-19)20-15-9-6-10-16-20/h5,7-8,13-14,20,25H,3-4,6,9-10,15-18H2,1-2H3/t22-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( II )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The method according to claim 1, wherein said single enantiomer of cyclohexylphenyl glycolic acid is the (S) enantiomer, said alkyl chloroformate is isobutylchloroformate, said sidechain propargyl alcohol derivative of formula (III) is N-ethyl-N-(4-methoxybenzyl)aminobutynol, and said single enantiomer of structure (II) is N-ethyl-N-(4-methoxybenzyl)aminobutynyl phenylcyclohexyl-glycolate, which is treated with \u03b1-chloroethyl carbonochloridate to provide (S)-4-ethylamino-2-butynyl phenylcyclohexylglycolate."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-4-ethylamino-2-butynyl phenylcyclohexylglycolate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)[C@@](C(=O)OCC#CCNCC)(O)C1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H27NO3/c1-2-21-15-9-10-16-24-19(22)20(23,17-11-5-3-6-12-17)18-13-7-4-8-14-18/h3,5-6,11-12,18,21,23H,2,4,7-8,13-16H2,1H3/t20-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06140529",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:56:01.764297"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:44:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:00 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-11bf3b40865d45ab89832788d86873e8"
+}

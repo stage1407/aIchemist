@@ -1,0 +1,692 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([Si:5]([CH3:26])([C:20]1[CH:25]=[CH:24][CH:23]=[CH:22][CH:21]=1)[CH:6]([NH:11][C:12](=[O:19])[C:13]1[CH:18]=[CH:17][CH:16]=[CH:15][CH:14]=1)[CH2:7][CH:8]([CH3:10])[CH3:9])CC=C.C[C:28]([CH3:30])=[O:29].[OH:31]S(O)(=O)=O.O=[Cr](=O)=O.OS([O-])=O.[Na+].CS([O-])(=O)=O>CC(C)=O.O.O=[Os](=O)(=O)=O.CCCCCC.CCOC(C)=O.CC(O)C>[C:12]([NH:11][CH:6]([Si:5]([CH3:26])([C:20]1[CH:25]=[CH:24][CH:23]=[CH:22][CH:21]=1)[CH2:1][CH2:30][C:28]([OH:31])=[O:29])[CH2:7][CH:8]([CH3:10])[CH3:9])(=[O:19])[C:13]1[CH:18]=[CH:17][CH:16]=[CH:15][CH:14]=1 |f:1.2.3,4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m18": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCOC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 8 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 7 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 19 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m15": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 90.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 88 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m17": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14/c1-3-5-6-4-2/h3-6H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 22 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 10 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaHSO3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OS(=O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O3S/c;1-4(2)3/h;(H2,1,2,3)/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m14": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 27 )"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "methylsulfonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)(=O)[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O3S/c1-5(2,3)4/h1H3,(H,2,3,4)/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 100 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m12_m16_m13_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "49"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "N-[1-[(3-Buten-1-yl)methylphenylsilyl]-3-methyl-1-butyl]benzamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC=C)[Si](C(CC(C)C)NC(C1=CC=CC=C1)=O)(C1=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H31NOSi/c1-5-6-17-26(4,21-15-11-8-12-16-21)22(18-19(2)3)24-23(25)20-13-9-7-10-14-20/h5,7-16,19,22H,1,6,17-18H2,2-4H3,(H,24,25)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Jones reagent"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)C.OS(=O)(=O)O.O=[Cr](=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H6O.Cr.H2O4S.3O/c1-3(2)4;;1-5(2,3)4;;;/h1-2H3;;(H2,1,2,3,4);;;"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.43,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H6O/c1-3(2)4/h1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 22.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "OsO4"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O=[Os](=O)(=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4O.Os"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m19": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-propanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "After stirring the mixture for 24 h at rt"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 49 (0.7 g, 1.91 mmol) in acetone (22 mL) was added 0.23 mL (2 mol %) of a 4 wt % solution of OsO4 in water and Jones reagent (2.43 mL, 6.49 mmol). After stirring the mixture for 24 h at rt, 2-propanol (0.5 mL) was added followed by NaHSO3 (0.2 g). The mixture was diluted with water (50 mL) and stirred until a dark-green, homogeneous solution was produced. This solution was diluted further with water (90 mL) and extracted with six 50-mL portions of EtOAc. The combined organic extracts were washed with saturated aqueous NaCl and dried over Na2SO4. Concentration gave a colorless solid of crude 50 as a mixture of diastereomers. This product was used in the next reaction without further purification: Rf=0.20 (1/9 EtOAc:hexane); 1H NMR (300 MHz, CDCl3) \u03b4 7.67-7.62 (m, 2H), 7.54-7.52 (m, 2H), 7.48-7.37 (m, 6H), 5.79 and 5.73 (two doublets due to diastereomers, J=10.0 Hz, 1H), 4.25-4.13 (m, 1H), 2.44-2.34 (m, 2H), 1.64-1.57 (m, 1H), 1.49-1.38 (m, 1H), 1.34-1.21 (m, 3H), 1.03, 0.98, 0.90 and 0.84 (four doublets due to diastereomers, J=6.6 Hz, 6H), 0.40 (s, 3H); MS (FAB) m/e (rel. intensity) 384 (MH+, 62), 315 (7), 312 (8), 311 (27), 310 (100), 307 (19), 306 (88), 255 (10), 253 (22); EMS (FAB) calcd for C22H30NO3Si: 384.1995, found: 384.1995."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "stirred until a dark-green, homogeneous solution"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was produced"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with six 50-mL portions of EtOAc",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "six"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "EtOAc"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOC(=O)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The combined organic extracts were washed with saturated aqueous NaCl",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "NaCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Na+].[Cl-]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na/h1H;/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over Na2SO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "Concentration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "gave a colorless solid of crude 50"
+        },
+        {
+            "type": "ADDITION",
+            "details": "as a mixture of diastereomers"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This product was used in the next reaction without further purification"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-[[1-(Benzoylamino)-3-methylbutyl]methylphenylsilyl]propanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(=O)NC(CC(C)C)[Si](CCC(=O)O)(C1=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H29NO3Si/c1-17(2)16-20(23-22(26)18-10-6-4-7-11-18)27(3,15-14-21(24)25)19-12-8-5-9-13-19/h4-13,17,20H,14-16H2,1-3H3,(H,23,26)(H,24,25)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06441212B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:08:14.479996"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:22:08 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:37 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-55650facaa064192b46cb71afe4a46aa"
+}

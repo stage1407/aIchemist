@@ -1,0 +1,356 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH-:1].[Na+].Br[C:4]1[CH:9]=[CH:8][C:7]([C:10]2[CH:15]=[CH:14][C:13](Br)=[CH:12][CH:11]=2)=[CH:6][CH:5]=1.N#N.[OH2:19]>>[C:8]1([OH:19])[C:7]([C:10]2[C:15]([OH:1])=[CH:14][CH:13]=[CH:12][CH:11]=2)=[CH:6][CH:5]=[CH:4][CH:9]=1 |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3_m4_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 400.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4,4'-dibromobiphenyl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=CC=C(C=C1)C1=CC=C(C=C1)Br"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H8Br2/c13-11-5-1-9(2-6-11)10-3-7-12(14)8-4-10/h1-8H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 11.5,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CuSO4.5H2O"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 64.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solution"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2O"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N2"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/N2/c1-2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 300.0,
+                "units": "CELSIUS"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A 600 ml autoclave was charged with 400 ml of 1N NaOH (0.4 mole), 11.5 g (37 mmole) 4,4'-dibromobiphenyl and 64 mg (0.256 mmole) CuSO4.5H2O as 4 ml of 0.064M solution in H2O. The autoclave was pressure checked with N2 to 1100 psi, vented, flushed with air and resealed. The autoclave was heated to 300\u00b0 C. at an autogenic pressure of 1168 psi. These conditions were maintained for two hours. After cooling and venting the aqueous reaction product was filtered to remove a grey solid which probably contained catalyst and unreacted starting material. This filter was then removed to a second filter flask. Any starting material remaining was recovered by washing with acetone and stripping the solvent on a rotary evaporator. The filtered aqueous product solution was acidified (pH2) with 25% sulfuric acid. The precipitated crude biphenol (4,4'-dihydroxybiphenyl) was filtered and washed with water (50 ml)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "flushed with air"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "These conditions were maintained for two hours",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "After cooling"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "was filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to remove a grey solid which probably contained catalyst"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This filter was then removed to a second filter flask"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Any starting material remaining was recovered"
+        },
+        {
+            "type": "WASH",
+            "details": "by washing with acetone",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetone"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H6O/c1-3(2)4/h1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "on a rotary evaporator"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The precipitated crude biphenol (4,4'-dihydroxybiphenyl)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "biphenol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C=1(C(=CC=CC1)C=1C(=CC=CC1)O)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C12H10O2/c13-11-7-3-1-5-9(11)10-6-2-4-8-12(10)14/h1-8,13-14H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "was filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with water (50 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 50.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Biphenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1(C(=CC=CC1)C=1C(=CC=CC1)O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H10O2/c13-11-7-3-1-5-9(11)10-6-2-4-8-12(10)14/h1-8,13-14H"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04490564",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:56:20.087381"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:34:57 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:23 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-b59f667d8a9a412a973dbf0365d18a58"
+}

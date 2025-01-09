@@ -1,0 +1,472 @@
+{
+    "identifiers": [
+        {
+            "type": "CUSTOM",
+            "details": "Plate",
+            "value": "1"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Reaction",
+            "value": "0378493_0174_104"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Row",
+            "value": "M"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Column",
+            "value": "8"
+        },
+        {
+            "type": "REACTION_TYPE",
+            "value": "BOC deprotection"
+        }
+    ],
+    "inputs": {
+        "Acid": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2SO4"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "O=S(=O)(O)O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 4000.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diglyme"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "COCCOCCOC"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2000.0,
+                            "units": "NANOLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 4,
+            "addition_time": {
+                "value": 22.0,
+                "units": "HOUR"
+            },
+            "addition_speed": {
+                "type": "PORTIONWISE",
+                "details": "Added in two 1,000 nL portions, with dispense mixing after each addition."
+            },
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot used to add solution, and then perform dispense mixing 2x800 nL after first portion, and then 3x1,000 nL after the final portion."
+            }
+        },
+        "Core": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "Core SMILES",
+                            "value": "CC(C)(C)OC(=O)N1CCN(CC1)c2ccc(NC(=O)c3oc(cc3)c4ccc(cc4)C#N)cc2"
+                        },
+                        {
+                            "type": "NAME",
+                            "details": "Core ID",
+                            "value": "p-CN Core"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 200.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 500.0,
+                            "units": "NANOLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot. Dispense followed by a 5 nL tip wash with DMF."
+            }
+        },
+        "base": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": " LiHMDS"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Li]N([Si](C)(C)C)[Si](C)(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 100.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 250.0,
+                            "units": "NANOLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 2,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot used to add solution, and then perform dispense mixing 3x500 nL."
+            }
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "details": "1536-well plate, Analytical Sales and Services, 20 uL polypropylene plate, cat. no. 15020",
+            "material": {
+                "type": "POLYPROPYLENE"
+            },
+            "preparations": [
+                {
+                    "type": "CUSTOM",
+                    "details": "plate sealed and briefly centrifuged after addition of all inputs"
+                }
+            ],
+            "attachments": [
+                {
+                    "type": "MAT"
+                }
+            ],
+            "volume": {
+                "value": 20.0,
+                "units": "MICROLITER"
+            }
+        },
+        "is_automated": true,
+        "environment": {
+            "type": "GLOVE_BOX"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            },
+            "setpoint": {
+                "value": 23.0,
+                "precision": 5.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "NONE"
+        }
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "quenched by addition of saturated aqueous NaHCO3 (2 uL) and diluted with water (1 uL) and DMSO (2 uL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "NaHCO3"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "O=C([O-])O.[Na+]"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 192.0,
+                                "precision": 40.0,
+                                "units": "MICROGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 2.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": true
+                        },
+                        "reaction_role": "SOLVENT"
+                    }
+                ],
+                "addition_device": {
+                    "type": "CUSTOM",
+                    "details": "SPT Labtech Mosquito(R) HTS liquid handling robot."
+                }
+            },
+            "is_automated": true
+        },
+        {
+            "type": "ADDITION",
+            "details": "quenched by addition of saturated aqueous NaHCO3 (2 uL) and diluted with water (1 uL) and DMSO (2 uL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 1.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "SOLVENT"
+                    }
+                ],
+                "addition_device": {
+                    "type": "CUSTOM",
+                    "details": "SPT Labtech Mosquito(R) HTS liquid handling robot."
+                }
+            },
+            "is_automated": true
+        },
+        {
+            "type": "ADDITION",
+            "details": "quenched by addition of saturated aqueous NaHCO3 (2 uL) and diluted with water (1 uL) and DMSO (2 uL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMSO"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 2.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "SOLVENT"
+                    }
+                ],
+                "addition_device": {
+                    "type": "CUSTOM",
+                    "details": "SPT Labtech Mosquito(R) HTS liquid handling robot."
+                }
+            },
+            "is_automated": true
+        },
+        {
+            "type": "ADDITION",
+            "details": "The reactions were further diluted to 10 mM using DMSO.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMSO"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 13.25,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "SOLVENT"
+                    }
+                ],
+                "addition_device": {
+                    "type": "CUSTOM",
+                    "details": "SPT Labtech Mosquito(R) HTS liquid handling robot."
+                }
+            },
+            "is_automated": true
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 20.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "Deprotected Core SMILES",
+                            "value": "CC(C)(C)OC(=O)N1CCN(CC1)c2ccc(NC(=O)c3oc(cc3)c4ccc(cc4)C#N)cc2"
+                        },
+                        {
+                            "type": "NAME",
+                            "details": "Deprotected Core ID",
+                            "value": "MK2_Core_CN"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_FreeCore_AreaAbs",
+                            "uses_internal_standard": false,
+                            "is_normalized": false,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 669.92975
+                            },
+                            "retention_time": {
+                                "value": 0.394,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "chmo_id": 715,
+                    "is_of_isolated_species": false,
+                    "instrument_manufacturer": "Waters I-class ACQUITY UPLC-MS"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1038/s44160-023-00351-1",
+        "publication_url": "https://www.nature.com/articles/s44160-023-00351-1",
+        "record_created": {
+            "time": {
+                "value": "18/09/2024, 16:54:56"
+            },
+            "person": {
+                "username": "bdeadman",
+                "name": "Benjamin Deadman",
+                "orcid": "0000-0001-8463-8199",
+                "organization": "Open Reaction Database",
+                "email": "ben@open-reaction-database.org"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Thu Oct 10 13:10:12 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-4e2a2ab61263455f82af5e030a68f343"
+}

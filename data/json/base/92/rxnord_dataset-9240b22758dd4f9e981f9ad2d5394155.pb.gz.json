@@ -1,0 +1,289 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "S([O-])(O)(=O)=O.[CH2:6]([C:11]1[CH:15]=[S+:14][S:13][C:12]=1[C:16]([CH3:19])([CH3:18])[CH3:17])[C:7]([CH3:10])([CH3:9])[CH3:8].N.[CH2:21]([OH:23])[CH3:22]>>[CH2:21]([O:23][C:12]1([C:16]([CH3:19])([CH3:18])[CH3:17])[C:11]([CH2:6][C:7]([CH3:10])([CH3:9])[CH3:8])=[CH:15][S:14][S:13]1)[CH3:22] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonia"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3N/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Example 1B"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 32.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-neopentyl-3-tertiarybutyl 1,2-dithiolium hydrogen sulfate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S(=O)(=O)(O)[O-].C(C(C)(C)C)C1=C(S[S+]=C1)C(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H21S2.H2O4S/c1-11(2,3)7-9-8-13-14-10(9)12(4,5)6;1-5(2,3)4/h8H,7H2,1-6H3;(H2,1,2,3,4)/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 300.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonia"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3N/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the mixture was stirred for an additional hour at room temperature"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Into a mixture of 32 grams of Example 1B, i.e., 4-neopentyl-3-tertiarybutyl 1,2-dithiolium hydrogen sulfate, and 300 cc of ethanol was introduced dry ammonia gas until the mixture was saturated. During the reaction, the mixture was kept at a temperature below 18\u00b0 C. After the introduction of ammonia gas was completed, the mixture was stirred for an additional hour at room temperature. The solid, which precipitated during the reaction, was filtered off. After removal of the ethanol from the filtrate under diminished pressure, there was isolated 16.5 grams (61% of theory) of 3-ethoxy-3-t-butyl-4-neopentyl 1,2-dithiole."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "During the reaction"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was kept at a temperature below 18\u00b0 C"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solid, which precipitated during the reaction"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "was filtered off"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "After removal of the ethanol from the filtrate under diminished pressure",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-ethoxy-3-t-butyl-4-neopentyl 1,2-dithiole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC1(SSC=C1CC(C)(C)C)C(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H26OS2/c1-8-15-14(13(5,6)7)11(10-16-17-14)9-12(2,3)4/h10H,8-9H2,1-7H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 16.5,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 61.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04190727",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:44:54.549579"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:15:58 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:50 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-e51ee97a22c6466da5b710fc418d9289"
+}

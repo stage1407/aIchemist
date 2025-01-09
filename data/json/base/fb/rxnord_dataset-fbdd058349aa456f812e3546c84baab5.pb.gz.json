@@ -1,0 +1,426 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([C:4]1[S:5][C:6](Br)=[CH:7][CH:8]=1)(=[O:3])[CH3:2].C[Sn](C)C.C[Sn](C)C.C(Cl)(Cl)Cl>C1(C)C=CC=CC=1.[Pd].C1(P(C2C=CC=CC=2)C2C=CC=CC=2)C=CC=CC=1.C1(P(C2C=CC=CC=2)C2C=CC=CC=2)C=CC=CC=1.C1(P(C2C=CC=CC=2)C2C=CC=CC=2)C=CC=CC=1.C1(P(C2C=CC=CC=2)C2C=CC=CC=2)C=CC=CC=1>[C:1]([C:4]1[S:5][C:6]([C:6]2[S:5][C:4]([C:1](=[O:3])[CH3:2])=[CH:8][CH:7]=2)=[CH:7][CH:8]=1)(=[O:3])[CH3:2] |f:1.2,5.6.7.8.9,^1:10,14|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( 3.57 )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexamethylditin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C[Sn](C)C.C[Sn](C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/6CH3.2Sn/h6*1H3;;"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m8_m5_m1_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-acetyl-5-bromo thiophene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)C=1SC(=CC1)Br"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H5BrOS/c1-4(8)5-2-3-6(7)9-5/h2-3H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 6.26,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrakis(triphenyl phosphine) Palladium (0)"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd].C1(=CC=CC=C1)P(C1=CC=CC=C1)C1=CC=CC=C1.C1(=CC=CC=C1)P(C1=CC=CC=C1)C1=CC=CC=C1.C1(=CC=CC=C1)P(C1=CC=CC=C1)C1=CC=CC=C1.C1(=CC=CC=C1)P(C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4C18H15P.Pd/c4*1-4-10-16(11-5-1)19(17-12-6-2-7-13-17)18-14-8-3-9-15-18;/h4*1-15H;"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CHCl3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": -5.0,
+                "units": "CELSIUS"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a slurry of 1 g tetrakis(triphenyl phosphine) Palladium (0) in 30 ml of dry toluene was added a solution of 6.26 g (30.5 mmol) of 2-acetyl-5-bromo thiophene in 30 ml of dry toluene under argon. The reaction was heated to reflux and to this solution was added dropwise a solution of 5 g (15.26 mmol) of hexamethylditin (99%) in 50 ml toluene (dry) over a period of 1.5 h. The reaction mixture was refluxed for another 6 h and then cooled down to -5\u00b0 C. Light yellow crystals of the product were isolated by suction filtration and were washed with hexane. The product was then continuously extracted through Whatman filter paper #42 with dioxane using a soxhlet apparatus until all of the product was dissolved and collected in the boiling flask. Slow cooling of the dioxane solution resulted in needle shaped light yellow crystals of the monomer which were separated by suction filtration and dried in vacuum. A Yield of 2.56 g (67%) having the following characteristics was obtained: mp 235\u00b0 C. (lit. mp 233.5\u00b0-234\u00b0 C.); UV/vis \u03bbmax (CHCl3): 367 (log \u03b5=4.19), 262 (3.57); FT-IR (KBr,cm-1): 3070, 1797 1656, 1611, 1511, 1433, 1361, 1302, 1270, 1089, 1036, 1020, 937, 897, 881, 792, 745, 673, 611, 593, 555, 463, 442; 1H NMR (CDCl3 300 MHz, TMS) \u03b4 2.58 (s,6H), 7.30 (d,2H), 7.62 (d,2H). Anal. calcd. for C12 H10S2 : C, 57.58; H, 4.03; N, 0.0. Found: C, 57.48; H, 3.87; N, 0.0."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction was heated"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to reflux and to this solution"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction mixture was refluxed for another 6 h",
+            "duration": {
+                "value": 6.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Light yellow crystals of the product were isolated by suction filtration"
+        },
+        {
+            "type": "WASH",
+            "details": "were washed with hexane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14/c1-3-5-6-4-2/h3-6H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The product was then continuously extracted through Whatman"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filter paper #42 with dioxane using a soxhlet apparatus until all of the product",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dioxane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCOCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "was dissolved"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "collected in the boiling flask"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "Slow cooling of the dioxane solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dioxane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCOCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "resulted in needle"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "were separated by suction filtration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried in vacuum"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was obtained"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5,5'-Diacetyl-2,2'-bithiophene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)C1=CC=C(S1)C=1SC(=CC1)C(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H10O2S2/c1-7(13)9-3-5-11(15-9)12-6-4-10(16-12)8(2)14/h3-6H,1-2H3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05814833",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:44:50.245957"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:08:59 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:58 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-068d7841870f42c2a2150bdc8fb93caa"
+}

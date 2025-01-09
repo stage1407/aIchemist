@@ -1,0 +1,54 @@
+{
+    "node_features": {
+        "Hybridization": ["C","N","O","S","P","B","Si","Se","Te","default"],
+        "Formal charge": ["C","H","N","O","S","P","B","Cl","Br","I","F","Na","Se","Te","default"],
+        "Implicit hydrogens": ["C","N","O","S"],
+        "Aromaticity": ["C","N","O","S","default"],
+        "Chirality/Stereochemistry": ["C","N","O","default"],
+        "Explicit valence": ["C","N","O","S","P","B","Si","Cl","Br","I","F","Na","Se","Te","default"],
+        "Implicit valence": ["C","N","O","S","P","B","Cl","Br","I","F","Na","Se","Te","default"],
+        "Lone pairs": ["N","O","S","P","Cl","Br","I","F","Se","Te","default"],
+        "Bonding": ["H","Cl","Br","I","F"],
+        "No lone pairs": ["Na"],
+        "Ionic bonding only": ["Na"],
+        "Degree": ["default"],
+        "Total_Degree": ["default"],
+        "Formal_Charge": ["default"],
+        "Lone_Pair_Count": ["default"],
+        "Aromatic": ["C"],
+        "Electronegativity": ["default"],
+        "Stereochemistry": ["default"],
+        "Hydrophobicity": ["default"]
+    },
+    "graph_features": {
+        "Electrophilic": [
+            "O=N(O)",
+            "O=P(O)(O)O",
+            "C=O",
+            "C(=O)O",
+            "C=C",
+            "C#C"
+        ],
+        "Nucleophilic": [
+            "R-S-R'",
+            "N",
+            "O",
+            "C(=O)O",
+            "S"
+        ],
+        "None": ["R"]
+    },
+    "edge_features": {
+        "Hydrogen_Bonding" : false,
+        "Bond_Order" : true,
+        "Electrophilic_Character": true,
+        "Nucleophilic_Character": true,
+        "Length": false,
+        "Aromaticity": true,
+        "Flexibility": false,
+        "Orientation": false,
+        "Stereo_State": true,
+        "Distance": false,
+        "Angle": false
+    }
+}

@@ -1,0 +1,324 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "ClC(=C)CO[C:5]1[CH:14]=[C:13]2[C:8]([C:9](C)=[CH:10][C:11](=[O:15])[O:12]2)=[CH:7][CH:6]=1.[C:18]([O:23][C:24](=[O:28])[CH2:25][CH2:26][CH3:27])(=O)[CH2:19][CH2:20][CH3:21].C(Cl)(Cl)[Cl:30]>C(C1C=CC(C(C)C)=CC=1)(C)C>[Cl:30][C:6](=[CH2:7])[CH2:5][C:14]1[C:13]([O:12][C:11](=[O:15])[CH2:10][CH2:9][CH3:8])=[CH:21][CH:20]=[C:19]2[C:18]=1[O:23][C:24](=[O:28])[CH:25]=[C:26]2[CH3:27]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "butyric anhydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)(=O)OC(CCC)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H14O3/c1-3-5-7(9)11-8(10)6-4-2/h3-6H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 96.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-diisopropylbenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)C1=CC=C(C=C1)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H18/c1-9(2)11-5-7-12(8-6-11)10(3)4/h5-10H,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1000.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "allyl ether"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "7-(\u03b2-chloroallyloxy)-4-methylcoumarin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC(COC1=CC=C2C(=CC(OC2=C1)=O)C)=C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H11ClO3/c1-8-5-13(15)17-12-6-10(3-4-11(8)12)16-7-9(2)14/h3-6H,2,7H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 143.5,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "chloroform"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Rearrangement of CAMC was accomplished in high yield by refluxing the allyl ether from Step 2 (143.5 gm; 0.55 mole) in a mixture of p-diisopropylbenzene (Aldrich, 1000 ml) and butyric anhydride (96 ml, 92.8 gm; 0.59 mol, Aldrich) under argon for 18 hours. The cooled reaction mixture was diluted with chloroform, washed with water and then saturated sodium bicarbonate, dried (MgSO4) then evapaorated under pressure. Folloeing recrystallization from ethanol, 79.9 grams of mixed 6 and 8-(\u03b2-chloroallyl)-7-butyroxy-4-methylcoumarin (BCAMC,15) were obtained. HPLC analysis (Beckman; C18-ODS reverse phase column, isocratic elution with 60% CH3OH/40%H2O) showed the mixture to contain 85.7% of the desired 8-substituted isomer, of which a sample was purified by column chromatography (60-200 mesh silica gel, elution with CH2 Cl2). The structures of the two isomers were confined by NMR. NMR (CDCl3) d 7.56 (1H,d), 7.11 (1H,d), 6.26 (1 h,d), 5.05-5.19 (2H, m, 3.84 (2H, m), 2.55-2.62 (2H, m), 2.43 (3H, d), 1.78-1.82 (2H, m), 1.01-1.09 (3H,t)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "in high yield"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The cooled reaction mixture"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "saturated sodium bicarbonate, dried (MgSO4)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium bicarbonate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C([O-])(O)=O.[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "MgSO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "recrystallization from ethanol, 79.9 grams",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "of mixed 6"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "8-(\u03b2-chloroallyl)-7-butyroxy-4-methylcoumarin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC(CC=1C(=CC=C2C(=CC(OC12)=O)C)OC(CCC)=O)=C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H17ClO4/c1-4-5-15(19)21-14-7-6-12-10(2)8-16(20)22-17(12)13(14)9-11(3)18/h6-8H,3-5,9H2,1-2H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05854967",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:46:20.703245"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:11:38 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:31 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-e2d4e2f529ed4023b68aca6c903b2b33"
+}

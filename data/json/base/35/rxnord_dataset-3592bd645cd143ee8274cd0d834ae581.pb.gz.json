@@ -1,0 +1,265 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1([CH3:38])[O:6][CH:5]([CH2:7][O:8][CH2:9][CH2:10][C:11]2[C:16]([CH:17]([C:19]3[CH:24]=[CH:23][C:22]([O:25][CH3:26])=[C:21]([F:27])[CH:20]=3)[OH:18])=[C:15]([O:28][CH2:29][O:30][CH3:31])[CH:14]=[C:13]([O:32][CH2:33][O:34][CH3:35])[C:12]=2[CH2:36][CH3:37])[CH2:4][O:3]1.[Cr](O[Cr]([O-])(=O)=O)([O-])(=O)=O.[NH+]1C=CC=CC=1.[NH+]1C=CC=CC=1>ClCCl.C(OCC)C>[F:27][C:21]1[CH:20]=[C:19]([C:17]([C:16]2[C:11]([CH2:10][CH2:9][O:8][CH2:7][CH:5]3[CH2:4][O:3][C:2]([CH3:1])([CH3:38])[O:6]3)=[C:12]([CH2:36][CH3:37])[C:13]([O:32][CH2:33][O:34][CH3:35])=[CH:14][C:15]=2[O:28][CH2:29][O:30][CH3:31])=[O:18])[CH:24]=[CH:23][C:22]=1[O:25][CH3:26] |f:1.2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diethyl ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-(6-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-5-ethyl-2,4-bis(methoxymethoxy)phenyl)-1-(3-fluoro-4-methoxyphenyl)methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1(OCC(O1)COCCC1=C(C(=CC(=C1C(O)C1=CC(=C(C=C1)OC)F)OCOC)OCOC)CC)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H39FO9/c1-7-20-21(10-11-34-14-19-15-37-28(2,3)38-19)26(25(36-17-32-5)13-24(20)35-16-31-4)27(30)18-8-9-23(33-6)22(29)12-18/h8-9,12-13,19,27,30H,7,10-11,14-17H2,1-6H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridinium dichromate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cr](=O)(=O)([O-])O[Cr](=O)(=O)[O-].[NH+]1=CC=CC=C1.[NH+]1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C5H5N.2Cr.7O/c2*1-2-4-6-5-3-1;;;;;;;;;/h2*1-5H;;;;;;;;;/q;;;;;;;;;2*-1/p+2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.43,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred at room temperature for 8 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2-Bromo-3-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-4-ethyl-1,5-bis(methoxymethoxy)benzene (390 mg, 0.84 mmol) obtained in the step 3 in Example 173 was dissolved in tetrahydrofuran (10 mL), and with stirring at \u221278\u00b0 C., tetrahydrofuran solution of 1.5 mol/L n-butyllithium (1.0 mL, 1.5 mmol) was dropwise added thereto. The resulting mixture was stirred at \u221278\u00b0 C. for 30 minutes, then 2-fluoro-4-methoxybenzaldehyde (130 mg, 0.8 mmol) was dropwise added thereto and further stirred for 30 minutes. Aqueous saturated ammonium chloride solution was added to the reaction mixture, and extracted twice with ethyl acetate. The organic layers were combined, washed with aqueous saturated sodium chloride solution, then dried over anhydrous sodium sulfate, and the solvent was evaporated away to obtain 1-(6-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-5-ethyl-2,4-bis(methoxymethoxy)phenyl)-1-(3-fluoro-4-methoxyphenyl)methanol. Thus obtained, 1-(6-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-5-ethyl-2,4-bis(methoxymethoxy)phenyl)-1-(3-fluoro-4-methoxyphenyl)methanol was dissolved in dichloromethane (10 mL), and pyridinium dichromate (160 m, 0.43 mmol) was added thereto and stirred at room temperature for 8 hours. The reaction mixture was diluted with diethyl ether, filtered through Celite, and the filtrate was concentrated under reduced pressure. The resulting residue was purified through silica gel column chromatography (ethyl acetate/hexane=1/4 to 1/1) to obtain 6-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-5-ethyl-2,4-bis(methoxymethoxy)phenyl 3-fluoro-4-methoxyphenyl ketone (210 mg, 46%)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "Thus obtained"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered through Celite"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the filtrate was concentrated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The resulting residue was purified through silica gel column chromatography (ethyl acetate/hexane=1/4 to 1/1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate hexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC.CCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14.C4H8O2/c1-3-5-6-4-2;1-3-6-4(2)5/h3-6H2,1-2H3;3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "6-{2-[(2,2-dimethyl-1,3-dioxolan-4-yl)methoxy]ethyl}-5-ethyl-2,4-bis(methoxymethoxy)phenyl 3-fluoro-4-methoxyphenyl ketone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC=1C=C(C=CC1OC)C(=O)C1=C(C=C(C(=C1CCOCC1OC(OC1)(C)C)CC)OCOC)OCOC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H37FO9/c1-7-20-21(10-11-34-14-19-15-37-28(2,3)38-19)26(25(36-17-32-5)13-24(20)35-16-31-4)27(30)18-8-9-23(33-6)22(29)12-18/h8-9,12-13,19H,7,10-11,14-17H2,1-6H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 210.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 46.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07538241B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:56:39.463321"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:55:17 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:01 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-2c7666887ac84ce3921d5e983f7ca3ed"
+}

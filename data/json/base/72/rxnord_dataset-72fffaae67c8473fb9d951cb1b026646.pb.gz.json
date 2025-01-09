@@ -1,0 +1,548 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C1(CO[C:9](=[O:16])[NH:10][C@H:11]2[CH2:14][NH:13][C:12]2=[O:15])C=CC=CC=1.[CH3:17][C:18]([CH3:57])([O:20][C:21](=[O:56])[C:22]([CH3:55])([CH3:54])[O:23]/[N:24]=[C:25](/[C:29]1[N:30]=[C:31]([NH:34][C:35]([C:48]2[CH:53]=[CH:52][CH:51]=[CH:50][CH:49]=2)([C:42]2[CH:47]=[CH:46][CH:45]=[CH:44][CH:43]=2)[C:36]2[CH:41]=[CH:40][CH:39]=[CH:38][CH:37]=2)[S:32][CH:33]=1)\\C(O)=O)[CH3:19].C1(N=C=NC2CCCCC2)CCCCC1.ON1C2C=CC=CC=2N=N1.C([O-])(O)=O.[Na+]>[Pd].O.CN(C=O)C.CO>[CH3:19][C:18]([CH3:57])([O:20][C:21](=[O:56])[C:22]([CH3:55])([CH3:54])[O:23]/[N:24]=[C:25](/[C:29]1[N:30]=[C:31]([NH:34][C:35]([C:42]2[CH:43]=[CH:44][CH:45]=[CH:46][CH:47]=2)([C:36]2[CH:41]=[CH:40][CH:39]=[CH:38][CH:37]=2)[C:48]2[CH:53]=[CH:52][CH:51]=[CH:50][CH:49]=2)[S:32][CH:33]=1)\\[C:9]([NH:10][C@H:11]1[CH2:14][NH:13][C:12]1=[O:15])=[O:16])[CH3:17] |f:4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m2_m8_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(Z)-\u03b1-[[2-(1,1-dimethylethoxy)-1,1-dimethyl-2-oxoethoxy]imino]-2-[(triphenylmethyl)amino]-4-thiazole acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(OC(C(O\\N=C(/C(=O)O)\\C=1N=C(SC1)NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)(C)C)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H33N3O5S/c1-30(2,3)39-28(38)31(4,5)40-35-26(27(36)37)25-21-41-29(33-25)34-32(22-15-9-6-10-16-22,23-17-11-7-12-18-23)24-19-13-8-14-20-24/h6-21H,1-5H3,(H,33,34)(H,36,37)/b35-26-"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.71,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N,N'-dicyclo-hexylcarbodiimide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CCCCC1)N=C=NC1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H22N2/c1-3-7-12(8-4-1)14-11-15-13-9-5-2-6-10-13/h12-13H,1-10H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.06,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-hydroxybenzo-triazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ON1N=NC2=C1C=CC=C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H5N3O/c10-9-6-4-2-1-3-5(6)7-8-9/h1-4,10H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.35,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 500.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m9_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-(2-oxo-3-azetidinyl) carbamic acid phenylmethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)COC(N[C@@H]1C(NC1)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H12N2O3/c14-10-9(6-12-10)13-11(15)16-7-8-4-2-1-3-5-8/h1-5,9H,6-7H2,(H,12,14)(H,13,15)/t9-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "palladium on carbon"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Pd"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.68,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 125.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaHCO3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)(O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred for 4 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 2.20 g (0.01 mmol) of (S)-(2-oxo-3-azetidinyl) carbamic acid phenylmethyl ester, 125 mL of methanol, and 0.68 g of 10% palladium on carbon catalyst was hydrogenated (5 minutes) on a parr apparatus at an initial gauge pressure of 50 psi. After filtration of the catalyst, the solution was concentrated to dryness under reduced pressure. The residual (S)-3-amino-2-azetidinone was dissolved in 10 mL of DMF and added to a mixture of 5.71 g (0.01 mol) of (Z)-\u03b1-[[2-(1,1-dimethylethoxy)-1,1-dimethyl-2-oxoethoxy]imino]-2-[(triphenylmethyl)amino]-4-thiazole acetic acid, 40 mL of DMF, 2.06 g (0.01 mol) of N,N'-dicyclo-hexylcarbodiimide and 1.35 g (0.01 mol) of 1-hydroxybenzo-triazole. The mixture was stirred for 4 hours, diluted with 500 mL of water and adjusted to pH 7.5 with aqueous NaHCO3. The mixture was extracted with four 300 mL portions of ethyl acetate. The combined extracts were washed with water and brine, dried (Na2SO4), decolorized with charcoal and concentrated to dryness. After purification by HPLC on a Waters Prep 500, using 4:1 ethyl acetate-hexane, 3.8 g of (S,Z)-\u03b1-[[2-(1,1-dimethylethoxy)-1,1-dimethyl-2-oxoethoxy]imino]-N-(2-oxo-3-azetidinyl)-2-[(triphenylmethyl)amino]-4-thiazoleacetamide was obtained."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "(5 minutes)",
+            "duration": {
+                "value": 5.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "After filtration of the catalyst"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the solution was concentrated to dryness under reduced pressure"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "The residual (S)-3-amino-2-azetidinone was dissolved in 10 mL of DMF",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "(S)-3-amino-2-azetidinone"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "N[C@@H]1C(NC1)=O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H6N2O/c4-2-1-5-3(2)6/h2H,1,4H2,(H,5,6)/t2-/m0/s1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMF"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CN(C)C=O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 10.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The mixture was extracted with four 300 mL portions of ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "four"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 300.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The combined extracts were washed with water and brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried (Na2SO4)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated to dryness"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "After purification by HPLC on a Waters Prep 500"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S,Z)-\u03b1-[[2-(1,1-dimethylethoxy)-1,1-dimethyl-2-oxoethoxy]imino]-N-(2-oxo-3-azetidinyl)-2-[(triphenylmethyl)amino]-4-thiazoleacetamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(OC(C(O\\N=C(/C(=O)N[C@@H]1C(NC1)=O)\\C=1N=C(SC1)NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)(C)C)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C35H37N5O5S/c1-33(2,3)44-31(43)34(4,5)45-40-28(30(42)37-26-21-36-29(26)41)27-22-46-32(38-27)39-35(23-15-9-6-10-16-23,24-17-11-7-12-18-24)25-19-13-8-14-20-25/h6-20,22,26H,21H2,1-5H3,(H,36,41)(H,37,42)(H,38,39)/b40-28-/t26-/m0/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 3.8,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 59396.9
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04912214",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:11:23.462900"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:00:37 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:03 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-83a347fc052d494e98bbe60451204b32"
+}

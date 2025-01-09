@@ -1,0 +1,270 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([CH2:3][NH2:4])[OH:2].[C:5](Cl)([C:18]1[CH:23]=[CH:22][CH:21]=[CH:20][CH:19]=1)([C:12]1[CH:17]=[CH:16][CH:15]=[CH:14][CH:13]=1)[C:6]1[CH:11]=[CH:10][CH:9]=[CH:8][CH:7]=1.N1C=CC=CC=1>O>[C:5]([NH:4][CH2:3][CH2:1][OH:2])([C:6]1[CH:11]=[CH:10][CH:9]=[CH:8][CH:7]=1)([C:18]1[CH:19]=[CH:20][CH:21]=[CH:22][CH:23]=1)[C:12]1[CH:13]=[CH:14][CH:15]=[CH:16][CH:17]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanolamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(O)CN"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H7NO/c3-1-2-4/h4H,1-3H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trityl chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)(C1=CC=CC=C1)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H15Cl/c20-19(16-10-4-1-5-11-16,17-12-6-2-7-13-17)18-14-8-3-9-15-18/h1-15H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N/c1-2-4-6-5-3-1/h1-5H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of ethanolamine, trityl chloride and pyridine was refluxed for 15h. Water was added slowly to the cooled reaction and the precipitate collected by filtration. The crude product recrystallized from a 1:1 mixture of ethanol and water."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "was refluxed for 15h",
+            "duration": {
+                "value": 15.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "the precipitate collected by filtration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The crude product recrystallized from a 1:1 mixture of ethanol and water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-tritylethanolamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)(C1=CC=CC=C1)NCCO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H21NO/c23-17-16-22-21(18-10-4-1-5-11-18,19-12-6-2-7-13-19)20-14-8-3-9-15-20/h1-15,22-23H,16-17H2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05744592",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:42:37.218011"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:04:20 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:20 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-37cb733aaaa64903931dd2bc0c489f04"
+}

@@ -1,0 +1,275 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1[CH:3]=[C:4]([C:8]([C:23]2[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=2)=[CH:9][CH2:10][O:11][CH2:12][CH2:13][N:14]2[CH2:19][CH2:18][CH2:17][C@@H:16]([C:20]([OH:22])=[O:21])[CH2:15]2)[CH:5]=[CH:6][CH:7]=1.ClCCl>CO.[Pd]>[CH3:1][C:2]1[CH:3]=[C:4]([CH:8]([C:23]2[CH:24]=[CH:25][CH:26]=[CH:27][CH:28]=2)[CH2:9][CH2:10][O:11][CH2:12][CH2:13][N:14]2[CH2:19][CH2:18][CH2:17][C@@H:16]([C:20]([OH:22])=[O:21])[CH2:15]2)[CH:5]=[CH:6][CH:7]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "palladium on carbon"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Pd"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acid"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(R)-N-(2-(3-(3-Methylphenyl)-3-phenyl-2-propen-1-yloxy)ethyl)-3-piperidinecarboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC=1C=C(C=CC1)C(=CCOCCN1C[C@@H](CCC1)C(=O)O)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H29NO3/c1-19-7-5-10-21(17-19)23(20-8-3-2-4-9-20)12-15-28-16-14-25-13-6-11-22(18-25)24(26)27/h2-5,7-10,12,17,22H,6,11,13-16,18H2,1H3,(H,26,27)/t22-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 8.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 150.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The acid prepared in Example 38 (8.2 g, 21.6 mmol) was dissolved in methanol (150 ml) and stirred under an atmosphere of hydrogen for 1 h at room temperature in the presence of 10% palladium on carbon catalyst (35% aqueous paste) and then filtered. The filtrate was evaporated to dryness leaving a residue which was dissolved into dichloromethane and dried over sodium sulphate. The solvent was evaporated in vacuo to give 2.3 g (28%) of the title compound as a foam."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The filtrate was evaporated to dryness"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "leaving a residue which"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over sodium sulphate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulphate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent was evaporated in vacuo"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(R)-N-(2-(3-(3-Methylphenyl)-3-phenyl-1-propyloxy)-ethyl)-3-piperidinecarboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC=1C=C(C=CC1)C(CCOCCN1C[C@@H](CCC1)C(=O)O)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H31NO3/c1-19-7-5-10-21(17-19)23(20-8-3-2-4-9-20)12-15-28-16-14-25-13-6-11-22(18-25)24(26)27/h2-5,7-10,17,22-23H,6,11-16,18H2,1H3,(H,26,27)/t22-,23?/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 2.3,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 28.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 27.9
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "FOAM",
+                        "details": "foam"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05198451",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:21:16.575136"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:19:34 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:03 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-576aa36c2c4f46a7b59f248943585a86"
+}

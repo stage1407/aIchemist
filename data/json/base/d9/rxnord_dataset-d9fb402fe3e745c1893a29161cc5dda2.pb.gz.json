@@ -1,0 +1,382 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "S(=O)(=O)(O)O.[N+:6]([O-:9])(O)=[O:7].[Cl:10][C:11]1[CH:16]=[C:15]([O:17][C:18]2[CH:23]=[CH:22][CH:21]=[C:20]([O:24][C:25]3[CH:30]=[C:29]([Cl:31])[C:28]([C:32]([F:35])([F:34])[F:33])=[C:27]([Cl:36])[CH:26]=3)[CH:19]=2)[CH:14]=[C:13]([Cl:37])[C:12]=1[C:38]([F:41])([F:40])[F:39]>ClCCCl>[Cl:10][C:11]1[CH:16]=[C:15]([O:17][C:18]2[CH:23]=[CH:22][C:21]([N+:6]([O-:9])=[O:7])=[C:20]([O:24][C:25]3[CH:26]=[C:27]([Cl:36])[C:28]([C:32]([F:33])([F:34])[F:35])=[C:29]([Cl:31])[CH:30]=3)[CH:19]=2)[CH:14]=[C:13]([Cl:37])[C:12]=1[C:38]([F:41])([F:40])[F:39]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m3_m4_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ice"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3-bis(2,6-dichloro-\u03b1,\u03b1,\u03b1-trifluoro-p-tolyloxy)-benzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=C(C(=CC(=C1)OC1=CC(=CC=C1)OC1=CC(=C(C(=C1)Cl)C(F)(F)F)Cl)Cl)C(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H8Cl4F6O2/c21-13-5-11(6-14(22)17(13)19(25,26)27)31-9-2-1-3-10(4-9)32-12-7-15(23)18(16(24)8-12)20(28,29)30/h1-8H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 11.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,2-dichloroethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4Cl2/c3-1-2-4/h1-2H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sulfuric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S(O)(O)(=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 6.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "nitric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[N+](=O)(O)[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/HNO3/c2-1(3)4/h(H,2,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 4.4,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A cooled mixture of concentrated sulfuric acid (6.5 ml.) and nitric acid (4.4 ml.) is added with stirring to an ice cold solution of 1,3-bis(2,6-dichloro-\u03b1,\u03b1,\u03b1-trifluoro-p-tolyloxy)-benzene (11.1 g. 0.021 mol) in 1,2-dichloroethane (30 ml.). After thirty minutes at room temperature, the phases are allowed to separate and the organic phase washed twice with water. Benzene (200 ml.) is added and the solution washed twice with dilute sodium carbonate solution, dried, filtered through activated silica gel (~25 g.), and the solvents removed. The residual crystals are triturated with pentane, filtered, and dried to obtain 1,3-bis(2,6-dichloro-\u03b1,\u03b1,\u03b1-trifluoro-p-tolyloxy)-4-nitrobenzene (9.9 g., 82%) m.p. 137.5\u00b0-140\u00b0 C., 90;l % pure."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "is added"
+        },
+        {
+            "type": "WAIT",
+            "details": "After thirty minutes at room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to separate"
+        },
+        {
+            "type": "WASH",
+            "details": "the organic phase washed twice with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "Benzene (200 ml.) is added",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Benzene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1=CC=CC=C1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 200.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "the solution washed twice with dilute sodium carbonate solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium carbonate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C([O-])([O-])=O.[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.2Na/c2-1(3)4;;/h(H2,2,3,4);;/q;2*+1/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered through activated silica gel (~25 g.)"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the solvents removed"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residual crystals are triturated with pentane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "pentane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C5H12/c1-3-5-4-2/h3-5H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3-bis(2,6-dichloro-\u03b1,\u03b1,\u03b1-trifluoro-p-tolyloxy)-4-nitrobenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=C(C(=CC(=C1)OC1=CC(=C(C=C1)[N+](=O)[O-])OC1=CC(=C(C(=C1)Cl)C(F)(F)F)Cl)Cl)C(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H7Cl4F6NO4/c21-11-3-9(4-12(22)17(11)19(25,26)27)34-8-1-2-15(31(32)33)16(7-8)35-10-5-13(23)18(14(24)6-10)20(28,29)30/h1-7H"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 9.9,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 82.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04185995",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:44:43.677203"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:15:41 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:42 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-c5f940511f02410cbbfedc4acef3fb40"
+}

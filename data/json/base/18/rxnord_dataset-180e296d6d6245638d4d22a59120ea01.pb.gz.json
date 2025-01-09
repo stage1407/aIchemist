@@ -1,0 +1,195 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([O:8][C:9]([CH:11]([CH2:22][C:23]1[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=1)[CH2:12][S:13]([C:16]([CH3:21])([CH3:20])[C:17](Cl)=[O:18])(=[O:15])=[O:14])=[O:10])[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.[CH3:29][CH:30]1[O:35][CH:34]([CH3:36])[CH2:33][NH:32][CH2:31]1>N1C=CC=CC=1>[CH3:36][C@H:34]1[CH2:33][N:32]([C:17]([C:16]([S:13]([CH2:12][CH:11]([CH2:22][C:23]2[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=2)[C:9]([O:8][CH2:1][C:2]2[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=2)=[O:10])(=[O:15])=[O:14])([CH3:21])[CH3:20])=[O:18])[CH2:31][C@@H:30]([CH3:29])[O:35]1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3_m4_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( c )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( d )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(RS)-2-[[2-[(benzyloxy)carbonyl]-3-phenylpropyl]sulfonyl]-2-methylpropionyl chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OC(=O)C(CS(=O)(=O)C(C(=O)Cl)(C)C)CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H23ClO5S/c1-21(2,20(22)24)28(25,26)15-18(13-16-9-5-3-6-10-16)19(23)27-14-17-11-7-4-8-12-17/h3-12,18H,13-15H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,6-dimethylmorpholine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1CNCC(O1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H13NO/c1-5-3-7-4-6(2)8-5/h5-7H,3-4H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N/c1-2-4-6-5-3-1/h1-5H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In an analogous manner to that described in Example 2, paragraphs (c) and (d), by the reaction of (RS)-2-[[2-[(benzyloxy)carbonyl]-3-phenylpropyl]sulfonyl]-2-methylpropionyl chloride with 2,6-dimethylmorpholine in pyridine followed by chromatographic separation of the resulting diastereomers there was obtained benzyl (RS)-\u03b1-[[[1-[(cis-2,6-dimethylmorpholino)carbonyl]-1-methylethyl]sulfonyl]methyl]hydrocinnamate, MS: 501 (M)+, as a colourless oil."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "followed by chromatographic separation of the resulting diastereomers there"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzyl (RS)-\u03b1-[[[1-[(cis-2,6-dimethylmorpholino)carbonyl]-1-methylethyl]sulfonyl]methyl]hydrocinnamate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C[C@@H]1O[C@@H](CN(C1)C(=O)C(C)(C)S(=O)(=O)CC(C(=O)OCC1=CC=CC=C1)CC1=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C27H35NO6S/c1-20-16-28(17-21(2)34-20)26(30)27(3,4)35(31,32)19-24(15-22-11-7-5-8-12-22)25(29)33-18-23-13-9-6-10-14-23/h5-14,20-21,24H,15-19H2,1-4H3/t20-,21+,24?"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05393875",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:27:50.048004"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:33:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:32 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-a5b82fc00fbc4409aec6f9d18730df9a"
+}

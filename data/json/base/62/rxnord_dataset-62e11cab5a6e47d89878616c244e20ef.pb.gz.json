@@ -1,0 +1,195 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1[CH2:7][CH2:6][CH2:5][C:4]([CH3:9])([CH3:8])[C:3]=1[CH:10]=[CH:11][C:12]([CH3:24])=[CH:13][C:14](=[S:21](=[O:23])=[O:22])C1C=CC=CC=1.I([O-])(=O)(=O)=O.[Na+].C1(S([O-])=[O:38])C=CC=CC=1.[Na+].C[C:42]1[CH2:47][CH2:46][CH2:45][C:44](C)(C)[C:43]=1C=CC(C)=CCCl>>[CH3:1][C:2]1[C:7](=[O:38])[CH2:6][CH2:5][C:4]([CH3:8])([CH3:9])[C:3]=1[CH:10]=[CH:11][C:12]([CH3:24])=[CH:13][CH2:14][S:21]([C:42]1[CH:47]=[CH:46][CH:45]=[CH:44][CH:43]=1)(=[O:22])=[O:23] |f:1.2,3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-(2,6,6-trimethyl-cyclohex-1-enyl)-3-methyl-1-chloro-penta-2,4-diene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(C(CCC1)(C)C)C=CC(=CCCl)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H23Cl/c1-12(9-11-16)7-8-14-13(2)6-5-10-15(14,3)4/h7-9H,5-6,10-11H2,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m0_m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-(2,6,6-trimethyl-cyclohex-1-enyl)-3-methyl-1-phenyl-sulphonyl-penta-2,4-diene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(C(CCC1)(C)C)C=CC(=CC(C1=CC=CC=C1)=S(=O)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H26O2S/c1-16(12-13-19-17(2)9-8-14-21(19,3)4)15-20(24(22)23)18-10-6-5-7-11-18/h5-7,10-13,15H,8-9,14H2,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium meta-periodate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "I(=O)(=O)(=O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/HIO4.Na/c2-1(3,4)5;/h(H,2,3,4,5);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium phenylsulphinate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)S(=O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6O2S.Na/c7-9(8)6-4-2-1-3-5-6;/h1-5H,(H,7,8);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "5-(2,6,6-trimethyl-3-oxo-cyclohex-1-enyl)-3-methyl-1-phenylsulphonyl-penta-2,4-diene was prepared by oxidation of 5-(2,6,6-trimethyl-cyclohex-1-enyl)-3-methyl-1-phenyl-sulphonyl-penta-2,4-diene by means of sodium meta-periodate in accordance with the process described in French Pat. No. 2,071,508. The product oxidised in this way was itself obtained by reacting sodium phenylsulphinate with 5-(2,6,6-trimethyl-cyclohex-1-enyl)-3-methyl-1-chloro-penta-2,4-diene as described in Example 1."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "obtained"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-(2,6,6-trimethyl-3-oxo-cyclohex-1-enyl)-3-methyl-1-phenylsulphonyl-penta-2,4-diene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(C(CCC1=O)(C)C)C=CC(=CCS(=O)(=O)C1=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H26O3S/c1-16(13-15-25(23,24)18-8-6-5-7-9-18)10-11-19-17(2)20(22)12-14-21(19,3)4/h5-11,13H,12,14-15H2,1-4H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04331814",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:50:28.839734"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:25:17 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:00 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-5f11243dc7e1455f85c9b6b267bda9e2"
+}

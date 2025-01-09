@@ -1,0 +1,413 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][O:2][C:3]1[CH:4]=[CH:5][C:6]2[NH:12][C:11](=[O:13])[N:10]([CH:14]3[CH2:19][CH2:18][N:17]([C:20]([O:22][C@H:23]([CH2:42][C:43]4[CH:48]=[C:47]([C:49]([F:52])([F:51])[F:50])[C:46]([NH2:53])=[C:45]([Cl:54])[CH:44]=4)[C:24]([N:26]4[CH2:31][CH2:30][CH:29]([CH:32]5[CH2:37][CH2:36][N:35]([CH2:38][C:39]([OH:41])=[O:40])[CH2:34][CH2:33]5)[CH2:28][CH2:27]4)=[O:25])=[O:21])[CH2:16][CH2:15]3)[CH2:9][CH2:8][C:7]=2[CH:55]=1.CN(C(ON1N=NC2C=CC=CC1=2)=[N+](C)C)C.[B-](F)(F)(F)F.C(N(CC)CC)C.[N:85]1([CH2:91][CH2:92]O)[CH2:90][CH2:89][O:88][CH2:87][CH2:86]1.C([O-])(O)=O.[Na+]>CN(C=O)C>[CH3:1][O:2][C:3]1[CH:4]=[CH:5][C:6]2[NH:12][C:11](=[O:13])[N:10]([CH:14]3[CH2:15][CH2:16][N:17]([C:20]([O:22][C@H:23]([CH2:42][C:43]4[CH:48]=[C:47]([C:49]([F:52])([F:50])[F:51])[C:46]([NH2:53])=[C:45]([Cl:54])[CH:44]=4)[C:24]([N:26]4[CH2:31][CH2:30][CH:29]([CH:32]5[CH2:37][CH2:36][N:35]([CH2:38][C:39]([O:41][CH2:92][CH2:91][N:85]6[CH2:90][CH2:89][O:88][CH2:87][CH2:86]6)=[O:40])[CH2:34][CH2:33]5)[CH2:28][CH2:27]4)=[O:25])=[O:21])[CH2:18][CH2:19]3)[CH2:9][CH2:8][C:7]=2[CH:55]=1 |f:1.2,5.6|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3_m4_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(R)-1-(4-amino-3-chloro-5-trifluoromethyl-benzyl)-2-(1\u2032-carboxymethyl-4,4\u2032-bipiperidinyl-1-yl)-2-oxo-ethyl 4-(7-methoxy-2-oxo-1,2,4,5-tetrahydro-1,3-benzodiazepin-3-yl)-piperidine-1-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COC=1C=CC2=C(CCN(C(N2)=O)C2CCN(CC2)C(=O)O[C@@H](C(=O)N2CCC(CC2)C2CCN(CC2)CC(=O)O)CC2=CC(=C(C(=C2)C(F)(F)F)N)Cl)C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C38H48ClF3N6O7/c1-54-28-2-3-31-26(21-28)8-17-48(36(52)44-31)27-9-15-47(16-10-27)37(53)55-32(20-23-18-29(38(40,41)42)34(43)30(39)19-23)35(51)46-13-6-25(7-14-46)24-4-11-45(12-5-24)22-33(49)50/h2-3,18-19,21,24-25,27,32H,4-17,20,22,43H2,1H3,(H,44,52)(H,49,50)/t32-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 230.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "TBTU"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C(=[N+](C)C)ON1C2=C(C=CC=C2)N=N1.[B-](F)(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H16N5O.BF4/c1-14(2)11(15(3)4)17-16-10-8-6-5-7-9(10)12-13-16;2-1(3,4)5/h5-8H,1-4H3;/q+1;-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 113.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 84.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-morpholin-4-yl-ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(CCOCC1)CCO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H13NO2/c8-4-1-7-2-5-9-6-3-7/h8H,1-6H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 39.3,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaHCO3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)(O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "was stirred overnight at RT"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 230 mg (0.29 mmol) (R)-1-(4-amino-3-chloro-5-trifluoromethyl-benzyl)-2-(1\u2032-carboxymethyl-4,4\u2032-bipiperidinyl-1-yl)-2-oxo-ethyl 4-(7-methoxy-2-oxo-1,2,4,5-tetrahydro-1,3-benzodiazepin-3-yl)-piperidine-1-carboxylate (Example 15.1), 113 mg (0.35 mmol) TBTU, 84 \u03bcL (0.60 mmol) triethylamine and 39.3 mg (0.30 mmol) 2-morpholin-4-yl-ethanol in 5 mL DMF was stirred overnight at RT. The reaction mixture was poured onto saturated NaHCO3 solution, the product precipitated was suction filtered and dried at 40\u00b0 C. This was dissolved in 25 mL of isopropanol and precipitated as the hydrochloride salt by the addition of 0.5 M HCl in isopropanol. This was suction filtered, washed with 5 mL isopropanol and 30 mL DIPE and dried at 30\u00b0 C. in the vacuum drying cupboard."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "the product precipitated"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried at 40\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 40.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "This was dissolved in 25 mL of isopropanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 25.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "precipitated as the hydrochloride salt by the addition of 0.5 M HCl in isopropanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloride salt"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "HCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "This was suction filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with 5 mL isopropanol and 30 mL DIPE",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried at 30\u00b0 C. in the vacuum",
+            "temperature": {
+                "setpoint": {
+                    "value": 30.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "drying cupboard"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(R)-1-(4-amino-3-chloro-5-trifluoromethyl-benzyl)-2-[1\u2032-(2-morpholin-4-yl-ethoxycarbonyl methyl)-4,4\u2032-bi piperidinyl-1-yl]-2-oxo-ethyl 4-(7-methoxy-2-oxo-1,2,4,5-tetrahydro-1,3-benzodiazepin-3-yl)-piperidine-1-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COC=1C=CC2=C(CCN(C(N2)=O)C2CCN(CC2)C(=O)O[C@@H](C(=O)N2CCC(CC2)C2CCN(CC2)CC(=O)OCCN2CCOCC2)CC2=CC(=C(C(=C2)C(F)(F)F)N)Cl)C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C44H59ClF3N7O8/c1-60-34-2-3-37-32(27-34)8-17-55(42(58)50-37)33-9-15-54(16-10-33)43(59)63-38(26-29-24-35(44(46,47)48)40(49)36(45)25-29)41(57)53-13-6-31(7-14-53)30-4-11-52(12-5-30)28-39(56)62-23-20-51-18-21-61-22-19-51/h2-3,24-25,27,30-31,33,38H,4-23,26,28,49H2,1H3,(H,50,58)/t38-/m1/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07579341B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:59:09.975630"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:03:52 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:25 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0568035ee73e4fd4aab03b03e4bc6d6a"
+}

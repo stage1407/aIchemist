@@ -1,0 +1,190 @@
+{
+    "node_features": {
+        "C": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Implicit hydrogens": true,
+            "Aromaticity": true,
+            "Chirality/Stereochemistry": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "H": {
+            "Formal charge": true,
+            "Bonding": true,
+            "Explicit valence": false,
+            "Implicit valence": false
+        },
+        "N": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Implicit hydrogens": true,
+            "Lone pairs": true,
+            "Aromaticity": true,
+            "Chirality/Stereochemistry": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "O": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Implicit hydrogens": true,
+            "Lone pairs": true,
+            "Aromaticity": true,
+            "Chirality/Stereochemistry": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "S": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Implicit hydrogens": true,
+            "Lone pairs": true,
+            "Aromaticity": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "P": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "B": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Lone pairs": false,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "Si": {
+            "Hybridization": true,
+            "Formal charge": false,
+            "Lone pairs": false,
+            "Explicit valence": true,
+            "Implicit valence": false
+        },
+        "Cl": {
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Bonding": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "Br": {
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Bonding": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "I": {
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Bonding": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "F": {
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Bonding": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "Na": {
+            "Formal charge": true,
+            "No lone pairs": true,
+            "Ionic bonding only": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "Se": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "Te": {
+            "Hybridization": true,
+            "Formal charge": true,
+            "Lone pairs": true,
+            "Explicit valence": true,
+            "Implicit valence": true
+        },
+        "default": {
+            "ImplicitValence": true,
+            "ExplicitValence": true,
+            "Degree": true,
+            "Total_Degree": true,
+            "Hybridization": true,
+            "Formal_Charge": true,
+            "Lone_Pair_Count": true,
+            "Aromatic": true,
+            "Electronegativity": true,
+            "Stereochemistry": true,
+            "Hydrophobicity": true
+        }
+    },
+    "edge_features": {
+        "Hydrogen_Bonding": true,
+        "Bond_Order": true,
+        "Electrophilic_Character": true,
+        "Nucleophilic_Character": true,
+        "Length": true,
+        "Aromaticity": true,
+        "Flexibility": true,
+        "Orientation": true,
+        "Stereo_State": true,
+        "Distance": true,
+        "Angle": true
+    },
+    "graph_features": {
+        "O=N(O)": {
+            "Electrophilic": true,
+            "Nucleophilic": false
+        },
+        "R-S-R'": {
+            "Electrophilic": false,
+            "Nucleophilic": true
+        },
+        "O=P(O)(O)O": {
+            "Electrophilic": true,
+            "Nucleophilic": false
+        },
+        "N": {
+            "Electrophilic": false,
+            "Nucleophilic": true
+        },
+        "C=O": {
+            "Electrophilic": true,
+            "Nucleophilic": false
+        },
+        "O": {
+            "Electrophilic": false,
+            "Nucleophilic": true
+        },
+        "C(=O)O": {
+            "Electrophilic": true,
+            "Nucleophilic": true
+        },
+        "S": {
+            "Electrophilic": false,
+            "Nucleophilic": true
+        },
+        "R": {
+            "Electrophilic": false,
+            "Nucleophilic": false
+        },
+        "C=C": {
+            "Electrophilic": true,
+            "Nucleophilic": false
+        },
+        "C#C": {
+            "Electrophilic": true,
+            "Nucleophilic": false
+        }
+    }
+}

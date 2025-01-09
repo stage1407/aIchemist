@@ -1,0 +1,421 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[Cl:1][C:2]1[C:3](F)=[CH:4][C:5]([F:28])=[C:6]([S:8]([N:11]([CH2:17][C:18]2[CH:23]=[CH:22][C:21]([O:24][CH3:25])=[CH:20][C:19]=2[O:26][CH3:27])[C:12]2[S:13][CH:14]=[N:15][N:16]=2)(=[O:10])=[O:9])[CH:7]=1.C(=O)([O-])[O-].[K+].[K+].[N:36]1[CH:41]=[CH:40][C:39]([C:42]2[CH:47]=[C:46]([C:48]([F:51])([F:50])[F:49])[CH:45]=[CH:44][C:43]=2[OH:52])=[CH:38][N:37]=1>CS(C)=O>[Cl:1][C:2]1[C:3]([O:52][C:43]2[CH:44]=[CH:45][C:46]([C:48]([F:49])([F:50])[F:51])=[CH:47][C:42]=2[C:39]2[CH:40]=[CH:41][N:36]=[N:37][CH:38]=2)=[CH:4][C:5]([F:28])=[C:6]([S:8]([N:11]([CH2:17][C:18]2[CH:23]=[CH:22][C:21]([O:24][CH3:25])=[CH:20][C:19]=2[O:26][CH3:27])[C:12]2[S:13][CH:14]=[N:15][N:16]=2)(=[O:10])=[O:9])[CH:7]=1 |f:1.2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-Chloro-N-(2,4-dimethoxybenzyl)-2,4-difluoro-N-1,3,4-thiadiazol-2-ylbenzenesulfonamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC=1C(=CC(=C(C1)S(=O)(=O)N(C=1SC=NN1)CC1=C(C=C(C=C1)OC)OC)F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H14ClF2N3O4S2/c1-26-11-4-3-10(15(5-11)27-2)8-23(17-22-21-9-28-17)29(24,25)16-6-12(18)13(19)7-14(16)20/h3-7,9H,8H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 378.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylsulphoxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6OS/c1-4(2)3/h1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.9,
+                            "units": "LITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Potassium carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])([O-])=O.[K+].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.2K/c2-1(3)4;;/h(H2,2,3,4);;/q;2*+1/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 117.8,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-pyridazin-4-yl-4-(trifluoromethyl)phenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=NC=C(C=C1)C1=C(C=CC(=C1)C(F)(F)F)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H7F3N2O/c12-11(13,14)8-1-2-10(17)9(5-8)7-3-4-15-16-6-7/h1-6,17H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 182.8,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "5-Chloro-N-(2,4-dimethoxybenzyl)-2,4-difluoro-N-1,3,4-thiadiazol-2-ylbenzenesulfonamide (Preparation 247, 378.0 g, 0.761 moles) was dissolved in dimethylsulphoxide (1.9 L). Potassium carbonate (117.8 g, 0.8524 moles) was added and stirred to give a suspension to which was added 2-pyridazin-4-yl-4-(trifluoromethyl)phenol (Preparation 712, 182.8 g, 0.761 moles) in one portion. The reaction mixture was stirred at room temperature for 18 hours. The reaction mixture was partitioned between ethyl acetate (2.7 L) and aqueous sodium hydroxide solution (2.5 L of 1 molar). The organic phase was washed with water (2\u00d72 L) and then saturated aqueous sodium chloride solution (250 mL). The solution was concentrated in vacuo to give the crude title product. The crude product was purified by column chromatography on silica gel (2 Kg) eluting with ethyl acetate/heptane (3:1). The cleanest fractions were combined and the solvents removed in vacuo to give the title compound as a dark red foam, (440 g). This material was dried in vacuo at 45\u00b0 C. for 48 hours to give the title compound as a red solid (400 g)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "to give a suspension to which"
+        },
+        {
+            "type": "STIRRING",
+            "details": "The reaction mixture was stirred at room temperature for 18 hours",
+            "duration": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The reaction mixture was partitioned between ethyl acetate (2.7 L) and aqueous sodium hydroxide solution (2.5 L of 1 molar)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 2.7,
+                                "units": "LITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium hydroxide"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[OH-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 2.5,
+                                "units": "LITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The organic phase was washed with water (2\u00d72 L)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 2.0,
+                                "units": "LITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The solution was concentrated in vacuo"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to give the crude title product",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude title product"
+                            },
+                            {
+                                "type": "NAME",
+                                "value": "5-Chloro-N-(2,4-dimethoxybenzyl)-2-fluoro-4-[2-pyridazin-4-yl-4-(trifluoromethyl)phenoxy]-N-1,3,4-thiadiazol-2-ylbenzenesulfonamide"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClC=1C(=CC(=C(C1)S(=O)(=O)N(C=1SC=NN1)CC1=C(C=C(C=C1)OC)OC)F)OC1=C(C=C(C=C1)C(F)(F)F)C1=CN=NC=C1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C28H20ClF4N5O5S2/c1-41-19-5-3-17(24(10-19)42-2)14-38(27-37-36-15-44-27)45(39,40)26-11-21(29)25(12-22(26)30)43-23-6-4-18(28(31,32)33)9-20(23)16-7-8-34-35-13-16/h3-13,15H,14H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The crude product was purified by column chromatography on silica gel (2 Kg)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "eluting with ethyl acetate/heptane (3:1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate heptane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC.CCCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H16.C4H8O2/c1-3-5-7-6-4-2;1-3-6-4(2)5/h3-7H2,1-2H3;3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the solvents removed in vacuo"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "5-Chloro-N-(2,4-dimethoxybenzyl)-2-fluoro-4-[2-pyridazin-4-yl-4-(trifluoromethyl)phenoxy]-N-1,3,4-thiadiazol-2-ylbenzenesulfonamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC=1C(=CC(=C(C1)S(=O)(=O)N(C=1SC=NN1)CC1=C(C=C(C=C1)OC)OC)F)OC1=C(C=C(C=C1)C(F)(F)F)C1=CN=NC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H20ClF4N5O5S2/c1-41-19-5-3-17(24(10-19)42-2)14-38(27-37-36-15-44-27)45(39,40)26-11-21(29)25(12-22(26)30)43-23-6-4-18(28(31,32)33)9-20(23)16-7-8-34-35-13-16/h3-13,15H,14H2,1-2H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 440.0,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 84.8
+                            }
+                        }
+                    ],
+                    "isolated_color": "dark red",
+                    "texture": {
+                        "type": "FOAM",
+                        "details": "foam"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08541588B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:03:45.878341"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:20:46 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:24 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-604eda064bcf44b7ba3e1a91b63e4254"
+}

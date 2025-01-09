@@ -1,0 +1,368 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[N:1]1[CH:6]=[CH:5][C:4]([CH2:7][OH:8])=[CH:3][CH:2]=1.[C:9](=O)(ON1C(=O)CCC1=O)[O:10]N1C(=O)CCC1=O.C(N(CC)CC)C.[CH:34]1([NH:37][C:38]([C:40]2[CH:45]=[CH:44][C:43]([C:46]3[N:47]=[C:48]([NH:51][C:52]([C@@H:54]4[CH2:58][CH2:57][CH2:56][NH:55]4)=[O:53])[S:49][CH:50]=3)=[CH:42][CH:41]=2)=[O:39])[CH2:36][CH2:35]1>CC#N.C(Cl)Cl.CN(C1C=CN=CC=1)C>[N:1]1[CH:6]=[CH:5][C:4]([CH2:7][O:8][C:9]([N:55]2[CH2:56][CH2:57][CH2:58][CH:54]2[C:52](=[O:53])[NH:51][C:48]2[S:49][CH:50]=[C:46]([C:43]3[CH:44]=[CH:45][C:40]([C:38](=[O:39])[NH:37][CH:34]4[CH2:35][CH2:36]4)=[CH:41][CH:42]=3)[N:47]=2)=[O:10])=[CH:3][CH:2]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.75,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyrrolidine-2-carboxylic acid [4-(4-cyclopropyl carbamoyl-phenyl)-thiazol-2-yl]-amide"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-Pyrrolidine-2-carboxylic acid [4-(4-cyclopropylcarbamoyl-phenyl)-thiazol-2-yl]-amide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CC1)NC(=O)C1=CC=C(C=C1)C=1N=C(SC1)NC(=O)[C@H]1NCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H20N4O2S/c23-16(20-13-7-8-13)12-5-3-11(4-6-12)15-10-25-18(21-15)22-17(24)14-2-1-9-19-14/h3-6,10,13-14,19H,1-2,7-9H2,(H,20,23)(H,21,22,24)/t14-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 150.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CH2Cl2"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMAP"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=1C=CN=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H10N2/c1-9(2)7-3-5-8-6-4-7/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 30.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m1_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Pyridine-4-yl-methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=C(C=C1)CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H7NO/c8-5-6-1-3-7-4-2-6/h1-4,8H,5H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 400.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CH3CN"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 12.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "disuccinimidyl carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(ON1C(CCC1=O)=O)(ON1C(CCC1=O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H8N2O7/c12-5-1-2-6(13)10(5)17-9(16)18-11-7(14)3-4-8(11)15/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 940.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "This solution was stirred at room temperature for 2 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Pyridine-4-yl-methanol (400 mg, 3.66 mmol) was dissolved in 12 mL of dry CH3CN. To this solution was added disuccinimidyl carbonate (3.66 mmol, 940 mg) followed by triethylamine (11 mmol, 1.5 mL). This solution was stirred at room temperature for 2 hours and the evaporated. The residue was redissloved in 10 mL of CH2Cl2. To this solution was added 150 mg (0.42 mmol) of pyrrolidine-2-carboxylic acid [4-(4-cyclopropyl carbamoyl-phenyl)-thiazol-2-yl]-amide (General Procedure 3I), followed by triethylamine (5.5 mmol, 0.75 mL), and DMAP (30 mg). Reaction mixture was stirred at room temperature overnight. It was evaporated to dryness, redissolved in 10 mL of DMF and purified using reverse phase HPLC. MS: 492.1(M+H+); H1 NMR (DMSO-d6): \u03b4(ppm) 12.6 (d, 1H), 8.84 (d, 2H), 8.51 (s, 1H), 7.91 (m, 6H), 5.42 (m, 2H), 4.60 (m, 1H), 3.58 (m, 1H), 2.83 (m, 2H), 2.33 (m, 1H), 1.99 (m, 4H), 0.60 (dd, 4H)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "Reaction mixture"
+        },
+        {
+            "type": "STIRRING",
+            "details": "was stirred at room temperature overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "It was evaporated to dryness"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "redissolved in 10 mL of DMF",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMF"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CN(C)C=O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 10.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "purified"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-[4-(4-Cyclopropylcarbamoyl-phenyl)-thiazol-2-ylcarbamoyl]-pyrrolidine-1-carboxylic acid pyridine-4-ylmethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=C(C=C1)COC(=O)N1C(CCC1)C(NC=1SC=C(N1)C1=CC=C(C=C1)C(NC1CC1)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H25N5O4S/c31-22(27-19-7-8-19)18-5-3-17(4-6-18)20-15-35-24(28-20)29-23(32)21-2-1-13-30(21)25(33)34-14-16-9-11-26-12-10-16/h3-6,9-12,15,19,21H,1-2,7-8,13-14H2,(H,27,31)(H,28,29,32)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07595398B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:00:34.746285"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:07:31 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:53 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-b825b05364e341eb88e0ba03d9a9ba83"
+}

@@ -1,0 +1,269 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[N:1]1[CH:6]=[CH:5][CH:4]=[CH:3][CH:2]=1.[OH:7][S:8]([OH:11])(=[O:10])=[O:9].[C:12](OC(=O)C)(=[O:14])[CH3:13]>>[NH+:1]1[CH:6]=[CH:5][CH:4]=[CH:3][CH:2]=1.[C:12]([O:9][S:8](=[O:11])(=[O:7])[O-:10])(=[O:14])[CH3:13] |f:3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m3_m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N/c1-2-4-6-5-3-1/h1-5H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 8.05,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic anhydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OC(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H6O3/c1-3(5)7-4(2)6/h1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2SO4"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OS(=O)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.4,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 0.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "under stirring"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 30 ml of acetic anhydride and 8.05 ml (0.1 mole) of pyridine is cooled to 0\u00b0 C., and 5.4 ml of conc. H2SO4 is added dropwise at 0\u00b0 C. under stirring. After 10 minutes, the crystals are filtered, washed with diethyl ether and dried under vacuum over P2O5 and KOH. Yield: 18.4 g (84%). IR: 1050 cm-1 sharp band, characteristic for sulfates and sulfate esters. Decomposes above 60\u00b0 C., very hygroscopic. MW: 219.2 (C7H9O5NS)."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "the crystals are filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with diethyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "diethyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried under vacuum over P2O5 and KOH",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "P2O5"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O=P12OP3(=O)OP(=O)(O1)OP(=O)(O2)O3"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/O10P4/c1-11-5-12(2)8-13(3,6-11)10-14(4,7-11)9-12"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "KOH"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[OH-].[K+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/K.H2O/h;1H2/q+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Decomposes above 60\u00b0 C."
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 10.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Acetylsulfuric acid pyridinium salt"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[NH+]1=CC=CC=C1.C(C)(=O)OS([O-])(=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N.C2H4O5S/c1-2-4-6-5-3-1;1-2(3)7-8(4,5)6/h1-5H;1H3,(H,4,5,6)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04444682",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:54:49.287385"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:32:18 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:43 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-b87340ee322546868a52bdaab8ced4a8"
+}

@@ -1,0 +1,226 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([N:4]1[C@H:18]2[C:8]([C:9]3[CH:10]=[CH:11][CH:12]=[C:13]4[C:19]=3[C:16]([CH2:17]2)=[CH:15][NH:14]4)=[CH:7][C@@H:6]([C:20]([OH:22])=O)[CH2:5]1)[CH2:2][CH3:3].[NH3:23]>C(O)CO>[CH2:1]([N:4]1[C@H:18]2[C:8]([C:9]3[CH:10]=[CH:11][CH:12]=[C:13]4[C:19]=3[C:16]([CH2:17]2)=[CH:15][NH:14]4)=[CH:7][C@H:6]([C:20]([NH2:23])=[O:22])[CH2:5]1)[CH2:2][CH3:3]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "amides"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methyl ester"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9,10-didehydro-6-n-propyl-8\u03b2-ergoline carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC)N1C[C@@H](C=C2C=3C=CC=C4NC=C(C[C@@H]12)C34)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H20N2O2/c1-2-6-20-10-12(18(21)22)7-14-13-4-3-5-15-17(13)11(9-19-15)8-16(14)20/h3-5,7,9,12,16,19H,2,6,8,10H2,1H3,(H,21,22)/t12-,16-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethylene glycol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O2/c3-1-2-4/h3-4H,1-2H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonia"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3N/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "By allowing 3.1 g of the methyl ester of 9,10-didehydro-6-n-propyl-8\u03b2-ergoline carboxylic acid to stand in a solution of ammonia in ethylene glycol, a mixture of the isomeric amides is obtained; chromatographic separation of the reaction product yields 1.2 g of 9,10-didehydro-6-n-propyl-8\u03b1-ergoline carboxylic acid amide. [\u03b1]D25 =+297\u00b0; c=0.5 (pyridine)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "is obtained"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "chromatographic separation of the reaction product"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9,10-didehydro-6-n-propyl-8\u03b1-ergoline carboxylic acid amide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC)N1C[C@H](C=C2C=3C=CC=C4NC=C(C[C@@H]12)C34)C(=O)N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H21N3O/c1-2-6-21-10-12(18(19)22)7-14-13-4-3-5-15-17(13)11(9-20-15)8-16(14)21/h3-5,7,9,12,16,20H,2,6,8,10H2,1H3,(H2,19,22)/t12-,16+/m0/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 1.2,
+                                    "units": "GRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04748248",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:05:19.778372"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:50:04 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:19 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-6e913028959e4be5bf1ca320ed6711ea"
+}

@@ -1,0 +1,157 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "Cl.[NH2:2][CH2:3][C:4]1[CH:5]=[C:6]([CH2:10][C:11]([OH:13])=[O:12])[CH:7]=[CH:8][CH:9]=1.Cl.NCC1C=CC(CC(O)=O)=CC=1.[C:27]([O:31][C:32](ON=C(C1C=CC=CC=1)C#N)=[O:33])([CH3:30])([CH3:29])[CH3:28]>>[C:27]([O:31][C:32]([NH:2][CH2:3][C:4]1[CH:5]=[C:6]([CH2:10][C:11]([OH:13])=[O:12])[CH:7]=[CH:8][CH:9]=1)=[O:33])([CH3:30])([CH3:29])[CH3:28] |f:0.1,2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-aminomethylphenylacetic acid hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.NCC=1C=C(C=CC1)CC(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H11NO2.ClH/c10-6-8-3-1-2-7(4-8)5-9(11)12;/h1-4H,5-6,10H2,(H,11,12);1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-aminomethylphenylacetic acid hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.NCC1=CC=C(C=C1)CC(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H11NO2.ClH/c10-6-8-3-1-7(2-4-8)5-9(11)12;/h1-4H,5-6,10H2,(H,11,12);1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-t-butoxycarbonyloxyimino-2-phenylacetonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)ON=C(C#N)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H14N2O3/c1-13(2,3)17-12(16)18-15-11(9-14)10-7-5-4-6-8-10/h4-8H,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Substitution of an equivalent amount of 3-aminomethylphenylacetic acid hydrochloride for 4-aminomethylphenylacetic acid hydrochloride in the reaction with 2-t-butoxycarbonyloxyimino-2-phenylacetonitrile described in Example 54 gave 3-(N-t-butoxycarbonylaminomethyl)phenylacetic acid, m.p. 95\u00b0-96.5\u00b0."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-(N-t-butoxycarbonylaminomethyl)phenylacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)NCC=1C=C(C=CC1)CC(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H19NO4/c1-14(2,3)19-13(18)15-9-11-6-4-5-10(7-11)8-12(16)17/h4-7H,8-9H2,1-3H3,(H,15,18)(H,16,17)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04159373",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:43:35.068396"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:13:57 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:27 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-fc8303e40bc84aa2b79d13d2c6104f0e"
+}

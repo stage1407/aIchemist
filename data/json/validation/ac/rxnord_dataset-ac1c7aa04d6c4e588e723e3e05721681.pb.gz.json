@@ -1,0 +1,387 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([O-])(C)(C)C.[K+].Cl[CH2:8][C:9]([C:11]1[CH:12]=[C:13]2[C:17](=[CH:18][CH:19]=1)[CH2:16][CH:15]([NH:20][S:21]([C:24]1[CH:29]=[CH:28][C:27]([CH3:30])=[CH:26][CH:25]=1)(=[O:23])=[O:22])[CH2:14]2)=[O:10].[C:31]([O:39][CH2:40][CH3:41])(=[O:38])[CH2:32][C:33]([O:35][CH2:36][CH3:37])=[O:34].C(O)(=O)C>CS(C)=O.O>[C:31]([CH:32]([CH2:8][C:9]([C:11]1[CH:12]=[C:13]2[C:17](=[CH:18][CH:19]=1)[CH2:16][CH:15]([NH:20][S:21]([C:24]1[CH:29]=[CH:28][C:27]([CH3:30])=[CH:26][CH:25]=1)(=[O:23])=[O:22])[CH2:14]2)=[O:10])[C:33]([O:35][CH2:36][CH3:37])=[O:34])([O:39][CH2:40][CH3:41])=[O:38] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diethyl malonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC(=O)OCC)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H12O4/c1-3-10-6(8)5-7(9)11-4-2/h3-5H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 15.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethyl sulphoxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6OS/c1-4(2)3/h1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "petroleum ether"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium tert.-butanolate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)[O-].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9O.K/c1-4(2,3)5;/h1-3H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 10.6,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2-p-toluenesulphonamido-indan-5-yl) chloromethyl ketone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCC(=O)C=1C=C2CC(CC2=CC1)NS(=O)(=O)C1=CC=C(C=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H18ClNO3S/c1-12-2-6-17(7-3-12)24(22,23)20-16-9-13-4-5-14(18(21)11-19)8-15(13)10-16/h2-8,16,20H,9-11H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 23.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "10.6 g (0.095 mol) of potassium tert.-butanolate, followed by 23.0 g (0.063 mol) of (2-p-toluenesulphonamido-indan-5-yl) chloromethyl ketone, are added to 15.2 g (0.095 mol) of diethyl malonate in 25 ml of dimethyl sulphoxide. The mixture is allowed to stand overnight and is neutralised with glacial acetic acid, and water and petroleum ether are added. The reaction product which is precipitated is separated off and dissolved in ethyl acetate. The organic phase is washed with water, dried and evaporated, and the residue obtained is purified by chromatography over 600 g of silica gel using 98:2 ethylene chloride/ethanol."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "are added"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The reaction product which is precipitated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "is separated off"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "dissolved in ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The organic phase is washed with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue obtained"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "is purified by chromatography over 600 g of silica gel using 98:2 ethylene chloride/ethanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethylene chloride ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(CCl)Cl.C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H4Cl2.C2H6O/c3-1-2-4;1-2-3/h1-2H2;3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Ethyl 2-carbethoxy-4-(2-p-toluenesulphonamido-indan-5-yl)-4-oxobutyrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)(OCC)C(C(=O)OCC)CC(=O)C=1C=C2CC(CC2=CC1)NS(=O)(=O)C1=CC=C(C=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H29NO7S/c1-4-32-24(28)22(25(29)33-5-2)15-23(27)18-9-8-17-13-20(14-19(17)12-18)26-34(30,31)21-10-6-16(3)7-11-21/h6-12,20,22,26H,4-5,13-15H2,1-3H3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04929754",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:12:04.780729"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:01:41 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:15 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-edc07604cbe248ef9cc188c32053b924"
+}

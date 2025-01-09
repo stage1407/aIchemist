@@ -1,0 +1,216 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([O:8][C:9]1[CH:10]=[CH:11][C:12]([C@@H:20]([O:72][Si:73]([C:76]([CH3:79])([CH3:78])[CH3:77])([CH3:75])[CH3:74])[CH2:21][NH:22][C@H:23]([CH3:71])[CH2:24][C:25]2[CH:26]=[C:27]([CH2:31][CH2:32][NH:33][C:34]([CH2:36][C:37]3[CH:42]=[CH:41][C:40]([CH2:43][NH:44][C:45]([CH2:47][CH2:48][N:49]4[CH2:54][CH2:53][CH:52]([O:55][C:56](=[O:70])[NH:57][C:58]5[CH:63]=[CH:62][CH:61]=[CH:60][C:59]=5[C:64]5[CH:69]=[CH:68][CH:67]=[CH:66][CH:65]=5)[CH2:51][CH2:50]4)=[O:46])=[CH:39][CH:38]=3)=[O:35])[CH:28]=[CH:29][CH:30]=2)=[C:13]2[C:18]=1[NH:17][C:16](=[O:19])[CH:15]=[CH:14]2)C1C=CC=CC=1>CCO.[Pd]>[Si:73]([O:72][C@H:20]([C:12]1[CH:11]=[CH:10][C:9]([OH:8])=[C:18]2[C:13]=1[CH:14]=[CH:15][C:16](=[O:19])[NH:17]2)[CH2:21][NH:22][C@H:23]([CH3:71])[CH2:24][C:25]1[CH:26]=[C:27]([CH2:31][CH2:32][NH:33][C:34]([CH2:36][C:37]2[CH:38]=[CH:39][C:40]([CH2:43][NH:44][C:45]([CH2:47][CH2:48][N:49]3[CH2:50][CH2:51][CH:52]([O:55][C:56](=[O:70])[NH:57][C:58]4[CH:63]=[CH:62][CH:61]=[CH:60][C:59]=4[C:64]4[CH:65]=[CH:66][CH:67]=[CH:68][CH:69]=4)[CH2:53][CH2:54]3)=[O:46])=[CH:41][CH:42]=2)=[O:35])[CH:28]=[CH:29][CH:30]=1)([C:76]([CH3:77])([CH3:78])[CH3:79])([CH3:74])[CH3:75]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "biphenyl-2-ylcarbamic acid 1-{2-[(4-{[2-(3-{(R)-2-[(R)-2-(8-benzyloxy-2-oxo-1,2-dihydroquinolin-5-yl)-2-(tert-butyldimethylsilanyloxy)-ethylamino]propyl}phenyl)ethylcarbamoyl]-methyl}phenyl)methylcarbamoyl]ethyl}-piperidin-4-yl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OC=1C=CC(=C2C=CC(NC12)=O)[C@H](CN[C@@H](CC=1C=C(C=CC1)CCNC(=O)CC1=CC=C(C=C1)CNC(=O)CCN1CCC(CC1)OC(NC1=C(C=CC=C1)C1=CC=CC=C1)=O)C)O[Si](C)(C)C(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C65H78N6O7Si/c1-46(67-44-59(78-79(5,6)65(2,3)4)55-28-30-58(63-56(55)29-31-61(73)70-63)76-45-50-16-9-7-10-17-50)40-51-19-15-18-47(41-51)32-36-66-62(74)42-48-24-26-49(27-25-48)43-68-60(72)35-39-71-37-33-53(34-38-71)77-64(75)69-57-23-14-13-22-54(57)52-20-11-8-12-21-52/h7-31,41,46,53,59,67H,32-40,42-45H2,1-6H3,(H,66,74)(H,68,72)(H,69,75)(H,70,73)/t46-,59+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.704,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "palladium on carbon"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Pd"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.289,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the mixture was stirred under an atmosphere of hydrogen (balloon) for 1 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Dry nitrogen was bubbled into a stirred solution of biphenyl-2-ylcarbamic acid 1-{2-[(4-{[2-(3-{(R)-2-[(R)-2-(8-benzyloxy-2-oxo-1,2-dihydroquinolin-5-yl)-2-(tert-butyldimethylsilanyloxy)-ethylamino]propyl}phenyl)ethylcarbamoyl]-methyl}phenyl)methylcarbamoyl]ethyl}-piperidin-4-yl ester (0.704 g, 0.650 mmol) in EtOH (5.00 mL) for 3 min and then palladium on carbon (10 wt. %, \u02dc50% water; 0.289 g, 0.130 mmol) was added. Hydrogen was bubbled into the reaction mixture for 3 min and then the mixture was stirred under an atmosphere of hydrogen (balloon) for 1 h. The reaction mixture was filtered and the filtrate was concentrated under reduced pressure to give the title compound, which was used without further purification in the next reaction."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "Hydrogen was bubbled into the reaction mixture for 3 min",
+            "duration": {
+                "value": 3.0,
+                "units": "MINUTE"
+            },
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Hydrogen"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[H][H]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The reaction mixture was filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the filtrate was concentrated under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Biphenyl-2-ylcarbamic Acid 1-{2-[(4-{[2-(3-{(R)-2-[(R)-2-(tert-Butyl-dimethylsilanyloxy)-2-(8-hydroxy-2-oxo-1,2-dihydroquinolin-5-yl)ethylamino]-propyl}phenyl)ethylcarbamoyl]methyl}-phenyl)methylcarbamoyl]ethyl}piperidin-4-yl Ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C)(C)(C(C)(C)C)O[C@@H](CN[C@@H](CC=1C=C(C=CC1)CCNC(=O)CC1=CC=C(C=C1)CNC(=O)CCN1CCC(CC1)OC(NC1=C(C=CC=C1)C1=CC=CC=C1)=O)C)C1=C2C=CC(NC2=C(C=C1)O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C58H72N6O7Si/c1-40(60-39-52(71-72(5,6)58(2,3)4)48-23-25-51(65)56-49(48)24-26-54(67)63-56)35-44-14-12-13-41(36-44)27-31-59-55(68)37-42-19-21-43(22-20-42)38-61-53(66)30-34-64-32-28-46(29-33-64)70-57(69)62-50-18-11-10-17-47(50)45-15-8-7-9-16-45/h7-26,36,40,46,52,60,65H,27-35,37-39H2,1-6H3,(H,59,68)(H,61,66)(H,62,69)(H,63,67)/t40-,52+/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08816088B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:23:02.921418"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:14:28 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:08 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-03be2f4454ec4c5d862c8b18336b42c7"
+}

@@ -1,0 +1,180 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([CH:3]1[CH2:29][CH:28]2[N:6]([C:7](=[O:82])[C:8](=[O:81])[C:9]3([OH:80])[O:76][CH:13]([CH:14]([O:74][CH3:75])[CH2:15][CH:16]([CH3:73])[CH2:17][C:18]([CH3:72])=[CH:19][CH2:20][C:21](=[O:71])[CH2:22][CH:23]([O:63][Si](C(C)(C)C)(C)C)[CH:24]([CH3:62])[CH:25]([C:31]([CH3:61])=[CH:32][CH:33]4[CH2:38][CH2:37][C:36]([O:51][Si](CC)(CC)CC)([CH2:39][CH2:40][CH:41]([C:43]5[CH:48]=[C:47]([CH3:49])[CH:46]=[C:45]([CH3:50])[CH:44]=5)[OH:42])[CH:35]([O:59][CH3:60])[CH2:34]4)[O:26][C:27]2=[O:30])[CH:12]([O:77][CH3:78])[CH2:11][CH:10]3[CH3:79])[CH2:5][CH2:4]1)[CH3:2]>C(#N)C>[CH2:1]([CH:3]1[CH2:29][CH:28]2[N:6]([C:7](=[O:82])[C:8](=[O:81])[C:9]3([OH:80])[O:76][CH:13]([CH:14]([O:74][CH3:75])[CH2:15][CH:16]([CH3:73])[CH2:17][C:18]([CH3:72])=[CH:19][CH2:20][C:21](=[O:71])[CH2:22][CH:23]([OH:63])[CH:24]([CH3:62])[CH:25]([C:31]([CH3:61])=[CH:32][CH:33]4[CH2:38][CH2:37][C:36]([OH:51])([CH2:39][CH2:40][CH:41]([C:43]5[CH:48]=[C:47]([CH3:49])[CH:46]=[C:45]([CH3:50])[CH:44]=5)[OH:42])[CH:35]([O:59][CH3:60])[CH2:34]4)[O:26][C:27]2=[O:30])[CH:12]([O:77][CH3:78])[CH2:11][CH:10]3[CH3:79])[CH2:5][CH2:4]1)[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-ethyl-1-hydroxy-12-[2'-(4\"-triethylsilyloxy-4\"-[3-(3,5-dimethylphenyl)-3-hydroxypropyl]-3\"-methoxycyclohexyl)-1'-methylvinyl]-14-t-butyldimethylsilyloxy-23,25-dimethoxy-13,19,21,27-tetramethyl-11,28-dioxa-4-azatricyclo[22.3.1.04,9 ]octacos-18-ene-2,3,10,16-tetraone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)C1CCN2C(C(C3(C(CC(C(C(CC(CC(=CCC(CC(C(C(OC(C2C1)=O)C(=CC1CC(C(CC1)(CCC(O)C1=CC(=CC(=C1)C)C)O[Si](CC)(CC)CC)OC)C)C)O[Si](C)(C)C(C)(C)C)=O)C)C)OC)O3)OC)C)O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C66H111NO13Si2/c1-20-49-28-31-67-53(39-49)63(72)77-59(46(9)37-50-26-29-65(58(40-50)76-17,80-82(21-2,22-3)23-4)30-27-54(69)51-34-43(6)33-44(7)35-51)48(11)55(79-81(18,19)64(12,13)14)41-52(68)25-24-42(5)32-45(8)36-56(74-15)60-57(75-16)38-47(10)66(73,78-60)61(70)62(67)71/h24,33-35,37,45,47-50,53-60,69,73H,20-23,25-32,36,38-41H2,1-19H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 220.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of 220 mg (0.186 mmole) of 7-ethyl-1-hydroxy-12-[2'-(4\"-triethylsilyloxy-4\"-[3-(3,5-dimethylphenyl)-3-hydroxypropyl]-3\"-methoxycyclohexyl)-1'-methylvinyl]-14-t-butyldimethylsilyloxy-23,25-dimethoxy-13,19,21,27-tetramethyl-11,28-dioxa-4-azatricyclo[22.3.1.04,9 ]octacos-18-ene-2,3,10,16-tetraone in 10 mL of a 10% HF-acetonitrile solution was stirred at room temperature. After 18 h, the reaction was quenched with 5 mL of ethoxytrimethylsilane and the solution was concentrated. The oily residue was purified by HPLC (Waters RCM silica gel, 25\u00d7100 mm) using hexane-methyl t-butyl ether-acetonitrile (6:3:1) to afford 45 mg of the faster diastereomer as a white solid. MASS: 960 (M+Li)"
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "the reaction was quenched with 5 mL of ethoxytrimethylsilane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethoxytrimethylsilane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O[Si](C)(C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C5H14OSi/c1-5-6-7(2,3)4/h5H2,1-4H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the solution was concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The oily residue was purified by HPLC (Waters RCM silica gel, 25\u00d7100 mm)"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to afford 45 mg of the faster diastereomer as a white solid"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-Ethyl-1,14-dihydroxy-12-[2'-(4\"-hydroxy-4\"-[3-(3,5-dimethylphenyl)-3-hydroxypropyl]-3\"-methoxycyclohexyl)-1'-methylvinyl]-23,25-dimethoxy-13,19,21,27-tetramethyl-11,28-dioxa-4-azatricyclo[22.3.1.04,9 ]octacos-18-ene-2,3,10,16-tetraone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)C1CCN2C(C(C3(C(CC(C(C(CC(CC(=CCC(CC(C(C(OC(C2C1)=O)C(=CC1CC(C(CC1)(CCC(O)C1=CC(=CC(=C1)C)C)O)OC)C)C)O)=O)C)C)OC)O3)OC)C)O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C54H83NO13/c1-12-38-17-20-55-42(28-38)52(61)67-48(35(6)26-39-15-18-53(62,47(29-39)66-11)19-16-43(57)40-23-32(3)22-33(4)24-40)37(8)44(58)30-41(56)14-13-31(2)21-34(5)25-45(64-9)49-46(65-10)27-36(7)54(63,68-49)50(59)51(55)60/h13,22-24,26,34,36-39,42-49,57-58,62-63H,12,14-21,25,27-30H2,1-11H3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05550233",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:33:12.373761"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:43:32 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:32 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-67244a9ea53f4ba78b83c724a07986c6"
+}

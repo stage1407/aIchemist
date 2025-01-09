@@ -1,0 +1,600 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([O:19][CH2:20][CH:21]([CH2:23][O:24][CH2:25][CH2:26][O:27][CH2:28][CH2:29][O:30]C(C1C=CC=CC=1)(C1C=CC=CC=1)C1C=CC=CC=1)[OH:22])[CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12][CH2:13][CH2:14][CH2:15][CH2:16][CH2:17][CH3:18].S(OCC)(O[CH2:54][CH3:55])(=O)=O.[OH-].[Na+].O>O1CCOCC1.[Cl-].C([N+](C)(C)C)CCCCCCCCCCCCCCC.ClCCl>[CH2:54]([O:22][CH:21]([CH2:20][O:19][CH2:1][CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12][CH2:13][CH2:14][CH2:15][CH2:16][CH2:17][CH3:18])[CH2:23][O:24][CH2:25][CH2:26][O:27][CH2:28][CH2:29][OH:30])[CH3:55] |f:2.3,6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m5_m6_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-O-octadecyl-3-O-[2-(2-trityloxyethoxy)ethyl]glycerol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCCCCCCCCCCCCCC)OCC(O)COCCOCCOC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C44H66O5/c1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-26-33-47-38-43(45)39-48-35-34-46-36-37-49-44(40-27-20-17-21-28-40,41-29-22-18-23-30-41)42-31-24-19-25-32-42/h17-25,27-32,43,45H,2-16,26,33-39H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diethyl sulfate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S(=O)(=O)(OCC)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H10O4S/c1-3-7-9(5,6)8-4-2/h3-4H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.5,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dioxane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCOCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cetyltrimethylammonium chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].C(CCCCCCCCCCCCCCC)[N+](C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H42N.ClH/c1-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20(2,3)4;/h5-19H2,1-4H3;1H/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 96.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m4_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the mixture was stirred at room temperature for 72 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "3.7 g (5.8 millimole) of 1-O-octadecyl-3-O-[2-(2-trityloxyethoxy)ethyl]glycerol and 1.5g (10 millimole) of diethyl sulfate were dissolved in 10 ml of dioxane, to which 96 mg (0.3 millimole) of cetyltrimethylammonium chloride and 2.4 g (30 millimole) of 50% sodium hydroxide were added, and the mixture was stirred at room temperature for 72 hours. Water and dichloromethane were added to the mixture and the resulting mixture was shaken for partition. Dichloromethane was distilled off and the residue was dissolved in a mixture of 20 ml of methanol and 25 ml of dioxane, to which 3 ml of concentrated hydrochloric acid was added. The mixture was stirred at 80\u00b0 C. for 16 hours and then water was added to the mixture. The organic solvent was distilled off under reduced pressure, and water and ether were added to the residue. The resulting mixture was shaken for partition and ether was distilled off. The residue was purified by silica gel column chromatography (Merck Co., Art. 7734, 100 g, Eluant: hexane-ethyl acetate=3:1-1:1), to give 1.95 g (73%) of the above-captioned compound."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "were added"
+        },
+        {
+            "type": "STIRRING",
+            "details": "the resulting mixture was shaken"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "for partition"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "Dichloromethane was distilled off",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Dichloromethane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClCCl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "the residue was dissolved in a mixture of 20 ml of methanol and 25 ml of dioxane, to which 3 ml of concentrated hydrochloric acid",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "methanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CO"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dioxane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCOCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 25.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 3.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "was added"
+        },
+        {
+            "type": "STIRRING",
+            "details": "The mixture was stirred at 80\u00b0 C. for 16 hours",
+            "duration": {
+                "value": 16.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 80.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "water was added to the mixture",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "The organic solvent was distilled off under reduced pressure, and water and ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "were added to the residue"
+        },
+        {
+            "type": "STIRRING",
+            "details": "The resulting mixture was shaken"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "for partition"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "ether was distilled off",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue was purified by silica gel column chromatography (Merck Co., Art. 7734, 100 g, Eluant: hexane-ethyl acetate=3:1-1:1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hexane ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCC.C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14.C4H8O2/c1-3-5-6-4-2;1-3-6-4(2)5/h3-6H2,1-2H3;3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 72.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "above-captioned compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-O-Ethyl-1-O-[2-(2-hydroxyethoxy)ethyl]-3-O-octadecylglycerol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(COCCOCCO)COCCCCCCCCCCCCCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C27H56O5/c1-3-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-21-30-25-27(32-4-2)26-31-24-23-29-22-20-28/h27-28H,3-26H2,1-2H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 1.95,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 73.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 73.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04889953",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:10:36.396033"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:59:14 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:16 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-114fbcfd06774b638071ecbf6953d782"
+}

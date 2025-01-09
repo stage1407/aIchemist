@@ -1,0 +1,506 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([O:3][C:4]([C:6]1([NH:11][C:12]([CH:14]2[CH2:18][CH:17]([NH2:19])[CH2:16][N:15]2[C:20](=[O:40])[NH:21][CH:22]([C:27](=[O:39])[NH:28][CH:29]2[C:37]3[C:32](=[CH:33][CH:34]=[CH:35][CH:36]=3)[CH2:31][CH:30]2[OH:38])[C:23]([CH3:26])([CH3:25])[CH3:24])=[O:13])[CH2:8][CH:7]1[CH:9]=[CH2:10])=[O:5])C.CCN(C(C)C)C(C)C.Cl.[C:51](Cl)(=[O:58])[C:52]1[CH:57]=[CH:56][CH:55]=[N:54][CH:53]=1.C(O)C(N)(CO)CO.[Li+].[OH-]>C(Cl)Cl.C(O)(=O)C>[OH:38][CH:30]1[CH2:31][C:32]2[C:37](=[CH:36][CH:35]=[CH:34][CH:33]=2)[CH:29]1[NH:28][C:27]([CH:22]([NH:21][C:20]([N:15]1[CH2:16][CH:17]([NH:19][C:51]([C:52]2[CH:53]=[N:54][CH:55]=[CH:56][CH:57]=2)=[O:58])[CH2:18][CH:14]1[C:12]([NH:11][C:6]1([C:4]([OH:3])=[O:5])[CH2:8][CH:7]1[CH:9]=[CH2:10])=[O:13])=[O:40])[C:23]([CH3:26])([CH3:24])[CH3:25])=[O:39] |f:2.3,5.6|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trisamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C(CO)(CO)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H11NO3/c5-4(1-6,2-7)3-8/h6-8H,1-3,5H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m6_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "compound 151"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "1-({4-Amino-1-[1-(2-hydroxy-indan-1-ylcarbamoyl)-2,2-dimethyl-propylcarbamoyl]-pyrrolidine-2-carbonyl}-amino)-2-vinyl-cyclopropanecarboxylic acid ethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(=O)C1(C(C1)C=C)NC(=O)C1N(CC(C1)N)C(NC(C(C)(C)C)C(NC1C(CC2=CC=CC=C12)O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C29H41N5O6/c1-6-17-14-29(17,26(38)40-7-2)33-24(36)20-13-18(30)15-34(20)27(39)32-23(28(3,4)5)25(37)31-22-19-11-9-8-10-16(19)12-21(22)35/h6,8-11,17-18,20-23,35H,1,7,12-15,30H2,2-5H3,(H,31,37)(H,32,39)(H,33,36)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 35.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DIEA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 19.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "nicotinoyl chloride hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.C(C1=CN=CC=C1)(=O)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H4ClNO.ClH/c7-6(9)5-2-1-3-8-4-5;/h1-4H;1H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 17.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DCM"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "LiOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Li+].[OH-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Li.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 320.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "was stirred at RT for 18 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a stirred solution of compound 151 (35 mg, 0.064 mmol) in DCM (1 ml), was added DIEA (0.12 mmol, 19 \u03bcl) and nicotinoyl chloride hydrochloride (0.12 mmol, 17 mg).The solution was stirred at RT for 18 h, PS-trisamine was added then stirred at RT for 4 h. After filtration, the solution was washed with citric acid (10% aq) and NaHCO3 (sat, aq), the organic phase was dried over Na2SO4 and concentrated. The residue was dissolved in THF:MeOH (2:1, 1.5 ml). LiOH (1N aq, 3.2 mmol, 320 \u03bcl) was added. The solution was stirred at 60\u00b0 C. for 24 h. Acetic acid was added and then concentrated. The residue was dissolved in MeOH and subjected to purification by HPLC, affording the title compound (19.5 mg, 0.03 mmol). Purity by HPLC>98%, M+H+633.1."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "then stirred at RT for 4 h",
+            "duration": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "After filtration"
+        },
+        {
+            "type": "WASH",
+            "details": "the solution was washed with citric acid (10% aq) and NaHCO3 (sat, aq)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "citric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(CC(O)(C(=O)O)CC(=O)O)(=O)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H8O7/c7-3(8)1-6(13,5(11)12)2-4(9)10/h13H,1-2H2,(H,7,8)(H,9,10)(H,11,12)"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "NaHCO3"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(=O)(O)[O-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "the organic phase was dried over Na2SO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "The residue was dissolved in THF:MeOH (2:1, 1.5 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "THF MeOH"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1CCOC1.CO"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O.CH4O/c1-2-4-5-3-1;1-2/h1-4H2;2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 1.5,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "The solution was stirred at 60\u00b0 C. for 24 h",
+            "duration": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 60.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "The residue was dissolved in MeOH",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "MeOH"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CO"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "subjected to purification by HPLC"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "1-({1-[1-(2-Hydroxy-indan-1-ylcarbamoyl)-2,2-dimethyl-propylcarbamoyl]-4-[(pyridine-3-carbonyl)-amino]-pyrrolidine-2-carbonyl}amino)-2-vinyl-cyclopropanecarboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1C(C2=CC=CC=C2C1)NC(=O)C(C(C)(C)C)NC(=O)N1C(CC(C1)NC(=O)C=1C=NC=CC1)C(=O)NC1(C(C1)C=C)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C33H40N6O7/c1-5-20-15-33(20,30(44)45)38-28(42)23-14-21(35-27(41)19-10-8-12-34-16-19)17-39(23)31(46)37-26(32(2,3)4)29(43)36-25-22-11-7-6-9-18(22)13-24(25)40/h5-12,16,20-21,23-26,40H,1,13-15,17H2,2-4H3,(H,35,41)(H,36,43)(H,37,46)(H,38,42)(H,44,45)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 0.03,
+                                    "units": "MILLIMOLE"
+                                }
+                            }
+                        },
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 19.5,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 46.9
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07608590B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:01:16.819137"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:10:47 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:54 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-2cd44dd0f78242028e0c85841cb17849"
+}

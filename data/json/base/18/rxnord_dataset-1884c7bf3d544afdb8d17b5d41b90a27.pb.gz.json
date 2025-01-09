@@ -1,0 +1,368 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([OH:16])(=O)[CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12][CH2:13][CH3:14].[B-](F)(F)(F)F.CC[O:24]C(C(C#N)=NOC(N(C)C)=[N+](C)C)=O.CN1CCOCC1.C1C2C(COC([NH:63][CH2:64][CH2:65][CH2:66][CH2:67][CH2:68][CH2:69][O:70][CH2:71][C@H:72]3[O:76][C@@H:75]([N:77]4[C:100]5[N:99]=[CH:98][N:97]=[C:81]([NH:82]C(OCCC6C=CC([N+]([O-])=O)=CC=6)=O)[C:80]=5[N:79]=[CH:78]4)[C@H:74]([O:101]C(OCCC4C=CC([N+]([O-])=O)=CC=4)=O)[CH2:73]3)=O)C3C(=CC=CC=3)C=2C=CC=1.N1CCCCC1.C([O-])(O)=O.[Na+]>C(Cl)(Cl)Cl.CN(C=O)C>[C:1]([NH:63][CH2:64][CH2:65][CH2:66][CH2:67][CH2:68][C:69]([O:70][CH2:71][C@H:72]1[O:76][C@@H:75]([N:77]2[C:100]3[N:99]=[CH:98][N:97]=[C:81]([NH2:82])[C:80]=3[N:79]=[CH:78]2)[C@H:74]([OH:101])[CH2:73]1)=[O:24])(=[O:16])[CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12][CH2:13][CH3:14] |f:1.2,6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "piperidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H11N/c1-2-4-6-5-3-1/h6H,1-5H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3\u2032-Deoxy-5\u2032-O-{6-{{[(9H-fluoren-9-yl)methoxy]carbonyl}amino}hexanyl}-N6,2\u2032-O-bis[2-(4-nitrophenyl)ethoxycarbonyl]adenosine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC=2C3=CC=CC=C3C(C12)COC(=O)NCCCCCCOC[C@@H]1C[C@H]([C@@H](O1)N1C=NC=2C(NC(=O)OCCC3=CC=C(C=C3)[N+](=O)[O-])=NC=NC12)OC(=O)OCCC1=CC=C(C=C1)[N+](=O)[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C49H50N8O13/c58-47(68-29-41-39-11-5-3-9-37(39)38-10-4-6-12-40(38)41)50-23-7-1-2-8-24-65-28-36-27-42(70-49(60)67-26-22-33-15-19-35(20-16-33)57(63)64)46(69-36)55-31-53-43-44(51-30-52-45(43)55)54-48(59)66-25-21-32-13-17-34(18-14-32)56(61)62/h3-6,9-20,30-31,36,41-42,46H,1-2,7-8,21-29H2,(H,50,58)(H,51,52,54,59)/t36-,42+,46+/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 584.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetradecanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCCCCCCCCCC)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H28O2/c1-2-3-4-5-6-7-8-9-10-11-12-13-14(15)16/h2-13H2,1H3,(H,15,16)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 151.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "TOTU"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[B-](F)(F)(F)F.CCOC(=O)C(=NOC(=[N+](C)C)N(C)C)C#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H17N4O3.BF4/c1-6-16-9(15)8(7-11)12-17-10(13(2)3)14(4)5;2-1(3,4)5/h6H2,1-5H3;/q+1;-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 67.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-methylmorpholine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1CCOCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H11NO/c1-6-2-4-7-5-3-6/h2-5H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.66,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaHCO3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)(O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 6.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CHCl3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 150.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "As described in Preparation 4, with tetradecanoic acid (151 mg, 0.66 mmol), TOTU (67 mg, 0.66 mmol), and N-methylmorpholine (67, 0.66 mmol) in abs. DMF (3 ml; 1 h). Deblocking of 7 (584 mg, 0.6 mmol) with 3% piperidine in abs. DMF (6 ml; 10 min) and addition of above-mentioned soln. (r.t., 2.5 h). Workup with CHCl3 (150 ml) and NaHCO3 soln. (2\u00d770 ml) and reextraction. Purification by FC (silica gel, 12\u00d73 cm, CHCl3, then CHCl3/MeOH 98:2,95:5): 405 mg (70%) of 14. Colorless oil. 1H-NMR (CDCl3): 8.73-8.15 (m, H\u2014C(8), H\u2014C(2), 4 H o to NO2, NH(ade)); 7.47-7.38 (m, 4H m to NO2); 6.12 (d, H\u2014C(1\u2032)); 5.73 (m, H\u2014C(2\u2032)); 5.57 (t, NH(CH2)5CO); 4.68 (m, H\u2014C(4\u2032)); 4.54, 4.43 (2t, 2 OCH2CH2); 4.4-4.2 (m, 2 H\u2014C(5\u2032)); 3.7-3.5 (m, 1 CH2 of NH(CH2)5CO); 3.25-3.1 (m, 2 OCH2CH2, 1 CH2 of NH(CH2)5CO); 2.65, 2.25 (2m, 2 H\u2014C(3\u2032)); 2.27, 2.15 (2t, 2 CH2 of NH(CH2)5CO), 1 CH2 of Me(CH2)12CO); 1.7-1.15 (m, 3 CH2 of NH(CH2)5CO), 11 CH2 of Me(CH2)12CO); 0.87 (t, Me(CH2)12CO)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "(r.t., 2.5 h)",
+            "duration": {
+                "value": 2.5,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Purification by FC (silica gel, 12\u00d73 cm, CHCl3",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "CHCl3"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3\u2032-Deoxy-5\u2032-O-[6-(tetradecanoylamino)hexanoyl]adenosine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCCCCCCCCCC)(=O)NCCCCCC(=O)OC[C@@H]1C[C@H]([C@@H](O1)N1C=NC=2C(N)=NC=NC12)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H50N6O5/c1-2-3-4-5-6-7-8-9-10-11-13-16-25(38)32-18-15-12-14-17-26(39)40-20-23-19-24(37)30(41-23)36-22-35-27-28(31)33-21-34-29(27)36/h21-24,30,37H,2-20H2,1H3,(H,32,38)(H2,31,33,34)/t23-,24+,30+/m0/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06362171B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:05:10.055629"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:12:04 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:30 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-c61e2f1a272945c08516afe07874df97"
+}

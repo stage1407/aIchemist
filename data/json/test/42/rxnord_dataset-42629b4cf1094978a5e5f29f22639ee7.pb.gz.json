@@ -1,0 +1,354 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C:2]1[CH:7]=[CH:6][N:5]=[CH:4][CH:3]=1.C(=O)([O-])[O-].[K+].[K+].Cl[CH2:15][C:16]([O:18][CH:19]([C:26]1[CH:31]=[CH:30][CH:29]=[CH:28][CH:27]=1)[C:20]1[CH:25]=[CH:24][CH:23]=[CH:22][CH:21]=1)=[O:17].C(OCC)(=O)C>CN(C)C=O>[CH:19]([O:18][C:16]([CH2:15][N:5]1[CH:6]=[CH:7][C:2](=[O:1])[CH:3]=[CH:4]1)=[O:17])([C:26]1[CH:27]=[CH:28][CH:29]=[CH:30][CH:31]=1)[C:20]1[CH:25]=[CH:24][CH:23]=[CH:22][CH:21]=1 |f:1.2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 200.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])([O-])=O.[K+].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.2K/c2-1(3)4;;/h(H2,2,3,4);;/q;2*+1/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 8.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzhydryl \u03b1-chloroacetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCC(=O)OC(C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H13ClO2/c16-11-14(17)18-15(12-7-3-1-4-8-12)13-9-5-2-6-10-13/h1-10,15H,11H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 16.45,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-hydroxypyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=CC=NC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5NO/c7-5-1-3-6-4-2-5/h1-4H,(H,6,7)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N,N-dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 80.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 60.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "After stirring for 4 hours at 60\u00b0 C."
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "4 g (42.06 mmol) of 4-hydroxypyridine was dissolved in 80 ml of N,N-dimethylformamide, and 8.7 g (62.92 mmol) of potassium carbonate and 16.45 g (63 mmol) of benzhydryl \u03b1-chloroacetate were added thereto. After stirring for 4 hours at 60\u00b0 C., 200 ml of ethyl acetate was added to the reaction solution, and washed, with water and a saturated sodium chloride aqueous solution followed by drying over anhydrous sodium sulfate and treating with active carbon. The solvent was distilled off under reduced pressure, and the crystal residue was washed with ether to obtain 9.8 g (yield: 73%) of 1-benzhydryloxycarbonylmethyl-4-pyridone."
+    },
+    "workups": [
+        {
+            "type": "WASH",
+            "details": "washed, with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "by drying over anhydrous sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "treating with active carbon"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "The solvent was distilled off under reduced pressure"
+        },
+        {
+            "type": "WASH",
+            "details": "the crystal residue was washed with ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-benzhydryloxycarbonylmethyl-4-pyridone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)OC(=O)CN1C=CC(C=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H17NO3/c22-18-11-13-21(14-12-18)15-19(23)24-20(16-7-3-1-4-8-16)17-9-5-2-6-10-17/h1-14,20H,15H2"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 9.8,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 73.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 73.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04988687",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:14:19.215153"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:05:51 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:52 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-279ce75a3dd448b0bcf3914f0590e58b"
+}

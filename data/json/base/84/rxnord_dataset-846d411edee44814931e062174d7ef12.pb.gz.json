@@ -1,0 +1,312 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([N:8]([CH3:30])[C:9](=[O:29])[C@@H:10]([N:18]([CH2:26][CH:27]=[O:28])[C:19]([O:21][C:22]([CH3:25])(C)[CH3:23])=[O:20])[CH2:11][C:12]1[CH:17]=[CH:16][CH:15]=[CH:14][CH:13]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.[BH4-].[Na+].[CH2:33](O)C>C(OCC)(=O)C>[CH2:1]([N:8]([CH3:30])[C:9](=[O:29])[C@@H:10]([N:18]([CH2:26][CH2:27][OH:28])[C:19]([O:21][CH:22]([CH2:25][CH3:33])[CH3:23])=[O:20])[CH2:11][C:12]1[CH:13]=[CH:14][CH:15]=[CH:16][CH:17]=1)[C:2]1[CH:3]=[CH:4][CH:5]=[CH:6][CH:7]=1 |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-N-benzyl-N-methyl-2-[N-(t-butoxycarbonyl)-2-oxo-ethylamino]-3-phenyl-propionamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)N(C([C@H](CC1=CC=CC=C1)N(C(=O)OC(C)(C)C)CC=O)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H30N2O4/c1-24(2,3)30-23(29)26(15-16-27)21(17-19-11-7-5-8-12-19)22(28)25(4)18-20-13-9-6-10-14-20/h5-14,16,21H,15,17-18H2,1-4H3/t21-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 5.0,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium borohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[BH4-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/BH4.Na/h1H4;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 5.0,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "Stir for 16 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Combine (S)-N-benzyl-N-methyl-2-[N-(t-butoxycarbonyl)-2-oxo-ethylamino]-3-phenyl-propionamide (5.0 mmol) and sodium borohydride (5.0 mmol) in ethanol (20 mL). Stir for 16 hours. Concentrate in vacuo to obtain a residue. Dilute the residue with ethyl acetate and extract with 0.5M hydrochloric acid solution and water. Separate the layers, dry the organic layer over MgSO4, filter, and evaporate in vacuo to give the title compound."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "Concentrate in vacuo"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to obtain a residue"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extract with 0.5M hydrochloric acid solution and water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Separate the layers"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dry the organic layer over MgSO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "MgSO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filter"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporate in vacuo"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 16.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-N-Benzyl-N-methyl-2-[N-(b-butoxycarbonyl)-2-hydroxy-ethylamino]-3-phenyl-propionamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)N(C([C@H](CC1=CC=CC=C1)N(C(=O)OC(C)CC)CCO)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H32N2O4/c1-4-19(2)30-24(29)26(15-16-27)22(17-20-11-7-5-8-12-20)23(28)25(3)18-21-13-9-6-10-14-21/h5-14,19,22,27H,4,15-18H2,1-3H3/t19?,22-/m0/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05672602",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:39:35.661558"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:57:33 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:36 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-fe9a3f58999641d3a633fa0dcc6da3c3"
+}

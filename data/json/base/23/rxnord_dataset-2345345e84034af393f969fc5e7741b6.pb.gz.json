@@ -1,0 +1,150 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([CH:4]([CH2:14][C:15]#[C:16][C:17]1([OH:25])[CH2:24][CH2:23][CH2:22][CH2:21][CH2:20][CH2:19][CH2:18]1)[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][C:11]([OH:13])=[O:12])(=[O:3])[CH3:2].C(C(CC#C[C@@H](O)CCCCC)CCCCCCC(O)=O)(=O)C>>[C:1]([CH:4]([CH2:14][CH2:15][CH2:16][C:17]1([OH:25])[CH2:18][CH2:19][CH2:20][CH2:21][CH2:22][CH2:23][CH2:24]1)[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][C:11]([OH:13])=[O:12])(=[O:3])[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "8-acetyl-11-(1-hydroxycyclooctyl)-10-undecynoic acid"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "8-Acetyl-11-(1-hydroxycyclooctyl)-10-undecynoic Acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)C(CCCCCCC(=O)O)CC#CC1(CCCCCCC1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H34O4/c1-18(22)19(12-7-3-4-8-14-20(23)24)13-11-17-21(25)15-9-5-2-6-10-16-21/h19,25H,2-10,12-16H2,1H3,(H,23,24)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "8-acetyl-12(S)-hydroxy-10-heptadecynoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)C(CCCCCCC(=O)O)CC#C[C@H](CCCCC)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H32O4/c1-3-4-7-13-18(21)14-10-12-17(16(2)20)11-8-5-6-9-15-19(22)23/h17-18,21H,3-9,11-13,15H2,1-2H3,(H,22,23)/t17?,18-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "This compound is prepared essentially by the same hydrogenation procedure described in Example 36, Step C, except that 8-acetyl-11-(1-hydroxycyclooctyl)-10-undecynoic acid (Example 41) is substituted for 8-acetyl-12(S)-hydroxy-10-heptadecynoic acid. The product is obtained as a colorless viscous oil."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "This compound is prepared essentially by the same hydrogenation procedure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The product is obtained as a colorless viscous oil"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "8-Acetyl-11-(1-hydroxycyclooctyl)undecanoic Acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)C(CCCCCCC(=O)O)CCCC1(CCCCCCC1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H38O4/c1-18(22)19(12-7-3-4-8-14-20(23)24)13-11-17-21(25)15-9-5-2-6-10-16-21/h19,25H,2-17H2,1H3,(H,23,24)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04092356",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:40:44.345257"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:09:08 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:13 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-74e85d2cd9f94d4fa692a3b555ba0350"
+}
