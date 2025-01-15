@@ -1,0 +1,305 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([N:8]([CH2:32][CH2:33][O:34]C(C)(C)C)[C:9]([NH:11][C:12]1[CH:13]=[CH:14][C:15]2[N:21]([CH3:22])[C:20](=[O:23])[CH2:19][N:18]=[C:17]([C:24]3[CH:29]=[CH:28][CH:27]=[CH:26][C:25]=3[F:30])[C:16]=2[CH:31]=1)=[O:10])C1C=CC=CC=1.C(=O)(O)[O-].[Na+].CO>Br>[F:30][C:25]1[CH:26]=[CH:27][CH:28]=[CH:29][C:24]=1[C:17]1[C:16]2[CH:31]=[C:12]([NH:11][C:9]([NH:8][CH2:32][CH2:33][OH:34])=[O:10])[CH:13]=[CH:14][C:15]=2[N:21]([CH3:22])[C:20](=[O:23])[CH2:19][N:18]=1 |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-benzyl-1-(2-tert.butoxyethyl)-3-[5-(o-fluorophenyl)-2,3-dihydro-1-methyl-2-oxo-1H-1,4-benzodiazepin-7-yl]urea"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)N(C(=O)NC=1C=CC2=C(C(=NCC(N2C)=O)C2=C(C=CC=C2)F)C1)CCOC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H33FN4O3/c1-30(2,3)38-17-16-35(20-21-10-6-5-7-11-21)29(37)33-22-14-15-26-24(18-22)28(32-19-27(36)34(26)4)23-12-8-9-13-25(23)31/h5-15,18H,16-17,19-20H2,1-4H3,(H,33,37)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.5,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen bromide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Br"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/BrH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 15.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium bicarbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])(O)=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "1.5 g (0.003 M) of 1-benzyl-1-(2-tert.butoxyethyl)-3-[5-(o-fluorophenyl)-2,3-dihydro-1-methyl-2-oxo-1H-1,4-benzodiazepin-7-yl]urea are dissolved in 15 ml of 48% aqueous hydrogen bromide solution, the mixture is heated on a steam-bath for 10 minutes, made alkaline with sodium bicarbonate, treated with a small amount of methanol and extracted three times with methylene chloride. The extracts are combined, dried over sodium sulphate, filtered and concentrated. The residue is purified in a pressure column (0.2-0.4 atmosphere of nitrogen) on 300 g of silica gel (particle size 0.04-0.06 mm) using acetone as the eluting agent and crystallised from acetone/ether. There is obtained 1-[5-(o-fluorophenyl)-2,3-dihydro-1-methyl-2-oxo-1H-1,4-benzodiazepin-7-yl]-3-(2-hydroxyethyl)urea which, according to the IR spectrum, is identical with a sample of this substance prepared in another manner (see Example 7)."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture is heated on a steam-bath for 10 minutes",
+            "duration": {
+                "value": 10.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted three times with methylene chloride",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "methylene chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over sodium sulphate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulphate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue is purified in a pressure column (0.2-0.4 atmosphere of nitrogen) on 300 g of silica gel (particle size 0.04-0.06 mm)"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "crystallised from acetone/ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetone ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)C.CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O.C3H6O/c1-3-5-4-2;1-3(2)4/h3-4H2,1-2H3;1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-[5-(o-fluorophenyl)-2,3-dihydro-1-methyl-2-oxo-1H-1,4-benzodiazepin-7-yl]-3-(2-hydroxyethyl)urea"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC1=C(C=CC=C1)C1=NCC(N(C2=C1C=C(C=C2)NC(=O)NCCO)C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H19FN4O3/c1-24-16-7-6-12(23-19(27)21-8-9-25)10-14(16)18(22-11-17(24)26)13-4-2-3-5-15(13)20/h2-7,10,25H,8-9,11H2,1H3,(H2,21,23,27)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04281188",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:48:31.762225"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:22:04 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:39 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-9d0b46c66da540bcadf7b000ca58e771"
+}

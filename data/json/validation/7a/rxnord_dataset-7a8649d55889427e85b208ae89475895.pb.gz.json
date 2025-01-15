@@ -1,0 +1,407 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "Br[C:2]1[C:10]2[C:5](=[CH:6][CH:7]=[C:8]([C:11]#[N:12])[CH:9]=2)[N:4](C2CCCCO2)[N:3]=1.[O:19]1[C:24]2[CH:25]=[CH:26][C:27](B(O)O)=[CH:28][C:23]=2[O:22][CH2:21][CH2:20]1.ClCCl.P([O-])([O-])([O-])=O.[K+].[K+].[K+].Cl>COCCOC.O.CO>[O:19]1[C:24]2[CH:25]=[CH:26][C:27]([C:2]3[C:10]4[C:5](=[CH:6][CH:7]=[C:8]([C:11]#[N:12])[CH:9]=4)[NH:4][N:3]=3)=[CH:28][C:23]=2[O:22][CH2:21][CH2:20]1 |f:3.4.5.6|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m8_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrochloric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-bromo-1-perhydro-2H-pyran-2-yl-1H-indazole-5-carbonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=NN(C2=CC=C(C=C12)C#N)C1OCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H12BrN3O/c14-13-10-7-9(8-15)4-5-11(10)17(16-13)12-3-1-2-6-18-12/h4-5,7,12H,1-3,6H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.354,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.094,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium phosphate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "P(=O)([O-])([O-])[O-].[K+].[K+].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/3K.H3O4P/c;;;1-5(2,3)4/h;;;(H3,1,2,3,4)/q3*+1;/p-3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethylene glycol dimethyl ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COCCOC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H10O2/c1-5-3-4-6-2/h3-4H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2H,3H-benzo[e]1,4-dioxin-6-boronic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCOC2=C1C=CC(=C2)B(O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H9BO4/c10-9(11)6-1-2-7-8(5-6)13-4-3-12-7/h1-2,5,10-11H,3-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.25,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 45.0,
+                "units": "CELSIUS"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The title compound was prepared using 3-bromo-1-perhydro-2H-pyran-2-yl-1H-indazole-5-carbonitrile (0.354 g, 1.15 mmol), in ethylene glycol dimethyl ether (20 mL), 2H,3H-benzo[e]1,4-dioxin-6-boronic acid (0.250 g, 1.39 mmol), [1,1\u2032-bis(diphenyl phosphino-ferrocene] complex with dichloromethane (1:1) (0.094 g, 0.11 mmol) and potassium phosphate (2.40 g, 11.5 mmol). Solvent was removed using a rotary evaporator and purification of the residue by column chromatography (silica gel, 20% ethyl acetate/hexanes) gave a solid. Methanol (30 mL) and aqueous 6 N hydrochloric acid (30 mL) were added to the solid and the mixture was heated at 45\u00b0 C. for 5 h. Water (30 mL) was added and the solid was filtered and dried in a vacuum oven to afford the title compound (0.230 g, 71% yield over 2 steps): ES-MS (m/z) 278 [M+1]+."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The title compound was prepared",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "title compound"
+                            },
+                            {
+                                "type": "NAME",
+                                "value": "3-(2H,3H-benzo[e]1,4-dioxin-6-yl)-1H-indazole-5-carbonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCOC2=C1C=CC(=C2)C2=NNC1=CC=C(C=C21)C#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C16H11N3O2/c17-9-10-1-3-13-12(7-10)16(19-18-13)11-2-4-14-15(8-11)21-6-5-20-14/h1-4,7-8H,5-6H2,(H,18,19)"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Solvent was removed"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "a rotary evaporator and purification of the residue by column chromatography (silica gel, 20% ethyl acetate/hexanes)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate hexanes"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "gave a solid"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "the solid was filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried in a vacuum oven"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3-(2H,3H-benzo[e]1,4-dioxin-6-yl)-1H-indazole-5-carbonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCOC2=C1C=CC(=C2)C2=NNC1=CC=C(C=C21)C#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H11N3O2/c17-9-10-1-3-13-12(7-10)16(19-18-13)11-2-4-14-15(8-11)21-6-5-20-14/h1-4,7-8H,5-6H2,(H,18,19)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 0.23,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 71.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 72.1
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07208513B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:39:49.677561"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:59:34 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:02 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-4224ffbf864d4b388716850b198a34cc"
+}

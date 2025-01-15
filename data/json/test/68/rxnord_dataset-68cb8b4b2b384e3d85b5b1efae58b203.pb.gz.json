@@ -1,0 +1,364 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "Suzuki-Miyaura cross-coupling"
+        }
+    ],
+    "inputs": {
+        "Aryl Halide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=C(C)C=CC2=C1C=NN2C3CCCCO3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.4,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CCC1=CC(CC)=CC=C1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Solvent_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 445.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 49.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1,
+            "addition_speed": {
+                "type": "FAST"
+            },
+            "flow_rate": {
+                "value": 1.0,
+                "units": "MILLILITER_PER_MINUTE"
+            },
+            "addition_device": {
+                "type": "SYRINGE",
+                "details": "HPLC Pump"
+            }
+        },
+        "Ligand in Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1ccccc1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Base in Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Boronate in Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC1(OB(C2=CC=C3N=CC=CC3=C2)OC1(C)C)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.4,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O=CN(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)c1ccc(cc1)c2ccc(cc2)C(C)(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.4,
+                            "precision": 0.4,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "INTERNAL_STANDARD"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Catalyst in Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)[O-].CC(=O)[O-].[Pd+2]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.025,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CCc1cc(CC)cc(CC)c1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "TUBE",
+            "material": {
+                "type": "CUSTOM",
+                "details": "Hastelloy"
+            },
+            "volume": {
+                "value": 710.0,
+                "units": "MICROLITER"
+            }
+        },
+        "is_automated": true,
+        "environment": {
+            "type": "GLOVE_BOX"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 100.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "PRESSURIZED"
+            },
+            "setpoint": {
+                "value": 100.0,
+                "units": "BAR"
+            }
+        },
+        "flow": {
+            "type": "PLUG_FLOW_REACTOR",
+            "tubing": {
+                "type": "STEEL",
+                "details": "Hastelloy",
+                "diameter": {
+                    "value": 0.5,
+                    "units": "MILLIMETER"
+                }
+            }
+        },
+        "conditions_are_dynamic": false
+    },
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C=C1)=C(C2=CC=C(N=CC=C3)C3=C2)C4=C1N(C5OCCCC5)N=C4"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "Agilent 1200 Infinity HPLC systems",
+                            "type": "YIELD",
+                            "uses_internal_standard": true,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "percentage": {
+                                "value": 54.2
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "Agilent 1200 Infinity HPLC systems": {
+                    "type": "LCMS",
+                    "details": "HPLC S4\nconditions uses a 0.1% AcOH/NH4COOH/Water based gradient over 1.4 minutes running from 5-95% MeCN using a Waters Acquity UPLC BEH C18 30 x 2.1 mm column at 80 \u00b0C with a flow rate of 2.5ml/min and a detection wavelength of 210 360nm",
+                    "instrument_manufacturer": "Agilent"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "city": "San Diego, CA",
+        "doi": "10.1126/science.aap9112",
+        "publication_url": "https://science.sciencemag.org/content/359/6374/429",
+        "record_created": {
+            "time": {
+                "value": "2/25/2021, 1:05:42 PM"
+            },
+            "person": {
+                "name": "Michael Wleklinski",
+                "orcid": "0000-0001-6735-4696",
+                "organization": "Merck",
+                "email": "michael.wleklinski@merck.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Mar  3 19:46:44 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "2021-03-04 13:56:49.759986"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "kearnes@google.com"
+                },
+                "details": "Automatic migration from schema v0.2.15 to v0.3.0"
+            }
+        ]
+    },
+    "reaction_id": "ord-0c525e5dde954d91b6dc2fe0bb849655"
+}

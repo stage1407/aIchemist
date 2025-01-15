@@ -1,0 +1,392 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C=CC1C=CC=CC=1.[H][H].[C]=O.C1(CC2C=CC=CC=2)C=CC=CC=1.[C:26]1([CH:32]([CH3:35])[CH:33]=[O:34])[CH:31]=[CH:30][CH:29]=[CH:28][CH:27]=1.C1(CCC=O)C=CC=CC=1>C1C=CC=CC=1>[C:26]1([C@H:32]([CH3:35])[CH:33]=[O:34])[CH:31]=[CH:30][CH:29]=[CH:28][CH:27]=1 |f:4.5,^3:10|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-phenylpropanal 3-phenylpropanal"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C(C=O)C.C1(=CC=CC=C1)CCC=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C9H10O/c1-8(7-10)9-5-3-2-4-6-9;10-8-4-7-9-5-2-1-3-6-9/h2-8H,1H3;1-3,5-6,8H,4,7H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Rh(acac)(CO)2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.1,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "styrene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H8/c1-2-8-6-4-3-5-7-8/h2-7H,1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m12": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.4,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H][H]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "carbon monoxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[C]=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CO/c1-2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aldehyde"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "olefin"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "carboxylic acid"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "styrene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H8/c1-2-8-6-4-3-5-7-8/h2-7H,1H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1250.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aldehyde"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diphenylmethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H12/c1-3-7-12(8-4-1)11-13-9-5-2-6-10-13/h1-10H,11H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 60.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred at 60\u00b0 C. for 42 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In a 50 ml autoclave were charged 38.7 mg (0.0488 mmol) of (S,R)-biphemphos, 3.1 mg (0.012 mmol) of Rh(acac)(CO)2, and a solution of 1250 mg (12.0 mmol) of styrene in 2.4 ml of benzene, and hydrogen and carbon monoxide were fed thereto each to a partial pressure of 50 atm. The mixture was stirred at 60\u00b0 C. for 42 hours. A conversion of the starting olefin and an aldehyde production ratio were determined by 1H-NMR (internal standard: diphenylmethane) analysis, and an optical purity (enantiomer excess) was determined by GLC analysis after conversion of the resulting optically active aldehyde into the corresponding carboxylic acid by Jones oxidation. As a result, the conversion of styrene was 100%, and the 2-phenylpropanal/3-phenylpropanal production ratio was 9:1. The 2-phenylpropanal produced had an optical purity of (S)-(+)-2-phenylpropanal of 94% ee."
+    },
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 42.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-phenylpropanal"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-(+)-2-Phenylpropanal"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)[C@@H](C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H10O/c1-8(7-10)9-5-3-2-4-6-9/h2-8H,1H3/t8-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05530150",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:32:18.191910"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:41:51 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:49 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-b2c95705e9884479b4067b9908d5ba74"
+}

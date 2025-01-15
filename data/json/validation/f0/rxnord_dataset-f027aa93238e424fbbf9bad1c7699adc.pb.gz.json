@@ -1,0 +1,354 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1](OCC)(=O)CC(OCC)=O.[Na].Cl[C:14]1[CH:19]=[CH:18][C:17]([N+:20]([O-:22])=[O:21])=[CH:16][N:15]=1>C1(C)C=CC=CC=1>[CH3:1][C:14]1[CH:19]=[CH:18][C:17]([N+:20]([O-:22])=[O:21])=[CH:16][N:15]=1 |^1:11|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-chloro-5-nitropyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=NC=C(C=C1)[N+](=O)[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H3ClN2O2/c6-5-2-1-4(3-7-5)8(9)10/h1-3H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 25.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 200.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diethyl malonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC(=O)OCC)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H12O4/c1-3-10-6(8)5-7(9)11-4-2/h3-5H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 42.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Na]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.71,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 120.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred at 90\u00b0 C. for 2 hours and 120\u00b0 C. for 30 min."
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A slurry of diethyl malonate (42 mL) and sodium (4.71 g) was warmed slowly to 90\u00b0 C. and stirred at 90\u00b0 C. for 2 hours and 120\u00b0 C. for 30 min. before being cooled to room temperature. Toluene (200 mL) and 2-chloro-5-nitropyridine (25.0 g) were added and the mixture was heated at 110\u00b0 C. for 1.5 hours and ambient temperature for 17 h. After removal of the volatiles in vacuo, 6 N HCl (200 mL) was added and the mixture heated to reflux for 4 h and cooled to room temperature. The solution was neutralized with solid sodium carbonate, extracted with ethyl acetate (6\u00d7100 mL), dried over solid magnesium sulfate, and concentrated to a dark solid. This material was purified by flash chromatography using 20% ethyl acetate in petroleum ether as the eluent. Concentration in vacuo of the product-rich fraction afforded 2-methyl-5-nitropyridine. A mixture of 2-methyl-5-nitropyridine (13.0 g) and 10% Pd on activated carbon (0.1 g) in 1,4-dioxane (150 mL) was hydrogenated at 50 psi for 24 hours and filtered over celite. Removal of the volatiles in vacuo provided 2-methyl-5-aminopyridine. A solution of this compound (9.90 g) was dissolved in 6 N HCl (100 mL), cooled to 0\u00b0 C., and vigorously stirred throughout the procedure. Sodium nitrite (6.32 g) in water (50 mL) was added. After 30 min, tin (II) chloride dihydrate (52.0 g) in 6 N HCl (100 mL) was added and the reaction slurry was stirred at 0\u00b0 C. for 3 hours. The pH was adjusted to pH 14 with 40% aqueous potassium hydroxide solution and extracted with ethyl acetate. The combined organic extracts were dried (MgSO4) and removal of the volatiles in vacuo provided hydrazine XC. A solution of XC (8.0 g) and 4,4-dimethyl-3-oxopentanenitrile (10.0 g) in ethanol (200 mL) and 6 N HCl (6 mL) was refluxed for 17 hours and cooled to room temperature. Solid sodium hydrogen carbonate was added to neutralize the solution. The slurry was filtered and removal of the volatiles in vacuo provided a residue which was purified by column chromatography using ethyl acetate as the eluent. Concentration in vacuo of the product-rich fractions afforded XCI, which was reacted with LXXXIX (Example 8) according to Method B to provide 9, m.p. 121-123\u00b0 C."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "before being cooled to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture was heated at 110\u00b0 C. for 1.5 hours and ambient temperature for 17 h",
+            "duration": {
+                "value": 17.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                },
+                "setpoint": {
+                    "value": 110.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "After removal of the volatiles in vacuo, 6 N HCl (200 mL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "HCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 200.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "was added"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture heated"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to reflux for 4 h",
+            "duration": {
+                "value": 4.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "cooled to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with ethyl acetate (6\u00d7100 mL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 100.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over solid magnesium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "magnesium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated to a dark solid"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This material was purified by flash chromatography"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "Concentration in vacuo of the product-rich fraction"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-methyl-5-nitropyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=NC=C(C=C1)[N+](=O)[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6N2O2/c1-5-2-3-6(4-7-5)8(9)10/h2-4H,1H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06333325B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:03:42.725187"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:08:04 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:05 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-cc05f70bea784e5cb0c46e0ae65d146c"
+}

@@ -1,0 +1,857 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C1(P(=[O:20])(C2C=CC=CC=2)C2C=CC=CC=2)C=CC=CC=1.FC(F)(F)S(OS(C(F)(F)F)(=O)=O)(=O)=O.C([S:43][CH:44]([CH2:77][N:78]1[CH2:83][CH2:82][S:81][CH2:80][CH2:79]1)[CH2:45][NH:46][C:47]([C:49]1[NH:50][C:51]2[C:56]([CH:57]=1)=[CH:55][C:54]([O:58][CH2:59][CH2:60][O:61][CH3:62])=[CH:53][C:52]=2[N:63]([CH2:73][CH:74]1[CH2:76][CH2:75]1)[S:64]([C:67]1[CH:72]=[CH:71][CH:70]=[CH:69][N:68]=1)(=[O:66])=[O:65])=O)C1C=CC=CC=1.C1(SC)C=CC=CC=1.C(=O)(O)[O-].[Na+]>ClCCl>[CH:74]1([CH2:73][N:63]([C:52]2[CH:53]=[C:54]([O:58][CH2:59][CH2:60][O:61][CH3:62])[CH:55]=[C:56]3[C:51]=2[NH:50][C:49]([C:47]2[S:43][CH:44]([CH2:77][N:78]4[CH2:83][CH2:82][S:81](=[O:20])[CH2:80][CH2:79]4)[CH2:45][N:46]=2)=[CH:57]3)[S:64]([C:67]2[CH:72]=[CH:71][CH:70]=[CH:69][N:68]=2)(=[O:65])=[O:66])[CH2:75][CH2:76]1 |f:4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium bicarbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])(O)=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trifluoromethanesulfonic anhydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(S(=O)(=O)OS(=O)(=O)C(F)(F)F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2F6O5S2/c3-1(4,5)14(9,10)13-15(11,12)2(6,7)8"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.17,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3_m4_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-[2-(benzylthio)-3-thiomorpholinopropyl]-7-[(cyclopropylmethyl)(pyridin-2-ylsulfonyl)amino]-5-(2-methoxyethoxy)-1H-indole-2-carboxamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)SC(CNC(=O)C=1NC2=C(C=C(C=C2C1)OCCOC)N(S(=O)(=O)C1=NC=CC=C1)CC1CC1)CN1CCSCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C35H43N5O5S3/c1-44-15-16-45-29-19-28-20-31(35(41)37-22-30(24-39-13-17-46-18-14-39)47-25-27-7-3-2-4-8-27)38-34(28)32(21-29)40(23-26-10-11-26)48(42,43)33-9-5-6-12-36-33/h2-9,12,19-21,26,30,38H,10-11,13-18,22-25H2,1H3,(H,37,41)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 355.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "thioanisole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)SC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8S/c1-8-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.12,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triphenylphosphine oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)P(C1=CC=CC=C1)(C1=CC=CC=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H15OP/c19-20(16-10-4-1-5-11-16,17-12-6-2-7-13-17)18-14-8-3-9-15-18/h1-15H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 557.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 0.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the mixture was stirred at 0\u00b0 C. for 15 min"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a mixture of triphenylphosphine oxide (557 mg) and dichloromethane (1 mL) was added trifluoromethanesulfonic anhydride (0.17 mL) at 0\u00b0 C., and the mixture was stirred at 0\u00b0 C. for 15 min, followed by an addition of dichloromethane (3 mL). A mixture of N-[2-(benzylthio)-3-thiomorpholinopropyl]-7-[(cyclopropylmethyl)(pyridin-2-ylsulfonyl)amino]-5-(2-methoxyethoxy)-1H-indole-2-carboxamide (355 mg), thioanisole (0.12 mL) and dichloromethane (3 mL) was added thereto at 0\u00b0 C., and the mixture was stirring at 0\u00b0 C. for 10 min. Aqueous sodium bicarbonate solution was added to the reaction mixture, and the organic layer was separated. The organic layer was extracted with concentrated hydrochloric acid, and after basified with the aqueous layer with potassium carbonate, the whole mixture was extracted with ethyl acetate. The extract was washed with saturated brine, dried over anhydrous sodium sulfate, and filtered, and the filtrate was concentrated under reduced pressure. The residue was subjected to silica gel column chromatography to give the amorphous solid from a fraction eluted with ethyl acetate. To the mixture of the obtained amorphous solid, tetrahydrofurane (5 mL), ethanol (5 mL) and water (5 mL) was added OXONE (registered trade mark, 369 mg) at room temperature, and the mixture was stirred at room temperature for 1 hr. To the resulting mixture was added 10% aqueous sodium sulfite solution, and the mixture was extracted with a mixed solvent of ethyl acetate and tetrahydrofuran. The organic layer was washed with saturated brine, dried over anhydrous sodium sulfate, and filtered, and the filtrate was concentrated under reduced pressure. The residue was purified by preparative HPLC to give amorphous solid, which was crystallized from diisopropyl ether to give the title compound (146 mg, yield 47%) as colorless crystals."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "was added"
+        },
+        {
+            "type": "STIRRING",
+            "details": "at 0\u00b0 C., and the mixture was stirring at 0\u00b0 C. for 10 min",
+            "duration": {
+                "value": 10.0,
+                "units": "MINUTE"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 0.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the organic layer was separated"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The organic layer was extracted with concentrated hydrochloric acid",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the whole mixture was extracted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The extract was washed with saturated brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over anhydrous sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the filtrate was concentrated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to give the amorphous solid from a fraction"
+        },
+        {
+            "type": "WASH",
+            "details": "eluted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "To the mixture of the obtained amorphous solid, tetrahydrofurane (5 mL), ethanol (5 mL) and water (5 mL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "tetrahydrofurane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "was added OXONE (registered trade mark, 369 mg) at room temperature",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "OXONE"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "OOS(=O)[O-].[K+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/K.H2O4S/c;1-4-5(2)3/h;1H,(H,2,3)/q+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 369.0,
+                                "units": "MILLIGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "the mixture was stirred at room temperature for 1 hr",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "To the resulting mixture was added 10% aqueous sodium sulfite solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfite"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O3S/c;;1-4(2)3/h;;(H2,1,2,3)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the mixture was extracted with a mixed solvent of ethyl acetate and tetrahydrofuran",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "tetrahydrofuran"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The organic layer was washed with saturated brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over anhydrous sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the filtrate was concentrated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue was purified by preparative HPLC"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to give amorphous solid, which"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was crystallized from diisopropyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "diisopropyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)OC(C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14O/c1-5(2)7-6(3)4/h5-6H,1-4H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 15.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "N-(cyclopropylmethyl)-N-(5-(2-methoxyethoxy)-2-{5-[(1-oxidothiomorpholino)methyl]-4,5-dihydro-1,3-thiazol-2-yl}-1H-indol-7-yl)pyridine-2-sulfonamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CC1)CN(S(=O)(=O)C1=NC=CC=C1)C=1C=C(C=C2C=C(NC12)C=1SC(CN1)CN1CCS(CC1)=O)OCCOC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H35N5O5S3/c1-37-10-11-38-22-14-21-15-24(28-30-17-23(39-28)19-32-8-12-40(34)13-9-32)31-27(21)25(16-22)33(18-20-5-6-20)41(35,36)26-4-2-3-7-29-26/h2-4,7,14-16,20,23,31H,5-6,8-13,17-19H2,1H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 146.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 47.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 47.3
+                            }
+                        }
+                    ],
+                    "isolated_color": "colorless",
+                    "texture": {
+                        "type": "CRYSTAL",
+                        "details": "crystals"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07652133B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:04:19.577979"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:35:38 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:23 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-7a8dbcbee1c843fb9eb4fab70b6b96fb"
+}

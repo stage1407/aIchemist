@@ -1,0 +1,222 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[N:1]1([CH2:7][CH2:8][O:9][C:10]2[CH:15]=[CH:14][CH:13]=[CH:12][C:11]=2[CH2:16][S:17]([C:20]2[CH:21]=[C:22]3[C:26](=[CH:27][CH:28]=2)[NH:25][C:24](=[O:29])[CH2:23]3)(=[O:19])=[O:18])[CH2:6][CH2:5][O:4][CH2:3][CH2:2]1.[CH3:30][C:31]1[C:35]([C:36]([N:38]2[CH2:42][CH2:41][CH2:40][C@@H:39]2[CH2:43][N:44]2[CH2:48][CH2:47][CH2:46][CH2:45]2)=[O:37])=[C:34]([CH3:49])[NH:33][C:32]=1[CH:50]=O>N1CCCCC1.C(O)C>[CH3:30][C:31]1[C:35]([C:36]([N:38]2[CH2:42][CH2:41][CH2:40][C@@H:39]2[CH2:43][N:44]2[CH2:48][CH2:47][CH2:46][CH2:45]2)=[O:37])=[C:34]([CH3:49])[NH:33][C:32]=1/[CH:50]=[C:23]1\\[C:24](=[O:29])[NH:25][C:26]2[C:22]\\1=[CH:21][C:20]([S:17]([CH2:16][C:11]1[CH:12]=[CH:13][CH:14]=[CH:15][C:10]=1[O:9][CH2:8][CH2:7][N:1]1[CH2:6][CH2:5][O:4][CH2:3][CH2:2]1)(=[O:19])=[O:18])=[CH:28][CH:27]=2",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-[2-(2-Morpholin-4-yl-ethoxy)-phenylmethanesulfonyl]-1,3-dihydro-indol-2-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(CCOCC1)CCOC1=C(C=CC=C1)CS(=O)(=O)C=1C=C2CC(NC2=CC1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H24N2O5S/c24-21-14-17-13-18(5-6-19(17)22-21)29(25,26)15-16-3-1-2-4-20(16)28-12-9-23-7-10-27-11-8-23/h1-6,13H,7-12,14-15H2,(H,22,24)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 41.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3,5-dimethyl-4-((R)-2-pyrrolidin-1-ylmethyl-pyrrolidine-1-carbonyl)-1H-pyrrole-2-carbaldehyde"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(NC(=C1C(=O)N1[C@H](CCC1)CN1CCCC1)C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H25N3O2/c1-12-15(11-21)18-13(2)16(12)17(22)20-9-5-6-14(20)10-19-7-3-4-8-19/h11,14,18H,3-10H2,1-2H3/t14-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 35.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "piperidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1CCCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H11N/c1-2-4-6-5-3-1/h6H,1-5H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "5-[2-(2-Morpholin-4-yl-ethoxy)-phenylmethanesulfonyl]-1,3-dihydro-indol-2-one (41 mg, 0.1 mmol) was condensed with 3,5-dimethyl-4-((R)-2-pyrrolidin-1-ylmethyl-pyrrolidine-1-carbonyl)-1H-pyrrole-2-carbaldehyde (35 mg, 0.1 mmol) and piperidine (1 drop) in ethanol (1.5 mL) at rt for 48 hours. The solid was collected by vacuum filtration and purified on a silica gel column to give 36 mg (35%) of the titled compound."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "The solid was collected by vacuum filtration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "purified on a silica gel column"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "titled compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3-[1-[3,5-Dimethyl-4-((R)-2-pyrrolidin-1-ylmethyl-pyrrolidine-1-carbonyl)-1H-pyrrol-2-yl]-meth-(Z)-ylidene]-5-[2-(2-morpholin-4-yl-ethoxy)-phenylmethanesulfonyl]-1,3-dihydro-indol-2-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(NC(=C1C(=O)N1[C@H](CCC1)CN1CCCC1)C)\\C=C\\1/C(NC2=CC=C(C=C12)S(=O)(=O)CC1=C(C=CC=C1)OCCN1CCOCC1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C38H47N5O6S/c1-26-34(39-27(2)36(26)38(45)43-15-7-9-29(43)24-42-13-5-6-14-42)23-32-31-22-30(11-12-33(31)40-37(32)44)50(46,47)25-28-8-3-4-10-35(28)49-21-18-41-16-19-48-20-17-41/h3-4,8,10-12,22-23,29,39H,5-7,9,13-21,24-25H2,1-2H3,(H,40,44)/b32-23-/t29-/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 36.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 35.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 51.3
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06599902B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:14:29.502759"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:42:07 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:14 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-4024d308c8124efe92550d0edef3f01c"
+}

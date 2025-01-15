@@ -1,0 +1,280 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][O:2][CH:3]([O:13][CH3:14])[CH2:4][O:5][C:6]1[CH:11]=[CH:10][C:9]([OH:12])=[CH:8][CH:7]=1.[CH2:15]([N:18]([CH2:22][C:23]1[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=1)[C:19](Cl)=[O:20])[CH:16]=[CH2:17].C(N(CC)CC)C>C1(C)C(C)=CC=CC=1>[CH2:15]([N:18]([CH2:22][C:23]1[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=1)[C:19](=[O:20])[O:12][C:9]1[CH:10]=[CH:11][C:6]([O:5][CH2:4][CH:3]([O:2][CH3:1])[O:13][CH3:14])=[CH:7][CH:8]=1)[CH:16]=[CH2:17]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-(2,2-Dimethoxyethoxy)phenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COC(COC1=CC=C(C=C1)O)OC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H14O4/c1-12-10(13-2)7-14-9-5-3-8(11)4-6-9/h3-6,10-11H,7H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.05,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-allyl-N-benzylcarbamoyl chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C=C)N(C(=O)Cl)CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H12ClNO/c1-2-8-13(11(12)14)9-10-6-4-3-5-7-10/h2-7H,1,8-9H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.08,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.05,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "xylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1(C(=CC=CC1)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture is stirred"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "4-(2,2-Dimethoxyethoxy)phenol (0.05 mole), N-allyl-N-benzylcarbamoyl chloride (0.08 mole), triethylamine (0.05 mole) and xylene (50 ml) are charged into a glass reaction flask equipped with a mechanical stirrer, thermometer and reflux condenser. The mixture is stirred and heated at reflux for a period of about 12 hours. After this time the reaction mixture is cooled to room temperature and is filtered. The filtrate is then washed with water and dried over anhydrous magnesium sulfate. The dried solution is then filtered and stripped of solvent and unreacted starting materials to yield the desired product O-[4-(2,2-dimethoxyethoxy)phenyl] N-allyl-N-benzylcarbamate as the residue."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "equipped with a mechanical stirrer"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "thermometer and reflux condenser"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "heated"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "at reflux for a period of about 12 hours",
+            "duration": {
+                "value": 12.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "is filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "The filtrate is then washed with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over anhydrous magnesium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "magnesium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The dried solution is then filtered"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "O-[4-(2,2-dimethoxyethoxy)phenyl] N-allyl-N-benzylcarbamate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C=C)N(C(OC1=CC=C(C=C1)OCC(OC)OC)=O)CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H25NO5/c1-4-14-22(15-17-8-6-5-7-9-17)21(23)27-19-12-10-18(11-13-19)26-16-20(24-2)25-3/h4-13,20H,1,14-16H2,2-3H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04163112",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:43:42.932097"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:14:08 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:58 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-7d2d49d39e014b5c82f72a55f4407e0b"
+}

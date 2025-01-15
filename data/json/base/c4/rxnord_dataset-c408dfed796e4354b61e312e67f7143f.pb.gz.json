@@ -1,0 +1,580 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]1[CH:6]=[CH:5][CH:4]=[CH:3][CH:2]=1.ClC1C=CC=CC=1Cl.[Cl-].[Al+3].[Cl-].[Cl-].[Br:19][C:20]1[CH:30]=[C:24]2[C:25]([O:27][C:28](=[O:29])[C:23]2=[CH:22][CH:21]=1)=[O:26]>O.C(OCC)(=O)C>[C:25]([C:24]1[CH:30]=[C:20]([Br:19])[CH:21]=[CH:22][C:23]=1[C:28]([OH:29])=[O:27])(=[O:26])[C:1]1[CH:6]=[CH:5][CH:4]=[CH:3][CH:2]=1 |f:2.3.4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-bromophthalic anhydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=CC=C2C(C(=O)OC2=O)=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H3BrO3/c9-4-1-2-5-6(3-4)8(11)12-7(5)10/h1-3H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.94,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "o-dichlorobenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=C(C=CC=C1)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H4Cl2/c7-5-3-1-2-4-6(5)8/h1-4H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aluminum chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[Al+3].[Cl-].[Cl-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Al.3ClH/h;3*1H/q+3;;;/p-3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.87,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 5.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred at around 25\u00b0 C. for 1 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of benzene (2.94 ml), o-dichlorobenzene (20 ml) and aluminum chloride (5.87 g) was cooled to 5\u00b0 C. and 5-bromophthalic anhydride (5.0 g) was added by small portions while maintaining the temperature of the mixture below 10\u00b0 C. The mixture was stirred at around 25\u00b0 C. for 1 h and then at 80\u00b0 C. for 1 h. The reaction mixture was cooled to around 5\u00b0 C. and ethyl acetate (40 ml) was added dropwise. Water (20 ml) was added dropwise below 40\u00b0 C. The organic layer was separated and 4N hydrochloric acid (20 ml) was added. The mixture was stirred until the precipitated solid was dissolved. The organic layer was separated and washed with water (20 ml). The solvent was evaporated and toluene (30 ml) and ethyl acetate (3 ml) were added to the residue, which was followed by heating to 80\u00b0 C. The obtained solution was cooled to 25\u00b0 C. over 30 min and the precipitated crystals were collected by filtration. The crystals were dissolved in a mixture of toluene (30 ml) and ethyl acetate (1.5 ml) by heating and the obtained solution was cooled to 25\u00b0 C. and then to 5\u00b0 C. The precipitated crystals were collected by filtration and washed with toluene, to give the title compound (2.81 g, yield 41.8%)."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "while maintaining the temperature of the mixture below 10\u00b0 C"
+        },
+        {
+            "type": "WAIT",
+            "details": "at 80\u00b0 C. for 1 h",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 80.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction mixture was cooled to around 5\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 5.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The organic layer was separated"
+        },
+        {
+            "type": "ADDITION",
+            "details": "4N hydrochloric acid (20 ml) was added",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hydrochloric acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "The mixture was stirred until the precipitated solid"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "was dissolved"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The organic layer was separated"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with water (20 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent was evaporated"
+        },
+        {
+            "type": "ADDITION",
+            "details": "toluene (30 ml) and ethyl acetate (3 ml) were added to the residue, which",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 30.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 3.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "by heating to 80\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 80.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The obtained solution was cooled to 25\u00b0 C. over 30 min",
+            "duration": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 25.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "the precipitated crystals were collected by filtration"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "The crystals were dissolved in a mixture of toluene (30 ml) and ethyl acetate (1.5 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 30.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 1.5,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "by heating"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the obtained solution was cooled to 25\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 25.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to 5\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 5.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The precipitated crystals were collected by filtration"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with toluene",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-Benzoyl-4-bromobenzoic Acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(=O)C1=C(C(=O)O)C=CC(=C1)Br"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H9BrO3/c15-10-6-7-11(14(17)18)12(8-10)13(16)9-4-2-1-3-5-9/h1-8H,(H,17,18)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 2.81,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 41.8
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07034039B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:30:43.940867"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:30:36 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:56 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-193d063c4e2844f2a4706a4ef598d142"
+}

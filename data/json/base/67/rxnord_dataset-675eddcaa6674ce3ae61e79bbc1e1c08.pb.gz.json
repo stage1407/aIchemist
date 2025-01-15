@@ -1,0 +1,442 @@
+{
+    "inputs": {
+        "aryl bromide stock solution": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Brc1ccccc1-c1ccccc1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 15.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)N(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 3
+        },
+        "ligand": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCP(CCCC)CCCC"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "PnBu3 HBF4"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.75,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST",
+                    "preparations": [
+                        {
+                            "type": "CUSTOM",
+                            "details": "ligand plate prepared by evaporating stock solution in the glovebox"
+                        }
+                    ]
+                }
+            ],
+            "addition_order": 2
+        },
+        "palladium pre-catalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "CAS_NUMBER",
+                            "value": "12012-95-2"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "[Pd(allyl)Cl]2"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl[Pd]CC=C.C=CC[Pd]Cl"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.3375,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)N(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 7.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 4
+        },
+        "base": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "KOPiv"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)C(=O)[O-].[K+]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 45.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT",
+                    "preparations": [
+                        {
+                            "type": "DRIED",
+                            "details": "dried by left open in glovebox"
+                        }
+                    ]
+                }
+            ],
+            "addition_order": 1
+        },
+        "imidazole stock solution with standard": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1cn(Cc2ccccc2)c(C)n1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 30.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)N(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 112.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4,4'-di-tert-butylbiphenyl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)c1ccc(-c2ccc(C(C)(C)C)cc2)cc1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 42.75,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "INTERNAL_STANDARD"
+                }
+            ],
+            "addition_order": 5
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "details": "96-well plate"
+        },
+        "is_automated": false,
+        "environment": {
+            "type": "GLOVE_BOX"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 120.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR"
+        },
+        "reflux": false,
+        "conditions_are_dynamic": false
+    },
+    "notes": {
+        "is_heterogeneous": true,
+        "is_sensitive_to_moisture": true,
+        "is_sensitive_to_oxygen": true
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "Cool to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                },
+                "setpoint": {
+                    "value": 23.0,
+                    "units": "CELSIUS"
+                }
+            },
+            "is_automated": false
+        },
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMA"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)N(C)C"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 750.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": false
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            },
+            "is_automated": false
+        },
+        {
+            "type": "ALIQUOT",
+            "amount": {
+                "volume": {
+                    "value": 75.0,
+                    "units": "MICROLITER"
+                }
+            },
+            "is_automated": false
+        },
+        {
+            "type": "FILTRATION",
+            "details": "Filter into HPLC analysis plate",
+            "keep_phase": "liquid/mobile",
+            "is_automated": false
+        },
+        {
+            "type": "WASH",
+            "details": "wash filter with 400 microliter of acetonitrile/water (4:1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC#N"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 320.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": false
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 80.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": false
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            },
+            "is_automated": false
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1nc(C)n(Cc2ccccc2)c1-c1ccccc1-c1ccccc1"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "YIELD",
+                            "uses_internal_standard": true,
+                            "is_normalized": true,
+                            "uses_authentic_standard": true,
+                            "authentic_standard": {
+                                "identifiers": [
+                                    {
+                                        "type": "SMILES",
+                                        "value": "Cc1nc(C)n(Cc2ccccc2)c1-c1ccccc1-c1ccccc1"
+                                    }
+                                ],
+                                "reaction_role": "PRODUCT",
+                                "preparations": [
+                                    {
+                                        "type": "SYNTHESIZED",
+                                        "details": "authentic product separately synthesized\n"
+                                    }
+                                ]
+                            },
+                            "percentage": {
+                                "value": 0.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "details": "UPLC-MS",
+                    "is_of_isolated_species": false,
+                    "instrument_manufacturer": "Agilent"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "experimenter": {
+            "name": "Jason M. Stevens and coworkers at BMS",
+            "orcid": "0000-0003-1671-1539",
+            "organization": "Bristol Myers Squibb",
+            "email": "Jason.Stevens@bms.com"
+        },
+        "city": "Summit, NJ",
+        "doi": "10.26434/chemrxiv",
+        "publication_url": "https://chemrxiv.org/engage/chemrxiv/article-details/64c7e2e1658ec5f7e5808425",
+        "record_created": {
+            "time": {
+                "value": "8/9/2023, 10:44:35 PM"
+            },
+            "person": {
+                "username": "beef-broccoli",
+                "name": "Jason Wang",
+                "orcid": "0000-0001-5826-2554",
+                "organization": "UCLA/Princeton",
+                "email": "wang10@g.ucla.edu"
+            },
+            "details": "Doyle lab"
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Aug 30 19:13:03 2023"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-46ae322a59ef4c71a3dddf06cfc27dfb"
+}

@@ -1,0 +1,438 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "Suzuki Coupling"
+        }
+    ],
+    "inputs": {
+        "Base": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DBU"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N\\2=C1\\N(CCCCC1)CCC/2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 5.81,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.5,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 2
+        },
+        "Nucleophile": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3,5-Dimethylisoxazole-4-boronic acid pinacol ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1noc(C)c1B2OC(C)(C)C(C)(C)O2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 3.5,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Electrophile": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-Chloropyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC(=CN=C1)Cl"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 2.338,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Naphthelene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "c1c2ccccc2ccc1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.0826,
+                            "units": "MICROGRAM"
+                        }
+                    },
+                    "reaction_role": "INTERNAL_STANDARD"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.67,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 4.663139,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.9326278,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Quench": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 8.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "WORKUP"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 8.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "WORKUP"
+                }
+            ],
+            "addition_order": 3
+        },
+        "Catalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Pd G3 \u00b5-OMS Pd G3 \u00b5-OMS"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)(=O)O[Pd]c1ccccc1-c2ccccc2N.c1ccc(cc1)P(c2ccccc2)c3ccccc3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0582162,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.2342334,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "DRY_ALUMINUM_PLATE",
+                "details": "Flow reactor with four 40W cartridge heaters"
+            },
+            "setpoint": {
+                "value": 30.0,
+                "units": "CELSIUS"
+            }
+        },
+        "flow": {
+            "type": "CUSTOM",
+            "details": "A droplet flow reactor system consisting of a liquid handler and oscillatory flow reactor. Each droplet is like a mini-batch reactor.",
+            "tubing": {
+                "type": "PFA",
+                "details": "500 \u00b5m diameter tubing, 240\u00b5L reactor",
+                "diameter": {
+                    "value": 0.0005,
+                    "units": "METER"
+                }
+            }
+        }
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "As soon as the slug leaves the reactor and is detected at PS2,a quench solution volume equal to the reaction slug volume(prepared slug volume + base injection volume) is injected into the reaction slug",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetone"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)C"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 8.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 8.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ],
+                "addition_order": 3
+            },
+            "amount": {
+                "volume": {
+                    "value": 17.5,
+                    "units": "MICROLITER"
+                }
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 600.0,
+                "units": "SECOND"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3,5-dimethyl-4-(quinolin-3-yl)isoxazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(C2=CC=CN=C2)C(C)=NO1"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "LCMS",
+                            "type": "YIELD",
+                            "uses_internal_standard": true,
+                            "percentage": {
+                                "value": 0.1
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "LCMS": {
+                    "type": "LCMS"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1039/C6RE00153J",
+        "publication_url": "http://doi.org/10.1039/C6RE00153J",
+        "record_created": {
+            "time": {
+                "value": "2023-06-12 13:49:01.971631"
+            },
+            "person": {
+                "username": "marcosfelt",
+                "name": "Kobi Felton",
+                "orcid": "0000-0002-3616-4766",
+                "organization": "University of Cambridge",
+                "email": "kobi.c.f@gmail.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Jun 12 14:18:18 2023"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-b0e15531459b4771a84da63075129b2d"
+}

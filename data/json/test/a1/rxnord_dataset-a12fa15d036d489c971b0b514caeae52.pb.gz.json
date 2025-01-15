@@ -1,0 +1,351 @@
+{
+    "identifiers": [
+        {
+            "type": "CUSTOM",
+            "details": "data subset",
+            "value": "Fig 7 Data"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Well",
+            "value": "H12"
+        }
+    ],
+    "inputs": {
+        "Cesium carbonate": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cesium carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "O=C([O-])[O-].[Cs+].[Cs+]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.012,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Nucleophile in DMF": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C=CCOc1cn(-c2ccccc2)nc1C(=O)O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.01,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dmf"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 4
+        },
+        "KI in DMF": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium iodide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "[I-].[K+]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.012,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT",
+                    "preparations": [
+                        {
+                            "type": "NONE"
+                        }
+                    ]
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 24.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "preparations": [
+                        {
+                            "type": "NONE"
+                        }
+                    ]
+                }
+            ],
+            "addition_order": 2
+        },
+        "3-(1-chloroethyl)pyridine in DMF": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "MOLBLOCK",
+                            "details": "Drawn with Ketcher",
+                            "value": "null\n  Ketcher  7242414322D 1   1.00000     0.00000     0\n\n  9  9  0  0  0  0            999 V2000\n    5.4598   -8.4501    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1902   -8.4496    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3266   -7.9500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1902   -9.4505    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.4598   -9.4550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.3288   -9.9500    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0564   -7.9500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.9222   -8.4504    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.0569   -6.9500    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0\n  3  1  2  0     0  0\n  4  2  2  0     0  0\n  1  5  1  0     0  0\n  2  3  1  0     0  0\n  5  6  2  0     0  0\n  6  4  1  0     0  0\n  2  7  1  0     0  0\n  7  8  1  0     0  0\n  7  9  1  0     0  0\nM  END\n"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "Drawn with Ketcher",
+                            "value": "CC(Cl)c1cccnc1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.01,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "preparations": [
+                        {
+                            "type": "NONE"
+                        }
+                    ]
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "preparations": [
+                        {
+                            "type": "NONE"
+                        }
+                    ]
+                }
+            ],
+            "addition_order": 3
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "VIAL",
+            "material": {
+                "type": "GLASS"
+            },
+            "attachments": [
+                {
+                    "type": "MAT",
+                    "details": "perfluoroalkoxy alkane (PFA) film Analytical Sales, Cat. No. 96967"
+                },
+                {
+                    "type": "MAT",
+                    "details": "two silicon rubber mats(Analytical Sales, Cat. No. 96965)"
+                }
+            ],
+            "volume": {
+                "value": 1.0,
+                "units": "MILLILITER"
+            }
+        },
+        "is_automated": false
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "DRY_ALUMINUM_PLATE"
+            },
+            "setpoint": {
+                "value": 70.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "SEALED"
+            },
+            "atmosphere": {
+                "type": "AIR"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR"
+        }
+    },
+    "workups": [
+        {
+            "type": "ALIQUOT",
+            "amount": {
+                "volume": {
+                    "value": 2.0,
+                    "units": "MICROLITER"
+                }
+            },
+            "is_automated": false
+        },
+        {
+            "type": "ADDITION",
+            "details": "Dilution of the aliquot (2 uL) with DMSO (200 uL).",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dmso"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 200.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "SOLVENT",
+                        "preparations": [
+                            {
+                                "type": "NONE"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "is_automated": false
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 16.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C=CCOc1cn(-c2ccccc2)nc1C(=O)OC(C)c1cccnc1"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "LCAP",
+                            "uses_internal_standard": false,
+                            "percentage": {
+                                "value": 65.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "is_of_isolated_species": false,
+                    "instrument_manufacturer": "Waters"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1016/j.chempr.2024.04.001",
+        "publication_url": "https://doi.org/10.1016/j.chempr.2024.04.001",
+        "record_created": {
+            "time": {
+                "value": "7/24/2024, 3:36:42 PM"
+            },
+            "person": {
+                "name": "Spencer P. Heins",
+                "organization": "UW-Madison",
+                "email": "sheins@wisc.edu"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Jul 31 22:03:49 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-550018100d194a0aadd041e992676da6"
+}

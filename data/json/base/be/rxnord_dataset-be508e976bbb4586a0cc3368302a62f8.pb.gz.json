@@ -1,0 +1,255 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][N:2]1[C:7]([CH3:9])([CH3:8])[CH2:6][CH2:5][CH2:4][C:3]1([CH3:11])[CH3:10].N(OC(C)(C)C)=O.N[C:20]1[CH:25]=[CH:24][C:23]([C:26]2[CH:58]=[CH:57][C:29]3=[N:30][N:31]([C:33]4[CH:38]=[C:37]([C:39]([CH2:42][C:43]([CH3:46])([CH3:45])[CH3:44])([CH3:41])[CH3:40])[CH:36]=[C:35]([C:47]([C:50]5[CH:55]=[CH:54][CH:53]=[CH:52][CH:51]=5)([CH3:49])[CH3:48])[C:34]=4[OH:56])[N:32]=[C:28]3[CH:27]=2)=[CH:22][CH:21]=1>N1C=CC=CC=1>[CH3:10][C:3]1([CH3:11])[CH2:4][CH2:5][CH2:6][C:7]([CH3:9])([CH3:8])[N:2]1[O:1][C:20]1[CH:21]=[CH:22][C:23]([C:26]2[CH:58]=[CH:57][C:29]3=[N:30][N:31]([C:33]4[CH:38]=[C:37]([C:39]([CH2:42][C:43]([CH3:44])([CH3:45])[CH3:46])([CH3:41])[CH3:40])[CH:36]=[C:35]([C:47]([C:50]5[CH:51]=[CH:52][CH:53]=[CH:54][CH:55]=5)([CH3:48])[CH3:49])[C:34]=4[OH:56])[N:32]=[C:28]3[CH:27]=2)=[CH:24][CH:25]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N/c1-2-4-6-5-3-1/h1-5H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-oxyl-2,2,6,6-tetramethylpiperidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ON1C(CCCC1(C)C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H19NO/c1-8(2)6-5-7-9(3,4)10(8)11/h11H,5-7H2,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.59,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tert-butyl nitrite"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9NO2/c1-4(2,3)7-5-6/h1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyridine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H5N/c1-2-4-6-5-3-1/h1-5H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 120.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-(4-aminophenyl)-2-(2-hydroxy-3-\u03b1-cumyl-5-tert-octylphenyl)-2H-benzotriazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NC1=CC=C(C=C1)C1=CC=2C(=NN(N2)C2=C(C(=CC(=C2)C(C)(C)CC(C)(C)C)C(C)(C)C2=CC=CC=C2)O)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C35H40N4O/c1-33(2,3)22-34(4,5)26-20-28(35(6,7)25-11-9-8-10-12-25)32(40)31(21-26)39-37-29-18-15-24(19-30(29)38-39)23-13-16-27(36)17-14-23/h8-21,40H,22,36H2,1-7H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 24.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The title compound is prepared reacting 0.59 g (3.75 mmol) of 1-oxyl-2,2,6,6-tetramethylpiperidine, 1.0 g (10 mmol) of tert-butyl nitrite, 2.3 mg (0.0037 mmol) of (S,S)-(+)-N,N-bis(3,5-di-tert-butylsalicylidene)-1,2-cyclohexanediaminocobalt(II), 120 mL of pyridine and 24.0 g (75 mmol) of 5-(4-aminophenyl)-2-(2-hydroxy-3-\u03b1-cumyl-5-tert-octylphenyl)-2H-benzotriazole, prepared in Example 17, in 10 mL of pyridine at 70\u00b0 C. The crude product obtained is purified by vacuum flash chromatography (2% ethyl acetate/heptane) to give 2.20 g of the title compound as a colorless oil in 87.3% yield. M/S [M+1]673."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The crude product obtained",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "5-[4-(2,2,6,6-Tetramethylpiperidin-1-yloxy)-phenyl]-2-(2-hydroxy-3-\u03b1-cumyl-5-tert-octylphenyl)-2H-benzotriazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1(N(C(CCC1)(C)C)OC1=CC=C(C=C1)C1=CC=2C(=NN(N2)C2=C(C(=CC(=C2)C(C)(C)CC(C)(C)C)C(C)(C)C2=CC=CC=C2)O)C=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C44H56N4O2/c1-40(2,3)29-41(4,5)33-27-35(44(10,11)32-16-13-12-14-17-32)39(49)38(28-33)47-45-36-23-20-31(26-37(36)46-47)30-18-21-34(22-19-30)50-48-42(6,7)24-15-25-43(48,8)9/h12-14,16-23,26-28,49H,15,24-25,29H2,1-11H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 87.3
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06846929B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:23:21.761563"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:08:52 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:21 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-4c4d5fb0cde64555b967b9c6646de9dd"
+}

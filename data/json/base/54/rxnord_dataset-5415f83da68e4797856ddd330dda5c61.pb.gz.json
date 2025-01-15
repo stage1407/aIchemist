@@ -1,0 +1,477 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_SMILES",
+            "value": "Brc1cnc2ccccc2c1.OCc1cocn1>CS(=O)(=O)O[Pd]c1ccccc1-c2ccccc2N.CC3(C)c4cccc(P(c5ccccc5)c6ccccc6)c4Oc7c(cccc37)P(c8ccccc8)c9ccccc9.CC(C)(C)C(=O)[O-].[K+].C1COCCO1.[Cu]Br.CSC>OCc1coc(-c2cnc3ccccc3c2)n1.OCc1ncoc1-c1cnc2ccccc2c1.OCc1nc(-c2cnc3ccccc3c2)oc1-c1cnc2ccccc2c1",
+            "is_mapped": false
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the vial label on the 48-vial plate",
+            "value": "D-12"
+        }
+    ],
+    "inputs": {
+        "cocatalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[Cu]Br.CSC"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1COCCO1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "is_limiting": false
+                }
+            ],
+            "addition_order": 5,
+            "addition_device": {},
+            "texture": {
+                "type": "LIQUID"
+            }
+        },
+        "3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "OCc1cocn1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 11.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1COCCO1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "is_limiting": false
+                }
+            ],
+            "addition_order": 4,
+            "addition_device": {},
+            "texture": {
+                "type": "LIQUID"
+            }
+        },
+        "pd_catalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)(=O)O[Pd]c1ccccc1-c2ccccc2N.CC3(C)c4cccc(P(c5ccccc5)c6ccccc6)c4Oc7c(cccc37)P(c8ccccc8)c9ccccc9"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "XantPhos Pd G3"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "value": "1445085-97-1"
+                        },
+                        {
+                            "type": "MDL",
+                            "value": "MFCD22572675"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST",
+                    "is_limiting": false
+                }
+            ],
+            "addition_order": 1,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "Palladium precatalyst (20 umol was dissolved in 2-methyltetrahydrofuran and diluted to 2 mL. 100 uL of precatalyst solution was dispensed into the vial, and then the solvent was removed in vacuo using the Genevac for 1 h."
+            },
+            "texture": {
+                "type": "SOLID"
+            }
+        },
+        "2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Brc1cnc2ccccc2c1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 10.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1COCCO1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "is_limiting": false
+                }
+            ],
+            "addition_order": 3,
+            "addition_device": {},
+            "texture": {
+                "type": "LIQUID"
+            }
+        },
+        "base": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)C(=O)[O-].[K+]"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "potassium pivalate"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 20.0,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT",
+                    "is_limiting": false
+                }
+            ],
+            "addition_order": 2,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "Stirrer bars added, and then the base was dispensed with a metal transfer plate."
+            },
+            "texture": {
+                "type": "SOLID"
+            }
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "VIAL"
+        },
+        "is_automated": true,
+        "environment": {
+            "type": "CUSTOM",
+            "details": "24-well metal heating blocks setup in glove box,sealed, and then heated outside."
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "DRY_ALUMINUM_PLATE",
+                "details": "heated tumble stirrer"
+            },
+            "setpoint": {
+                "value": 100.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "SEALED",
+                "details": "Sealed 24-well metal heating blocks"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR",
+            "details": "heated tumble stirrer"
+        },
+        "conditions_are_dynamic": false
+    },
+    "notes": {
+        "procedure_details": "- reaction input `pd_catalyst` was added as a solution (2-methyltetrahydrofuran 1 mmol/L) and then the solvent was removed to leave solid solute before adding other reactants/reagents; - stirrer was added after `pd_catalyst` and before `base`; - reaction inputs were prepared inside a glove box but the reaction itself did not happen in a glove box; - the reaction vial was sealed after adding all reaction inputs"
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The reactions were then allowed to cool to room temperature",
+            "temperature": {
+                "setpoint": {
+                    "value": 22.0,
+                    "precision": 3.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "Each reaction vial was diluted with 500 uL of a pre-prepared solution consisting of 1 umol dibenzylaniline (labelled as an internal standard for the purposes of PyParse analysis) and 20 umol dimethylsulfoxide in acetonitrile.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "c1ccc(CN(Cc2ccccc2)c2ccccc2)cc1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 1.0,
+                                "units": "MICROMOLE"
+                            }
+                        },
+                        "reaction_role": "INTERNAL_STANDARD",
+                        "is_limiting": false
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CS(=O)C"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 20.0,
+                                "units": "MICROMOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP",
+                        "is_limiting": false
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CCN"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 500.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": true
+                        },
+                        "reaction_role": "WORKUP",
+                        "is_limiting": false
+                    }
+                ],
+                "texture": {
+                    "type": "LIQUID"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "The reactions were sealed and shaken to ensure a homogenous mixture."
+        },
+        {
+            "type": "ALIQUOT",
+            "details": "50 uL of each reaction mixture was then aspirated and dispensed to the analysis plate.",
+            "amount": {
+                "volume": {
+                    "value": 50.0,
+                    "units": "MICROLITER"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "Each well of the analysis plate was diluted with 150 uL of dimethylsulfoxide, and the analysis plate was sealed with polypropylene film.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CS(=O)C"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 150.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP",
+                        "is_limiting": false
+                    }
+                ],
+                "texture": {
+                    "type": "LIQUID"
+                }
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "OCc1coc(-c2cnc3ccccc3c2)n1"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "LC-MS",
+                            "type": "AREA",
+                            "details": "The metric used for analysis was \"corrP/STD\"; this metric was selected as it shades each well in the heatmap visualisation according to the normalised ratio of product to internal standard.",
+                            "uses_internal_standard": true,
+                            "percentage": {
+                                "value": 55.0
+                            },
+                            "retention_time": {
+                                "value": 0.71,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "OCc1ncoc1-c1cnc2ccccc2c1"
+                        }
+                    ],
+                    "is_desired_product": false,
+                    "measurements": [
+                        {
+                            "analysis_key": "LC-MS",
+                            "type": "AREA",
+                            "details": "The metric used for analysis was \"corrP/STD\"; this metric was selected as it shades each well in the heatmap visualisation according to the normalised ratio of product to internal standard.",
+                            "uses_internal_standard": true,
+                            "percentage": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 0.73,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "SIDE_PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "OCc1nc(-c2cnc3ccccc3c2)oc1-c1cnc2ccccc2c1"
+                        }
+                    ],
+                    "is_desired_product": false,
+                    "measurements": [
+                        {
+                            "analysis_key": "LC-MS",
+                            "type": "CUSTOM",
+                            "details": "only retention time is reported",
+                            "retention_time": {
+                                "value": 1.01,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "SIDE_PRODUCT"
+                }
+            ],
+            "analyses": {
+                "LC-MS": {
+                    "type": "LCMS",
+                    "details": "LCMS System B, Column: 50 mm x 2.1 mm ID, Acquity UPLC CSH C18 column. Flow Rate: 1 mL/min, Temp: 40 deg Celcius, UV detection range: 210 to 350 nm, Mass spectrum: Recorded on a mass spectrometer using alternate-scan positive and negative, mode: electrospray ionisation, with a mass range of 100 to 1000. Solvents: A: 10 mM solution of ammonium bicarbonate in water adjusted to pH 10 with ammonia solution. B: Acetonitrile Gradient: [Time (min.), A%, B%] [[0, 100, 0], [1.5,97, 3], [1.9, 97, 3], [2.0, 100, 0]"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1039/d3dd00167a",
+        "record_created": {
+            "time": {
+                "value": "Thu Jul 18 18:22:17 2024"
+            },
+            "person": {
+                "username": "qai",
+                "name": "Qianxiang Ai",
+                "email": "qai@mit.edu"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Nov  6 21:19:45 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-f7effc5d7bec41d2947a4e8a744e52e2"
+}

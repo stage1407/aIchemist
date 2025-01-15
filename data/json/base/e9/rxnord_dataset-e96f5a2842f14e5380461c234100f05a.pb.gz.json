@@ -1,0 +1,353 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][N:2]1[CH2:14][CH2:13][C:12]2[C:11]3[C:6](=[CH:7][CH:8]=[C:9]([CH3:15])[CH:10]=3)[NH:5][C:4]=2[CH:3]1[C:16]1C=CC=C[CH:17]=1.N1C2C(=CC=C3C=2N=CC=C3)C=CC=1.[O-]P([O-])([O-])=O.[K+].[K+].[K+].Br[C:45]#[C:46][C:47]1[CH:52]=[CH:51][C:50]([Cl:53])=[CH:49][CH:48]=1>C1(C)C=CC=CC=1>[Cl:53][C:50]1[CH:51]=[CH:52][C:47]([C:46]#[C:45][N:5]2[C:6]3[C:11](=[CH:10][C:9]([CH3:15])=[CH:8][CH:7]=3)[C:12]3[CH2:13][CH2:14][N:2]([CH3:1])[CH:3]([CH2:16][CH3:17])[C:4]2=3)=[CH:48][CH:49]=1 |f:2.3.4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m2_m3_m4_m5_m6_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,6-dimethyl-1-phenyl-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1C(C=2NC3=CC=C(C=C3C2CC1)C)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H20N2/c1-13-8-9-17-16(12-13)15-10-11-21(2)19(18(15)20-17)14-6-4-3-5-7-14/h3-9,12,19-20H,10-11H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 276.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CuSO4.5H2O"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 50.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,10-phenanthroline"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1=CC=CC2=CC=C3C=CC=NC3=C12"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H8N2/c1-3-9-5-6-10-4-2-8-14-12(10)11(9)13-7-1/h1-8H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 72.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "K3PO4"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/3K.H3O4P/c;;;1-5(2,3)4/h;;;(H3,1,2,3,4)/q3*+1;/p-3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 425.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-(bromoethynyl)-4-chlorobenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC#CC1=CC=C(C=C1)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H4BrCl/c9-6-5-7-1-3-8(10)4-2-7/h1-4H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 237.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 9.0,
+                            "precision": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 80.0,
+                "units": "CELSIUS"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2,6-dimethyl-1-phenyl-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indole (276 mg, \u03bcmol) was mixed with CuSO4.5H2O (50 mg, 0.2 mmol), 1,10-phenanthroline (72 mg, 0.4 mmol), K3PO4 (425 mg, 2 mmol) and 1-(bromoethynyl)-4-chlorobenzene (237 mg, 1.1 mmol) in toluene (8-10 ml). The reaction mixture was flushed with nitrogen and heated at 80\u00b0 C. for 16 h. The reaction mixture was filtered through Celite, and the Celite bed was rinsed with dichloromethane. Combined organic layer was concentrated under reduced pressure and the residue was purified by silica gel chromatography (100-200 mesh) eluting with 60-80% ethyl acetate in hexane to obtain 9-((4-chlorophenyl)ethynyl)-1-ethyl-2,6-dimethyl-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indole as brown semi solid (90 mg). 1H NMR (CDCl3) FREE BASE7.40-7.20 (m, 9H), 7.16-7.12 (d, 1H), 7.08-7.04 (d, 2H), 4.73 (s, 1H), 3.22-3.16 (m, 1H), 3.0-2.80 (m, 3H), 2.50 (s, 3H), 2.45 (s, 3H)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The reaction mixture was flushed with nitrogen"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The reaction mixture was filtered through Celite"
+        },
+        {
+            "type": "WASH",
+            "details": "the Celite bed was rinsed with dichloromethane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dichloromethane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClCCl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "Combined organic layer was concentrated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue was purified by silica gel chromatography (100-200 mesh)"
+        },
+        {
+            "type": "WASH",
+            "details": "eluting with 60-80% ethyl acetate in hexane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14/c1-3-5-6-4-2/h3-6H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9-((4-chlorophenyl)ethynyl)-1-ethyl-2,6-dimethyl-2,3,4,9-tetrahydro-1H-pyrido[3,4-b]indole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C(C=C1)C#CN1C2=C(C3=CC(=CC=C13)C)CCN(C2CC)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H23ClN2/c1-4-21-23-19(12-13-25(21)3)20-15-16(2)5-10-22(20)26(23)14-11-17-6-8-18(24)9-7-17/h5-10,15,21H,4,12-13H2,1-3H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solid"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 90.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08338447B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:49:03.921328"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:38:40 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:02 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-3005f3b43b804e10a8ac62b5eee9d2b9"
+}

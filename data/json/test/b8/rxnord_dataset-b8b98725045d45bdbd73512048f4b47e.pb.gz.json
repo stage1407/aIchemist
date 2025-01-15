@@ -1,0 +1,206 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([O:5][C:6](=[O:20])[C:7]([O:10][C:11]1[CH:16]=[CH:15][C:14]([Cl:17])=[CH:13][C:12]=1[CH:18]=O)([CH3:9])[CH3:8])([CH3:4])([CH3:3])[CH3:2].[Cl:21][C:22]1[CH:30]=[C:29]2[C:25]([CH2:26][C:27](=[O:31])[NH:28]2)=[CH:24][CH:23]=1.N1CCCC1>CO>[C:1]([O:5][C:6](=[O:20])[C:7]([O:10][C:11]1[CH:16]=[CH:15][C:14]([Cl:17])=[CH:13][C:12]=1[CH:18]=[C:26]1[C:25]2[C:29](=[CH:30][C:22]([Cl:21])=[CH:23][CH:24]=2)[NH:28][C:27]1=[O:31])([CH3:9])[CH3:8])([CH3:4])([CH3:3])[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(4-chloro-2-formyl-phenoxy)-2-methyl-propionic acid tert-butyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(C(C)(C)OC1=C(C=C(C=C1)Cl)C=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H19ClO4/c1-14(2,3)20-13(18)15(4,5)19-12-7-6-11(16)8-10(12)9-17/h6-9H,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 9.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "6-chlorooxindole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C2CC(NC2=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H6ClNO/c9-6-2-1-5-3-8(11)10-7(5)4-6/h1-2,4H,3H2,(H,10,11)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pyrrolidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9N/c1-2-4-5-3-1/h5H,1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.49,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In a manner similar to the method described in Example 227b, 2-(4-chloro-2-formyl-phenoxy)-2-methyl-propionic acid tert-butyl ester (9 g, 30 mmol) was reacted with 6-chlorooxindole (5.1 g, 30 mmol) and pyrrolidine (2.49 g, 35 mmol) in methanol to give E/Z 2-[4-chloro-2-(6-chloro-2-oxo-1,2-dihydro-indol-3-ylidenemethyl)-phenoxy]-2-methyl-propionic acid tert-butyl ester as a yellow oil (6.2 g)."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-[4-chloro-2-(6-chloro-2-oxo-1,2-dihydro-indol-3-ylidenemethyl)-phenoxy]-2-methyl-propionic acid tert-butyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(C(C)(C)OC1=C(C=C(C=C1)Cl)C=C1C(NC2=CC(=CC=C12)Cl)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H23Cl2NO4/c1-22(2,3)30-21(28)23(4,5)29-19-9-7-14(24)10-13(19)11-17-16-8-6-15(25)12-18(16)26-20(17)27/h6-12H,1-5H3,(H,26,27)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 6.2,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 46.1
+                            }
+                        }
+                    ],
+                    "isolated_color": "yellow",
+                    "texture": {
+                        "type": "OIL",
+                        "details": "oil"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07495007B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:54:14.966682"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:47:17 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:27 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0374ba3e35f34623be847186cd498e2c"
+}

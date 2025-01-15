@@ -1,0 +1,313 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([C:5]1[CH:6]=[CH:7][C:8]2[S:18][CH2:17][C:16]3[C:15](=[O:19])[CH:14]=[C:13]([C:20]([OH:22])=[O:21])[NH:12][C:11]=3[C:9]=2[CH:10]=1)[CH2:2][CH2:3][CH3:4].Cl.[CH3:24]O>>[CH3:24][O:21][C:20]([C:13]1[NH:12][C:11]2[C:9]3[CH:10]=[C:5]([CH2:1][CH2:2][CH2:3][CH3:4])[CH:6]=[CH:7][C:8]=3[S:18][CH2:17][C:16]=2[C:15](=[O:19])[CH:14]=1)=[O:22]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9-butyl-1,4-dihydro-4-oxo-5H-[1]benzothiopyrano-[4,3-b]pyridine-2-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)C=1C=CC2=C(C1)C=1NC(=CC(C1CS2)=O)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H17NO3S/c1-2-3-4-10-5-6-15-11(7-10)16-12(9-22-15)14(19)8-13(18-16)17(20)21/h5-8H,2-4,9H2,1H3,(H,18,19)(H,20,21)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.82,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 350.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of 9-butyl-1,4-dihydro-4-oxo-5H-[1]benzothiopyrano-[4,3-b]pyridine-2-carboxylic acid (1.82 g, described in Example 84) in 350 ml of anhydrous methanol saturated with hydrogen chloride is heated at reflux for 17 hours. The solvent is removed by evaporation. Water is added to the residue and the aqueous mixture is extracted with chloroform. The organic extract is dried over magnesium sulfate and evaporated. The residue is subjected to chromatography on silica gel using benzene-ethyl acetate (4:1) as eluant. The eluate is evaporated and the residue is crystallized from ether to give the title compound, m.p. 144\u00b0-146\u00b0 C."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "at reflux for 17 hours",
+            "duration": {
+                "value": 17.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent is removed by evaporation"
+        },
+        {
+            "type": "ADDITION",
+            "details": "Water is added to the residue",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the aqueous mixture is extracted with chloroform",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "chloroform"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The organic extract"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "is dried over magnesium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "magnesium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The eluate is evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue is crystallized from ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "9-Butyl-1,4-dihydro-4-oxo-5H-[1]benzothiopyrano[4,3-b]pyridine-2-carboxylic acid Methyl Ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COC(=O)C1=CC(C2=C(N1)C1=C(SC2)C=CC(=C1)CCCC)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H19NO3S/c1-3-4-5-11-6-7-16-12(8-11)17-13(10-23-16)15(20)9-14(19-17)18(21)22-2/h6-9H,3-5,10H2,1-2H3,(H,19,20)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04060619",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:39:23.421577"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:06:49 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:22 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-8c928f470cfe4aaa90107e7858dbcbbc"
+}

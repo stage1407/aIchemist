@@ -1,0 +1,584 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1([CH3:23])[S:6][C@@H:5]2[C@H:7]([NH:10]C(CC3C=CC=CC=3)=O)[C:8](=[O:9])[N:4]2[C@H:3]1[C:20]([O-:22])=[O:21].[K+].CC1(C)S[C@@H]2[C@H](NC(COC3C=CC=CC=3)=O)C(=O)N2[C@H:27]1[C:45]([OH:47])=[O:46].CC1(C)S[C@@H]2[C@H](NC(CC3C=CC=CC=3)=O)C(=O)N2[C@H]1C(O)=O.CC(OCC1CS[C@@H]2[C@H](NC(CCC[C@@H](N)C(O)=O)=O)C(=O)N2C=1C(O)=O)=O.O(CC(NC1C(=O)N2C(C(O)=O)=C(C)CS[C@H]12)=O)C1C=CC=CC=1.ClCC(NC1C(=O)N2C(C(O)=O)=C(C)CS[C@H]12)=O.C1(CC(NC2C(=O)N3C(C(O)=O)=C(C)CS[C@H]23)=O)C=CC=CC=1.C(NC1C(=O)N2C(C(O)=O)=C(C)CS[C@H]12)C1C=CC=CC=1>>[CH3:27][C:45]([O:47][CH2:23][C:2]1[CH2:1][S:6][C@@H:5]2[C@H:7]([NH2:10])[C:8](=[O:9])[N:4]2[C:3]=1[C:20]([OH:22])=[O:21])=[O:46] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m18": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "amino"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "iminohalide iminoether"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m16": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-(N'-phenylcarbamoyl)cephalosporin C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m22": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "esters"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m21": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "S-heterocyclic"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-[2-nitro-2-carbethoxyvinyl(1)]cephalosporin C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "penicillin G"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)CC=3C=CC=CC3)C(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H18N2O4S/c1-16(2)12(15(21)22)18-13(20)11(14(18)23-16)17-10(19)8-9-6-4-3-5-7-9/h3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22)/t11-,12+,14-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m15": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-(N'-butylcarbamoyl)cephalosporin C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "penicillin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)CC=3C=CC=CC3)C(=O)[O-])C.[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H18N2O4S.K/c1-16(2)12(15(21)22)18-13(20)11(14(18)23-16)17-10(19)8-9-6-4-3-5-7-9;/h3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22);/q;+1/p-1/t11-,12+,14-;/m1./s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "penicillin V"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1([C@@H](N2[C@H](S1)[C@@H](C2=O)NC(=O)COC=3C=CC=CC3)C(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H18N2O5S/c1-16(2)12(15(21)22)18-13(20)11(14(18)24-16)17-10(19)8-23-9-6-4-3-5-7-9/h3-7,11-12,14H,8H2,1-2H3,(H,17,19)(H,21,22)/t11-,12+,14-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m17": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-benzylamino-3-methylceph-3-em-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)NC1[C@@H]2N(C(=C(CS2)C)C(=O)O)C1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H16N2O3S/c1-9-8-21-14-11(13(18)17(14)12(9)15(19)20)16-7-10-5-3-2-4-6-10/h2-6,11,14,16H,7-8H2,1H3,(H,19,20)/t11?,14-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m13": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-chloracetamido-3-methylceph-3-em-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCC(=O)NC1[C@@H]2N(C(=C(CS2)C)C(=O)O)C1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H11ClN2O4S/c1-4-3-18-9-6(12-5(14)2-11)8(15)13(9)7(4)10(16)17/h6,9H,2-3H2,1H3,(H,12,14)(H,16,17)/t6?,9-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-[N-(2,2-diethoxycarbonyl)vinyl]adipinoylamino-3-[(1-methyl-1,2,3,4-tetrazol-5-yl)thiomethyl]ceph-3-em-4-carboxylic acid"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-[N-(2,2-diethoxycarbonyl)vinyl]adipinamido-3-[(4,5-dihydro-6-hydroxy-5-oxo-4-methyl-1,2,4-triazin-3-yl)thiomethyl]ceph-3-em-4-carboxylic acid"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m20": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "halogen"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-[N-(2,2-diethoxycarbonyl)vinyl]adipinamido-3-[(2,5-dihydro-6-hydroxy-5-oxo-2-methyl-1,2,4-triazin-3-yl)thiomethyl]ceph-3-em-4-carboxylic acid"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m12": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-phenoxyacetamido-3-methylceph-3-em-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O(C1=CC=CC=C1)CC(=O)NC1[C@@H]2N(C(=C(CS2)C)C(=O)O)C1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H16N2O5S/c1-9-8-24-15-12(14(20)18(15)13(9)16(21)22)17-11(19)7-23-10-5-3-2-4-6-10/h2-6,12,15H,7-8H2,1H3,(H,17,19)(H,21,22)/t12?,15-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cephalosporin"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m14": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-phenylacetamido-3-methylceph-3-em-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)CC(=O)NC1[C@@H]2N(C(=C(CS2)C)C(=O)O)C1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H16N2O4S/c1-9-8-23-15-12(14(20)18(15)13(9)16(21)22)17-11(19)7-10-5-3-2-4-6-10/h2-6,12,15H,7-8H2,1H3,(H,17,19)(H,21,22)/t12?,15-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cephalosporin C"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)OCC1=C(N2[C@@H]([C@@H](C2=O)NC(=O)CCC[C@H](C(=O)O)N)SC1)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H21N3O8S/c1-7(20)27-5-8-6-28-14-11(13(22)19(14)12(8)16(25)26)18-10(21)4-2-3-9(17)15(23)24/h9,11,14H,2-6,17H2,1H3,(H,18,21)(H,23,24)(H,25,26)/t9-,11-,14-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-[2,2-diethoxycarbonylvinyl(1)]cephalosporin C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m19": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "formula II"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In an iminohalide/iminoether reaction for converting amido groups to amino groups present on a penicillin or cephalosporin selected from the group consisting of penicillin V, penicillin G, cephalosporin C, 6-chloracetamidopenicillanic acid, N-[2,2-diethoxycarbonylvinyl(1)]cephalosporin C, N-[2-nitro-2-carbethoxyvinyl(1)]cephalosporin C, 7-[N-(2,2-diethoxycarbonyl)vinyl]adipinoylamino-3-[(1-methyl-1,2,3,4-tetrazol-5-yl)thiomethyl]ceph-3-em-4-carboxylic acid, 7-[N-(2,2-diethoxycarbonyl)vinyl]adipinamido-3-[(2,5-dihydro-6-hydroxy-5-oxo-2-methyl-1,2,4-triazin-3-yl)thiomethyl]ceph-3-em-4-carboxylic acid, 7-[N-(2,2-diethoxycarbonyl)vinyl]adipinamido-3-[(4,5-dihydro-6-hydroxy-5-oxo-4-methyl-1,2,4-triazin-3-yl)thiomethyl]ceph-3-em-4-carboxylic acid, 3-desacetoxy-3-(1-methyl-1,2,3,4-tetrazol-5-yl)thiocephalosporin C, 3-desacetoxy-3-(2,5-dihydro-6-hydroxy-5-oxo-2-methyl-1,2,4-triazin-3-yl)thiocephalosporin C, 3-desacetoxy-3-(4,5-dihydro-6-hydroxy-5-oxo-4-methyl-1,2,4-triazin-3-yl)thiocephalosporin C, 7-phenoxyacetamido-3-methylceph-3-em-4-carboxylic acid, 7-chloracetamido-3-methylceph-3-em-4-carboxylic acid, 7-phenylacetamido-3-methylceph-3-em-4-carboxylic acid, N-ethoxycarbonylcephalosporin C, N-methoxycarbonylcephalosporin C, N-isobutoxycarbonylcephalosporin C, N-iso-propyloxycarbonylcephalosporin C, N-(N'-butylcarbamoyl)cephalosporin C, N-(N'-phenylcarbamoyl)cephalosporin C, N-chloracetylcephalosporin C, or 7-benzylamino-3-methylceph-3-em-4-carboxylic acid; to prepare an amino-compound of formula I, ##STR11## in which X is a group of formula II or IIa, ##STR12## in which R1 is methyl, methoxy, halogen, acetoxymethyl or --CH2 --S-heterocyclic, and esters and salts thereof,"
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7-Aminocephalosporanic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)OCC1=C(N2[C@@H]([C@@H](C2=O)N)SC1)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H12N2O5S/c1-4(13)17-2-5-3-18-9-6(11)8(14)12(9)7(5)10(15)16/h6,9H,2-3,11H2,1H3,(H,15,16)/t6-,9-/m1/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04562253",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:58:56.373740"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:39:11 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:49 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-517c699285bf463a850ca7823f7980ad"
+}

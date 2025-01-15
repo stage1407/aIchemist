@@ -1,0 +1,611 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH:1](C(OC(C)(C)C)=O)[C@H:2]([C:13]([NH:15][C@H:16]([C:32]([OH:34])=[O:33])[CH2:17][CH2:18][CH2:19][CH2:20][NH:21][C:22]([O:24][CH2:25][C:26]1[CH:31]=[CH:30][CH:29]=[CH:28][CH:27]=1)=[O:23])=[O:14])[C@@H:3]([CH3:12])[O:4][CH2:5][C:6]1[CH:11]=[CH:10][CH:9]=[CH:8][CH:7]=1.Cl.[NH:43]([C:65]([O:67][C:68]([CH3:71])([CH3:70])[CH3:69])=[O:66])[C@H:44]([C:55]([O:57]N1C(=O)CCC1=O)=O)[C@@H:45]([CH3:54])[O:46][CH2:47][C:48]1[CH:53]=[CH:52][CH:51]=[CH:50][CH:49]=1.CCN(CC)CC>C1COCC1.CN(C=O)C.CCN(CC)CC.O.CCOC(C)=O.CC(O)=O>[NH:43]([C:65]([O:67][C:68]([CH3:69])([CH3:70])[CH3:71])=[O:66])[C@H:44]([C:55]([NH:1][C@H:2]([C:13]([NH:15][C@H:16]([C:32]([OH:34])=[O:33])[CH2:17][CH2:18][CH2:19][CH2:20][NH:21][C:22]([O:24][CH2:25][C:26]1[CH:31]=[CH:30][CH:29]=[CH:28][CH:27]=1)=[O:23])=[O:14])[C@@H:3]([CH3:12])[O:4][CH2:5][C:6]1[CH:7]=[CH:8][CH:9]=[CH:10][CH:11]=1)=[O:57])[C@@H:45]([CH3:54])[O:46][CH2:47][C:48]1[CH:49]=[CH:50][CH:51]=[CH:52][CH:53]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCOC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Et3N"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Boc-Thr(Bzl)-OSu"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N([C@@H]([C@H](OCC1=CC=CC=C1)C)C(=O)ON1C(=O)CCC1=O)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H26N2O7/c1-13(27-12-14-8-6-5-7-9-14)17(21-19(26)28-20(2,3)4)18(25)29-22-15(23)10-11-16(22)24/h5-9,13,17H,10-12H2,1-4H3,(H,21,26)/t13-,17+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 8.8,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Et3N"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m1_m2_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Boc-Thr(Bzl)-Lys(Z)-OH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N([C@@H]([C@H](OCC1=CC=CC=C1)C)C(=O)N[C@@H](CCCCNC(=O)OCC1=CC=CC=C1)C(=O)O)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H41N3O8/c1-21(39-19-22-13-7-5-8-14-22)25(33-29(38)41-30(2,3)4)26(34)32-24(27(35)36)17-11-12-18-31-28(37)40-20-23-15-9-6-10-16-23/h5-10,13-16,21,24-25H,11-12,17-20H2,1-4H3,(H,31,37)(H,32,34)(H,33,38)(H,35,36)/t21-,24+,25+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 14.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HCl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 500.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dipeptide hydrochloride salt"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 11.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 140.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "was stirred for an additional 24 hours at 25\u00b0"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Boc-Thr(Bzl)-Lys(Z)-OH (14.0 g, 24.5 mmol) was treated with 500 ml of 4.0 N HCl in THF for 30 minutes, evaporated to dryness, and re-evaporated twice with fresh THF. The oily residue solidified when treated with ether. The dried powder (11.4 g, 21.6 mmol) of the dipeptide hydrochloride salt was then dissolved in 140 ml DMF, cooled to 0\u00b0, and treated with Boc-Thr(Bzl)-OSu (8.8 g, 21.6 mmol) followed by 3.5 ml of Et3N. A few drops of Et3N was added to maintain a slightly basic condition while the mixture was stirred for an additional 24 hours at 25\u00b0. It was acidified with 5 ml of HOAc and then diluted with a large volume of water. The solid crude product precipitated was collected, dissolved in EtOAc, washed with H2O, dried over Na2SO4, and evaporated to dryness, leaving a glassy solid mass. Crystallized from EtOAc and petroleum ether: yield, 13.8 g (83.7%); mp 110\u00b0- 112\u00b0; [\u03b1]D25 = +19.45\u00b0 (c 1, EtOAc)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "evaporated to dryness"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "re-evaporated twice with fresh THF",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "THF"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1CCOC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "treated with ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "cooled to 0\u00b0"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to maintain a slightly basic condition while the mixture"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solid crude product precipitated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was collected"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "dissolved in EtOAc",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "EtOAc"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOC(=O)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "washed with H2O",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "H2O"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over Na2SO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated to dryness"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "leaving a glassy solid mass"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Crystallized from EtOAc and petroleum ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "EtOAc"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOC(=O)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "petroleum ether"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "yield"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Boc-Thr(Bzl)-Thr(Bzl)-Lys(Z)-OH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N([C@@H]([C@H](OCC1=CC=CC=C1)C)C(=O)N[C@@H]([C@H](OCC1=CC=CC=C1)C)C(=O)N[C@@H](CCCCNC(=O)OCC1=CC=CC=C1)C(=O)O)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C41H54N4O10/c1-28(52-25-30-17-9-6-10-18-30)34(36(46)43-33(38(48)49)23-15-16-24-42-39(50)54-27-32-21-13-8-14-22-32)44-37(47)35(45-40(51)55-41(3,4)5)29(2)53-26-31-19-11-7-12-20-31/h6-14,17-22,28-29,33-35H,15-16,23-27H2,1-5H3,(H,42,50)(H,43,46)(H,44,47)(H,45,51)(H,48,49)/t28-,29-,33+,34+,35+/m1/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04116951",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:41:40.320595"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:10:46 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:21 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-874099034c7349b897219820e42ef54f"
+}

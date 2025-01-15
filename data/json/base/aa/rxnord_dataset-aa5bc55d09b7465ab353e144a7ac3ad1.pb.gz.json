@@ -1,0 +1,201 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1[C:7](=[O:8])[C:6]([CH3:9])=[CH:5]O[C:3]=1[CH2:10][OH:11].[NH3:12]>>[CH3:1][CH:2]1[C:7](=[O:8])[C:6]([CH3:9])=[CH:5][N:12]=[C:3]1[CH2:10][OH:11]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3,5-Dimethyl-2-hydroxymethyl-4-pyrone"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3,5-dimethyl-2-hydroxymethyl-4-pyrone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(OC=C(C1=O)C)CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10O3/c1-5-4-11-7(3-9)6(2)8(5)10/h4,9H,3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 9.75,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonia"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3N/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 60.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 60.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The solution was then stirred at 60\u00b0 C. for 48 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "3,5-Dimethyl-2-hydroxymethyl-4-pyrone 4 (9.75 g, 63.3 mmol) was dissolved in 32% aqueous ammonia (0.880, 60 ml) in a 100 ml round bottom flask. The flask was sealed with a septum cap and made secure with wire. The solution was then stirred at 60\u00b0 C. for 48 hours before being evaporated to dryness under reduced pressure to give 5 as an off-white solid (9.30 g, 60.8 mmol, 96% yield). Selected IR (cm-1, nujol) 3150-3500 (br, s), 1639 (s); 1H-NMR (DMSO-d6) \u03b4 1.80 (s, 3H), 1.84 (s, 3H), 4.45 (s, 2H), 7.44 (s, 1H); Ms (APCI+) m/z (%) 154 (MH+, 100)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The flask was sealed with a septum"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "cap"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "before being evaporated to dryness under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 48.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3,5-Dimethyl-2-hydroxymethyl-4-pyridone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1C(=NC=C(C1=O)C)CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H11NO2/c1-5-3-9-7(4-10)6(2)8(5)11/h3,6,10H,4H2,1-2H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 60.8,
+                                    "units": "MILLIMOLE"
+                                }
+                            }
+                        },
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 9.3,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 96.0
+                            }
+                        }
+                    ],
+                    "isolated_color": "off-white",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06043371",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:52:59.958857"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:34:37 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:53 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-e4c622e566234ab5852cbb1f4889627a"
+}

@@ -1,0 +1,143 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "1953"
+        }
+    ],
+    "inputs": {
+        "C1CCCCC1P(=O)C2CCCCC2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCCCC1P(=O)C2CCCCC2"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "effective_coupling_partner"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "CC(C)(C)C(=O)Oc1ccc(C#N)cc1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)C(=O)Oc1ccc(C#N)cc1"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "substrate"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.2,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "dcype": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dcype"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.020000001,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 100.0,
+                "units": "CELSIUS"
+            }
+        }
+    },
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "N#Cc3ccc(P(=O)(C1CCCCC1)C2CCCCC2)cc3"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "type": "YIELD",
+                            "float_value": {
+                                "value": 98.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "isolated_yield": {
+                    "type": "CUSTOM",
+                    "details": "isolated yield"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1021/acs.joc.6b00289",
+        "record_created": {
+            "time": {
+                "value": "11/25/2022, 09:26:47"
+            },
+            "person": {
+                "name": "Jules Schleinitz",
+                "organization": "PASTEUR, D\u00e9partement de Chimie, \u00c9cole Normale Sup\u00e9rieure, PSL University, Sorbonne Universit\u00e9",
+                "email": "jules.schleinitz@ens.psl.eu"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Fri Nov 25 14:26:47 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-71fd12bb222642e3ae90b086f1ca394e"
+}

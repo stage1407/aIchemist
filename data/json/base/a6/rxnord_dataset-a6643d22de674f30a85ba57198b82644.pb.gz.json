@@ -1,0 +1,310 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([C:5]1[CH:10]=[C:9]([C:11]([CH3:14])([CH3:13])[CH3:12])[CH:8]=[C:7]([CH3:15])[C:6]=1[OH:16])([CH3:4])([CH3:3])[CH3:2].[P:17]([Cl:20])(Cl)Cl>CN(C)C=O.C1(C)C(C)=CC=CC=1>[C:1]([C:5]1[CH:10]=[C:9]([C:11]([CH3:14])([CH3:13])[CH3:12])[CH:8]=[C:7]([CH3:15])[C:6]=1[O:16][P:17]([Cl:20])[O:16][C:6]1[C:7]([CH3:15])=[CH:8][C:9]([C:11]([CH3:13])([CH3:12])[CH3:14])=[CH:10][C:5]=1[C:1]([CH3:4])([CH3:3])[CH3:2])([CH3:4])([CH3:3])[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,4-di-tert-butyl-6-methylphenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)C1=C(C(=CC(=C1)C(C)(C)C)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H24O/c1-10-8-11(14(2,3)4)9-12(13(10)16)15(5,6)7/h8-9,16H,1-7H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 890.3,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "xylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1(C(=CC=CC1)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 170.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "phosphorus trichloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "P(Cl)(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Cl3P/c1-4(2)3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 274.9,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 50.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "with stirring over the course of 1.5 hours at a temperature of 50\u00b0 C"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "890.3 g (4 mol) of 2,4-di-tert-butyl-6-methylphenol, 4.2 g of dimethylformamide and 170.0 g of xylene are introduced into a four-neck flask which has been flushed with nitrogen and is fitted with a thermometer, dropping funnel, reflux condenser and distillation attachment. 274.9 g (2 mol) of phosphorus trichloride are added dropwise with stirring over the course of 1.5 hours at a temperature of 50\u00b0 C. The reaction mixture is warmed to 130\u00b0 C. and refluxed at this temperature for 1 hour. The reaction mixture is kept at 120\u00b0 C. for 1 hour under a vacuum of 0.15 bar. Xylene is subsequently removed by distillation under a greater vacuum. After the vacuum has been broken using nitrogen, 959.5 g (1.9 mol) of the title compound are obtained as supercooled, yellow-orange, clear melt."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "has been flushed with nitrogen"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "is fitted with a thermometer"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "reflux condenser"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "distillation attachment"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction mixture is warmed to 130\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 130.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "refluxed at this temperature for 1 hour",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "WAIT",
+            "details": "The reaction mixture is kept at 120\u00b0 C. for 1 hour under a vacuum of 0.15 bar",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 120.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Xylene is subsequently removed by distillation under a greater vacuum",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Xylene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C=1(C(=CC=CC1)C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.5,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "bis(2,4-di-tert-butyl-6-methylphenyl)phosphorochloridite"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)C1=C(C(=CC(=C1)C(C)(C)C)C)OP(OC1=C(C=C(C=C1C)C(C)(C)C)C(C)(C)C)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H46ClO2P/c1-19-15-21(27(3,4)5)17-23(29(9,10)11)25(19)32-34(31)33-26-20(2)16-22(28(6,7)8)18-24(26)30(12,13)14/h15-18H,1-14H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 1.9,
+                                    "units": "MOLE"
+                                }
+                            }
+                        },
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 959.5,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 95.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05401845",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:28:07.342999"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:33:39 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:50 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-fe8bb390e62742689ba7acf0a2fca8fd"
+}

@@ -1,0 +1,579 @@
+{
+    "identifiers": [
+        {
+            "type": "CUSTOM",
+            "details": "Expt_Sample",
+            "value": "0378493_0148_1440"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Plate_Position",
+            "value": "10"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Row in plate",
+            "value": "P"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Column in plate",
+            "value": "18"
+        },
+        {
+            "type": "REACTION_TYPE",
+            "details": "Chemistry",
+            "value": "Suzuki"
+        }
+    ],
+    "inputs": {
+        "Boronic Acid/Ester Solution": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC1(C)OB(OC1(C)C)C2=CCCCC2"
+                        },
+                        {
+                            "type": "MDL",
+                            "details": "Monomer ID",
+                            "value": "MFCD05663845"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 150.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMSO"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 250.0,
+                            "units": "NANOLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 2,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot"
+            }
+        },
+        "Base Solution": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "BTMG"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)\\C(=N/C(C)(C)C)N(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 200.0,
+                            "units": "NANOMOLE"
+                        }
+                    }
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2O"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 250.0,
+                            "units": "NANOLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 4,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot"
+            }
+        },
+        "Aryl Halide Core Solution": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Ic1c[nH]c2ncccc12"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Core ID",
+                            "value": "Core_12"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 100.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMSO"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 250.0,
+                            "units": "NANOLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 400.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 1,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot"
+            }
+        },
+        "Catalyst Solution": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "RuPhos G3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)Oc1cccc(OC(C)C)c1-c1ccccc1[PH](C1CCCCC1)(C1CCCCC1)[Pd]1(OS(C)(=O)=O)Nc2ccccc2-c2ccccc21"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "value": "1445085-77-7"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 10.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMSO"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 250.0,
+                            "units": "NANOLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 3,
+            "addition_device": {
+                "type": "CUSTOM",
+                "details": "SPT Labtech Mosquito(R) HTS liquid handling robot"
+            }
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "details": "1536-well plate, Analytical Sales and Services, 20 uL polypropylene plate, cat. no. 15020",
+            "material": {
+                "type": "POLYPROPYLENE"
+            },
+            "preparations": [
+                {
+                    "type": "CUSTOM",
+                    "details": "plate sealed and centrifuged after addition of all inputs"
+                }
+            ],
+            "attachments": [
+                {
+                    "type": "MAT"
+                }
+            ],
+            "volume": {
+                "value": 20.0,
+                "units": "MICROLITER"
+            }
+        },
+        "is_automated": true,
+        "environment": {
+            "type": "GLOVE_BOX"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "AMBIENT"
+            },
+            "atmosphere": {
+                "type": "NITROGEN"
+            }
+        },
+        "stirring": {
+            "type": "NONE"
+        },
+        "reflux": false,
+        "conditions_are_dynamic": false
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "After 22 hours the crude reactions were diluted with 3 x 1 uL 0.5 M AcOH in DMSO (containing PhPh as an internal standard). The reactions were mixed after each dispense operation.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetic acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CC(=O)O"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 1.5,
+                                "units": "MICROMOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DMSO"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 3.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "c1ccc(-c2ccccc2)cc1"
+                            }
+                        ],
+                        "reaction_role": "INTERNAL_STANDARD"
+                    }
+                ],
+                "addition_device": {
+                    "type": "CUSTOM",
+                    "details": "SPT Labtech Mosquito(R) HTS liquid handling robot"
+                }
+            }
+        },
+        {
+            "type": "ALIQUOT",
+            "details": "Mosquito(R) was used to transfer 1 uL of each quenched reaction from the 1,536-well reaction plate to 384-well analytical plates containing 60 uL DMSO for analysis. ",
+            "amount": {
+                "volume": {
+                    "value": 1.0,
+                    "units": "MICROLITER"
+                }
+            },
+            "is_automated": true
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 22.0,
+                "units": "HOUR"
+            },
+            "conversion": {
+                "value": 0.0
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "CUSTOM",
+                            "details": "Product  ID",
+                            "value": "Inform_120"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCC(=CC1)c2c[nH]c3ncccc23"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Product Mass",
+                            "value": "198.1157"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Product Formula",
+                            "value": "C13H14N2"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_CouplingProd AreaAbs",
+                            "uses_internal_standard": false,
+                            "is_normalized": false,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 0.797,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        },
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "Pdt-to-IS Ratio",
+                            "uses_internal_standard": true,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 0.0,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Ic1c[nH]c2ncccc12"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_Core AreaAbs",
+                            "uses_internal_standard": false,
+                            "is_normalized": false,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 11932.043
+                            },
+                            "retention_time": {
+                                "value": 0.797,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        },
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_Core Area (Core_05 adjusted)",
+                            "uses_internal_standard": false,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 11932.043
+                            },
+                            "retention_time": {
+                                "value": 0.797,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        }
+                    ],
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "c1ccc(-c2ccccc2)cc1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_PhPh AreaAbs",
+                            "uses_internal_standard": false,
+                            "is_normalized": false,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 23329.963
+                            },
+                            "retention_time": {
+                                "value": 1.186,
+                                "units": "MINUTE"
+                            },
+                            "wavelength": {
+                                "value": 254.0,
+                                "units": "NANOMETER"
+                            }
+                        },
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "AREA",
+                            "details": "UV254_PhPh Area (Core_05 adjusted)",
+                            "float_value": {
+                                "value": 23329.963
+                            }
+                        }
+                    ],
+                    "reaction_role": "INTERNAL_STANDARD"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "chmo_id": 715,
+                    "is_of_isolated_species": false,
+                    "data": {
+                        "NOTE": {
+                            "string_value": "lcms note",
+                            "description": "nan"
+                        }
+                    },
+                    "instrument_manufacturer": "Waters I-class ACQUITY UPLC-MS"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1038/s44160-023-00351-1",
+        "publication_url": "https://www.nature.com/articles/s44160-023-00351-1",
+        "record_created": {
+            "time": {
+                "value": "15/11/2023, 14:31:07"
+            },
+            "person": {
+                "username": "bdeadman",
+                "name": "Benjamin Deadman",
+                "orcid": "0000-0001-8463-8199",
+                "organization": "Open Reaction Database",
+                "email": "ben@open-reaction-database.org"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Oct  9 13:58:35 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-4a67e8eeea7641c6b2820fcde2ba38d1"
+}
