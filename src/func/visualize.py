@@ -16,7 +16,7 @@ ATOM_COLORS = {
     'I': 'purple'    # Iodine
 }
 
-def visualize_molecule_graph(G: nx.Graph):
+def visualize_molecule_graph(G: nx.Graph, mol=None):
     """
     Visualizes a molecular graph with atom symbols as nodes and bond types as edge labels.
 
@@ -36,6 +36,13 @@ def visualize_molecule_graph(G: nx.Graph):
 
     # Extract bond types as double values for edge labels
     edge_labels = nx.get_edge_attributes(G, 'bond_type')  # Get bond type as edge labels
+    if not mol is None:
+        for bond in mol.GetBonds():
+            idx1 = bond.GetBeginAtomIdx()
+            idx2 = bond.GetEndAtomIdx()
+            is_aromatic = bond.GetIsAromatic()
+            bond_type = "1.0" if (idx1 + idx2) % 2 == 0 else "2.0"
+            G.add_edge(idx1, idx2, aromatic=is_aromatic, bond_type=bond_type if is_aromatic else str(bond.GetBondTypeAsDouble()))
 
     # Draw the graph with custom node colors and labels
     plt.figure(figsize=(10, 8))
@@ -55,6 +62,9 @@ def visualize_molecule_graph(G: nx.Graph):
     # Draw bond type labels (BondTypeAsDouble)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10, font_color='red')
 
+    ring_info = mol.GetRingInfo()
+    aromatic_rings = [ring for ring in ring_info.AtomRings() if all(mol.GetAtomWithIdx(idx).GetIsAromatic() for idx in ring)]
+    
     plt.title("Molecular Graph Visualization")
     plt.axis('off')
     plt.show()

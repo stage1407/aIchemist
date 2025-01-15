@@ -372,7 +372,7 @@ def transform(G : mol_graph, omega : list, G_R : reaction_graph):
                 G.add_edge(u,v,bond_type=x)
             phi_.update({(u,v): x}) if x >= 0.0 else ValueError("Transformation is not feasible")
             # G[u][v]["bond_type"] = G[u][v]["bond_type"] + G_R.psi[(omega[u],omega[v])]
-            if x <= 0.0: # G[u][v]["bond_type"] == 0:
+            if float(x) <= 0.0: # G[u][v]["bond_type"] == 0:
                 G.remove_edge(u,v)
             print(u,v,G.get_edge_data(u,v))
     G.phi = phi_
