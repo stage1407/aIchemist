@@ -1,0 +1,176 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([N:3]([CH2:6][C:7]1[O:11][C:10]([C:12]([O:14]CCCC)=O)=[CH:9][CH:8]=1)[CH2:4][CH3:5])[CH3:2].[NH3:19]>>[CH2:1]([N:3]([CH2:6][C:7]1[O:11][C:10]([C:12]([NH2:19])=[O:14])=[CH:9][CH:8]=1)[CH2:4][CH3:5])[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-butyl 5-(N,N-diethylaminomethyl)-2-furoate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC1=CC=C(O1)C(=O)OCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H23NO3/c1-4-7-10-17-14(16)13-9-8-12(18-13)11-15(5-2)6-3/h8-9H,4-7,10-11H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 25.3,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonia"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3N/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "liquid"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 25.3 g (0.1 mole) of n-butyl 5-(N,N-diethylaminomethyl)-2-furoate is added to 50 ml of liquid ammonia in a pressure vessel. The mixture is held at 180\u00b0 C. and 2000 pounds per square inch gage pressure for 8 hours. The mixture is cooled to ambient temperature and evaporated to dryness giving 5-(N,N-diethylaminomethyl)-2-furamide (m.p. 164\u00b0-165\u00b0 C.)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "is held at 180\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 180.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated to dryness"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-(N,N-diethylaminomethyl)-2-furamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC1=CC=C(O1)C(=O)N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H16N2O2/c1-3-12(4-2)7-8-5-6-9(14-8)10(11)13/h5-6H,3-4,7H2,1-2H3,(H2,11,13)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04195023",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:45:04.047718"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:16:11 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:54 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-eb85caa288a540a391469828a5b38c70"
+}

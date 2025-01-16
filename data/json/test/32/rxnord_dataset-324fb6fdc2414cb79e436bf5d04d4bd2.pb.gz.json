@@ -1,0 +1,212 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "Br[CH2:2][C:3]([C:5]1[CH:10]=[CH:9][C:8]([O:11][CH2:12][CH2:13][CH3:14])=[CH:7][CH:6]=1)=[O:4].[NH:15]1[CH:19]=[N:18][CH:17]=[N:16]1.C(N(C(C)C)CC)(C)C>O1CCCC1>[N:15]1([CH2:2][C:3]([C:5]2[CH:10]=[CH:9][C:8]([O:11][CH2:12][CH2:13][CH3:14])=[CH:7][CH:6]=2)=[O:4])[CH:19]=[N:18][CH:17]=[N:16]1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-bromo-4'-propoxyacetophenone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrCC(=O)C1=CC=C(C=C1)OCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H13BrO2/c1-2-7-14-10-5-3-9(4-6-10)11(13)8-12/h3-6H,2,7-8H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 29.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,2,4-triazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1N=CN=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N3/c1-3-2-5-4-1/h1-2H,(H,3,4,5)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 10.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diisopropylethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)N(CC)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 15.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "By substantially following the procedure of Example 608a using 29 g of 2-bromo-4'-propoxyacetophenone (Example 585b), 10 g of 1,2,4-triazole, 15 g (116 mmole) of diisopropylethylamine, and 100 ml of tetrahydrofuran, 8.4 g of the desired compound, mp 97\u00b0-99\u00b0 C., was obtained."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "desired compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-(1,2,4-triazol-1-yl)-4'-propoxyacetophenone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(N=CN=C1)CC(=O)C1=CC=C(C=C1)OCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H15N3O2/c1-2-7-18-12-5-3-11(4-6-12)13(17)8-16-10-14-9-15-16/h3-6,9-10H,2,7-8H2,1H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 8.4,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 30.4
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05798311",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:44:29.233121"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:08:15 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:46 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-a19d8a0e04e0412aa782ce27a61dd8e7"
+}

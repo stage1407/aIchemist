@@ -1,0 +1,151 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([NH:4][C:5](=[O:42])[CH2:6][CH2:7][CH2:8]/[CH:9]=[CH:10]\\[CH2:11][C@@H:12]1[C@@H:16](/[CH:17]=[CH:18]/[C@@H:19]([O:27]C2CCCCO2)[C:20]([CH3:26])([CH3:25])[CH2:21][C:22]#[C:23][CH3:24])[C@H:15]([O:34]C2CCCCO2)[CH2:14][C:13]1=[O:41])(=[O:3])[CH3:2]>C(O)(=O)C.O.C1COCC1>[C:1]([NH:4][C:5](=[O:42])[CH2:6][CH2:7][CH2:8]/[CH:9]=[CH:10]\\[CH2:11][C@@H:12]1[C@@H:16](/[CH:17]=[CH:18]/[C@@H:19]([OH:27])[C:20]([CH3:25])([CH3:26])[CH2:21][C:22]#[C:23][CH3:24])[C@H:15]([OH:34])[CH2:14][C:13]1=[O:41])(=[O:3])[CH3:2] |f:1.2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(5Z,13E)-(11R,15R)-16,16-dimethyl-9-oxo-11,15-bis(tetrahydropyran-2-yloxy)-5,13-prostadien-18-ynoic acid acetylamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)NC(CCC\\C=C/C[C@H]1C(C[C@H]([C@@H]1\\C=C\\[C@H](C(CC#CC)(C)C)OC1OCCCC1)OC1OCCCC1)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C34H51NO7/c1-5-6-21-34(3,4)30(42-33-18-12-14-23-40-33)20-19-27-26(15-9-7-8-10-16-31(38)35-25(2)36)28(37)24-29(27)41-32-17-11-13-22-39-32/h7,9,19-20,26-27,29-30,32-33H,8,10-18,21-24H2,1-4H3,(H,35,36,38)/b9-7-,20-19+/t26-,27-,29-,30-,32?,33?/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid water THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O.O.C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O.C2H4O2.H2O/c1-2-4-5-3-1;1-2(3)4;/h1-4H2;1H3,(H,3,4);1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "400 mg. of (5Z,13E)-(11R,15R)-16,16-dimethyl-9-oxo-11,15-bis(tetrahydropyran-2-yloxy)-5,13-prostadien-18-ynoic acid acetylamide is agitated for 16 hours at 25\u00b0 with 12 ml. of a mixture of glacial acetic acid/water/THF (65/35/10), evaporated under vacuum, and the residue purified by column chromatography on silica gel. With methylene chloride/2-5% methanol, 190 mg. of the title compound is obtained as an oil."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "evaporated under vacuum"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue purified by column chromatography on silica gel"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(5Z,13E)-(11R,15R)-16,16-Dimethyl-11,15-dihydroxy-9-oxo-5,13-prostadien-18-ynoic Acid Acetylamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)NC(CCC\\C=C/C[C@H]1C(C[C@H]([C@@H]1\\C=C\\[C@H](C(CC#CC)(C)C)O)O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H35NO5/c1-5-6-15-24(3,4)22(29)14-13-19-18(20(27)16-21(19)28)11-9-7-8-10-12-23(30)25-17(2)26/h7,9,13-14,18-19,21-22,28-29H,8,10-12,15-16H2,1-4H3,(H,25,26,30)/b9-7-,14-13+/t18-,19-,21-,22-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04235930",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:46:44.833070"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:18:59 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:04 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-5cddab676ff54393a42b848ed00f3e8b"
+}

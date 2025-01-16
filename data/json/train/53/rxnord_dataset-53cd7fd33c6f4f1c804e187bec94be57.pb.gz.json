@@ -1,0 +1,232 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH:1]([C:8]1[C:18]([S:19](=[O:28])(=[O:27])[NH:20][C:21]2[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=2)=[CH:17][C:11]([C:12]([O:14]CC)=[O:13])=[CH:10][C:9]=1[NH:29][CH2:30][C:31]1[CH:36]=[CH:35][CH:34]=[CH:33][CH:32]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.Cl>[OH-].[Na+]>[NH:1]([C:8]1[C:18]([S:19](=[O:28])(=[O:27])[NH:20][C:21]2[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=2)=[CH:17][C:11]([C:12]([OH:14])=[O:13])=[CH:10][C:9]=1[NH:29][CH2:30][C:31]1[CH:36]=[CH:35][CH:34]=[CH:33][CH:32]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1 |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Ethyl 4-anilino-3-benzylamino-5-phenylsulphamyl-benzoate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N(C1=CC=CC=C1)C1=C(C=C(C(=O)OCC)C=C1S(NC1=CC=CC=C1)(=O)=O)NCC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H27N3O4S/c1-2-35-28(32)22-18-25(29-20-21-12-6-3-7-13-21)27(30-23-14-8-4-9-15-23)26(19-22)36(33,34)31-24-16-10-5-11-17-24/h3-19,29-31H,2,20H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 35.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrochloric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Ethyl 4-anilino-3-benzylamino-5-phenylsulphamyl-benzoate (3 g) was dissolved in 1N sodium hydroxide (35 ml), and the solution was heated on a steam bath for 1 hour. After cooling, the reaction mixture was adjusted to a pH of 2.5 by addition of 4N hydrochloric acid. The precipitated 4-anilino-3-benzylamino-5-phenylxulphamyl-benzoic acid was collected by suction and recrystallized from acetone/water. The compound was obtained with a melting point of 243\u00b0C."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "the solution was heated on a steam bath for 1 hour",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "After cooling"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The precipitated 4-anilino-3-benzylamino-5-phenylxulphamyl-benzoic acid was collected by suction",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "4-anilino-3-benzylamino-5-phenylxulphamyl-benzoic acid"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "recrystallized from acetone/water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetone water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)C.O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H6O.H2O/c1-3(2)4;/h1-2H3;1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The compound was obtained with a melting point of 243\u00b0C."
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-anilino-3-benzylamino-5-phenylsulphamyl-benzoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N(C1=CC=CC=C1)C1=C(C=C(C(=O)O)C=C1S(NC1=CC=CC=C1)(=O)=O)NCC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C26H23N3O4S/c30-26(31)20-16-23(27-18-19-10-4-1-5-11-19)25(28-21-12-6-2-7-13-21)24(17-20)34(32,33)29-22-14-8-3-9-15-22/h1-17,27-29H,18H2,(H,30,31)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US03971819",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:35:37.239207"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:00:17 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:04 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-cfe8ae96d93f4856b8d94930f28531b7"
+}

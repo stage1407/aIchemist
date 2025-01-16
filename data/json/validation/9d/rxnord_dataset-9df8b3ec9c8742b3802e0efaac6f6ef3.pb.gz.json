@@ -1,0 +1,321 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([S:4][CH2:5][C:6]1[CH:7]=[C:8]([C:12]2[C:13]3[NH:17][C:16]([C:18]([C:58]4[CH:63]=[CH:62][CH:61]=[C:60]([CH2:64][S:65][C:66](=[O:68])[CH3:67])[CH:59]=4)=[C:19]4[N:57]=[C:22]([C:23]([C:46]5[CH:51]=[CH:50][CH:49]=[C:48]([CH2:52][S:53][C:54](=[O:56])[CH3:55])[CH:47]=5)=[C:24]5[NH:45][C:27](=[C:28]([C:34]6[CH:39]=[CH:38][CH:37]=[C:36]([CH2:40][S:41][C:42](=[O:44])[CH3:43])[CH:35]=6)[C:29]6[CH:30]=[CH:31][C:32]=2[N:33]=6)[CH:26]=[CH:25]5)[CH:21]=[CH:20]4)=[CH:15][CH:14]=3)[CH:9]=[CH:10][CH:11]=1)(=[O:3])[CH3:2].[Zn:69](OC(C)=O)OC(C)=O.O.O.O>C(Cl)(Cl)Cl.CO>[Zn+2:69].[C:66]([S:65][CH2:64][C:60]1[CH:59]=[C:58]([C:18]2[C:16]3[NH:17][C:13]([C:12]([C:8]4[CH:9]=[CH:10][CH:11]=[C:6]([CH2:5][S:4][C:1](=[O:3])[CH3:2])[CH:7]=4)=[C:32]4[N:33]=[C:29]([C:28]([C:34]5[CH:39]=[CH:38][CH:37]=[C:36]([CH2:40][S:41][C:42](=[O:44])[CH3:43])[CH:35]=5)=[C:27]5[NH:45][C:24](=[C:23]([C:46]6[CH:51]=[CH:50][CH:49]=[C:48]([CH2:52][S:53][C:54](=[O:56])[CH3:55])[CH:47]=6)[C:22]6[CH:21]=[CH:20][C:19]=2[N:57]=6)[CH:25]=[CH:26]5)[CH:30]=[CH:31]4)=[CH:14][CH:15]=3)[CH:63]=[CH:62][CH:61]=1)(=[O:68])[CH3:67] |f:1.2.3,7.8|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H2O"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "29"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "5,10,15,20-Tetrakis[m-(S-acetylthiomethyl)phenyl]porphyrin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)SCC=1C=C(C=CC1)C=1C2=CC=C(N2)C(=C2C=CC(C(=C3C=CC(=C(C=4C=CC1N4)C4=CC(=CC=C4)CSC(C)=O)N3)C3=CC(=CC=C3)CSC(C)=O)=N2)C2=CC(=CC=C2)CSC(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C56H46N4O4S4/c1-33(61)65-29-37-9-5-13-41(25-37)53-45-17-19-47(57-45)54(42-14-6-10-38(26-42)30-66-34(2)62)49-21-23-51(59-49)56(44-16-8-12-40(28-44)32-68-36(4)64)52-24-22-50(60-52)55(48-20-18-46(53)58-48)43-15-7-11-39(27-43)31-67-35(3)63/h5-28,57,60H,29-32H2,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 16.2,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CHCl3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Zn(OAc)2\u20222H2O"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Zn](OC(=O)C)OC(=O)C.O.O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C2H4O2.2H2O.Zn/c2*1-2(3)4;;;/h2*1H3,(H,3,4);2*1H2;/q;;;;+2/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 80.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred at ambient temperature"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 16.2 mg of 29 (16.7 \u03bcmol) in 20 mL of CHCl3 and a solution of 80.0 mg of Zn(OAc)2\u20222H2O (365 \u03bcmol) in 5 mL of methanol were combined and stirred at ambient temperature. After 2 h the metalation was completed (checked by fluorescence excitation spectroscopy) and 40 mL of H2O was added. The phases were separated and the organic layer was washed three times with 5% NaHCO3 and dried (Na2SO4). The solvents were removed under reduced pressure. Column chromatography over flash silica gel with CH2Cl2/hexanes (4:1) gave the title compound as a purple solid in quantitative yield. IR (neat): {tilde over (\u03bd)}=2922 (w, CH), 2849 (w, CH), 1690 (s, CO), 1655 (m, arom. C\u2550C), 1600 (w, arom. C\u2550C), 1478 (w), 1420 (w), 1338 (w), 1208 (m), 1131 (m), 1067 (w), 1002 (m), 955 (w), 932 (w), 794 (m), 717 (m); 1H NMR (300.5 MHz, CDCl3): \u03b4=2.30 (s, 12H, CH3), 4.31 (s, 8H, CH2), 7.62-7.69 (m, 8H, ArH), 8.05-8.13 (m, 8H, ArH), 8.92 (s, 8H, \u03b2-pyrrole); LD-MS calcd av mass 1028.15 (C56H44N4O4S4Zn), obsd 1028.8, 986.6 [M+\u2014COCH3], 954.7 [M+\u2014SCOCH3], 911.3 [M+\u2014SCOCH3\u2014COCH3], 880.4 [M+-2 SCOCH3], 838.8 [M+-2 SCOCH3\u2014COCH3], 805.3 [M+-3 SCOCH3]; \u03bbabs (toluene) 424, 550, 589 nm; \u03bbem (toluene) 597, 647 nm."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The phases were separated"
+        },
+        {
+            "type": "WASH",
+            "details": "the organic layer was washed three times with 5% NaHCO3",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "NaHCO3"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(=O)(O)[O-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried (Na2SO4)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvents were removed under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "CH2Cl2 hexanes"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Zinc(II) 5,10,15,20-Tetrakis[m-(S-acetylthiomethyl)phenyl]porphyrin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Zn+2].C(C)(=O)SCC=1C=C(C=CC1)C=1C2=CC=C(N2)C(=C2C=CC(C(=C3C=CC(=C(C=4C=CC1N4)C4=CC(=CC=C4)CSC(C)=O)N3)C3=CC(=CC=C3)CSC(C)=O)=N2)C2=CC(=CC=C2)CSC(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C56H46N4O4S4.Zn/c1-33(61)65-29-37-9-5-13-41(25-37)53-45-17-19-47(57-45)54(42-14-6-10-38(26-42)30-66-34(2)62)49-21-23-51(59-49)56(44-16-8-12-40(28-44)32-68-36(4)64)52-24-22-50(60-52)55(48-20-18-46(53)58-48)43-15-7-11-39(27-43)31-67-35(3)63;/h5-28,57,60H,29-32H2,1-4H3;/q;+2"
+                        }
+                    ],
+                    "isolated_color": "purple",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06208553B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:58:29.752051"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:52:06 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:39 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-4dd46ab270f64b77be467a3309345fee"
+}

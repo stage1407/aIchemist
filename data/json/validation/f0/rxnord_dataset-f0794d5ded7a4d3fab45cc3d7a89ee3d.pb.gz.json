@@ -1,0 +1,219 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][CH:2]1[CH2:7][CH2:6][CH:5]([C:8]([O:10][CH2:11][CH3:12])=[O:9])[CH2:4][CH2:3]1.CCN(C(C)C)C(C)C.[Si:22](Cl)([C:35]([CH3:38])([CH3:37])[CH3:36])([C:29]1[CH:34]=[CH:33][CH:32]=[CH:31][CH:30]=1)[C:23]1[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=1>C(Cl)Cl.CN(C1C=CN=CC=1)C>[Si:22]([O:1][CH:2]1[CH2:3][CH2:4][CH:5]([C:8]([O:10][CH2:11][CH3:12])=[O:9])[CH2:6][CH2:7]1)([C:35]([CH3:38])([CH3:37])[CH3:36])([C:29]1[CH:30]=[CH:31][CH:32]=[CH:33][CH:34]=1)[C:23]1[CH:28]=[CH:27][CH:26]=[CH:25][CH:24]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m4_m2_m5_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl 4-hydroxycyclohexanecarboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1CCC(CC1)C(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H16O3/c1-2-12-9(11)7-3-5-8(10)6-4-7/h7-8,10H,2-6H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 5.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DIPEA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 16.06,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "TBDPS-Cl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C1=CC=CC=C1)(C1=CC=CC=C1)(C(C)(C)C)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H19ClSi/c1-16(2,3)18(17,14-10-6-4-7-11-14)15-12-8-5-9-13-15/h4-13H,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 11.8,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DCM"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMAP"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=1C=CN=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H10N2/c1-9(2)7-3-5-8-6-4-7/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.13,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The reactant ethyl 4-hydroxycyclohexanecarboxylate (5.4 g, 30.73 mmol) in DCM (100 mL) was treated with DIPEA (16.06 mL, 92.2 mmol), DMAP (4.13 g, 30.80 mmol) and TBDPS-Cl (11.8 mL, 46.1 mmol) at RT for 16 h. After concentrated in vacuum, the residue was purified by CombiFlash on silica gel column using EtOAC/Hexane as eluents to give ethyl 4-(tert-butyldiphenylsilyloxy)cyclohexanecarboxylate 157a, 12.6 g, 99% yield."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "After concentrated in vacuum"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue was purified by CombiFlash on silica gel column"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl 4-(tert-butyldiphenylsilyloxy)cyclohexanecarboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C1=CC=CC=C1)(C1=CC=CC=C1)(C(C)(C)C)OC1CCC(CC1)C(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H34O3Si/c1-5-27-24(26)20-16-18-21(19-17-20)28-29(25(2,3)4,22-12-8-6-9-13-22)23-14-10-7-11-15-23/h6-15,20-21H,5,16-19H2,1-4H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 99.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US09145441B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:48:54.069388"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:22:10 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:04 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-506a7bae31f44e64992cd1cc474e3e4d"
+}

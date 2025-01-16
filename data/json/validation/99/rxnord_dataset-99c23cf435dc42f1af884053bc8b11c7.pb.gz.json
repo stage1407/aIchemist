@@ -1,0 +1,271 @@
+{
+    "identifiers": [
+        {
+            "type": "CUSTOM",
+            "details": "rxn_id from SURF table",
+            "value": "lit_pub_bo_1301"
+        },
+        {
+            "type": "REACTION_TYPE",
+            "details": "borylation",
+            "value": "borylation"
+        }
+    ],
+    "inputs": {
+        "catalyst_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C[OH2+].C[OH2+].C1CC=CCCC=C1.C1CC=CCCC=C1.[Ir].[Ir]"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "12148-71-9"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0025,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "solvent_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "109-99-9"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "reagent_3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O1B(OC(C)(C)C1(C)C)B2OC(C)(C)C(O2)(C)C"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "73183-34-3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.5,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ]
+        },
+        "reagent_2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "N=1C=CC=CC1C=NN(CC=2C=CC=CC2)CC=3C=CC=CC3"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "237402-29-8"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.005,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ]
+        },
+        "startingmat_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "N(=CC1=CC=CC=2C=CC=CC12)N(C)C"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "59670-84-7"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.5,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "reagent_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O1BOC(C)(C)C1(C)C"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "details": "cas number from SURF _cas column",
+                            "value": "25015-63-8"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.025,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 80.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "SEALED"
+            },
+            "atmosphere": {
+                "type": "ARGON"
+            }
+        },
+        "stirring": {}
+    },
+    "notes": {
+        "procedure_details": "Following the general procedure, column chromatography in neutral alumina (EtOAc/n-hexane 1:8) afforded 11i (155 mg, 95 %) as a yellow oil."
+    },
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "N(=CC1=C(C=CC=2C=CC=CC21)B3OC(C)(C)C(O3)(C)C)N(C)C"
+                        },
+                        {
+                            "type": "CAS_NUMBER",
+                            "value": "1360607-22-2"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "MS of product_1",
+                            "type": "IDENTITY"
+                        },
+                        {
+                            "analysis_key": "NMR of product_1",
+                            "type": "IDENTITY"
+                        },
+                        {
+                            "analysis_key": "product_1_UNKNOWN",
+                            "type": "YIELD",
+                            "percentage": {
+                                "value": 95.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "MS of product_1": {
+                    "type": "HRMS",
+                    "details": "HRMS Found: 324.2017",
+                    "data": {
+                        "found": {
+                            "float_value": 324.2017,
+                            "description": "Observed m/z"
+                        }
+                    }
+                },
+                "NMR of product_1": {
+                    "type": "NMR_1H",
+                    "data": {
+                        "peaks": {
+                            "string_value": "1 H NMR (400 MHz, CDCl3): \u03b4 8.77-8.76 (m, 1H), 8.31 (s, 1H,), 7.79-7.78 (m, 1H) 7.75 (d, 1H, J = 10.5 Hz), 7.71 (d, 1H, J = 10.5 Hz), 7.49-7.47 (m, 2H), 3.07 (s, 6H), 1.39 (s, 12H). 13C NMR (125 MHz, CDCl3): \u03b4 139.4, 135.4, 135.1, 130.6, 128.1, 126.7, 126.3, 126.3, 125.9, 83.6, 42.9, 25.0 (C-B not observed); 11B NMR (160 MHz, CDCl3): \u03b4 32.2 ppm;"
+                        }
+                    }
+                },
+                "product_1_UNKNOWN": {
+                    "type": "CUSTOM",
+                    "details": "UNKNOWN"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1002/anie.201104544",
+        "record_created": {
+            "time": {
+                "value": "2024-07-30"
+            },
+            "person": {
+                "username": "Alex T. Mueller",
+                "orcid": "0000-0001-8063-9952",
+                "organization": "F. Hoffmann-La Roche Ltd.",
+                "email": "alex.mueller@roche.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Tue Aug 13 21:33:01 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-04ef4005b699487e9a1d97d3cb0cd4bf"
+}

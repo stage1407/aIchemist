@@ -1,0 +1,364 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]1([N:7]2[C:19]3[CH:18]=[CH:17][C:16]([C:20]4[CH:21]=[CH:22][C:23]5[NH:24][C:25]6[C:30]([C:31]=5[CH:32]=4)=[CH:29][C:28]([C:33]4[CH:34]=[CH:35][C:36]5[N:37]([C:46]7[CH:51]=[CH:50][CH:49]=[CH:48][CH:47]=7)[C:38]7[C:43]([C:44]=5[CH:45]=4)=[CH:42][CH:41]=[CH:40][CH:39]=7)=[CH:27][CH:26]=6)=[CH:15][C:14]=3[C:13]3[C:8]2=[CH:9][CH:10]=[CH:11][CH:12]=3)[CH:6]=[CH:5][CH:4]=[CH:3][CH:2]=1.Br[C:53]1[CH:54]=[C:55]([C:59]2[N:64]=[C:63]([C:65]3[CH:70]=[CH:69][CH:68]=[CH:67][CH:66]=3)[CH:62]=[C:61]([C:71]3[CH:76]=[CH:75][CH:74]=[CH:73][CH:72]=3)[N:60]=2)[CH:56]=[CH:57][CH:58]=1.CC([O-])(C)C.[Na+].C(P(C(C)(C)C)C(C)(C)C)(C)(C)C>CC1C=CC(C)=CC=1.CC([O-])=O.CC([O-])=O.[Pd+2]>[C:71]1([C:61]2[CH:62]=[C:63]([C:65]3[CH:70]=[CH:69][CH:68]=[CH:67][CH:66]=3)[N:64]=[C:59]([C:55]3[CH:56]=[C:57]([N:24]4[C:23]5[CH:22]=[CH:21][C:20]([C:16]6[CH:17]=[CH:18][C:19]7[N:7]([C:1]8[CH:2]=[CH:3][CH:4]=[CH:5][CH:6]=8)[C:8]8[C:13]([C:14]=7[CH:15]=6)=[CH:12][CH:11]=[CH:10][CH:9]=8)=[CH:32][C:31]=5[C:30]5[C:25]4=[CH:26][CH:27]=[C:28]([C:33]4[CH:34]=[CH:35][C:36]6[N:37]([C:46]7[CH:47]=[CH:48][CH:49]=[CH:50][CH:51]=7)[C:38]7[C:43]([C:44]=6[CH:45]=4)=[CH:42][CH:41]=[CH:40][CH:39]=7)[CH:29]=5)[CH:58]=[CH:53][CH:54]=3)[N:60]=2)[CH:76]=[CH:75][CH:74]=[CH:73][CH:72]=1 |f:2.3,6.7.8|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tri-tert-butylphosphine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)P(C(C)(C)C)C(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H27P/c1-10(2,3)13(11(4,5)6)12(7,8)9/h1-9H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Pd(OAc)2"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)[O-].CC(=O)[O-].[Pd+2]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C2H4O2.Pd/c2*1-2(3)4;/h2*1H3,(H,3,4);/q;;+2/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 201.21,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9,9\u2033-diphenyl-9H,9\u2032H,9\u2033H-[3,3\u2032;6\u2032,3\u2033]tercarbazole"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "9,9\u2033-Diphenyl-9H,9\u2032H,9\u2033H-[3,3\u2032;6\u2032,3\u2033]tercarbazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)N1C2=CC=CC=C2C=2C=C(C=CC12)C=1C=CC=2NC3=CC=C(C=C3C2C1)C=1C=CC=2N(C3=CC=CC=C3C2C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C48H31N3/c1-3-11-35(12-4-1)50-45-17-9-7-15-37(45)41-29-33(21-25-47(41)50)31-19-23-43-39(27-31)40-28-32(20-24-44(40)49-43)34-22-26-48-42(30-34)38-16-8-10-18-46(38)51(48)36-13-5-2-6-14-36/h1-30,49H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 28.8,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(3-bromophenyl)-4,6-diphenylpyrimidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC=1C=C(C=CC1)C1=NC(=CC(=N1)C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H15BrN2/c23-19-13-7-12-18(14-19)22-24-20(16-8-3-1-4-9-16)15-21(25-22)17-10-5-2-6-11-17/h1-15H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 18.88,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-xylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC=1C=CC(=CC1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10/c1-7-3-5-8(2)6-4-7/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 820.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaOtBu"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9O.Na/c1-4(2,3)5;/h1-3H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 13.01,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "28.8 g (44.32 mmol) of 9,9\u2033-diphenyl-9H,9\u2032H,9\u2033H-[3,3\u2032;6\u2032,3\u2033]tercarbazole 29, 18.88 g (48.76 mmol) of 2-(3-bromophenyl)-4,6-diphenylpyrimidine 14 and 13.01 g (135.35 mmol) of NaOtBu are suspended in 820 ml of p-xylene. 201.21 mg (0.90 mmol) of Pd(OAc)2 and 2.7 ml of a 1M tri-tert-butylphosphine solution are added to this suspension. The reaction mixture is heated under reflux for 19 h. After cooling, the organic phase is separated off, washed three times with 100 ml of water and subsequently evaporated to dryness. The residue is extracted with hot toluene, recrystallised from toluene and finally sublimed in a high vacuum. The yield is 23.3 g (55%)."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction mixture is heated"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "under reflux for 19 h",
+            "duration": {
+                "value": 19.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "After cooling"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the organic phase is separated off"
+        },
+        {
+            "type": "WASH",
+            "details": "washed three times with 100 ml of water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 100.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "subsequently evaporated to dryness"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The residue is extracted with hot toluene",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "recrystallised from toluene",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "9\u2032-[3-(4,6-Diphenylpyrimidin-2-yl)phenyl]-9,9\u2033-diphenyl-9H,9\u2032H,9\u2033H-[3,3\u2032;6\u2032,3\u2033]tercarbazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C1=NC(=NC(=C1)C1=CC=CC=C1)C=1C=C(C=CC1)N1C2=CC=C(C=C2C=2C=C(C=CC12)C=1C=CC=2N(C3=CC=CC=C3C2C1)C1=CC=CC=C1)C=1C=CC=2N(C3=CC=CC=C3C2C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C70H45N5/c1-5-18-46(19-6-1)62-45-63(47-20-7-2-8-21-47)72-70(71-62)52-22-17-27-55(40-52)75-68-38-34-50(48-32-36-66-58(41-48)56-28-13-15-30-64(56)73(66)53-23-9-3-10-24-53)43-60(68)61-44-51(35-39-69(61)75)49-33-37-67-59(42-49)57-29-14-16-31-65(57)74(67)54-25-11-4-12-26-54/h1-45H"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US09324954B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 21:01:31.143934"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:56:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:48 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-f6471b87fd234192ba7f000d22724620"
+}

@@ -1,0 +1,382 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[F-].[K+].[F:3][C:4]([O:12][C:13]1[C:18]([F:19])=[C:17]([F:20])[C:16]([F:21])=[C:15]([F:22])[C:14]=1[F:23])([C:8]([F:11])([F:10])[F:9])[C:5]([F:7])=[O:6].[F:24]C1C(O)=C(F)C(F)=C(F)C=1F.S(F)(O[C:40]([F:47])([F:46])[C:41]([F:45])=[C:42]([F:44])[F:43])(=O)=O>COCCOCCOC>[F:43][C:42]([F:44])=[C:41]([F:45])[C:40]([F:47])([F:46])[O:6][C:5]([F:24])([F:7])[C:4]([F:3])([O:12][C:13]1[C:14]([F:23])=[C:15]([F:22])[C:16]([F:21])=[C:17]([F:20])[C:18]=1[F:19])[C:8]([F:11])([F:10])[F:9] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "KF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[F-].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/FH.K/h1H;/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "KF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[F-].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/FH.K/h1H;/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 17.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diglyme"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COCCOCCOC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14O3/c1-7-3-5-9-6-4-8-2/h3-6H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 500.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "perfluoro-2-phenoxypropionyl fluoride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)F)(C(F)(F)F)OC1=C(C(=C(C(=C1F)F)F)F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9F10O2/c10-1-2(11)4(13)6(5(14)3(1)12)21-8(16,7(15)20)9(17,18)19"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 86.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "perfluoroallyl fluorosulfate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S(=O)(=O)(OC(C(=C(F)F)F)(F)F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3F6O3S/c4-1(2(5)6)3(7,8)12-13(9,10)11"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 69.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pentafluorophenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC1=C(C(=C(C(=C1O)F)F)F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6HF5O/c7-1-2(8)4(10)6(12)5(11)3(1)9/h12H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred for 30 min at 5\u00b0"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A suspension of 17.4 g (0.30 mol) of flame-dried KF in 500 ml of diglyme was stirred at 5\u00b0 while 86.1 g (0.26 mol) of perfluoro-2-phenoxypropionyl fluoride prepared by reaction of a metal salt of pentafluorophenol with HFPO) was added dropwise. The mixture was stirred for 30 min at 5\u00b0, after which the KF had partially dissolved. Then 69.0 g (0.30 mol) of perfluoroallyl fluorosulfate was added dropwise, and the mixture was stirred at 5\u00b0-10\u00b0 for 3 hr. The cooling bath was removed, and the mixture was stirred overnight. The reaction mixture was then drowned in 2 l. of water, and the lower layer was washed with 1 l., then with 500 ml of water, dried over CaSO4, filtered and distilled to afford 20.8 g (17%) of perfluoro-6-phenoxy-4-oxa-1-heptene, bp 68\u00b0-75\u00b0 (10 mm). A late fraction was analyzed. IR (neat): 5.58 (CF=CF2), 6.57 and 6.80 (arom. C=C), 7.5-9 IR (neat): 5.58 (CF=CF2), 6.57 and 6.80 (arom. C=C), 7.5-9\u03bc (CF, C=O) with a weak peak at 5.64 (-OCF=CFCF3). NMR (CCl4) : 19F -77.8 (d of d of t of d, JFF 25.5, 13.7, ~13, 7.2 Hz, 2F, OCF2C=), -79.8 (m, 3F, CF3), -83.0 (m, 2F, CF2O), -91.7 (d of d of t, JFF 52.0, 39.2, 7.2 Hz, 1F, cis-CF2CF=CFF), -105.1 (d of d of t, JFF 118.0, 52.0, 25.5 Hz, 1F, trans-CF2CF=CFF), -139.9 (t of m, JFF 18.7 Hz, 1F, CF), -150.8 (m, 2F, arom. CF), -156.1 (t, JFF 21.0 Hz, 1F, arom. CF), -162.3 (m, 2F, arom. CF), and -190.6 ppm (d of d of t of t, JFF 118.0, 39.2, 13.7, 1.6 Hz, 1F, CF2CF=). Impurity bands ascribable to the isomer C6F5OCF(CF3)CF2OCF=CFCF3 were also present."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "was added dropwise"
+        },
+        {
+            "type": "STIRRING",
+            "details": "the mixture was stirred at 5\u00b0-10\u00b0 for 3 hr",
+            "duration": {
+                "value": 3.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The cooling bath was removed"
+        },
+        {
+            "type": "STIRRING",
+            "details": "the mixture was stirred overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "of water, and the lower layer was washed with 1 l",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": ", then with 500 ml of water, dried over CaSO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 500.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "CaSO4"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "distilled"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "perfluoro-6-phenoxy-4-oxa-1-heptene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(=C(C(OC(C(C(F)(F)F)(OC1=C(C(=C(C(=C1F)F)F)F)F)F)(F)F)(F)F)F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12F16O2/c13-1-2(14)4(16)6(5(17)3(1)15)29-10(23,11(24,25)26)12(27,28)30-9(21,22)7(18)8(19)20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 20.8,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 17.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04292449",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:48:57.749449"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:22:48 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-3ea646fc0fc6467ca920adfef4ac601b"
+}

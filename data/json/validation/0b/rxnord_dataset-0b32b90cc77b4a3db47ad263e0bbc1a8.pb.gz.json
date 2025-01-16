@@ -1,0 +1,434 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "Br[C:2]1[CH:3]=[C:4]([C:8]2[CH:21]=[CH:20][C:19]3[C:10](=[C:11]([C:28]4[CH:33]=[CH:32][CH:31]=[CH:30][CH:29]=4)[C:12]4[C:17]([C:18]=3[C:22]3[CH:27]=[CH:26][CH:25]=[CH:24][CH:23]=3)=[CH:16][CH:15]=[CH:14][CH:13]=4)[CH:9]=2)[CH:5]=[CH:6][CH:7]=1.[CH:34]1[C:42]2[C:41]3[CH:43]=[CH:44][CH:45]=[CH:46][C:40]=3[O:39][C:38]=2[C:37]([C:47]2[CH:48]=[CH:49][C:50]3[NH:51][C:52]4[C:57]([C:58]=3[CH:59]=2)=[CH:56][CH:55]=[CH:54][CH:53]=4)=[CH:36][CH:35]=1.CC(C)([O-])C.[Na+].C(P(C(C)(C)C)C(C)(C)C)(C)(C)C>C1C=CC(/C=C/C(/C=C/C2C=CC=CC=2)=O)=CC=1.C1C=CC(/C=C/C(/C=C/C2C=CC=CC=2)=O)=CC=1.[Pd].CCCCCC.C1(C)C=CC=CC=1>[CH:34]1[C:42]2[C:41]3[CH:43]=[CH:44][CH:45]=[CH:46][C:40]=3[O:39][C:38]=2[C:37]([C:47]2[CH:48]=[CH:49][C:50]3[N:51]([C:6]4[CH:7]=[CH:2][CH:3]=[C:4]([C:8]5[CH:21]=[CH:20][C:19]6[C:10](=[C:11]([C:28]7[CH:33]=[CH:32][CH:31]=[CH:30][CH:29]=7)[C:12]7[C:17]([C:18]=6[C:22]6[CH:27]=[CH:26][CH:25]=[CH:24][CH:23]=6)=[CH:16][CH:15]=[CH:14][CH:13]=7)[CH:9]=5)[CH:5]=4)[C:52]4[C:57]([C:58]=3[CH:59]=2)=[CH:56][CH:55]=[CH:54][CH:53]=4)=[CH:36][CH:35]=1 |f:2.3,5.6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m7_m4_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tri(tert-butyl)phosphine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)P(C(C)(C)C)C(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H27P/c1-10(2,3)13(11(4,5)6)12(7,8)9/h1-9H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.2,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14/c1-3-5-6-4-2/h3-6H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(3-bromophenyl)-9,10-diphenylanthracene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC=1C=C(C=CC1)C1=CC2=C(C3=CC=CC=C3C(=C2C=C1)C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H21Br/c33-26-15-9-14-24(20-26)25-18-19-29-30(21-25)32(23-12-5-2-6-13-23)28-17-8-7-16-27(28)31(29)22-10-3-1-4-11-22/h1-21H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-(dibenzofuran-4-yl)-9H-carbazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=C(C=2OC3=C(C21)C=CC=C3)C=3C=CC=2NC1=CC=CC=C1C2C3"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H15NO/c1-3-10-21-17(6-1)20-14-15(12-13-22(20)25-21)16-8-5-9-19-18-7-2-4-11-23(18)26-24(16)19/h1-14,25H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.69,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "bis(dibenzylideneacetone)palladium(0)"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1C=CC(=CC1)/C=C/C(=O)/C=C/C2=CC=CC=C2.C=1C=CC(=CC1)/C=C/C(=O)/C=C/C2=CC=CC=C2.[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C17H14O.Pd/c2*18-17(13-11-15-7-3-1-4-8-15)14-12-16-9-5-2-6-10-16;/h2*1-14H;/b2*13-11+,14-12+;"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 59.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium tert-butoxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)([O-])C.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9O.Na/c1-4(2,3)5;/h1-3H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.59,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "by being stirred while the pressure"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In a 100-mL three-neck flask were put 1.0 g (2.1 mmol) of 2-(3-bromophenyl)-9,10-diphenylanthracene, 0.69 g (2.1 mmol) of 3-(dibenzofuran-4-yl)-9H-carbazole, and 0.59 g (6.2 mmol) of sodium tert-butoxide. After the air in the flask was replaced with nitrogen, to this mixture were added 20 mL of toluene and 0.2 mL of tri(tert-butyl)phosphine (a 10 wt % hexane solution). This mixture was degassed by being stirred while the pressure was reduced. After the degassing, 59 mg (0.10 mmol) of bis(dibenzylideneacetone)palladium(0) was added to this mixture. This mixture was stirred at 110\u00b0 C. for 5 hours under a nitrogen stream. After the stirring, the obtained mixture was suction-filtered through Celite (produced by Wako Pure Chemical Industries, Ltd., Catalog No. 531-16855), alumina, and Florisil (produced by Wako Pure Chemical Industries, Ltd., Catalog No. 540-00135). The filtrate was concentrated to give a yellow solid. The obtained solid was recrystallized from toluene, and the obtained crystal was purified by high performance liquid column chromatography (abbreviation: HPLC) (developing solvent: chloroform). The obtained fraction was concentrated to give 0.91 g of a pale yellow solid in 60% yield. The synthesis scheme of Step 2 is illustrated in (b-15)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "In a 100-mL three-neck flask were put"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This mixture was degassed"
+        },
+        {
+            "type": "STIRRING",
+            "details": "This mixture was stirred at 110\u00b0 C. for 5 hours under a nitrogen stream",
+            "duration": {
+                "value": 5.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 110.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "After the stirring, the obtained mixture was suction-filtered through Celite (produced by Wako Pure Chemical Industries, Ltd., Catalog No. 531-16855), alumina, and Florisil (produced by Wako Pure Chemical Industries, Ltd., Catalog No. 540-00135)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Florisil"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-][Si](=O)[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.O3Si/c;1-4(2)3/q+2;-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The filtrate was concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to give a yellow solid"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The obtained solid was recrystallized from toluene",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the obtained crystal was purified by high performance liquid column chromatography (abbreviation: HPLC) (developing solvent: chloroform)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "chloroform"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The obtained fraction was concentrated"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "pale yellow solid"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3-(Dibenzofuran-4-yl)-9-[3-(9,10-diphenyl-2-anthryl)phenyl]-9H-carbazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=C(C=2OC3=C(C21)C=CC=C3)C=3C=CC=2N(C1=CC=CC=C1C2C3)C3=CC(=CC=C3)C3=CC2=C(C1=CC=CC=C1C(=C2C=C3)C3=CC=CC=C3)C3=CC=CC=C3"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C56H35NO/c1-3-15-36(16-4-1)54-45-23-7-8-24-46(45)55(37-17-5-2-6-18-37)50-34-39(29-31-47(50)54)38-19-13-20-41(33-38)57-51-27-11-9-21-43(51)49-35-40(30-32-52(49)57)42-25-14-26-48-44-22-10-12-28-53(44)58-56(42)48/h1-35H"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 0.91,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 60.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 58.7
+                            }
+                        }
+                    ],
+                    "isolated_color": "pale yellow",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US09450188B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 21:09:26.960639"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 22:17:49 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:44 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-e3cc12f0cd8042bbb886b5ff71320aa6"
+}

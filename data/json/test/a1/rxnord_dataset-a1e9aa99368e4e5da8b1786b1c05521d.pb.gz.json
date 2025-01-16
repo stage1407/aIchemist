@@ -1,0 +1,548 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C:2]1[CH:3]=[C:4]([CH:8]2[CH2:10][CH:9]2[C:11]2[S:12][CH:13]=[CH:14][CH:15]=2)[CH:5]=[CH:6][CH:7]=1.CN(C)C=O.[OH-].[Na+].[CH3:23][O:24]/[N:25]=[C:26](\\[C:31]1[CH:36]=[CH:35][CH:34]=[CH:33][C:32]=1[CH2:37]Br)/[C:27]([O:29][CH3:30])=[O:28]>O>[S:12]1[CH:13]=[CH:14][CH:15]=[C:11]1[CH:9]1[CH2:10][CH:8]1[C:4]1[CH:3]=[C:2]([CH:7]=[CH:6][CH:5]=1)[O:1][CH2:37][C:32]1[CH:33]=[CH:34][CH:35]=[CH:36][C:31]=1[C:26](=[N:25][O:24][CH3:23])[C:27]([O:29][CH3:30])=[O:28] |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "glass"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methyl (E)-2-(bromomethyl)phenylglyoxylate O-methyloxime"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO\\N=C(\\C(=O)OC)/C1=C(C=CC=C1)CBr"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H12BrNO3/c1-15-11(14)10(13-16-2)9-6-4-3-5-8(9)7-12/h3-6H,7H2,1-2H3/b13-10+"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.9,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-(3-hydroxyphenyl)-2-(2-thienyl)cyclopropane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC=1C=C(C=CC1)C1C(C1)C=1SC=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H12OS/c14-10-4-1-3-9(7-10)11-8-12(11)13-5-2-6-15-13/h1-7,11-12,14H,8H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N,N-dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 15.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.41,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred overnight at ambient temperature"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a 20 ml glass vial equipped with a magnetic stirring bar was charged 2.2 g (0.0102 moles) of 1-(3-hydroxyphenyl)-2-(2-thienyl)cyclopropane, 15 mls of dry N,N-dimethylformamide, and 0.41 g (0.0102 moles) of powdered sodium hydroxide. To this solution was added 2.9 g (0.0102 moles) of methyl (E)-2-(bromomethyl)phenylglyoxylate O-methyloxime in one portion. The vial was capped and stirred overnight at ambient temperature. The reaction mixture was then poured into 100 mls of water, and extracted with s\u00d7100 mls of ethyl ether. The ether extract was then washed with 2\u00d7100 mls of water and 100 mls of saturated aqueous sodium chloride solution. The ether extract was then dried over anhydrous magnesium sulfate, filtered, and concentrated under reduced pressure with a rotary evaporator at 45\u00b0 C. to afford 5.1 g of the crude product as an dark green oil. This material was chromatographed on a mixed bed of neutral alumina and silica gel with 50% ethyl acetate, 50% hexane. The pure fractions were combined, and concentrated under reduced pressure with a rotary evaporator to afford 3.7 g of the title compound, Methyl2-[2-((3-(2-(thien-2-yl)cyclopropyl))phenoxymethyl)phenyl]-2-methoxyiminoacetate as a viscous yellow oil. 86% isolated yield."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The vial was capped"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with s\u00d7100 mls of ethyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 100.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The ether extract",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "was then washed with 2\u00d7100 mls of water and 100 mls of saturated aqueous sodium chloride solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 100.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na/h1H;/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 100.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The ether extract",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "was then dried over anhydrous magnesium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "magnesium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated under reduced pressure with a rotary evaporator at 45\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 45.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to afford 5.1 g of the crude product as an dark green oil",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 5.1,
+                                "units": "GRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This material was chromatographed on a mixed bed of neutral alumina and silica gel with 50% ethyl acetate, 50% hexane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "hexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14/c1-3-5-6-4-2/h3-6H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated under reduced pressure with a rotary evaporator"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Methyl 2-[2-((3-(2-(thien-2-yl)cyclopropyl))phenoxymethyl)phenyl]-2-methoxyiminoacetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S1C(=CC=C1)C1C(C1)C=1C=C(OCC2=C(C=CC=C2)C(C(=O)OC)=NOC)C=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H23NO4S/c1-27-24(26)23(25-28-2)19-10-4-3-7-17(19)15-29-18-9-5-8-16(13-18)20-14-21(20)22-11-6-12-30-22/h3-13,20-21H,14-15H2,1-2H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 3.7,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 86.1
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05945557",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:49:14.000492"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:17:41 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:05 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-7c4aee6c07ae4c27a7c84044334a2dc6"
+}

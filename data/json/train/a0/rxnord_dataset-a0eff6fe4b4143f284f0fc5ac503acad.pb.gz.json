@@ -1,0 +1,131 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[F:1][C:2]([F:12])([F:11])[C:3]1[CH:8]=[CH:7][C:6]([NH2:9])=[C:5]([NH2:10])[CH:4]=1.[C:13]([NH:15][C:16]([NH2:18])=[NH:17])#N>>[F:1][C:2]([F:11])([F:12])[C:3]1[CH:8]=[CH:7][C:6]2[N:9]=[C:13]([NH:15][C:16]([NH2:18])=[NH:17])[NH:10][C:5]=2[CH:4]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-Trifluoromethyl -o- phenylenediamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C1=CC(=C(C=C1)N)N)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H7F3N2/c8-7(9,10)4-1-2-5(11)6(12)3-4/h1-3H,11-12H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 25.46,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "cyanoguanidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(#N)NC(=N)N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4N4/c3-1-6-2(4)5/h(H4,4,5,6)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 12.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "4-Trifluoromethyl -o- phenylenediamine (25.46g) and cyanoguanidine (12.40g) were reacted together in a manner analogous to that of Example 2 to yield 5-Trifluoromethyl-2-guanidinobenzimidazole is a red gummy solid which when dissolved in 5N hydrochloroic acid and evaporated to dryness yielded the dihydrochloride (25.01g) as a brown solid, m.p. 206\u00b0-209\u00b0C."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-Trifluoromethyl-2-guanidinobenzimidazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C1=CC2=C(N=C(N2)NC(=N)N)C=C1)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H8F3N5/c10-9(11,12)4-1-2-5-6(3-4)16-8(15-5)17-7(13)14/h1-3H,(H5,13,14,15,16,17)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US03935314",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:33:56.842613"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:57:34 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0e673b892f664bd28b584c82b8456024"
+}

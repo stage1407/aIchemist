@@ -1,0 +1,278 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([C:3]([CH3:23])([CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]CCCCCCCCCC)[CH3:4])#[N:2].C([Li])CCC.[CH:29]([NH:32]C(C)C)(C)C.[C:36](#N)C(C)C.BrCCCCCCBr>O1CCCC1>[C:29]([C:11]([CH3:12])([CH2:10][CH2:9][CH2:8][CH2:7][CH2:6][CH2:5][C:3]([C:1]#[N:2])([CH3:4])[CH3:23])[CH3:36])#[N:32]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m0_m3_m7_m4_m5_m6_m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-butyllithium"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)[Li]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9.Li/c1-3-4-2;/h1,3-4H2,2H3;"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diisopropylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)NC(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-5(2)7-6(3)4/h5-7H,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 6.07,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "isobutyronitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C(C)C)#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H7N/c1-4(2)3-5/h4H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,6-dibromohexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrCCCCCCBr"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H12Br2/c7-5-3-1-2-4-6-8/h1-6H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 7.32,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexanes"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 120.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-Cyano-2-methyleicosane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(#N)C(C)(CCCCCCCCCCCCCCCCCC)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H43N/c1-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-22(2,3)21-23/h4-20H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "By the procedure used to prepare the compound of Example 2, the title compound is prepared from 24 mL of a 2.5M n-butyllithium solution in hexanes, 6.07 g of diisopropylamine, 5.5 mL of isobutyronitrile, 7.32 g of 1,6-dibromohexane, and 120 mL of tetrahydrofuran. The IR and 1H NMR spectra of the white solid (7.7 g) obtained were consistent with structure of the desired product."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2,9-Dicyano-2,9-dimethyldecane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(#N)C(C)(CCCCCCC(C)(C)C#N)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H24N2/c1-13(2,11-15)9-7-5-6-8-10-14(3,4)12-16/h5-10H2,1-4H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solid"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 7.7,
+                                    "units": "GRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05134183",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:19:07.081972"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:15:19 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:34 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-feab189420254fe5946ec04a67adb952"
+}

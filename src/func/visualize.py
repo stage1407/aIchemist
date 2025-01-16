@@ -35,7 +35,48 @@ def visualize_molecule_graph(G: nx.Graph):
     node_colors = [ATOM_COLORS.get(data['element'], 'black') for _, data in G.nodes(data=True)]  # Assign colors based on atom type
 
     # Extract bond types as double values for edge labels
-    edge_labels = nx.get_edge_attributes(G, 'bond_type')  # Get bond type as edge labels
+    edge_repr : dict = nx.get_edge_attributes(G, 'bond_type')  # Get bond type as edge labels
+    edge_labels : dict = {}
+
+    def search_aromatic():
+        aromatic_nodes = []
+        for u in G.nodes:
+            found = False
+            for v in G.nodes:
+                if edge_repr.get((u,v)) == 1.5:
+                    found = True
+                    aromatic_nodes.append(u)
+                    break
+            if found:
+                continue
+        start = aromatic_nodes[0]
+        end = aromatic_nodes[-1]
+        is_aromatic = False
+        for w in G.nodes:
+            if edge_repr.get((start,w)) == 1.5 and edge_repr.get((w,end)) == 1.5:
+                aromatic_nodes.append(w)
+                is_aromatic = True
+                break
+
+        print(aromatic_nodes)
+        return aromatic_nodes if is_aromatic else None
+
+    aromatic_nodes = search_aromatic()
+    if aromatic_nodes is not None:
+        alter : bool = False
+        for u in G.nodes:
+            for v in G.nodes:
+                if edge_repr.get((u,v)) == 1.5:
+                    if alter:
+                        edge_labels.update({(u,v) : 1})
+                        alter = not alter
+                    else:
+                        edge_labels.update({(u,v) : 2})
+                        alter = not alter
+                else:
+                    edge_labels.update({(u,v) : edge_repr.get((u,v))})
+
+        
 
     # Draw the graph with custom node colors and labels
     plt.figure(figsize=(10, 8))
@@ -54,7 +95,7 @@ def visualize_molecule_graph(G: nx.Graph):
 
     # Draw bond type labels (BondTypeAsDouble)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10, font_color='red')
-
+    
     plt.title("Molecular Graph Visualization")
     plt.axis('off')
     plt.show()

@@ -1,0 +1,329 @@
+{
+    "inputs": {
+        "Aryl Halide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)Sc1c2cc(ccc2n(c1CC(C)(C)C(=O)OC)Cc3ccc(cc3)Cl)OCc4ccc5ccccc5n4"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 2.5,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                }
+            ],
+            "addition_order": 1
+        },
+        "Amine": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCNCC1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 3.75,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[O-]P(=O)([O-])[O-].[K+].[K+].[K+]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 7.5,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[Cu]I"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.25,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 12.5,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 2
+        },
+        "Catalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "c1c(cc(cc1C(F)(F)F)NC(=O)C(=O)O)C(F)(F)F"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.5,
+                            "units": "MICROMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)C"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 12.5,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 3
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "details": "96 Glass Vials",
+            "material": {
+                "type": "GLASS"
+            },
+            "volume": {
+                "value": 250.0,
+                "units": "MICROLITER"
+            }
+        },
+        "environment": {
+            "type": "GLOVE_BOX",
+            "details": "Nitrogen Filled"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "DRY_ALUMINUM_PLATE"
+            },
+            "setpoint": {
+                "value": 80.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR",
+            "details": "Magnetic Stir Bar"
+        }
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "The reaction vials were then cooled to r.t.\nand diluted with 100 \u03bcL of 5% AcOH in DMSO, containing 1,3,5-trimethoxybenzene (0.005M) and were\nshaken vigorously.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 95.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CC(=O)O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "1,3,5-trimethoxybenzene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "COc1cc(OC)cc(OC)c1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.5,
+                                "units": "MICROMOLE"
+                            }
+                        },
+                        "reaction_role": "INTERNAL_STANDARD"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ALIQUOT",
+            "details": "25 microliter of resulting solution is taken",
+            "amount": {
+                "volume": {
+                    "value": 25.0,
+                    "units": "MICROLITER"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "To the 25 microliter aliquot 700 microliter of MeCN was added prior to UPLC-MS Analysis",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "CC#N"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 700.0,
+                                "units": "MICROLITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)Sc1c2cc(ccc2n(c1CC(C)(C)C(=O)OC)Cc3ccc(cc3)N4CCCCC4)OCc5ccc6ccccc6n5"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "YIELD",
+                            "uses_internal_standard": true,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "percentage": {
+                                "value": 0.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "details": "Quantitative analysis was accomplished by reverse phase UPLC (Waters\nX-BridgeTM BEH 2.5 micron, RP C-18, 2.1 x 50 mm column, eluents: MeCN-H2O containing 0.05%\nTFA) using an internal standard (either 4,4-di-tert-butyl biphenyl, or 1,3,5-trimethoxybenzene as noted\nin the experiment)",
+                    "instrument_manufacturer": "Waters"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "experimenter": {
+            "name": "Spencer Dreher",
+            "orcid": "0000-0002-5094-1218",
+            "organization": "Merck",
+            "email": "spencer_dreher@merck.com"
+        },
+        "city": "Rahway, NJ",
+        "doi": "10.1039/C5SC04751J",
+        "publication_url": "https://pubs.rsc.org/en/content/articlelanding/2016/SC/C5SC04751J#!divAbstract",
+        "record_created": {
+            "time": {
+                "value": "6/2/2021, 8:10:58 AM"
+            },
+            "person": {
+                "name": "Michael Wleklinski",
+                "orcid": "0000-0001-6735-4696",
+                "organization": "Merck",
+                "email": "michael.wleklinski@merck.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Jul  7 21:27:17 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-9785e38ceca74e4c83d6aeca79400a0e"
+}

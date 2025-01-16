@@ -1,0 +1,457 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][CH:2]([CH3:13])[CH:3]([N+:10]([O-])=O)[CH:4]([OH:9])[C:5]([F:8])([F:7])[F:6].[H][H]>C(O)(C)C.C(O)(=O)C.[Pd]>[NH2:10][CH:3]([CH:2]([CH3:13])[CH3:1])[CH:4]([OH:9])[C:5]([F:6])([F:7])[F:8]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "isopropanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 115.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "palladium on carbon"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Pd"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-methyl-3-nitro-1,1,1-trifluoro-2-pentanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C(C(C(F)(F)F)O)[N+](=O)[O-])C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H10F3NO3/c1-3(2)4(10(12)13)5(11)6(7,8)9/h3-5,11H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 17.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.43,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H][H]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 5.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "with stirring"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of 4-methyl-3-nitro-1,1,1-trifluoro-2-pentanol (17.1 g) in isopropanol (115 ml) and acetic acid (0.43 ml) was hydrogenated over 10% palladium on carbon (2.4 g) at 3.5 barg pressure until uptake of hydrogen was complete. The catalyst was removed by filtration through diatomaceous earth and the filter cake washed with isopropanol. The filtrate was evaporated under vacuum until no further isopropanol distilled and the residue dissolved in acetonitrile (40 ml). A solution of oxalic acid (3.94 g) in acetonitrile (80 ml) was added with stirring and the mixture cooled to 5\u00b0 C. The product which crystallised was collected by filtration, washed with cold acetonitrile and dried at 50\u00b0 C. to give 3-amino-4methyl-1,1,1-trifluoro-2-pentanol as its oxalate salt (9.08 g). ##STR4##"
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "The catalyst was removed by filtration through diatomaceous earth"
+        },
+        {
+            "type": "WASH",
+            "details": "the filter cake washed with isopropanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The filtrate was evaporated under vacuum until no further isopropanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C3H8O/c1-3(2)4/h3-4H,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "distilled"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "the residue dissolved in acetonitrile (40 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 40.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "A solution of oxalic acid (3.94 g) in acetonitrile (80 ml) was added",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "oxalic acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C(=O)O)(=O)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H2O4/c3-1(4)2(5)6/h(H,3,4)(H,5,6)"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 3.94,
+                                "units": "GRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 80.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The product which crystallised"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "was collected by filtration"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with cold acetonitrile",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried at 50\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 50.0,
+                    "units": "CELSIUS"
+                }
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-amino-4methyl-1,1,1-trifluoro-2-pentanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NC(C(C(F)(F)F)O)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H12F3NO/c1-3(2)4(10)5(11)6(7,8)9/h3-5,11H,10H2,1-2H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "oxalate salt"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 9.08,
+                                    "units": "GRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05907043",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:48:19.007035"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:15:45 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-15464535981c48329e6c06756387e644"
+}
