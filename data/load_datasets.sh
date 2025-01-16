@@ -50,7 +50,9 @@ echo "Cleaning up temporary files..."
 rm -rf $EXTRACTED_DIR
 rm $ARCHIVE_NAME
 
-python3 ./data/extract.py
+python3 ./data/load.py
+
+rm -rf $TARGET_DIR
 
 echo "Script successfully finished!"
 
