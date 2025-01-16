@@ -103,7 +103,7 @@ transformations = [transformation1,
 reaction_graphs = []
 intermediates = []
 current_graph : mol_graph = educt_graph
-visualize_molecule_graph(educt_graph, educt_mol)
+visualize_molecule_graph(educt_graph)
 
 i = 0
 for t in transformations:

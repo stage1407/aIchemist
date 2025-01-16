@@ -16,7 +16,7 @@ ATOM_COLORS = {
     'I': 'purple'    # Iodine
 }
 
-def visualize_molecule_graph(G: nx.Graph, mol=None):
+def visualize_molecule_graph(G: nx.Graph):
     """
     Visualizes a molecular graph with atom symbols as nodes and bond types as edge labels.
 
@@ -35,14 +35,48 @@ def visualize_molecule_graph(G: nx.Graph, mol=None):
     node_colors = [ATOM_COLORS.get(data['element'], 'black') for _, data in G.nodes(data=True)]  # Assign colors based on atom type
 
     # Extract bond types as double values for edge labels
-    edge_labels = nx.get_edge_attributes(G, 'bond_type')  # Get bond type as edge labels
-    if not mol is None:
-        for bond in mol.GetBonds():
-            idx1 = bond.GetBeginAtomIdx()
-            idx2 = bond.GetEndAtomIdx()
-            is_aromatic = bond.GetIsAromatic()
-            bond_type = "1.0" if (idx1 + idx2) % 2 == 0 else "2.0"
-            G.add_edge(idx1, idx2, aromatic=is_aromatic, bond_type=bond_type if is_aromatic else str(bond.GetBondTypeAsDouble()))
+    edge_repr : dict = nx.get_edge_attributes(G, 'bond_type')  # Get bond type as edge labels
+    edge_labels : dict = {}
+
+    def search_aromatic():
+        aromatic_nodes = []
+        for u in G.nodes:
+            found = False
+            for v in G.nodes:
+                if edge_repr.get((u,v)) == 1.5:
+                    found = True
+                    aromatic_nodes.append(u)
+                    break
+            if found:
+                continue
+        start = aromatic_nodes[0]
+        end = aromatic_nodes[-1]
+        is_aromatic = False
+        for w in G.nodes:
+            if edge_repr.get((start,w)) == 1.5 and edge_repr.get((w,end)) == 1.5:
+                aromatic_nodes.append(w)
+                is_aromatic = True
+                break
+
+        print(aromatic_nodes)
+        return aromatic_nodes if is_aromatic else None
+
+    aromatic_nodes = search_aromatic()
+    if aromatic_nodes is not None:
+        alter : bool = False
+        for u in G.nodes:
+            for v in G.nodes:
+                if edge_repr.get((u,v)) == 1.5:
+                    if alter:
+                        edge_labels.update({(u,v) : 1})
+                        alter = not alter
+                    else:
+                        edge_labels.update({(u,v) : 2})
+                        alter = not alter
+                else:
+                    edge_labels.update({(u,v) : edge_repr.get((u,v))})
+
+        
 
     # Draw the graph with custom node colors and labels
     plt.figure(figsize=(10, 8))
@@ -61,9 +95,6 @@ def visualize_molecule_graph(G: nx.Graph, mol=None):
 
     # Draw bond type labels (BondTypeAsDouble)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10, font_color='red')
-
-    ring_info = mol.GetRingInfo()
-    aromatic_rings = [ring for ring in ring_info.AtomRings() if all(mol.GetAtomWithIdx(idx).GetIsAromatic() for idx in ring)]
     
     plt.title("Molecular Graph Visualization")
     plt.axis('off')
