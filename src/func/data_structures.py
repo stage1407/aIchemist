@@ -10,17 +10,18 @@ from rdkit.Chem import rdMolTransforms
 #from rdkit.Chem.rdMolDescriptors import CalcCrippenContribs
 import pubchempy as pcp #type: ignore
 from enum import Enum
+import periodictable
 import os
 
 MAX_DEPTH = 10
-quantum_mechanics = False       # set True for modeling pi-electrons        #? Can be learned by Machine Learning?
-geometric_properties = False    # set True for modeling hydrogen bonds      #? Can be learned by Machine Learning?
+quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
+geometric_properties = False    # set True for modeling hydrogen bonds      #!Dummy for now
 properties = [
     "Hybridization",
     "Formal charge",
     "Implicit hydrogens",
     "Aromaticity",
-    "Chirality/Stereochemistry",
+    "Chirality",
     "Explicit valence",
     "Implicit valence",
     "Lone pairs",
@@ -47,15 +48,18 @@ properties = {
     "edge_features": list(feature_filter["edge_features"].keys()),
     "graph_features": list(feature_filter["graph_features"].keys())
 }
-def get_atom_properties(atom, property):
+def get_atom_properties(atom : Chem.Atom, property):
     node_properties = properties["node_features"]
+    hybrid_num = {v: k for k,v in Chem.rdchem.HybridizationType.values.items()}
+    chiral_num = {v: k for k,v in Chem.rdchem.ChiralType.values.items()}
     property_dict = {
-        node_properties[0]: atom.GetHybridization().name,  # Returns the hybridization type (e.g., SP2).
+        node_properties[0]: hybrid_num[atom.GetHybridization()],  # Returns the hybridization type (e.g., SP2).    #? Enhance to types
         node_properties[1]: atom.GetFormalCharge(),  # Returns the formal charge on the atom.
         node_properties[2]: atom.GetNumImplicitHs(),  # Returns the number of implicit hydrogens.
         node_properties[3]: atom.GetIsAromatic(),  # Returns True if the atom is aromatic.
-        node_properties[4]: atom.GetChiralTag().name,  # Returns chirality (e.g., R/S).
-        node_properties[5]: atom.GetExplicitValence(),  # Returns the explicit valence of the atom.
+        #*Note: Same as Stereochemistry 
+        node_properties[4]: chiral_num[atom.GetChiralTag()],  # Returns chirality (e.g., R/S).             #? Enhance to types     
+        node_properties[5]: atom.GetExplicitValence(),  # Returns the explicit valence of the atom. 
         node_properties[6]: atom.GetImplicitValence(),  # Returns the implicit valence of the atom.
         node_properties[7]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2, # Calculated manually as lone pairs are not directly accessible.
         node_properties[8]: [bond.GetBondType().name for bond in atom.GetBonds()],  # Returns bond types connected to the atom.
@@ -66,20 +70,21 @@ def get_atom_properties(atom, property):
         node_properties[13]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2,  # Same as Lone pairs.
         node_properties[14]: atom.GetIsAromatic(),  # Same as Aromaticity.
         node_properties[15]: atom.GetAtomicNum(),  # Approximate electronegativity by atomic number.
-        node_properties[16]: atom.GetChiralTag().name,  # Same as Chirality/Stereochemistry.
+        node_properties[16]: chiral_num[atom.GetChiralTag()] if geometric_properties else _derive_isometries(),  # Same as Chirality/Stereochemistry.   #? Enhance to types
         node_properties[17]: atom.GetAtomicNum() in [6, 7, 8, 15, 16, 17],  # An approximate way to infer hydrophobicity.
     }
     return property_dict[property]
 
-def get_bond_properties(mol, bond, p):
+def get_bond_properties(mol, bond : Chem.Bond, p):
+    stereo_num = {v : k for k, v in Chem.rdchem.BondStereo.values.items()}
     properties = {
         "Bond_Order": bond.GetBondTypeAsDouble(),  # Returns the bond order (e.g., 1.0, 2.0).
-        "Electrophilic_Character": bond.GetBeginAtom().GetAtomicNum() in [6, 7] and bond.GetEndAtom().GetAtomicNum() in [8, 16],  # Approximate electrophilic character.
-        "Nucleophilic_Character": bond.GetBeginAtom().GetAtomicNum() in [15, 16] or bond.GetEndAtom().GetAtomicNum() in [15, 16],  # Approximate nucleophilic character.
+        "Electrophilic_Character": int(bond.GetBeginAtom().GetAtomicNum() in [6, 7] and bond.GetEndAtom().GetAtomicNum() in [8, 16]),  # Approximate electrophilic character.
+        "Nucleophilic_Character": int(bond.GetBeginAtom().GetAtomicNum() in [15, 16] or bond.GetEndAtom().GetAtomicNum() in [15, 16]),  # Approximate nucleophilic character.
         #"Length": rdMolTransforms.GetBondLength(mol.GetConformer(), bond.GetBeginAtomIdx(), bond.GetEndAtomIdx()),  # Bond length from 3D coordinates.
-        "Aromaticity": bond.GetIsAromatic(),  # Checks if the bond is aromatic.
+        "Aromaticity": int(bond.GetIsAromatic()),  # Checks if the bond is aromatic.
         #"Orientation": "Not directly available",  # Orientation calculation requires vector math.
-        "Stereo_State": bond.GetStereo().name,  # Returns the stereochemistry of the bond.
+        "Stereo_State": stereo_num[bond.GetStereo()],  # Returns the stereochemistry of the bond.           #? Enhance to bondType?
         #"Distance": rdMolTransforms.GetBondLength(mol.GetConformer(), bond.GetBeginAtomIdx(), bond.GetEndAtomIdx())  # Same as Length.
     }
     return properties[p]
@@ -127,7 +132,7 @@ class mol_graph(nx.Graph):
                 self.add_node(atom.GetIdx() + index_shift, element=atom.GetSymbol(), feature=_derive_feature_vector(node=atom))
                 i += 1
             for bond in mol.GetBonds():
-                self.add_edge(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift, bond_type=bond.GetBondTypeAsDouble(), feature=_derive_feature_vector(edge=bond,mol=mol))
+                self.add_edge(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift, bond_type=bond.GetBondType(), feature=_derive_feature_vector(edge=bond,mol=mol))
                 self.phi.update({(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift): bond.GetBondTypeAsDouble()})
             index_shift = i
             if geometric_properties:
@@ -148,7 +153,7 @@ class mol_graph(nx.Graph):
             distance = donor_hydrogen_coords.Distance(acceptor_coords)
             #TODO: Comment
             if distance <= distance_threshold:
-                self.add_edge(donor_hydrogen.GetIdx(), acceptor_idx, [0.1,False,Chem.rdchem.BondStereo.STEREONONE, distance])
+                self.add_edge(donor_hydrogen.GetIdx(), acceptor_idx, bond_type="Hydrogen Bonding", feature=[0.1,False,Chem.rdchem.BondStereo.STEREONONE, distance])
     
     def _find_donor_acceptor_pairs(self, mol : Chem.Mol):
         donors = []
@@ -213,6 +218,29 @@ class mol_graph(nx.Graph):
         #TODO:
         pass
 
+    def check_valences(self):
+        def valence_electrons(symbol):
+            try:
+                # Hole das Element aus dem Periodensystem
+                element = getattr(periodictable, symbol)
+                # Elektronenkonfiguration abrufen
+                config = element.electrons
+                # Bestimme die Valenzelektronen (letzt Schale mit Elektronen)
+                valence_shell = max(config.keys())
+                valence_electrons = config[valence_shell]
+                return valence_electrons
+            except AttributeError:
+                return f"Element '{symbol}' was not found!"
+            except ValueError:
+                return f"Cannot determine number of valence electrons for {symbol}!"
+        for v in self.nodes:
+            deg = self.degree(v)
+            elem = self.get_atom_element(v)
+            if deg != valence_electrons(elem):
+                print(f"Wrong number of valence electrons on {elem}{v}!")
+                return False            
+        return True
+
 def _derive_feature_vector(node=None, edge=None, subgraph=None, mol=None):
     features = []
     if node:
@@ -233,6 +261,10 @@ def _derive_feature_vector(node=None, edge=None, subgraph=None, mol=None):
     else:
         raise AttributeError
     return features
+
+def _derive_isometries():
+    #TODO: Geometric isometry (cis/trans), conformation isometry (rotations), diastereomerie (non-isometric isomeres, enantiomere, diastereomere,...)
+    pass
 
 class reaction_graph:
     #TODO: Implement this data structure
@@ -302,7 +334,7 @@ class reaction_graph:
                         i += 1
                         F = self._compute_all_isomeric_graphs(G)
                         U.append()
-                        #!RGAT part
+                        #!HGAT part
                         #TODO:  implement feasibility 
                         #* U[i] = set of all graphs produced by feasible transformations
                         #* and a descending chemical distance

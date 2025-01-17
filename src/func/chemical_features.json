@@ -39,7 +39,6 @@
         "None": ["R"]
     },
     "edge_features": {
-        "Hydrogen_Bonding" : false,
         "Bond_Order" : true,
         "Electrophilic_Character": true,
         "Nucleophilic_Character": true,
