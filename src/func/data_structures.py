@@ -11,7 +11,6 @@ from rdkit.Chem import rdMolTransforms
 import pubchempy as pcp #type: ignore
 from enum import Enum
 import periodictable
-from base.embedding import encoder, decoder
 import os
 
 MAX_DEPTH = 10
