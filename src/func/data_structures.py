@@ -11,6 +11,7 @@ from rdkit.Chem import rdMolTransforms
 import pubchempy as pcp #type: ignore
 from enum import Enum
 import periodictable
+from base.embedding import encoder, decoder
 import os
 
 MAX_DEPTH = 10
@@ -48,6 +49,7 @@ properties = {
     "edge_features": list(feature_filter["edge_features"].keys()),
     "graph_features": list(feature_filter["graph_features"].keys())
 }
+
 def get_atom_properties(atom : Chem.Atom, property):
     node_properties = properties["node_features"]
     hybrid_num = {v: k for k,v in Chem.rdchem.HybridizationType.values.items()}
@@ -62,7 +64,7 @@ def get_atom_properties(atom : Chem.Atom, property):
         node_properties[5]: atom.GetExplicitValence(),  # Returns the explicit valence of the atom. 
         node_properties[6]: atom.GetImplicitValence(),  # Returns the implicit valence of the atom.
         node_properties[7]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2, # Calculated manually as lone pairs are not directly accessible.
-        node_properties[8]: [bond.GetBondType().name for bond in atom.GetBonds()],  # Returns bond types connected to the atom.
+        node_properties[8]: [bond.GetBondTypeAsDouble() for bond in atom.GetBonds()],  # Returns bond types connected to the atom.
         node_properties[9]: ((atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2) == 0,  # True if no lone pairs.
         node_properties[10]: atom.GetDegree(),  # Returns the number of directly bonded atoms
         node_properties[11]: atom.GetTotalDegree(),  # Returns total degree including implicit hydrogens.
@@ -75,7 +77,7 @@ def get_atom_properties(atom : Chem.Atom, property):
     }
     return property_dict[property]
 
-def get_bond_properties(mol, bond : Chem.Bond, p):
+def get_bond_properties(bond : Chem.Bond, p):
     stereo_num = {v : k for k, v in Chem.rdchem.BondStereo.values.items()}
     properties = {
         "Bond_Order": bond.GetBondTypeAsDouble(),  # Returns the bond order (e.g., 1.0, 2.0).
