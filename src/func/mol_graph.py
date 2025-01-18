@@ -1,17 +1,9 @@
-import numpy as np
 import json
 from rdkit import Chem
-import typing as type
 import networkx as nx #type: ignore
 from rdkit.Chem import AllChem 
 from rdkit.Chem import rdFMCS
-from rdkit.Chem import Draw
-from rdkit.Chem import rdMolTransforms
-#from rdkit.Chem.rdMolDescriptors import CalcCrippenContribs
-import pubchempy as pcp #type: ignore
-from enum import Enum
 import periodictable
-from itertools import product
 from scipy.optimize import linear_sum_assignment
 import reaction_graph
 
@@ -120,6 +112,12 @@ class mol_graph(nx.Graph):
             AllChem.EmbedMolecule(self.mol)
             AllChem.UFFOptimizeMolecule(self.mol)
         self._build_graph()
+
+        """Should be obsolete but dunno
+        def __getitem__(self, key):
+        print("TODO this")
+        #TODO access underlying mols as 
+        return key"""
 
     def _build_graph(self):
         """
