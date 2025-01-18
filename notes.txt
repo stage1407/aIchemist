@@ -1,0 +1,5 @@
+Mapping auch für Nicht-MCS-Atome:
+
+    Dein Ansatz ist absolut sinnvoll, wenn du die GNNs später auf Bindungsänderungen oder atomare Rollen in der Reaktion trainieren willst. Ein vollständiges Mapping (inklusive Nicht-MCS-Atome) liefert mehr Kontext für den Reaktionsgraphen.
+    Die Herausforderung, schwächste Bindungen zu priorisieren, ist spannend, aber ohne zusätzliche physikalisch-chemische Informationen schwierig. Es wäre sinnvoller, die lokale chemische Umgebung (z. B. Bindungsordnung, Elektronegativitätsdifferenzen, etc.) in das Modell einzubeziehen, um solche Priorisierungen zu automatisieren.
+    Alternativ könnten wir eine Heuristik erstellen, die Bindungen mit geringeren Bindungsordnungen als "schwächer" bewertet. (Sollen wir das später als Erweiterung betrachten?)

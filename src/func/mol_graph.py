@@ -13,7 +13,7 @@ from enum import Enum
 import periodictable
 from itertools import product
 from scipy.optimize import linear_sum_assignment
-import os
+import reaction_graph
 
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
@@ -129,17 +129,23 @@ class mol_graph(nx.Graph):
         """
         self.phi : dict = {}
         index_shift = 0
+        separated_list = []
         for mol in self.mols:
+            sep_mol = nx.Graph()
             i = 0
             for atom in mol.GetAtoms():
                 self.add_node(atom.GetIdx() + index_shift, element=atom.GetSymbol(), feature=_derive_feature_vector(node=atom))
+                sep_mol.add_node(atom.GetIdx() + index_shift, element=atom.GetSymbol(), feature=_derive_feature_vector(node=atom))
                 i += 1
             for bond in mol.GetBonds():
                 self.add_edge(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift, bond_type=bond.GetBondType(), feature=_derive_feature_vector(edge=bond,mol=mol))
+                sep_mol.add_edge(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift, bond_type=bond.GetBondType(), feature=_derive_feature_vector(edge=bond,mol=mol))
                 self.phi.update({(bond.GetBeginAtomIdx() + index_shift, bond.GetEndAtomIdx() + index_shift): bond.GetBondTypeAsDouble()})
             index_shift = i
             if geometric_properties:
                 self._add_hydrogen_bonds(mol)      #? feature or algorithmic retrieval
+            separated_list.append(sep_mol)
+        self.mol_list = separated_list
 
     def _add_hydrogen_bonds(self, mol : Chem.RWMol, distance_threshold=2.5):
         #TODO: Comment
@@ -269,106 +275,7 @@ def _derive_isometries():
     #TODO: Geometric isometry (cis/trans), conformation isometry (rotations), diastereomerie (non-isometric isomeres, enantiomeres, diastereomeres,...)
     pass
 
-class reaction_graph(nx.Graph):
-    def __init__(self, mol_educts=None, mol_products=None, graph=None):
-        assert (mol_educts is not None and mol_products is not None) or graph is not None 
-        if mol_educts is not None and mol_products is not None:
-            self.create_reaction_graph(mol_educts,mol_products)
-        elif graph is not None:
-            self.add_edges_from(graph.edges(data=True))
-        else:
-            raise AttributeError("Could not create ReactionGraph by Nones as arguments")
-        
-    def create_reaction_graph(self, mol_educts, mol_products):
-        # Bipartite maximization of MCS relation between educts and products (extended backpacking problem) #! just a heuristic approach
-        selected_pairs, _ = self.maximize_disjoint_mcs(mol_educts, mol_products)
-        
-        # Derive atom-mapping
-        atom_mapping = self.compute_atom_mapping(selected_pairs)
 
-        # Compute bond changes
-        bond_changes = self.compute_bond_changes(mol_educts, mol_products, atom_mapping)
-
-        # Create nodes and edges in reaction_graph based on bond_changes between educts and products
-        self.build_graph_from_bond_changes(bond_changes)
-
-    def maximize_disjoint_mcs(reactants, products):                 #! May be done by a GIN
-        def compute_mcs_sizes(r_list, p_list):
-            """
-            Berechnet paarweise die MCS-Größen zwischen Edukten und Produkten.
-            Gibt eine Gewichtungsmatrix und die Paare zurück
-            """
-            pairs = []
-            weights = []
-
-            for (i, reactant_smiles),(j,product_smiles) in product(enumerate(r_list), enumerate(p_list)):
-                reactant = Chem.MolFromSmiles(reactant_smiles)
-                product = Chem.MolFromSmiles(product_smiles)
-
-                # Compute Maximal Common Substructure
-                mcs_result = rdFMCS.FindMCS([reactant,product])
-                mcs_size = mcs_result.numAtoms  # Größe == Anzahl Atome
-                
-                # save the pair and weight
-                pairs.append((reactant_smiles, product_smiles, mcs_result.smartsString, mcs_size))
-                weights.append((i, j, mcs_size))
-            return pairs, weights
-
-        pairs, weights = compute_mcs_sizes(reactants, products)
-
-        # number of educts and products
-        num_reactants = len(reactants)
-        num_products = len(products)
-
-        # create weight matrix
-        cost_matrix = np.zeros((num_reactants, num_products))
-        for i,j,mcs_size in weights:
-            cost_matrix[i,j] = -mcs_size                        # hungarian method, maximizing, by minimizing the negatives
-
-        # solving the assignment problem
-        reactant_indices, product_indices = linear_sum_assignment(cost_matrix)
-
-        # Gathering maximal MCS and their pairs
-        selected_pairs = []
-        total_mcs_size = 0
-        for r_idx, p_idx in zip(reactant_indices, product_indices):
-            # get the belonging pair and MCS info
-            for pair in pairs:
-                if reactants[r_idx] == pair[0] and products[p_idx] == pair[1]:
-                    selected_pairs.append(pair)
-                    total_mcs_size += pair[3]
-                    break
-
-        return selected_pairs, total_mcs_size
-
-    def compute_atom_mapping(self, selected_pairs):
-        atom_mapping = {}
-        for pair in selected_pairs:
-            mcs_smarts = pair[2]
-
-            reactant_mol = Chem.MolFromSmiles(pair[0])
-            product_mol = Chem.MolFromSmiles(pair[1])
-
-            mcs = Chem.MolFromSmarts(mcs_smarts)
-
-            reactant_match = reactant_mol.GetSubstructMatch(mcs)
-            product_match = product_mol.GetSubstructMatch(mcs)
-
-            for r_idx, p_idx in zip(reactant_match, product_match):
-                #? Is this enough for the condition
-                if reactant_mol.GetAtomWithIdx(r_idx).GetSymbol() == product_mol.GetAtomWithIdx(p_idx).GetSymbol():
-                    atom_mapping[r_idx] = p_idx
-
-        return atom_mapping
-    
-    def compute_bond_changes(self, mol_educts, mol_products, atom_mapping):
-        #TODO: Rewrite (zip seems to be wrong)
-        bond_changes = {}
-
-        # Compute this for each molecule
-        for reactant_mol, product_mol in zip(mol_educts, mol_products):
-            for atom_idx1, atom_idx2 in atom_mapping.items():
-                pass
 
     
 
