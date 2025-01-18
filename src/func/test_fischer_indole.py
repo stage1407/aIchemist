@@ -1,4 +1,4 @@
-from data_structures import mol_graph, reaction_graph, transform
+from func.mol_graph import mol_graph, reaction_graph, transform
 from rdkit import Chem
 from rdkit.Chem import AllChem, Draw
 from visualize import visualize_molecule_graph
