@@ -11,6 +11,8 @@ from rdkit.Chem import rdMolTransforms
 import pubchempy as pcp #type: ignore
 from enum import Enum
 import periodictable
+from itertools import product
+from scipy.optimize import linear_sum_assignment
 import os
 
 MAX_DEPTH = 10
@@ -267,98 +269,69 @@ def _derive_isometries():
     #TODO: Geometric isometry (cis/trans), conformation isometry (rotations), diastereomerie (non-isometric isomeres, enantiomere, diastereomere,...)
     pass
 
-class reaction_graph:
-    #TODO: Implement this data structure
-    def __init__(self, psi : dict): #, educts : mol_graph = None, products=None): 
-        if psi is not None:
-            assert sum(psi.values()) == 0
-            self.psi = psi
+class reaction_graph(nx.Graph):
+
+    def __init__(self, mol_educts=None, mol_products=None, graph=None):
+        assert (mol_educts is not None and mol_products is not None) or graph is not None 
+        if mol_educts is not None and mol_products is not None:
+            #TODO: Create ReactionGraph by maximize_disjoint_mcs
+            pass
+        elif graph is not None:
+            super().__init__()
         else:
-            pass
-            #print(psi)
-            #self._init2(educts=educts, products=products)
-    """
-    def _init2(self, educts : mol_graph, products : mol_graph):
-    """
-    """
-        Represents the graph theoretical difference: Product - Educt 
+            raise AttributeError("Could not create ReactionGraph by Nones as arguments")
 
-        Parameters:
-        - educts: represents all educts, in a mol_graph
-        - products: represents all products, in a mol_graph
-        
-        Returns:
-        - reaction_graph
-    """
-    """
-        # assert np.sort(educts.get_elements()) == np.sort(products.get_elements())
-        psi = {}
-        psi.setdefault(0)
-        # It's a kind of magic (Eeeeeeeeh-Oohhhhhhh)
-        max_mcs = None
-        for i,e_mol in enumerate(educts.mols):
-            max = 1
-            for j,p_mol in enumerate(products.mols):
-                mcs : rdFMCS.MCSResult = rdFMCS.FindMCS([e_mol, p_mol])
-                mcs_mol = Chem.MolFromSmarts(mcs)    # Computing mcs over reaction, to know what is not changing in reaction
-                e_mol_matching = e_mol.GetSubstructMatch(mcs_mol)
-                p_mol_matching = p_mol.GetSubstructMatch(mcs_mol)
-                if mcs.numAtoms > max:
-                    max = mcs.numAtoms
-                    max_mcs = (i,j,mcs_mol,e_mol_matching,p_mol_matching)
-        #TODO: How to use pairwise mcs for reaction graphs
+    def maximize_disjoint_mcs(reactants, products):                 #! May be done by a GIN
+        def compute_mcs_sizes(r_list, p_list):
+            """
+            Berechnet paarweise die MCS-Größen zwischen Edukten und Produkten.
+            Gibt eine Gewichtungsmatrix und die Paare zurück
+            """
+            pairs = []
+            weights = []
 
+            for (i, reactant_smiles),(j,product_smiles) in product(enumerate(r_list), enumerate(p_list)):
+                reactant = Chem.MolFromSmiles(reactant_smiles)
+                product = Chem.MolFromSmiles(product_smiles)
 
-        assert sum(psi.values()) == 0       # feasibility
-        self.psi = psi
-    """
-        
-    def _algorithmic_constructed_reaction_graph(self, educts : mol_graph, products : mol_graph):
-        """
-        Cite pseudo-code of the reaction-network paper (drive)
-        """
-        i = 0
-        i_max = MAX_DEPTH
-        path_stack = []
-        U = [[educts]]
-        cond = False
-        while not cond:
-            if len(U[i]) != 0:
-                G = U[i].pop()          #TODO: arbitrary graph
-                path_stack.append(G)
-                cd = compute_chemical_distance(educts, products)
-                if cd == 0:
-                    #* Output the molecular_manipulation path
-                    pass
-                else:
-                    if i < i_max:
-                        i += 1
-                        F = self._compute_all_isomeric_graphs(G)
-                        U.append()
-                        #!HGAT part
-                        #TODO:  implement feasibility 
-                        #* U[i] = set of all graphs produced by feasible transformations
-                        #* and a descending chemical distance
-                        #? HOW TO?!
-            else:
-                i -= 1
-                path_stack.pop()
-            cond = i == 0
-        
-    def _compute_all_isomeric_graphs(self, G, descending_chemical_distance=True, feasible_transformations=True):
-        
-        pass
+                # Compute Maximal Common Substructure
+                mcs_result = rdFMCS.FindMCS([reactant,product])
+                mcs_size = mcs_result.numAtoms  # Größe == Anzahl Atome
                 
-    def _construct_transformation(self, G):
-        
-        pass
+                # save the pair and weight
+                pairs.append((reactant_smiles, product_smiles, mcs_result.smartsString, mcs_size))
+                weights.append((i, j, mcs_size))
+            return pairs, weights
+
+        pairs, weights = compute_mcs_sizes(reactants, products)
+
+        # number of educts and products
+        num_reactants = len(reactants)
+        num_products = len(products)
+
+        # create weight matrix
+        cost_matrix = np.zeros((num_reactants, num_products))
+        for i,j,mcs_size in weights:
+            cost_matrix[i,j] = -mcs_size                        # Ungarische Methode. Negative Werte minimieren
+
+        # solving the assignment problem
+        reactant_indices, product_indices = linear_sum_assignment(cost_matrix)
+
+        # Gathering maximal MCS and their pairs
+        selected_pairs = []
+        total_mcs_size = 0
+        for r_idx, p_idx in zip(reactant_indices, product_indices):
+            # get the belonging pair and MCS info
+            for pair in pairs:
+                if reactants[r_idx] == pair[0] and products[p_idx] == pair[1]:
+                    selected_pairs.append(pair)
+                    total_mcs_size += pair[3]
+                    break
+
+        return selected_pairs, total_mcs_size
 
 
-    def __add__(self, other):
-        if isinstance(other, reaction_graph):
-            #TODO: Provide composition functionality via (+)
-            pass
-        return TypeError(f"Input has to be instance of the class: reaction_graph.")
+    
 
 def compute_chemical_distance(graph1 : mol_graph, graph2 : mol_graph):
     sum = 0
