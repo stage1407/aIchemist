@@ -116,7 +116,7 @@ class mol_graph(nx.Graph):
         """Should be obsolete but dunno
         def __getitem__(self, key):
         print("TODO this")
-        #TODO access underlying mols as 
+        # access underlying mols as 
         return key"""
 
     def _build_graph(self):
