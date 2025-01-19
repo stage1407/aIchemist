@@ -10,6 +10,7 @@ import reaction_graph
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
 geometric_properties = False    # set True for modeling hydrogen bonds      #!Dummy for now
+"""
 properties = [
     "Hybridization",
     "Formal charge",
@@ -30,6 +31,7 @@ properties = [
     "Stereochemistry",
     "Hydrophobicity"
 ]
+"""
 
 #*node_features = ["element","degree","charge","valence","lones","aromaticity","hydrogen","hybridization"]
 #*edge_features = []
