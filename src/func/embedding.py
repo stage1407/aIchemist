@@ -1,6 +1,6 @@
 from rdkit import Chem
 import json
-from datastructure import _derive_isometries
+from mol_graph import _derive_isometries
 
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
