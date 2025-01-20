@@ -2,14 +2,14 @@ import json
 from enum import Enum
 import os
 
-class Dataset(Enum):
+class DatasetType(Enum):
     TRAINING = "./data/json/train"
     TEST = "./data/json/train"
     VALIDATION = "./data/json/validation"
 
 #FileLoader
 class Channel():
-    def __init__(self, dataset : Dataset):
+    def __init__(self, dataset : DatasetType):
         self.path = dataset.value
 
     def getMessagePaths(self):
@@ -42,3 +42,18 @@ class Message():
 
 #    def getProvenance(self):
 #        return self.msg.get("provenance")
+
+
+#TODO: Data Pipeline, missing gap between data/json and models/training.py
+#TODO: 1. Extract Inputs (Educts + Reagents + Catalysts) and Outcomes (Products + Catalysts)
+#TODO: 2. Initialize Mol_Graphs for Educts and Products AND DON'T FORGET THE REACTION GRAPHS
+class Extractor():
+    def __init__(self, type : DatasetType):
+        ch = Channel(type)
+        for path in ch.getMessagePaths():
+            msg = Message(path)
+            educt_mol_graph, product_mol_graph = derive_from_data(msg)
+
+def derive_from_data(msg : Message):
+    #TODO
+    pass

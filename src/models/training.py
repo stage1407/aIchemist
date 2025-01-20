@@ -9,6 +9,9 @@ from reaction_gae import ReactionGAE
 from gnn_encoder import GNNEncoder
 from reaction_gat import ReactionGAT
 from reaction_vgae import ReactionVGAE
+from data.extract import Extractor, DatasetType
+from data.dataloader import ReactionDataset
+from func.mol_graph_converter import MolGraphConverter
 
 # Beispielkonfiguration
 config = {
@@ -103,9 +106,16 @@ class ModelType(Enum):
 
 # Haupttrainingspipeline
 def main(model_type : ModelType):
-    # TODO: Lade die Daten (DataLoader) und das Modell
-    train_loader = None  # Füge hier den Trainings-Loader ein
-    val_loader = None    # Füge hier den Validierungs-Loader ein
+    train_mol_graphs = Extractor(DatasetType.TRAINING)
+    val_mol_graphs = Extractor(DatasetType.VALIDATION)
+
+    converter = MolGraphConverter(normalize_features=True, one_hot_edges=True)
+
+    train_dataset = ReactionDataset(train_mol_graphs, converter)
+    val_dataset = ReactionDataset(val_mol_graphs, converter)
+
+    train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True)     # Füge hier den Trainings-Loader ein
+    val_loader = DataLoader(val_dataset, batch_size=config["batch_size"])                       # Füge hier den Validierungs-Loader ein
     input_dim = len(properties["node_features"])
     edge_attr_dim = len(properties["edge_features"])
     model = None         # Initialisiere hier das Modell
