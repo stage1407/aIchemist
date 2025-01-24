@@ -12,6 +12,7 @@ from reaction_vgae import ReactionVGAE
 from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from func.mol_graph_converter import MolGraphConverter
+from loss_function import compute_node_loss, compute_edge_loss
 
 # Beispielkonfiguration
 config = {
@@ -23,7 +24,7 @@ config = {
 }
 
 # Trainingsfunktion
-def train(model, loader, optimizer, criterion, device):
+def train(model, loader, optimizer, device):
     model.train()
     total_loss = 0
     all_preds = []
@@ -37,8 +38,8 @@ def train(model, loader, optimizer, criterion, device):
         node_out, edge_out = model(data)
         
         # Loss-Berechnung
-        node_loss = criterion(node_out, data.node_target)
-        edge_loss = criterion(edge_out, data.edge_target)
+        node_loss = compute_node_loss(node_out, data.node_target)
+        edge_loss = compute_edge_loss(edge_out, data.edge_target)
         loss = node_loss + edge_loss
 
         # Backward-Pass und Optimierung
@@ -77,8 +78,8 @@ def validate(model, loader, criterion, device):
             node_out, edge_out = model(data)
 
             # Loss-Berechnung
-            node_loss = criterion(node_out, data.node_target)
-            edge_loss = criterion(edge_out, data.edge_target)
+            node_loss = compute_node_loss(node_out, data.node_target)
+            edge_loss = compute_edge_loss(edge_out, data.edge_target)
             loss = node_loss + edge_loss
 
             total_loss += loss.item()
@@ -118,7 +119,8 @@ def main(model_type : ModelType):
     val_loader = DataLoader(val_dataset, batch_size=config["batch_size"])                       # Füge hier den Validierungs-Loader ein
     input_dim = len(properties["node_features"])
     edge_attr_dim = len(properties["edge_features"])
-    model = None         # Initialisiere hier das Modell
+    model = None         # Initialisiere das Modell
+
     if model_type == ModelType.ENC:
         model = GNNEncoder(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
     elif model_type == ModelType.GAE:
@@ -131,11 +133,10 @@ def main(model_type : ModelType):
     model.to(config["device"])
 
     optimizer = Adam(model.parameters(), lr=config["learning_rate"])
-    criterion = torch.nn.CrossEntropyLoss()
 
     for epoch in range(config["epochs"]):
-        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, criterion, config["device"])
-        val_loss, val_acc, val_f1 = validate(model, val_loader, criterion, config["device"])
+        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, config["device"])
+        val_loss, val_acc, val_f1 = validate(model, val_loader, config["device"])
 
         print(f"Epoch {epoch+1}/{config['epochs']}")
         print(f"  Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.4f} | Train F1: {train_f1:.4f}")
