@@ -105,7 +105,12 @@ def derive_from_data(msg : Message):
 
         # Conditions
         conditions = msg.getConditions()
-        reaction_data["conditions"]["temperature"] = conditions.get("temperature", {}).get("value", None)
+        temperature = conditions.get("temperature", {}).get("value", None)
+        temp_unit = conditions.get("temperatur",{}).get("setpoint",{}).get("units", None)
+        if temperature and temp_unit == "CELSIUS":
+            temperature += 273.15       # Kelvin
+        reaction_data["conditions"]["temperature"] = temperature
+        
         reaction_data["conditions"]["pressure"] = conditions.get("pressure", {}).get("value", None)
         reaction_data["conditions"]["stirring"] = conditions.get("stirring", {}).get("details", None)
 
