@@ -1,5 +1,7 @@
 import torch
+import torch.nn as nn
 from torch_geometric.data import Data
+from loss_function import Chem
 
 def generate_mock_mol_graph(num_nodes=10, num_edges=20, feature_dim=5, edge_attr_dim=3):
     """
@@ -51,3 +53,28 @@ if __name__ == "__main__":
     mock_dataset = generate_mock_dataset(num_graphs=10, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)
     print(f"Generierte {len(mock_dataset)} Mock-Graphen.")
     print(f"Erster Graph: {mock_dataset[0]}")
+
+
+def example_training_pipeline():
+    """Example demonstrating how to use the chemical loss in training."""
+    # Mock model, data loader, and optimizer
+    class MockModel(nn.Module):
+        def forward(self, data):
+            return data.x, data.edge_attr
+
+    model = MockModel()
+    train_loader = [
+        torch.load("mock_data.pt")  # Replace with actual data loader
+    ]
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    criterion = nn.CrossEntropyLoss()
+
+    # Training with chemical loss
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    loss = Chem.train_with_chemical_loss(model, train_loader, optimizer, criterion, device)
+
+    print("Training Loss:", loss)
+
+if __name__ == "__main__":
+    example_training_pipeline()

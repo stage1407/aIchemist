@@ -13,7 +13,7 @@ from reaction_vgae import ReactionVGAE
 from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from func.mol_graph_converter import MolGraphConverter
-from loss_function import compute_node_loss, compute_edge_loss
+from loss_function import compute_node_loss, compute_edge_loss, Chem
 
 MOCK_ON=True
 
@@ -27,7 +27,7 @@ config = {
 }
 
 # Trainingsfunktion
-def train(model, loader, optimizer, device):
+def train(model, loader, optimizer, device, chemical_loss_enabled=False):
     model.train()
     total_loss = 0
     all_preds = []
@@ -43,7 +43,11 @@ def train(model, loader, optimizer, device):
         # Loss-Berechnung
         node_loss = compute_node_loss(node_out, data.node_target)
         edge_loss = compute_edge_loss(edge_out, data.edge_target)
+
         loss = node_loss + edge_loss
+
+        if chemical_loss_enabled:
+            loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
 
         # Backward-Pass und Optimierung
         loss.backward()
@@ -67,7 +71,7 @@ def train(model, loader, optimizer, device):
     return avg_loss, acc, f1
 
 # Validierungsfunktion
-def validate(model, loader, criterion, device):
+def validate(model, loader, device, chemical_loss_enabled=False):
     model.eval()
     total_loss = 0
     all_preds = []
@@ -84,6 +88,10 @@ def validate(model, loader, criterion, device):
             node_loss = compute_node_loss(node_out, data.node_target)
             edge_loss = compute_edge_loss(edge_out, data.edge_target)
             loss = node_loss + edge_loss
+
+            if chemical_loss_enabled:
+                loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
+
 
             total_loss += loss.item()
 
