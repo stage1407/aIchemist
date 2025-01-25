@@ -52,8 +52,8 @@ class Extractor():
         ch = Channel(type)
         for path in ch.getMessagePaths():
             msg = Message(path)
-            educt_mol_graph, product_mol_graph = derive_from_data(msg)
+            educt_mol_graph, product_mol_graph, conditions = derive_from_data(msg)
 
 def derive_from_data(msg : Message):
-    #TODO
+    #TODO: Extract Inputs, Outcomes and important conditions of the reaction (temperature, pressure, concentration/ratio, ...)
     pass
