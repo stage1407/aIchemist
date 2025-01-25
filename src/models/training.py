@@ -5,6 +5,7 @@ from torch.optim import Adam
 from sklearn.metrics import accuracy_score, f1_score
 from func.mol_graph import properties
 # from data.dataloader import DataLoader
+from models.mock import generate_mock_dataset
 from reaction_gae import ReactionGAE
 from gnn_encoder import GNNEncoder
 from reaction_gat import ReactionGAT
@@ -13,6 +14,8 @@ from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from func.mol_graph_converter import MolGraphConverter
 from loss_function import compute_node_loss, compute_edge_loss
+
+MOCK_ON=True
 
 # Beispielkonfiguration
 config = {
@@ -117,6 +120,12 @@ def main(model_type : ModelType):
 
     train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True)     # Füge hier den Trainings-Loader ein
     val_loader = DataLoader(val_dataset, batch_size=config["batch_size"])                       # Füge hier den Validierungs-Loader ein
+    if MOCK_ON:
+        ####### MOCK #######
+        mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)
+        train_loader = DataLoader(mock_dataset[:80], batch_size=8, shuffle=True)
+        val_loader = DataLoader(mock_dataset[80:], batch_size=8, shuffle=False)
+        ####################
     input_dim = len(properties["node_features"])
     edge_attr_dim = len(properties["edge_features"])
     model = None         # Initialisiere das Modell
