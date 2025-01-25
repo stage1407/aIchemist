@@ -38,4 +38,4 @@ class Chem:
 
         return chemical_loss
 
-
+    #TODO: Chemical Distance as graph theoretic loss function. (Use func.reaction_graph module)
