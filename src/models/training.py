@@ -13,6 +13,7 @@ from reaction_vgae import ReactionVGAE
 from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from func.mol_graph_converter import MolGraphConverter
+from func.reaction_graph import reaction_graph
 from loss_function import compute_node_loss, compute_edge_loss, Chem
 
 MOCK_ON=True
@@ -27,7 +28,7 @@ config = {
 }
 
 # Trainingsfunktion
-def train(model, loader, optimizer, device, chemical_loss_enabled=False):
+def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemical_distance_loss=None):
     model.train()
     total_loss = 0
     all_preds = []
@@ -48,6 +49,15 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False):
 
         if chemical_loss_enabled:
             loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
+
+        generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data.input_graph)
+        ground_truth_reaction_graph = reaction_graph(graph=data.target_graph)
+
+        chem_dist_loss = 0
+        if chemical_distance_loss is not None:
+            chem_dist_loss = chemical_distance_loss(generated_reaction_graph, ground_truth_reaction_graph)
+        
+        loss += chem_dist_loss
 
         # Backward-Pass und Optimierung
         loss.backward()
@@ -71,7 +81,7 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False):
     return avg_loss, acc, f1
 
 # Validierungsfunktion
-def validate(model, loader, device, chemical_loss_enabled=False):
+def validate(model, loader, device, chemical_loss_enabled=False, chemical_distance_loss=None):
     model.eval()
     total_loss = 0
     all_preds = []
@@ -91,6 +101,15 @@ def validate(model, loader, device, chemical_loss_enabled=False):
 
             if chemical_loss_enabled:
                 loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
+
+            generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data.input_graph)
+            ground_truth_reaction_graph = reaction_graph(graph=data.target_graph)
+
+            chem_dist_loss = 0
+            if chemical_distance_loss is not None:
+                chem_dist_loss = chemical_distance_loss(generated_reaction_graph, ground_truth_reaction_graph)
+        
+            loss += chem_dist_loss
 
 
             total_loss += loss.item()
@@ -152,8 +171,8 @@ def main(model_type : ModelType):
     optimizer = Adam(model.parameters(), lr=config["learning_rate"])
 
     for epoch in range(config["epochs"]):
-        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, config["device"])
-        val_loss, val_acc, val_f1 = validate(model, val_loader, config["device"])
+        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, config["device"],chemical_loss_enabled=True, chemical_distance_loss=Chem.ChemicalDistanceLoss(weight=0.5,mode="ratio"))
+        val_loss, val_acc, val_f1 = validate(model, val_loader, config["device"], chemical_loss_enabled=True, chemical_distance_loss=Chem.ChemicalDistanceLoss(weight=0.5,mode="ratio"))
 
         print(f"Epoch {epoch+1}/{config['epochs']}")
         print(f"  Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.4f} | Train F1: {train_f1:.4f}")

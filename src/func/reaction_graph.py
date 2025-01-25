@@ -1,44 +1,40 @@
 import numpy as np
-import json
 from rdkit import Chem
-import typing as type
 import networkx as nx #type: ignore
-from rdkit.Chem import AllChem 
 from rdkit.Chem import rdFMCS
-from rdkit.Chem import Draw
-from rdkit.Chem import rdMolTransforms
 #from rdkit.Chem.rdMolDescriptors import CalcCrippenContribs
-import pubchempy as pcp #type: ignore
-from enum import Enum
-import periodictable
 from itertools import product
 from scipy.optimize import linear_sum_assignment
 import mol_graph
 
 class reaction_graph(nx.Graph):
-    def __init__(self, mol_educts=None, mol_products=None, graph=None):
+    def __init__(self, mol_educts:mol_graph=None, mol_products:mol_graph=None, graph=None):
         assert (mol_educts is not None and mol_products is not None) or graph is not None 
         if mol_educts is not None and mol_products is not None:
-            self.create_reaction_graph(mol_educts,mol_products)
+            self.educts = mol_educts
+            self.products = mol_products
+            self.create_reaction_graph()
         elif graph is not None:
             self.add_edges_from(graph.edges(data=True))
         else:
             raise AttributeError("Could not create ReactionGraph by Nones as arguments")
         
-    def create_reaction_graph(self, mol_educts, mol_products):
+    def create_reaction_graph(self):
         # Bipartite maximization of MCS relation between educts and products (extended backpacking problem) #! just a heuristic approach
-        selected_pairs, _ = self.maximize_disjoint_mcs(mol_educts, mol_products)
+        selected_pairs, _ = self.maximize_disjoint_mcs()
         
         # Derive atom-mapping
         atom_mapping = self.compute_atom_mapping(selected_pairs)
 
         # Compute bond changes
-        bond_changes = self.compute_bond_changes(mol_educts, mol_products, atom_mapping)
+        bond_changes = self.compute_bond_changes(atom_mapping)
 
         # Create nodes and edges in reaction_graph based on bond_changes between educts and products
         self.build_graph_from_bond_changes(bond_changes)
 
-    def maximize_disjoint_mcs(reactants : mol_graph, products : mol_graph):                 #! May be done by a GIN
+    def maximize_disjoint_mcs(self):                 #! May be done by a GIN
+        reactants = self.educts
+        products = self.products
         def compute_mcs_sizes(r_list, p_list):
             """
             Berechnet paarweise die MCS-Größen zwischen Edukten und Produkten.
@@ -107,25 +103,22 @@ class reaction_graph(nx.Graph):
 
         return atom_mapping
 
-    def compute_bond_changes(self, mol_educts : mol_graph, mol_products : mol_graph, atom_mapping):
+    def compute_bond_changes(self, atom_mapping):
         bond_changes = {}
         # Compute this for each molecule
         atom_indices = []
-        for mol in mol_educts:
+        for mol in self.educts:
             mol : Chem.Mol = mol
             for atom in mol.GetAtoms():
                 atom : Chem.Atom = atom
                 atom_indices.append(atom.GetIdx())
         for idx1, idx2 in product(atom_indices, atom_indices):
             if idx1 != idx2:
-                diff = mol_products[idx1][idx2]["feature"][0] - mol_educts[idx1][idx2]["feature"][0]
+                diff = self.products[atom_mapping[idx1]][atom_mapping[idx2]]["feature"][0] - self.educts[idx1][idx2]["feature"][0]
                 if diff != 0:
                     e : set = {idx1,idx2}
                     bond_changes[e] = diff
         return bond_changes        
-                
-            
-
 
     def build_graph_from_bond_changes(self, bond_changes):
         """
@@ -133,3 +126,23 @@ class reaction_graph(nx.Graph):
         """
         for (atom_idx1, atom_idx2), bond_change in bond_changes.items():
             self.add_edge(atom_idx1, atom_idx2, weight=bond_change)
+
+    def chemical_distance(self):
+        """
+        Computes the chemical Distance between self and other_graph.
+        """
+        # Sums up
+        sum_g1 = sum(data["weight"] for _,_,data in self.educts.edges(data=True))
+        sum_g2 = sum(data["weight"] for _,_,data in self.products.edges(data=True))
+        
+        selected_pairs = self.maximize_disjoint_mcs()
+        sum_mcs = 0
+        for pair in selected_pairs:
+            mcs_mol = Chem.MolFromSmarts(pair[2])
+            for bond in mcs_mol.GetBonds():
+                sum_mcs += int(bond.GetBondTypeAsDouble())
+                
+
+        chemical_distance = sum_g1 + sum_g2 - 2*sum_mcs
+
+        return chemical_distance

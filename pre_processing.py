@@ -5,25 +5,21 @@ import ord_schema
 from ord_schema import message_helpers, validations
 from ord_schema.proto import dataset_pb2
 from ord_schema.proto import reaction_pb2
-import re
 import os
 from os.path import isfile, join
-import ast
-import requests
-import json
 import os
 import shutil
 import wget # type: ignore
 
-#download ORD data
+# download ORD data
 url = "https://github.com/open-reaction-database/ord-data/archive/refs/heads/main.zip"
 wget.download(url, "ord-data-main.zip")
 
-#unzip
+# unzip
 shutil.unpack_archive("ord-data-main.zip", "ord-data-main")
 
-#prepare datastructure
-#all datasets are stored in one folder
+# prepare datastructure
+# all datasets are stored in one folder
 for root, dirs, files in os.walk('ord-data-main/ord-data-main/data'):
     for file in files:
         if file[0:11] == "ord_dataset":
