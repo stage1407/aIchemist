@@ -26,7 +26,7 @@ def compute_metrics(node_pred, node_target, edge_pred, edge_target, tanimoto_ena
     }
 
     if tanimoto_enabled and pred_graph is not None and target_graph is not None:
-        metrics["tanimoto_score"] = tanimoto_score(pred_graph, target_graph)
+        metrics["tanimoto_score"] = _tanimoto_score(pred_graph, target_graph)
 
     return metrics
 
