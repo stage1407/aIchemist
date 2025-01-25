@@ -8,14 +8,12 @@ from ord_schema.proto import reaction_pb2
 import re
 import os
 from os.path import isfile, join
-import weaviate
-from weaviate.util import generate_uuid5
 import ast
 import requests
 import json
 import os
 import shutil
-import wget
+import wget # type: ignore
 
 #download ORD data
 url = "https://github.com/open-reaction-database/ord-data/archive/refs/heads/main.zip"
