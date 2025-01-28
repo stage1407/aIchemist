@@ -110,7 +110,7 @@ def derive_from_data(msg : Message):
         if temperature and temp_unit == "CELSIUS":
             temperature += 273.15       # Kelvin
         reaction_data["conditions"]["temperature"] = temperature
-        
+
         reaction_data["conditions"]["pressure"] = conditions.get("pressure", {}).get("value", None)
         reaction_data["conditions"]["stirring"] = conditions.get("stirring", {}).get("details", None)
 
@@ -134,7 +134,7 @@ def derive_from_data(msg : Message):
                 reaction_data["product_amounts"].append(mol_amount)
         
         return reaction_data
-
+ 
     except Exception as e:
         print(f"Error occured by extracting datasets: {e}")
         return None
