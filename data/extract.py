@@ -1,9 +1,8 @@
 import json
 from enum import Enum
 import os
-import periodictable
-from typing import dict, float
-
+from rdkit import Chem
+from rdkit.Chem import Descriptors, rdFreeSASA
 
 class DatasetType(Enum):
     TRAINING = "./data/json/train"
@@ -14,19 +13,24 @@ class DatasetType(Enum):
 class Channel():
     def __init__(self, dataset : DatasetType):
         self.path = dataset.value
+        self.ld = 0
 
     def getMessagePaths(self):
         messages = []
+        loaded = 0
         for subdir in os.listdir(self.path):
             subpath = os.path.join(self.path, subdir)
             for msg_file in os.listdir(subpath):
+                loaded += 1
                 msg = os.path.join(subpath, msg_file)
                 messages.append(msg)
+        self.ld = loaded
         return messages
 
 class Message():
-    def __init__(self, message_path):
-        self.msg : dict = json.load(message_path)
+    def __init__(self, message_path : str):
+        with open(message_path, 'r') as f:
+            self.msg : dict = json.load(f)
 
     def getInputs(self):
         return self.msg.get("inputs")
@@ -53,12 +57,15 @@ class Message():
 class Extractor():
     def __init__(self, type : DatasetType):
         ch = Channel(type)
+        self.data = []
         for path in ch.getMessagePaths():
             msg = Message(path)
+            # print(path)
             #! Flag solvents when finding the maximal common substructure (But should be mostly estinguished by itself)
             extracted = derive_from_data(msg)
             if extracted is not None:
                 self.data.append(extracted)
+        self.loaded_files = ch.ld
 
 def derive_from_data(msg : Message):
     #TODO: Extract Inputs, Outcomes and important conditions of the reaction (temperature, pressure, concentration/ratio, ...)
@@ -81,30 +88,42 @@ def derive_from_data(msg : Message):
         
         # Inputs
         inputs = msg.getInputs()
+        # print(inputs)
         if not inputs:
-            return None
-        for _, inp_val in inputs.items():
-            for comp in inp_val.get("components", []):  #?      does this work or is there another layer between?!?!
-                role = comp.get("reaction_role", "").upper()
-                identifiers = comp.get("identifiers", [])
-                smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
-                amount = comp.get("amount", {})
-                if not smiles or not amount:
-                    return None
-                if role == "REACTANT":
-                    molar_mass = periodictable.formula(smiles).mass if smiles else 1
-                    mol_amount = convert_to_mol(amount, molar_mass)
-                    if mol_amount is None:
-                        return None
-                    reaction_data["educts"].append(smiles)
-                    reaction_data["educt_amounts"].append(mol_amount)
-                elif role == "SOLVENT":
-                    reaction_data["solvents"].append(smiles)
-                elif role == "CATALYST":
-                    reaction_data["catalysts"].append(smiles)
+            pass
+        else:
+            for _, inp_val in inputs.items():
+                for comp in inp_val.get("components", []):  #?      does this work or is there another layer between?!?!
+                    role = comp.get("reaction_role", "").upper()
+                    identifiers = comp.get("identifiers", [])
+                    smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
+                    #print(smiles)
+                    amount = comp.get("amount", {})
+                    #print(amount)
+                    if smiles is None or amount is None:
+                        pass
+                    else: 
+                        if role == "REACTANT":
+                            mol = Chem.MolFromSmiles(smiles)
+                            molar_mass = Descriptors.MolWt(mol) if mol else None
+                            mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                            #print("MolCount",mol_amount)
+                            if mol_amount is None:
+                                pass
+                            else:
+                                #print(smiles)
+                                reaction_data["educts"].append(smiles)
+                                reaction_data["educt_amounts"].append(mol_amount)
+                        elif role == "SOLVENT":
+                            reaction_data["solvents"].append(smiles)
+                        elif role == "CATALYST":
+                            reaction_data["catalysts"].append(smiles)
+                        #print(amount)
+        #print(reaction_data if reaction_data is not None else "") 
 
         # Conditions
         conditions = msg.getConditions()
+        # print("Cond",conditions)
         temperature = conditions.get("temperature", {}).get("value", None)
         temp_unit = conditions.get("temperatur",{}).get("setpoint",{}).get("units", None)
         if temperature and temp_unit == "CELSIUS":
@@ -117,29 +136,46 @@ def derive_from_data(msg : Message):
         # Outcomes
         outcomes = msg.getOutcomes()
         if not outcomes:
-            return None
-        
-        for outcome in outcomes:
-            for product in outcome.get("products", []):
-                identifiers = product.get("identifiers", [])
-                smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
-                amount = product.get("measurements", [{}])[0].get("amount", {})
-                if not smiles or not amount:
-                    return None
-                molar_mass = periodictable.formula(smiles).mass if smiles else 1
-                mol_amount = convert_to_mol(amount, molar_mass)
-                if mol_amount is None:
-                    return None
-                reaction_data["products"].append(smiles)
-                reaction_data["product_amounts"].append(mol_amount)
-        
+            pass
+        else:
+            for outcome in outcomes:
+                for product in outcome.get("products", []):
+                    identifiers = product.get("identifiers", [])
+                    smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
+                    amount = product.get("measurements", [{}])[0].get("amount", {})
+                    if not smiles or not amount:
+                        return None
+                    mol = Chem.MolFromSmiles(smiles)
+                    molar_mass = Descriptors.MolWt(mol) if mol else None
+                    mol_amount = convert_to_mol(amount, molar_mass)
+                    if molar_mass is None or mol_amount is None:
+                        return None
+                    reaction_data["products"].append(smiles)
+                    reaction_data["product_amounts"].append(mol_amount)
+        # print("ReactData", reaction_data)
         return reaction_data
  
     except Exception as e:
-        print(f"Error occured by extracting datasets: {e}")
-        return None
+        # print(f"Error occured by extracting datasets: {e}")
+        return reaction_data
     
-def convert_to_mol(amount : dict, molar_mass : float) -> float:
+def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> float:
+    def estimate_density() -> float:
+        try:
+            mol = Chem.MolFromSmiles(smiles)
+            if mol is None:
+                return None
+            mol_weight = Descriptors.MolWt(mol)
+            radii = rdFreeSASA.classifyAtoms(mol)
+            mol_volume = rdFreeSASA.CalcSASA(mol, radii)
+
+            estimated_volume = mol_volume * 1.5     # Approximate conversion factor
+
+            density = mol_weight /estimated_volume if estimated_volume > 0 else None
+            return round(density, 3) if density else None
+        except Exception as e:
+            # print(f"Error estimating density for {smiles}: {e}")
+            return None
     try:
         if "mass" in amount:
             mass_value = amount["mass"]["value"]
@@ -149,32 +185,53 @@ def convert_to_mol(amount : dict, molar_mass : float) -> float:
             elif unit == "KILOGRAM":
                 mass_value *= 1_000
             elif unit == "MILLIGRAM":
-                mass_value *= 0.001
+                mass_value *= 0.00_1
             elif unit == "MICROGRAM":
-                mass_value *= 0.000001
+                mass_value *= 0.00_000_1
+            elif unit == "NANOGRAM":
+                mass_value *= 0.00_000_000_1
             return mass_value / molar_mass
+
         elif "volume" in amount:
             volume_value = amount["volume"]["value"]
             unit = amount["volume"]["units"]
             if unit == "LITER":
                 volume_value *= 1
             elif unit == "MILLILITER":
-                volume_value *= 0.001
+                volume_value *= 0.00_1
+            elif unit == "MICROLITER":
+                volume_value *= 0.00_000_1
+            elif unit == "NANOLITER":
+                volume_value *= 0.00_000_000_1
+
+            density_value = amount.get("density", {}).get("value", None)
+            if density_value is None:
+                density_value = estimate_density(smiles)
             
-            if "density" in amount:
-                density_value = amount["density"]["value"]  # density in g/mL
+            if density_value is not None:
                 mass_value = volume_value * density_value
                 return mass_value / molar_mass
             else:
                 return None
+
         elif "moles" in amount:
+            unit = amount["volume"]["units"]
+            if unit == "MOLE":
+                volume_value *= 1
+            elif unit == "MILLIMOLE":
+                volume_value *= 0.00_1
+            elif unit == "NANOMOLE":
+                volume_value *= 0.00_000_1
             return amount["moles"]["value"]
         
         else:
             return None
         
     except Exception as e:
-        print(f"Error occured by extracting datasets: {e}")
+        # print(f"Error occured by converting dataset to mols: {e}")
         return None
 
-
+for v in [DatasetType.TEST, DatasetType.TRAINING, DatasetType.VALIDATION]:
+    ex = Extractor(v)
+    print(str(v)+ ":", str(len(ex.data)) + "/" + str(ex.loaded_files))
+    #print("Data:", ex.data)
