@@ -6,7 +6,7 @@ from rdkit.Chem import Descriptors, rdFreeSASA
 
 class DatasetType(Enum):
     TRAINING = "./data/json/train"
-    TEST = "./data/json/train"
+    TEST = "./data/json/test"
     VALIDATION = "./data/json/validation"
 
 #FileLoader

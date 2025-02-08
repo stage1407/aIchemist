@@ -29,6 +29,7 @@ config = {
 
 # Trainingsfunktion
 def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemical_distance_loss=None):
+    # TODO: Maybe weight valence rule violations much higher than chemical distance loss and structural loss.
     model.train()
     total_loss = 0
     all_preds = []
