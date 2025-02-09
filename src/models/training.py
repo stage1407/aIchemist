@@ -24,7 +24,7 @@ from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
 from src.models.loss_function import compute_node_loss, compute_edge_loss, Chem
 
-MOCK_ON=True
+MOCK_ON=False
 
 # Beispielkonfiguration
 config = {
@@ -34,6 +34,18 @@ config = {
     "learning_rate": 0.05,
     "device": "cuda" if torch.cuda.is_available() else "cpu"
 }
+
+def pad_missing_features(data_x, target_dim=19):
+    current_dim = data_x.shape[1]
+
+    if current_dim < target_dim:
+        padding = torch.zeros((data_x.shape[0], target_dim - current_dim), dtype=torch.float32, device=data_x.device)
+        data_x = torch.cat([data_x, padding], dim=1)
+    elif current_dim > target_dim:
+        data_x = data_x[:, :target_dim]  # Truncate extra dimensions if necessary
+
+    return data_x
+
 
 # Trainingsfunktion
 def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemical_distance_loss=None):
@@ -46,9 +58,10 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
     for data in loader:
         data = data.to(device)
         optimizer.zero_grad()
-
+        print(data, data.x, data.edge_index)
         # Forward-Pass
-        node_out, edge_out = model(data)
+        data.x = pad_missing_features(data.x, target_dim=19)
+        node_out, edge_out = model(data.x,data.edge_index)
         
         # Loss-Berechnung
         node_loss = compute_node_loss(node_out, data.node_target)
@@ -59,7 +72,7 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
         if chemical_loss_enabled:
             loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
 
-        generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data.input_graph)
+        generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data["input_graph"])
         ground_truth_reaction_graph = reaction_graph(graph=data.target_graph)
 
         chem_dist_loss = 0
@@ -101,7 +114,8 @@ def validate(model, loader, device, chemical_loss_enabled=False, chemical_distan
             data = data.to(device)
 
             # Forward-Pass
-            node_out, edge_out = model(data)
+            data.x = pad_missing_features(data.x, target_dim=19)
+            node_out, edge_out = model(data.x, data.edge_index)
 
             # Loss-Berechnung
             node_loss = compute_node_loss(node_out, data.node_target)
@@ -151,8 +165,8 @@ def main(model_type : ModelType):
 
     converter = MolGraphConverter(normalize_features=True, one_hot_edges=True)
 
-    train_dataset = ReactionDataset(train_mol_graphs, converter)
-    val_dataset = ReactionDataset(val_mol_graphs, converter)
+    train_dataset = ReactionDataset(train_mol_graphs.data, converter)
+    val_dataset = ReactionDataset(val_mol_graphs.data, converter)
 
     train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True)     # Füge hier den Trainings-Loader ein
     val_loader = DataLoader(val_dataset, batch_size=config["batch_size"])                       # Füge hier den Validierungs-Loader ein

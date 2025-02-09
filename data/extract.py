@@ -71,7 +71,6 @@ class Extractor():
         return len(self.data)
 
 def derive_from_data(msg : Message):
-    #TODO: Extract Inputs, Outcomes and important conditions of the reaction (temperature, pressure, concentration/ratio, ...)
     try:
         reaction_data = {
             "educts": [],
@@ -92,7 +91,7 @@ def derive_from_data(msg : Message):
         # Inputs
         inputs = msg.getInputs()
         # print(inputs)
-        if not inputs:
+        if not inputs: #Error check
             pass
         else:
             for _, inp_val in inputs.items():
@@ -103,7 +102,7 @@ def derive_from_data(msg : Message):
                     #print(smiles)
                     amount = comp.get("amount", {})
                     #print(amount)
-                    if smiles is None or amount is None:
+                    if smiles is None or amount is None: #Error check if data is complete
                         pass
                     else: 
                         if role == "REACTANT":

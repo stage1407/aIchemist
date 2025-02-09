@@ -1,6 +1,13 @@
+import sys
+from pathlib import Path
+project_dir = Path(__file__).resolve().parent.parent.parent
+sources = project_dir / "src"
+sys.path.insert(0, str(sources))
+from src.func.chem_structures import mol_graph, reaction_graph
 import torch
 from torch_geometric.data import Data
 import numpy as np
+
 
 class MolGraphConverter:
     """
@@ -17,52 +24,74 @@ class MolGraphConverter:
         self.normalize_features = normalize_features
         self.one_hot_edges = one_hot_edges
 
-    def convert(self, mol_graph):
+    def convert_to_data(self, reaction_graph, educt_graph, product_graph):
         """
-        Konvertiere ein `mol_graph`-Objekt in ein PyTorch Geometric `Data`-Objekt.
-        :param mol_graph: Das `mol_graph`-Objekt, das konvertiert werden soll.
-        :return: Ein PyTorch Geometric `Data`-Objekt.
+        Converts a `reaction_graph` into a PyTorch Geometric `Data` object, using atomic properties
+        from the product graph MINUS the atomic properties from the educt graph.
+
+        :param reaction_graph: The `reaction_graph` instance representing bond changes in a reaction.
+        :param educt_graph: The `mol_graph` of the reactants.
+        :param product_graph: The `mol_graph` of the products.
+        :return: A PyTorch Geometric `Data` object.
         """
-        # Knotenfeatures extrahieren
+        # Extract Node Features (Atomic Property Changes)
         node_features = []
-        for node_idx in mol_graph.nodes:
-            feature_vector = mol_graph.nodes[node_idx]["feature"]
+        node_index_map = {}  # Maps reaction graph node index to sequential index for PyTorch Geometric
+
+        for i, node_idx in enumerate(reaction_graph.nodes):
+            node_index_map[node_idx] = i
+
+            # Get atomic properties from educt and product graphs
+            educt_features = torch.tensor(educt_graph.nodes[node_idx]["feature"], dtype=torch.float) if node_idx in educt_graph.nodes else torch.zeros(len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))
+            product_features = torch.tensor(product_graph.nodes[node_idx]["feature"], dtype=torch.float) if node_idx in product_graph.nodes else torch.zeros(len(educt_features))
+
+            # Compute feature change (Product - Educt)
+            feature_vector = product_features - educt_features
             node_features.append(feature_vector)
 
-        node_features = torch.tensor(node_features, dtype=torch.float)
+        node_features = torch.stack(node_features)
 
-        # Optional: Normalisierung der Knotenfeatures
+        # Normalize Features if enabled
         if self.normalize_features:
             node_features = (node_features - node_features.mean(dim=0)) / (node_features.std(dim=0) + 1e-9)
 
-        # Kanteninformationen extrahieren
+        # Extract Edge Information (Bond Changes)
         edge_index = []
         edge_attr = []
-        for edge in mol_graph.edges:
-            edge_index.append([edge[0], edge[1]])
+        for edge in reaction_graph.edges:
+            node1, node2 = edge
+            bond_change = reaction_graph.edges[edge]["weight"]  # Bond change stored in reaction_graph
 
-            # Extrahiere den numerischen Typ der Kante (Bindungstyp)
-            bond_type = mol_graph.edges[edge]["bond_type"]
-            if self.one_hot_edges:
-                # Kodierung als One-Hot-Vektor
-                max_bond_type = 3  # Angenommen: Einfach-, Doppel-, Dreifachbindung
-                one_hot = [1 if i == bond_type else 0 for i in range(max_bond_type + 1)]
-                edge_attr.append(one_hot)
-            else:
-                edge_attr.append([bond_type])
+            # Convert to sequential index
+            if node1 in node_index_map and node2 in node_index_map:
+                edge_index.append([node_index_map[node1], node_index_map[node2]])
 
+                # One-Hot Encoding of Bond Change if enabled
+                if self.one_hot_edges:
+                    max_bond_change = 3  # Assume bond changes range from -3 (triple bond broken) to +3
+                    one_hot = [1 if i == bond_change else 0 for i in range(-3, 4)]  # Range (-3 to 3)
+                    edge_attr.append(one_hot)
+                else:
+                    edge_attr.append([bond_change])
+
+    # Convert to PyTorch tensors
         edge_index = torch.tensor(edge_index, dtype=torch.long).t().contiguous()
         edge_attr = torch.tensor(edge_attr, dtype=torch.float)
 
-        # Erstelle ein PyTorch Geometric `Data`-Objekt
+        # Create PyTorch Geometric Data object
         data = Data(
             x=node_features,
             edge_index=edge_index,
-            edge_attr=edge_attr
+            edge_attr=edge_attr,
+            input_graph=educt_graph
         )
-
         return data
-
-# Beispielverwendung
-# converter = MolGraphConverter(normalize_features=True, one_hot_edges=True)
-# pyg_data = converter.convert(mol_graph)
+    
+    def reaction_to_data(self, react_data) -> reaction_graph:
+        rd = react_data
+        smilies_ed = (rd["educts"]+rd["educt_amounts"])
+        ed = mol_graph(smilies=smilies_ed)
+        smilies_pr = (rd["products"]+rd["product_amounts"])
+        prod = mol_graph(smilies=smilies_pr)
+        react = reaction_graph(ed,prod)
+        return self.convert_to_data(react, ed, prod)

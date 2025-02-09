@@ -6,14 +6,15 @@ database = project_dir / "data"
 sys.path.insert(0, str(sources))  # Nutze insert(0) statt append(), um Konflikte zu vermeiden
 import json
 import numpy as np
-from itertools import product
+from itertools import product as times
 from rdkit import Chem
 import networkx as nx #type: ignore
 from rdkit.Chem import AllChem 
 from rdkit.Chem import rdFMCS
+from rdkit.Chem.rdmolops import AddHs
 import periodictable
 from scipy.optimize import linear_sum_assignment
-import importlib
+from networkx.algorithms.isomorphism import GraphMatcher
 
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
@@ -95,7 +96,7 @@ def get_bond_properties(bond : Chem.Bond, p):
     return properties[p]
 
 class mol_graph(nx.Graph):
-    def __init__(self, smilies : str = None, mols : Chem.RWMol = None):
+    def __init__(self, smilies : list[str] = None, mols : Chem.RWMol = None):
         """
         Initialize the MoleculeGraph from a SMILES string or RDKit molecule object.
         
@@ -111,9 +112,17 @@ class mol_graph(nx.Graph):
         # read all smiles strings of the reaction
         if mols is None:
             for smiles in smilies:
+                #TODO: SMILES -> SMARTS
                 self.smiles.append(smiles)
-                mol : Chem.rdchem.Mol = Chem.MolFromSmiles(smiles)
-                self.mols.append(mol.AddHs())
+                try:
+                    mol : Chem.rdchem.Mol = Chem.MolFromSmiles(smiles)
+                except:
+                    smarts = smiles
+                    try:
+                        mol : Chem.rdchem.Mol = Chem.MolFromSmarts(smarts)
+                    except:
+                        print(smiles)
+                self.mols.append(AddHs(mol))
         else:
             self.mols = mols
         # Make all hydrogen atoms in the molecule explicit
@@ -270,7 +279,7 @@ def _derive_feature_vector(node=None, edge=None, subgraph=None, mol=None):
         bond : Chem.Bond = edge
         for p in properties["edge_features"]:
             if feature_definition[p]:
-                features.append(get_bond_properties(mol,bond,p))
+                features.append(get_bond_properties(bond,p))
     elif subgraph and not subgraph:    #! Just to skip subgraph features yet!
         #? How to implement subgraphs?
         ("mol_interpretation")
@@ -342,19 +351,40 @@ class reaction_graph(nx.Graph):
             Berechnet paarweise die MCS-Größen zwischen Edukten und Produkten.
             Gibt eine Gewichtungsmatrix und die Paare zurück
             """
+            def find_mcs_nx(graph1, graph2):
+                GM = GraphMatcher(graph1, graph2,
+                                  node_match=lambda n1, n2: n1['element'] == n2['element'], 
+                                  edge_match=lambda e1, e2: e1['bond_type'] == e2['bond_type'])      # TODO Minimize "Edge Distance"
+                common_sg = max(GM.subgraph_isomorphisms_iter(), key=len, default={})
+                
+                mcs_graph = nx.Graph()
+                for u, v in common_sg.items():
+                    mcs_graph.add_node(u, **graph1.nodes[u])
+    
+                for u, v in common_sg.items():
+                    for neighbor in graph1.neighbors(u):
+                        if neighbor in common_sg:
+                            mcs_graph.add_edge(u, neighbor, **graph1.edges[u, neighbor])
+    
+                return mcs_graph
             pairs = []
             weights = []
 
-            for (i, reactant),(j,product) in product(enumerate(r_list), enumerate(p_list)):
+            for (i, reactant),(j,product) in times(enumerate(r_list), enumerate(p_list)):
                 # reactant = Chem.MolFromSmiles(reactant)
                 # product = Chem.MolFromSmiles(product)
 
                 # Compute Maximal Common Substructure
-                mcs_result = rdFMCS.FindMCS([reactant,product])
-                mcs_size = mcs_result.numAtoms  # Größe == Anzahl Atome
+                #print(reactant, product, type(reactant), type(product))
+                #ed = Chem.MolToSmiles(reactant)
+                #prod = Chem.MolToSmiles(product)
+                #print(ed, prod)
+                #mcs_result = rdFMCS.FindMCS([reactant,product])
+                mcs_result : nx.Graph = find_mcs_nx(reactant,product)
+                mcs_size = mcs_result.number_of_nodes() # Größe == Anzahl Atome
                 
                 # save the pair and weight
-                pairs.append((reactant, product, mcs_result.smartsString, mcs_size))
+                pairs.append((reactant, product, mcs_result, mcs_size))
                 weights.append((i, j, mcs_size))
             return pairs, weights
 
@@ -386,36 +416,62 @@ class reaction_graph(nx.Graph):
         return selected_pairs, total_mcs_size
 
     def compute_atom_mapping(self, selected_pairs):
-        atom_mapping = {}
+        def get_substruct_match_nx(mol_graph, substructure_graph):
+            GM = GraphMatcher(mol_graph, substructure_graph,
+                              node_match=lambda n1, n2: n1['element'] == n2['element'],
+                              edge_match=lambda e1, e2: e1['bond_type'] == e2['bond_type'])
+            matches = next(GM.subgraph_isomorphisms_iter(), None)
+            
+            if matches:
+                substruct_graph = nx.Graph()
+                for u, v in matches.items():
+                    substruct_graph.add_node(u, **mol_graph.nodes[u])
+        
+                for u, v in matches.items():
+                    for neighbor in mol_graph.neighbors(u):
+                        if neighbor in matches:
+                            substruct_graph.add_edge(u, neighbor, **mol_graph.edges[u, neighbor])
+        
+                return substruct_graph
+            else:
+                return None  # No substructure match found
+            
+        atom_mapping : dict = {}
         for pair in selected_pairs:
-            mcs_smarts = pair[2]
+            mcs = pair[2]
 
-            reactant_mol : Chem.Mol = pair[0]
-            product_mol : Chem.Mol = pair[1]
+            reactant_mol : nx.Graph = pair[0]
+            product_mol : nx.Graph = pair[1]
 
-            mcs = Chem.MolFromSmarts(mcs_smarts)
+            #mcs = Chem.MolFromSmarts(mcs_smarts)
 
-            reactant_match = reactant_mol.GetSubstructMatch(mcs)
-            product_match = product_mol.GetSubstructMatch(mcs)
+            #reactant_match = reactant_mol.GetSubstructMatch(mcs)
+            #product_match = product_mol.GetSubstructMatch(mcs)
+            reactant_match = get_substruct_match_nx(reactant_mol, mcs)
+            product_match = get_substruct_match_nx(product_mol, mcs)
 
             for r_idx, p_idx in zip(reactant_match, product_match):
                 #? Is this enough for the condition
-                if reactant_mol.GetAtomWithIdx(r_idx).GetSymbol() == product_mol.GetAtomWithIdx(p_idx).GetSymbol():
+                if reactant_mol.nodes[r_idx]['symbol'] == product_mol.nodes[p_idx]['symbol']:
                     atom_mapping[r_idx] = p_idx
 
         return atom_mapping
 
-    def compute_bond_changes(self, atom_mapping):
+    def compute_bond_changes(self, atom_mapping : dict):
         bond_changes = {}
         # Compute this for each molecule
-        atom_indices = []
-        for mol in self.educts:
-            mol : Chem.Mol = mol
-            for atom in mol.GetAtoms():
-                atom : Chem.Atom = atom
-                atom_indices.append(atom.GetIdx())
-        for idx1, idx2 in product(atom_indices, atom_indices):
-            if idx1 != idx2:
+        #atom_indices = []
+        #for mol in self.educts:
+        #    mol : Chem.Mol = mol
+        #    print(type(mol))
+        #    for atom in mol.GetAtoms():
+        #        atom : Chem.Atom = atom
+        #        atom_indices.append(atom.GetIdx())
+        if atom_mapping == {} or atom_mapping is None:
+            return {}       #TODO
+        for idx1, idx2 in times(self.educts.nodes,self.educts.nodes):
+            if idx1 < idx2:
+                print(self.products, self.educts, atom_mapping)
                 diff = self.products[atom_mapping[idx1]][atom_mapping[idx2]]["feature"][0] - self.educts[idx1][idx2]["feature"][0]
                 if diff != 0:
                     e : set = {idx1,idx2}
@@ -426,8 +482,14 @@ class reaction_graph(nx.Graph):
         """
         Baut den Reaktionsgraphen aus den Bindungsänderungen auf.
         """
+        nodes : set = {}
         for (atom_idx1, atom_idx2), bond_change in bond_changes.items():
+            nodes.add(atom_idx1)
+            nodes.add(atom_idx2)
             self.add_edge(atom_idx1, atom_idx2, weight=bond_change)
+        
+        for n in nodes:
+            self.add_node(n)
 
     def chemical_distance(self):
         """
