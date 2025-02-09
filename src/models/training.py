@@ -1,20 +1,28 @@
+import sys
+from pathlib import Path
+project_dir = Path(__file__).resolve().parent.parent.parent
+sources = project_dir / "src"
+database = project_dir / "data"
+sys.path.insert(0, str(sources))  # Nutze insert(0) statt append(), um Konflikte zu vermeiden
+sys.path.insert(0, str(database))
 from enum import Enum
 import torch
 from torch_geometric.loader import DataLoader
 from torch.optim import Adam
 from sklearn.metrics import accuracy_score, f1_score
-from func.mol_graph import properties
+from src.func.chem_structures import properties
+from src.func.chem_structures import reaction_graph
 # from data.dataloader import DataLoader
-from models.mock import generate_mock_dataset
-from reaction_gae import ReactionGAE
-from gnn_encoder import GNNEncoder
-from reaction_gat import ReactionGAT
-from reaction_vgae import ReactionVGAE
+from src.models.mock import generate_mock_dataset
+from src.models.reaction_gae import ReactionGAE
+from src.models.gnn_encoder import GNNEncoder
+from src.models.reaction_gat import ReactionGAT
+from src.models.reaction_vgae import ReactionVGAE
 from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
-from func.mol_graph_converter import MolGraphConverter
-from func.reaction_graph import reaction_graph
-from loss_function import compute_node_loss, compute_edge_loss, Chem
+from src.func.mol_graph_converter import MolGraphConverter
+#from src.func.reaction_graph import reaction_graph
+from src.models.loss_function import compute_node_loss, compute_edge_loss, Chem
 
 MOCK_ON=True
 
@@ -23,7 +31,7 @@ config = {
     "hidden_dim": 32,
     "batch_size": 32,
     "epochs": 50,
-    "learning_rate": 0.001,
+    "learning_rate": 0.05,
     "device": "cuda" if torch.cuda.is_available() else "cpu"
 }
 
@@ -180,4 +188,7 @@ def main(model_type : ModelType):
         print(f"  Val Loss: {val_loss:.4f} | Val Acc: {val_acc:.4f} | Val F1: {val_f1:.4f}")
 
 if __name__ == "__main__":
-    main()
+    for model in ModelType:
+        print(f"Modell: {model}:")
+        print(f"Statistik:")
+        main(model)

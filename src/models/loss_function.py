@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import periodictable
-from func import reaction_graph
+from func.chem_structures import reaction_graph
 
 
 def compute_node_loss(node_out, node_target):

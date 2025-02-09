@@ -67,6 +67,9 @@ class Extractor():
                 self.data.append(extracted)
         self.loaded_files = ch.ld
 
+    def __len__(self):
+        return len(self.data)
+
 def derive_from_data(msg : Message):
     #TODO: Extract Inputs, Outcomes and important conditions of the reaction (temperature, pressure, concentration/ratio, ...)
     try:

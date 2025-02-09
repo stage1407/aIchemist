@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+project_dir = Path(__file__).resolve().parent.parent.parent
+sources = project_dir / "src"
+database = project_dir / "data"
+sys.path.insert(0, str(sources))  # Nutze insert(0) statt append(), um Konflikte zu vermeiden
 import json
 from rdkit import Chem
 import networkx as nx #type: ignore
@@ -5,12 +11,14 @@ from rdkit.Chem import AllChem
 from rdkit.Chem import rdFMCS
 import periodictable
 from scipy.optimize import linear_sum_assignment
-import reaction_graph
+import importlib
+module = importlib.import_module("src.func.reaction_graph")
+reaction_graph = getattr(module, "reaction_graph")
 
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
 geometric_properties = False    # set True for modeling hydrogen bonds      #!Dummy for now
-"""
+
 properties = [
     "Hybridization",
     "Formal charge",
@@ -31,7 +39,7 @@ properties = [
     "Stereochemistry",
     "Hydrophobicity"
 ]
-"""
+
 
 #*node_features = ["element","degree","charge","valence","lones","aromaticity","hydrogen","hybridization"]
 #*edge_features = []

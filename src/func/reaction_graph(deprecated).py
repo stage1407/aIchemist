@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+project_dir = Path(__file__).resolve().parent.parent.parent
+sources = project_dir / "src"
+sys.path.insert(0, str(sources))  # Nutze insert(0) statt append(), um Konflikte zu vermeiden
 import numpy as np
 from rdkit import Chem
 import networkx as nx #type: ignore
@@ -5,7 +10,10 @@ from rdkit.Chem import rdFMCS
 #from rdkit.Chem.rdMolDescriptors import CalcCrippenContribs
 from itertools import product
 from scipy.optimize import linear_sum_assignment
-import mol_graph
+import importlib
+mol_graph = importlib.import_module("src.func.mol_graph") 
+mol_graph = getattr(mol_graph,"mol_graph")
+
 
 class reaction_graph(nx.Graph):
     def __init__(self, mol_educts:mol_graph=None, mol_products:mol_graph=None, graph=None):
