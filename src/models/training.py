@@ -54,7 +54,6 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
     total_loss = 0
     all_preds = []
     all_targets = []
-
     for data in loader:
         data = data.to(device)
         optimizer.zero_grad()

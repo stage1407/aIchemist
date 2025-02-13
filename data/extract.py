@@ -117,9 +117,17 @@ def derive_from_data(msg : Message):
                                 reaction_data["educts"].append(smiles)
                                 reaction_data["educt_amounts"].append(mol_amount)
                         elif role == "SOLVENT":
-                            reaction_data["solvents"].append(smiles)
+                            reaction_data["educts"].append(smiles)
+                            reaction_data["educt_amounts"].append(1)
+                            reaction_data["products"].append(smiles)
+                            reaction_data["product_amounts"].append(0.9)
                         elif role == "CATALYST":
-                            reaction_data["catalysts"].append(smiles)
+                            #reaction_data["educts"].append(smiles)
+                            #reaction_data["educt_amounts"].append(1)
+                            #reaction_data["products"].append(smiles)
+                            #reaction_data["product_amounts"].append(0.9)
+                            pass
+
                         #print(amount)
         #print(reaction_data if reaction_data is not None else "") 
 
@@ -155,6 +163,7 @@ def derive_from_data(msg : Message):
                     reaction_data["products"].append(smiles)
                     reaction_data["product_amounts"].append(mol_amount)
         # print("ReactData", reaction_data)
+        #print(reaction_data["educt_amounts"],reaction_data["product_amounts"])
         return reaction_data
  
     except Exception as e:

@@ -8,6 +8,7 @@ import torch
 from torch_geometric.data import Data
 import numpy as np
 
+AVOGADRO=6.022*(10**23)
 
 class MolGraphConverter:
     """
@@ -24,7 +25,7 @@ class MolGraphConverter:
         self.normalize_features = normalize_features
         self.one_hot_edges = one_hot_edges
 
-    def convert_to_data(self, reaction_graph, educt_graph, product_graph):
+    def convert_to_data(self, reaction_graph : reaction_graph, educt_graph, product_graph):
         """
         Converts a `reaction_graph` into a PyTorch Geometric `Data` object, using atomic properties
         from the product graph MINUS the atomic properties from the educt graph.
@@ -38,6 +39,7 @@ class MolGraphConverter:
         node_features = []
         node_index_map = {}  # Maps reaction graph node index to sequential index for PyTorch Geometric
 
+        print("Type of reaction_graph:",type(reaction_graph), reaction_graph.nodes)
         for i, node_idx in enumerate(reaction_graph.nodes):
             node_index_map[node_idx] = i
 
@@ -87,11 +89,26 @@ class MolGraphConverter:
         )
         return data
     
-    def reaction_to_data(self, react_data) -> reaction_graph:
+    def reaction_to_data(self, react_data):
         rd = react_data
-        smilies_ed = (rd["educts"]+rd["educt_amounts"])
+        scalar = 0
+        print("Scaling Reaction Data...")
+        min_num = min(rd["educt_amounts"] + rd["product_amounts"] + [1000])
+        scalar = 1/min(rd["educt_amounts"] + rd["product_amounts"])
+        list_ed = zip(list(rd["educts"]),list(rd["educt_amounts"]))
+        smilies_ed = []
+        for smiles,num in list_ed:
+            amount = 1 if num == min_num else int(num*scalar)               #NaIve Scale
+            smilies_ed += amount*[smiles]
         ed = mol_graph(smilies=smilies_ed)
-        smilies_pr = (rd["products"]+rd["product_amounts"])
+        smilies_pr = []
+        list_pr = zip(rd["products"],rd["product_amounts"])
+        for smiles,num in list_pr:
+            amount = 1 if num == min_num else int(num*scalar)               #NaIve Scale
+            smilies_pr += amount*[smiles]
         prod = mol_graph(smilies=smilies_pr)
+        #print("Scaling",smilies_ed,smilies_pr)
         react = reaction_graph(ed,prod)
+        #print("Test:",react)
+        #print(self, react, ed, prod)
         return self.convert_to_data(react, ed, prod)
