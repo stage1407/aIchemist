@@ -378,7 +378,7 @@ class reaction_graph(nx.Graph):
             Computes the MCS sizes between reactants and products.
             Returns a weight matrix and the corresponding pairs.
             """
-            def find_mcs_nx(graph1, graph2):
+            def find_mcs_nx(graph1 : mol_graph, graph2 : mol_graph):
                 GM = GraphMatcher(graph1, graph2,
                                   node_match=lambda n1, n2: n1['element'] == n2['element'], 
                                   edge_match=lambda e1, e2: True)
@@ -387,7 +387,8 @@ class reaction_graph(nx.Graph):
 
                 for mapping in GM.subgraph_isomorphisms_iter():
                     num_nodes = len(mapping)
-                    num_edges = sum(1 for u,v in mapping.items() if graph1.has_edge(u,v) and graph2.has_edge(u,v))
+                    num_edges = sum(min(graph1.get_edge_data(u,v)["bond_type"],graph2.get_edge_data(u,v)["bond_type"]) 
+                                    for u,v in mapping.items() if graph1.has_edge(u,v) and graph2.has_edge(u,v))
                     score = num_nodes + num_edges   # Maximize nodes + edges
 
                     if score > max_score:
@@ -532,12 +533,12 @@ class reaction_graph(nx.Graph):
                     # print(idx1, idx2)
                     # print(atom_mapping)
                     # print(self.products.edges)
-                    prod_n1, prod_n2 = atom_mapping[idx1],atom_mapping[idx2]
-                    ed_n1, ed_n2 = idx1,idx2
+                    prod_n1,prod_n2 = atom_mapping[idx1],atom_mapping[idx2]
+                    ed_n1,ed_n2 = idx1,idx2
                     # print(self.products.get_edge_data(prod_n1,prod_n2))
                     # print(self.educts.get_bond_features(ed_n1,ed_n2))
                     # TODO: Debug (No balance : Just added bonds No removals)
-                    diff = self.products.get_edge_data(prod_n1, prod_n2)["bond_type"] - self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"]
+                    diff = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] - self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"]
                     print(diff)
                     if diff != 0:
                         e = (idx1,idx2)

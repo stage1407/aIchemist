@@ -71,7 +71,7 @@ class MolGraphConverter:
                 # One-Hot Encoding of Bond Change if enabled
                 if self.one_hot_edges:
                     max_bond_change = 3  # Assume bond changes range from -3 (triple bond broken) to +3
-                    one_hot = [1 if i == bond_change else 0 for i in range(-3, 4)]  # Range (-3 to 3)
+                    one_hot = [1 if i == bond_change else 0 for i in range(-max_bond_change, max_bond_change)]  # Range (-3 to 3)
                     edge_attr.append(one_hot)
                 else:
                     edge_attr.append([bond_change])
@@ -93,8 +93,8 @@ class MolGraphConverter:
         rd = react_data
         scalar = 0
         print("Scaling Reaction Data...")
-        min_num = min(rd["educt_amounts"] + rd["product_amounts"] + [1000])
-        scalar = 1/min(rd["educt_amounts"] + rd["product_amounts"])
+        min_num = min(rd["educt_amounts"] + rd["product_amounts"] + [100])      # TODO: Catch
+        scalar = 1/min(rd["educt_amounts"] + rd["product_amounts"] + [100])     # TODO: This
         list_ed = zip(list(rd["educts"]),list(rd["educt_amounts"]))
         smilies_ed = []
         for smiles,num in list_ed:
