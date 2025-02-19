@@ -21,24 +21,24 @@ quantum_mechanics = False       # set True for modeling pi-electrons        #!Du
 geometric_properties = False    # set True for modeling hydrogen bonds      #!Dummy for now
 
 properties = [
-    "Hybridization",
-    "Formal charge",
-    "Implicit hydrogens",
-    "Aromaticity",
-    "Chirality",
-    "Explicit valence",
-    "Implicit valence",
-    "Lone pairs",
-    "Bonding",
-    "No lone pairs",
-    "Degree",
-    "Total_Degree",
-    "Formal_Charge",
-    "Lone_Pair_Count",
-    "Aromatic",
-    "Electronegativity",
-    "Stereochemistry",
-    "Hydrophobicity"
+    "Hybridization",            #00
+    "Formal charge",            #01
+    "Implicit hydrogens",       #02
+    "Aromaticity",              #03
+    "Chirality",                #04
+    "Explicit valence",         #05
+    "Implicit valence",         #06
+    "Lone pairs",               #07
+    #! "Bonding",                  #08   -> semantically belongs to edge features
+    "No lone pairs",            #08
+    "Degree",                   #09
+    "Total_Degree",             #10
+    "Formal_Charge",            #11
+    "Lone_Pair_Count",          #12
+    "Aromatic",                 #13
+    "Electronegativity",        #14
+    "Stereochemistry",          #15
+    "Hydrophobicity"            #16
 ]
 
 
@@ -54,7 +54,7 @@ properties = {
     "graph_features": list(feature_filter["graph_features"].keys())
 }
 
-def get_atom_properties(atom : Chem.Atom, property):
+def get_atom_properties(atom : Chem.Atom, property) -> float:
     node_properties = properties["node_features"]
     hybrid_num = {v: k for k,v in Chem.rdchem.HybridizationType.values.items()}
     chiral_num = {v: k for k,v in Chem.rdchem.ChiralType.values.items()}
@@ -63,21 +63,21 @@ def get_atom_properties(atom : Chem.Atom, property):
         node_properties[1]: atom.GetFormalCharge(),  # Returns the formal charge on the atom.
         node_properties[2]: atom.GetNumImplicitHs(),  # Returns the number of implicit hydrogens.
         node_properties[3]: atom.GetIsAromatic(),  # Returns True if the atom is aromatic.
-        #*Note: Same as Stereochemistry 
+        #* Note: Same as Stereochemistry 
         node_properties[4]: chiral_num[atom.GetChiralTag()],  # Returns chirality (e.g., R/S).             #? Enhance to types     
         node_properties[5]: atom.GetExplicitValence(),  # Returns the explicit valence of the atom. 
         node_properties[6]: atom.GetImplicitValence(),  # Returns the implicit valence of the atom.
         node_properties[7]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2, # Calculated manually as lone pairs are not directly accessible.
-        node_properties[8]: [bond.GetBondTypeAsDouble() for bond in atom.GetBonds()],  # Returns bond types connected to the atom.
-        node_properties[9]: ((atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2) == 0,  # True if no lone pairs.
-        node_properties[10]: atom.GetDegree(),  # Returns the number of directly bonded atoms
-        node_properties[11]: atom.GetTotalDegree(),  # Returns total degree including implicit hydrogens.
-        node_properties[12]: atom.GetFormalCharge(),  # Same as Formal charge.
-        node_properties[13]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2,  # Same as Lone pairs.
-        node_properties[14]: atom.GetIsAromatic(),  # Same as Aromaticity.
-        node_properties[15]: atom.GetAtomicNum(),  # Approximate electronegativity by atomic number.
-        node_properties[16]: chiral_num[atom.GetChiralTag()] if geometric_properties else _derive_isometries(),  # Same as Chirality/Stereochemistry.   #? Enhance to types
-        node_properties[17]: atom.GetAtomicNum() in [6, 7, 8, 15, 16, 17],  # An approximate way to infer hydrophobicity.
+        #! node_properties[8]: [bond.GetBondTypeAsDouble() for bond in atom.GetBonds()],  # Returns bond types connected to the atom.
+        node_properties[8]: int(((atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2) == 0),  # True if no lone pairs.
+        node_properties[9]: atom.GetDegree(),  # Returns the number of directly bonded atoms
+        node_properties[10]: atom.GetTotalDegree(),  # Returns total degree including implicit hydrogens.
+        node_properties[11]: atom.GetFormalCharge(),  # Same as Formal charge.
+        node_properties[12]: (atom.GetTotalNumHs() + atom.GetImplicitValence() + atom.GetExplicitValence() - atom.GetTotalValence()) // 2,  # Same as Lone pairs.
+        node_properties[13]: int(atom.GetIsAromatic()),  # Same as Aromaticity.
+        node_properties[14]: atom.GetAtomicNum(),  # Approximate electronegativity by atomic number.
+        node_properties[15]: chiral_num[atom.GetChiralTag()] if not geometric_properties else _derive_isometries(),  # Same as Chirality/Stereochemistry.   #? Enhance to types
+        node_properties[16]: int(atom.GetAtomicNum() in [6, 7, 8, 15, 16, 17]),  # An approximate way to infer hydrophobicity.
     }
     return property_dict[property]
 
@@ -269,21 +269,26 @@ class mol_graph(nx.Graph):
 
 def _derive_feature_vector(node=None, edge=None, subgraph=None, mol=None):
     features = []
-    if node:
+    if node is not None:
         feature_definition : dict = feature_filter["node_features"]
         for p in properties["node_features"]:
             if node.GetSymbol() in feature_definition[p]:
                 features.append(get_atom_properties(node,p))
-    elif edge and mol:
+            else:
+                features.append(0)
+    elif edge is not None and mol is not None:
         feature_definition : dict = feature_filter["edge_features"]
         bond : Chem.Bond = edge
         for p in properties["edge_features"]:
             if feature_definition[p]:
                 features.append(get_bond_properties(bond,p))
-    elif subgraph and not subgraph:    #! Just to skip subgraph features yet!
-        #? How to implement subgraphs?
-        ("mol_interpretation")
-        ("mol_fragment_type")
+            else:
+                features.append(0)
+    
+    # elif subgraph and not subgraph:    #! Just to skip subgraph features yet!
+    #     #? How to implement subgraphs?
+    #     ("mol_interpretation")
+    #     ("mol_fragment_type")
     else:
         raise AttributeError
     return features
@@ -355,6 +360,8 @@ class reaction_graph(nx.Graph):
         self.build_graph_from_bond_changes(bond_changes)
         print("Nodes:",self.nodes)
         print("Edges:",self.edges)
+        # Save atom mapping
+        self.bijection = atom_mapping
 
     """
     def flexible_edge_match(e1,e2):
@@ -447,7 +454,7 @@ class reaction_graph(nx.Graph):
 
         if num_reactants == 0 or num_products == 0:
             print("No reactants or products available! Returning empty pairs.")
-            return [], 0
+            return [], [], 0
 
         reactant_indices, product_indices = linear_sum_assignment(cost_matrix)
 

@@ -8,6 +8,7 @@
         "Explicit valence": ["C","N","O","S","P","B","Si","Cl","Br","I","F","Na","Se","Te","default"],
         "Implicit valence": ["C","N","O","S","P","B","Cl","Br","I","F","Na","Se","Te","default"],
         "Lone pairs": ["N","O","S","P","Cl","Br","I","F","Se","Te","default"],
+        "Bonding": ["H","Cl","Br","I","F"],
         "No lone pairs": ["Na"],
         "Ionic bonding only": ["Na"],
         "Degree": ["default"],

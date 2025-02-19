@@ -42,15 +42,20 @@ class MolGraphConverter:
         print("Type of reaction_graph:",type(reaction_graph), reaction_graph.nodes)
         for i, node_idx in enumerate(reaction_graph.nodes):
             node_index_map[node_idx] = i
+            atom_mapping = reaction_graph.bijection
 
             # Get atomic properties from educt and product graphs
-            educt_features = torch.tensor(educt_graph.nodes[node_idx]["feature"], dtype=torch.float) if node_idx in educt_graph.nodes else torch.zeros(len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))
-            product_features = torch.tensor(product_graph.nodes[node_idx]["feature"], dtype=torch.float) if node_idx in product_graph.nodes else torch.zeros(len(educt_features))
+            print(educt_graph.nodes[node_idx]["feature"])
+            educt_features = torch.tensor(educt_graph.nodes[node_idx]["feature"], dtype=torch.float) \
+                if node_idx in educt_graph.nodes else torch.zeros(len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))
+            product_features = torch.tensor(product_graph.nodes[atom_mapping[node_idx]]["feature"], dtype=torch.float) \
+                if atom_mapping[node_idx] in product_graph.nodes else torch.zeros(len(educt_features))
 
             # Compute feature change (Product - Educt)
             feature_vector = product_features - educt_features
             node_features.append(feature_vector)
 
+        print("Tensor:", node_features)
         node_features = torch.stack(node_features)
 
         # Normalize Features if enabled
@@ -87,7 +92,7 @@ class MolGraphConverter:
             edge_attr=edge_attr,
             input_graph=educt_graph
         )
-        return data
+        return data, educt_graph
     
     def reaction_to_data(self, react_data):
         rd = react_data
