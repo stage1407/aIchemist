@@ -25,12 +25,12 @@ class MolGraphConverter:
         self.normalize_features = normalize_features
         self.one_hot_edges = one_hot_edges
 
-    def convert_to_data(self, reaction_graph : reaction_graph, educt_graph, product_graph):
+    def convert_to_data(self, r_graph : reaction_graph, educt_graph, product_graph):
         """
-        Converts a `reaction_graph` into a PyTorch Geometric `Data` object, using atomic properties
+        Converts a `r_graph` into a PyTorch Geometric `Data` object, using atomic properties
         from the product graph MINUS the atomic properties from the educt graph.
 
-        :param reaction_graph: The `reaction_graph` instance representing bond changes in a reaction.
+        :param reaction_graph: The `r_graph` instance representing bond changes in a reaction.
         :param educt_graph: The `mol_graph` of the reactants.
         :param product_graph: The `mol_graph` of the products.
         :return: A PyTorch Geometric `Data` object.
@@ -39,10 +39,14 @@ class MolGraphConverter:
         node_features = []
         node_index_map = {}  # Maps reaction graph node index to sequential index for PyTorch Geometric
 
-        print("Type of reaction_graph:",type(reaction_graph), reaction_graph.nodes)
-        for i, node_idx in enumerate(reaction_graph.nodes):
+        # Simulating empty graph
+        if r_graph.isEmpty():
+            r_graph._setPseudoEmpty()
+
+        print("Type of r_graph:",type(r_graph), r_graph.nodes)
+        for i, node_idx in enumerate(r_graph.nodes):
             node_index_map[node_idx] = i
-            atom_mapping = reaction_graph.bijection
+            atom_mapping = r_graph.bijection
 
             # Get atomic properties from educt and product graphs
             print(educt_graph.nodes[node_idx]["feature"])
@@ -65,9 +69,9 @@ class MolGraphConverter:
         # Extract Edge Information (Bond Changes)
         edge_index = []
         edge_attr = []
-        for edge in reaction_graph.edges:
+        for edge in r_graph.edges:
             node1, node2 = edge
-            bond_change = reaction_graph.edges[edge]["weight"]  # Bond change stored in reaction_graph
+            bond_change = r_graph.edges[edge]["weight"]  # Bond change stored in r_graph
 
             # Convert to sequential index
             if node1 in node_index_map and node2 in node_index_map:

@@ -15,7 +15,7 @@ class ReactionDataset(Dataset):
         data, educt_graph = self.converter.reaction_to_data(mol_graph)
         # TODO: Maybe they belong to this notation (target graphs instead of randomized targets) (learning the correlation between educt graph and product graph)
         # Add target attributes for node/edge labels (mock example)
-        data.node_target = torch.randint(0, 2, (data.x.size(),))    # Binary node labels
+        data.node_target = torch.randint(0, 2, (data.x.size(0),))    # Binary node labels
         data.edge_target = torch.randint(0, 3, (data.edge_index.size(1),))      # Edge change labels
 
         return data, educt_graph

@@ -563,6 +563,11 @@ class reaction_graph(nx.Graph):
             self.add_node(atom_idx2)
             self.add_edge(atom_idx1, atom_idx2, weight=bond_change)
         
+    def isEmpty(self):
+        return self.number_of_nodes == 0
+    
+    def _setPseudoEmpty(self):
+        self.add_node()
 
     def chemical_distance(self):
         """
