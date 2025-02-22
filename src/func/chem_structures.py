@@ -112,7 +112,6 @@ class mol_graph(nx.Graph):
         # read all smiles strings of the reaction
         if mols is None:
             for smiles in smilies:
-                #TODO: SMILES -> SMARTS
                 self.smiles.append(smiles)
                 try:
                     mol : Chem.rdchem.Mol = Chem.MolFromSmiles(smiles)
@@ -162,7 +161,7 @@ class mol_graph(nx.Graph):
             if geometric_properties:
                 self._add_hydrogen_bonds(mol)      #? feature or algorithmic retrieval
             separated_list.append(sep_mol)
-        self.mol_list = separated_list
+        self.cc_list = separated_list
 
     def _add_hydrogen_bonds(self, mol : Chem.RWMol, distance_threshold=2.5):
         #TODO: Comment
@@ -378,65 +377,76 @@ class reaction_graph(nx.Graph):
         products = self.products
 
         print("Maximizing MCS...")
-        print(f"Reactants count: {len(reactants.mol_list)} | Products count: {len(products.mol_list)}")
+        print(f"Reactants count: {len(reactants.mols)} | Products count: {len(products.mols)}")
 
         def compute_mcs_sizes(r_list, p_list):
             """
             Computes the MCS sizes between reactants and products.
             Returns a weight matrix and the corresponding pairs.
             """
-            def find_mcs_nx(graph1 : mol_graph, graph2 : mol_graph):
-                GM = GraphMatcher(graph1, graph2,
-                                  node_match=lambda n1, n2: n1['element'] == n2['element'], 
-                                  edge_match=lambda e1, e2: True)
-                common_sg = {}
-                max_score = 0
-
-                for mapping in GM.subgraph_isomorphisms_iter():
-                    num_nodes = len(mapping)
-                    num_edges = sum(min(graph1.get_edge_data(u,v)["bond_type"],graph2.get_edge_data(u,v)["bond_type"]) 
-                                    for u,v in mapping.items() if graph1.has_edge(u,v) and graph2.has_edge(u,v))
-                    score = num_nodes + num_edges   # Maximize nodes + edges
-
-                    if score > max_score:
-                        max_score = score
-                        common_sg = mapping
-
-                #print(common_sg)
-
-                """
-                mcs_graph = nx.Graph()
-                for u, v in common_sg.items():
-                    mcs_graph.add_node(u, **graph1.nodes[u])
-
-                for u, v in common_sg.items():
-                    for neighbor in graph1.neighbors(u):
-                        if neighbor in common_sg:
-                            mcs_graph.add_edge(u, neighbor, **graph1.edges[u, neighbor])
-                """
-
-                return common_sg
 
             pairs = []
             weights = []
 
+            counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
                 print(f"Comparing Reactant {i} with Product {j}...")
 
                 # Compute Maximal Common Substructure
-                mcs_result = find_mcs_nx(reactant, product)
-                mcs_size = len(mcs_result.items()) # if mcs_result != {} else 0
+                mcs_result = rdFMCS.FindMCS(
+                    [reactant, product],
+                    bondCompare=rdFMCS.BondCompare.CompareOrder,
+                    atomCompare=rdFMCS.AtomCompare.CompareElements,
+                    timeout=10
+                )
 
-                print(f"MCS Size between Reactant {i} and Product {j}: {mcs_size}")
+
+                if not mcs_result.numAtoms:
+                    continue
+
+                mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
+                Chem.SanitizeMol(mcs_mol)
+                mcs_mol = Chem.AddHs(mcs_mol)
+
+                bond_sum = 0
+
+                mcs_graph = nx.Graph()
+                k = counter
+                for atom in mcs_mol.GetAtoms():
+                    atom_symbol = atom.GetSymbol()
+                    #? Counter necessary?
+                    mcs_graph.add_node(atom.GetIdx() + counter, element=atom_symbol)
+                    k += 1
+
+                for bond in mcs_mol.GetBonds():
+                    u, v = bond.GetBeginAtomIdx() + counter, bond.GetEndAtomIdx() + counter
+                    bond_type = bond.GetBondTypeAsDouble()
+                    bond_sum += bond_type
+                    mcs_graph.add_edge(u,v,bond_type=bond_type)
+                counter = k
+
+                mcs_size = bond_sum
+
+                print(f"MCS Size between Reactant ({i+1}/{len(r_list)}) and Product ({j+1}/{len(p_list)}): {mcs_size}")
+                chi = GraphMatcher(reactants.cc_list[i], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
+                psi = GraphMatcher(products.cc_list[j], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
+
+                chi_mapping = next(chi.subgraph_isomorphisms_iter(), None)
+                psi_mapping = next(psi.subgraph_isomorphisms_iter(), None)
+
+                if chi_mapping is None or psi_mapping is None:
+                    continue
+
+                phi_mapping = {chi_mapping[k]: psi_mapping[v] for k, v in chi_mapping.items() if v in psi_mapping}
 
                 # Save the pair and weight
                 if mcs_size > 0:
-                    pairs.append((reactant, product, mcs_result, mcs_size))
+                    pairs.append((reactant, product, phi_mapping, mcs_size))
                     weights.append((i, j, mcs_size))
 
             return pairs, weights
 
-        pairs, weights = compute_mcs_sizes(reactants.mol_list, products.mol_list)
+        pairs, weights = compute_mcs_sizes(reactants.mols, products.mols)
 
         print(f"Found {len(pairs)} MCS pairs.")
 
@@ -445,8 +455,8 @@ class reaction_graph(nx.Graph):
             print("No MCS pairs found! Something is wrong.")
 
         # Solve assignment problem
-        num_reactants = len(reactants.mol_list)
-        num_products = len(products.mol_list)
+        num_reactants = len(reactants.cc_list)
+        num_products = len(products.cc_list)
 
         cost_matrix = np.zeros((num_reactants, num_products))
         for i, j, mcs_size in weights:
@@ -464,8 +474,8 @@ class reaction_graph(nx.Graph):
         total_mcs_size = 0
         for r_idx, p_idx in zip(reactant_indices, product_indices):
             for pair in pairs:
-                if reactants.mol_list[r_idx] == pair[0] and products.mol_list[p_idx] == pair[1]:
-                    selected_pairs.append(pair)
+                if reactants.cc_list[r_idx] == pair[0] and products.cc_list[p_idx] == pair[1]:
+                    selected_pairs.append((pair[0],pair[1]))
                     selected_mcs_results.append(pair[2])
                     total_mcs_size += pair[3]
                     break
@@ -474,47 +484,45 @@ class reaction_graph(nx.Graph):
         return selected_pairs, selected_mcs_results, total_mcs_size
 
     def compute_atom_mapping(self, mcs_list):
-        """
-        def get_substruct_match_nx(substructure_graph,educts=True):
-            GM = GraphMatcher(self.educts if educts else self.products, substructure_graph,
-                              node_match=lambda n1, n2: n1['element'] == n2['element'],
-                              edge_match=lambda e1, e2: True)
-            matches = next(GM.isomorphisms_iter(), None)
-            assert matches is not None
-            substruct_graph = nx.Graph()
-            for u, v in matches.items():
-                substruct_graph.add_node(u, **mol_graph.nodes[u])
-        
-            for u, v in matches.items():
-                for neighbor in mol_graph.neighbors(u):
-                    if neighbor in matches:
-                        substruct_graph.add_edge(u, neighbor, **mol_graph.edges[u, neighbor])
-            return matches
-        
-        atom_mapping : dict = {}
-        for pair in selected_pairs:
-            mcs = pair[2]
+        e_graph = self.educts
+        p_graph = self.products
+        def compute_bond_env(graph, node):
+            bond_env = set()
+            for nbr in graph.neighbors(node):
+                bond_type = graph.edges[node, nbr]["bond_type"]
+                nbr_type = graph.nodes[nbr]["element"]
+                bond_env.add((nbr_type, bond_type))
+            return bond_env
 
-            reactant_mol : nx.Graph = pair[0]
-            product_mol : nx.Graph = pair[1]
-
-            #mcs = Chem.MolFromSmarts(mcs_smarts)
-
-            #reactant_match = reactant_mol.GetSubstructMatch(mcs)
-            #product_match = product_mol.GetSubstructMatch(mcs)
-            reactant_match = get_substruct_match_nx(mcs,educts=True)
-            product_match = get_substruct_match_nx(mcs,educts=False)
-            # print(type(reactant_match),type(product_match))
-
-            for r_idx, p_idx in zip(reactant_match, product_match):
-                #? Is this enough for the condition
-                if reactant_mol.nodes[r_idx]['element'] == product_mol.nodes[p_idx]['element']:
-                    atom_mapping[r_idx] = p_idx
-        """
-        print(mcs_list)
         atom_mapping = {}
         for mcs in mcs_list:
             atom_mapping |= mcs
+
+        mapped_educts = set(atom_mapping.keys())
+        mapped_products = set(atom_mapping.values())
+
+        residual_educts = [node for node in e_graph.nodes() if node not in mapped_educts]
+        residual_products = [node for node in p_graph.nodes() if node not in mapped_products]
+
+        num_educts = len(residual_educts)
+        num_products = len(residual_products)
+
+        cost_matrix = np.full((num_educts, num_products), fill_value=100)
+
+        for i, e_atom in enumerate(residual_educts):
+            for j, p_atom in enumerate(residual_products):
+                if e_graph.nodes[e_atom]["element"] == p_graph.nodes[p_atom]["element"]:
+                    e_env = compute_bond_env(e_graph, e_atom)
+                    p_env = compute_bond_env(p_graph, p_atom)
+                    cost_matrix[i,j] = len(e_env.symmetric_difference(p_env))       # Maximize Overlap
+        
+        print(cost_matrix)
+
+        rows, cols = linear_sum_assignment(cost_matrix)
+
+        for i, j in zip(rows, cols):
+            atom_mapping[residual_educts[i]] = residual_products[j]
+            
         return atom_mapping
 
     def compute_bond_changes(self, atom_mapping : dict):
@@ -536,7 +544,7 @@ class reaction_graph(nx.Graph):
         # print((list(self.products.edges),list(map(lambda x: self.get_edge_data(x[0],x[1]),self.products.edges))))
         for idx1, idx2 in times(atom_mapping.keys(),atom_mapping.keys()):
             if idx1 < idx2: # Prevent (v,u) if (u,v) is already captured
-                try:
+                if True:
                     # print(idx1, idx2)
                     # print(atom_mapping)
                     # print(self.products.edges)
@@ -545,13 +553,19 @@ class reaction_graph(nx.Graph):
                     # print(self.products.get_edge_data(prod_n1,prod_n2))
                     # print(self.educts.get_bond_features(ed_n1,ed_n2))
                     # TODO: Debug (No balance : Just added bonds No removals)
-                    diff = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] - self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"]
+                    print(self.products)
+                    ed_type = self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"] \
+                        if self.educts.has_edge(ed_n1, ed_n2) else 0
+                    prod_type = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] \
+                        if self.products.has_edge(prod_n1,prod_n2) else 0
+                    diff = prod_type - ed_type
                     print(diff)
                     if diff != 0:
                         e = (idx1,idx2)
                         bond_changes[e] = diff
-                except:
-                    pass
+                #except:
+                #    print("Shit happens")
+                #    pass
         return bond_changes
 
     def build_graph_from_bond_changes(self, bond_changes):
@@ -565,9 +579,6 @@ class reaction_graph(nx.Graph):
         
     def isEmpty(self):
         return self.number_of_nodes == 0
-    
-    def _setPseudoEmpty(self):
-        self.add_node()
 
     def chemical_distance(self):
         """

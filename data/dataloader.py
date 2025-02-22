@@ -11,8 +11,10 @@ class ReactionDataset(Dataset):
         return len(self.mol_graphs)
     
     def __getitem__(self, idx):
-        mol_graph = self.mol_graphs[idx]
-        data, educt_graph = self.converter.reaction_to_data(mol_graph)
+        reaction_data = self.mol_graphs[idx]
+        print("RD",reaction_data)
+        data, educt_graph = self.converter.reaction_to_data(reaction_data)
+        print("Data,Educt", data, educt_graph)
         # TODO: Maybe they belong to this notation (target graphs instead of randomized targets) (learning the correlation between educt graph and product graph)
         # Add target attributes for node/edge labels (mock example)
         data.node_target = torch.randint(0, 2, (data.x.size(0),))    # Binary node labels

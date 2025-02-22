@@ -3,6 +3,13 @@ from enum import Enum
 import os
 from rdkit import Chem
 from rdkit.Chem import Descriptors, rdFreeSASA
+from scipy.constants import N_A #as AVOGADRO
+from math import gcd
+
+REALISM = True
+
+# Wrong, but limited to our resources:
+AVOGADRO = 10_000
 
 class DatasetType(Enum):
     TRAINING = "./data/json/train"
@@ -71,23 +78,22 @@ class Extractor():
         return len(self.data)
 
 def derive_from_data(msg : Message):
-    try:
-        reaction_data = {
-            "educts": [],
-            "educt_amounts": [],
-            "products": [],
-            "product_amounts" : [],
-            "solvents": [],
-            "solvent_amounts": [],
-            "catalysts": [],
-            "catalyst_amount": [],
-            "conditions": {
-                "temperature": None,
-                "pressure": None,
-                "stirring": None
-            }
+    reaction_data = {
+        "educts": [],
+        "educt_amounts": [],
+        "products": [],
+        "product_amounts" : [],
+        "solvents": [],
+        "solvent_amounts": [],
+        "catalysts": [],
+        "catalyst_amount": [],
+        "conditions": {
+            "temperature": None,
+            "pressure": None,
+            "stirring": None
         }
-        
+    }
+    try:        
         # Inputs
         inputs = msg.getInputs()
         # print(inputs)
@@ -109,7 +115,6 @@ def derive_from_data(msg : Message):
                             mol = Chem.MolFromSmiles(smiles)
                             molar_mass = Descriptors.MolWt(mol) if mol else None
                             mol_amount = convert_to_mol(amount, molar_mass, smiles)
-                            #print("MolCount",mol_amount)
                             if mol_amount is None:
                                 pass
                             else:
@@ -117,10 +122,18 @@ def derive_from_data(msg : Message):
                                 reaction_data["educts"].append(smiles)
                                 reaction_data["educt_amounts"].append(mol_amount)
                         elif role == "SOLVENT":
-                            reaction_data["educts"].append(smiles)
-                            reaction_data["educt_amounts"].append(1)
-                            reaction_data["products"].append(smiles)
-                            reaction_data["product_amounts"].append(0.9)
+                            #! Difficult
+                            mol = Chem.MolFromSmiles(smiles)
+                            molar_mass = Descriptors.MolWt(mol) if mol else None
+                            mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                            #print(mol_amount)
+                            if mol_amount is None:
+                                pass
+                            else:
+                                reaction_data["educts"].append(smiles)
+                                reaction_data["educt_amounts"].append(mol_amount)
+                                reaction_data["products"].append(smiles)
+                                reaction_data["product_amounts"].append(mol_amount)
                         elif role == "CATALYST":
                             #reaction_data["educts"].append(smiles)
                             #reaction_data["educt_amounts"].append(1)
@@ -157,18 +170,28 @@ def derive_from_data(msg : Message):
                         return None
                     mol = Chem.MolFromSmiles(smiles)
                     molar_mass = Descriptors.MolWt(mol) if mol else None
-                    mol_amount = convert_to_mol(amount, molar_mass)
+                    mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                    # print(mol_amount)
                     if molar_mass is None or mol_amount is None:
                         return None
                     reaction_data["products"].append(smiles)
                     reaction_data["product_amounts"].append(mol_amount)
         # print("ReactData", reaction_data)
         #print(reaction_data["educt_amounts"],reaction_data["product_amounts"])
-        return reaction_data
- 
+        
+        # Down-Scale Number of molecules
+        print(reaction_data["educt_amounts"])
+        downscale_factor = max(1,gcd(*(reaction_data["educt_amounts"] + reaction_data["product_amounts"])))
+        downscale = lambda y : [max(1,x // downscale_factor) for x in y]
+        reaction_data["educt_amounts"] = downscale(reaction_data["educt_amounts"])
+        reaction_data["product_amounts"] = downscale(reaction_data["product_amounts"])
+        print(reaction_data["product_amounts"])
     except Exception as e:
+        # print(traceback.format_exc())
         # print(f"Error occured by extracting datasets: {e}")
-        return reaction_data
+        #print(reaction_data["educt_amounts"])
+        pass
+    return reaction_data
     
 def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> float:
     def estimate_density() -> float:
@@ -187,6 +210,7 @@ def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> fl
         except Exception as e:
             # print(f"Error estimating density for {smiles}: {e}")
             return None
+    res = 0
     try:
         if "mass" in amount:
             mass_value = amount["mass"]["value"]
@@ -201,7 +225,7 @@ def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> fl
                 mass_value *= 0.00_000_1
             elif unit == "NANOGRAM":
                 mass_value *= 0.00_000_000_1
-            return mass_value / molar_mass
+            res = mass_value / molar_mass
 
         elif "volume" in amount:
             volume_value = amount["volume"]["value"]
@@ -221,7 +245,7 @@ def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> fl
             
             if density_value is not None:
                 mass_value = volume_value * density_value
-                return mass_value / molar_mass
+                res = mass_value / molar_mass
             else:
                 return None
 
@@ -233,10 +257,10 @@ def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> fl
                 volume_value *= 0.00_1
             elif unit == "NANOMOLE":
                 volume_value *= 0.00_000_1
-            return amount["moles"]["value"]
-        
+            res = amount["moles"]["value"]
         else:
             return None
+        return res*AVOGADRO if REALISM else res
         
     except Exception as e:
         # print(f"Error occured by converting dataset to mols: {e}")

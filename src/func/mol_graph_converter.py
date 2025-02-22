@@ -3,12 +3,10 @@ from pathlib import Path
 project_dir = Path(__file__).resolve().parent.parent.parent
 sources = project_dir / "src"
 sys.path.insert(0, str(sources))
-from src.func.chem_structures import mol_graph, reaction_graph
+from src.func.chem_structures import mol_graph, reaction_graph, properties
 import torch
 from torch_geometric.data import Data
 import numpy as np
-
-AVOGADRO=6.022*(10**23)
 
 class MolGraphConverter:
     """
@@ -41,15 +39,15 @@ class MolGraphConverter:
 
         # Simulating empty graph
         if r_graph.isEmpty():
-            r_graph._setPseudoEmpty()
+            # print("True")
+            r_graph.add_node(0,feature=len(properties)*[0])
 
-        print("Type of r_graph:",type(r_graph), r_graph.nodes)
         for i, node_idx in enumerate(r_graph.nodes):
             node_index_map[node_idx] = i
             atom_mapping = r_graph.bijection
 
             # Get atomic properties from educt and product graphs
-            print(educt_graph.nodes[node_idx]["feature"])
+            print("Feature Educt:",educt_graph.nodes[node_idx]["feature"])
             educt_features = torch.tensor(educt_graph.nodes[node_idx]["feature"], dtype=torch.float) \
                 if node_idx in educt_graph.nodes else torch.zeros(len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))
             product_features = torch.tensor(product_graph.nodes[atom_mapping[node_idx]]["feature"], dtype=torch.float) \
@@ -108,6 +106,7 @@ class MolGraphConverter:
         smilies_ed = []
         for smiles,num in list_ed:
             amount = 1 if num == min_num else int(num*scalar)               #NaIve Scale
+            print(amount)
             smilies_ed += amount*[smiles]
         ed = mol_graph(smilies=smilies_ed)
         smilies_pr = []
