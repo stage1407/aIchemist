@@ -71,7 +71,11 @@ class Extractor():
             #! Flag solvents when finding the maximal common substructure (But should be mostly estinguished by itself)
             extracted = derive_from_data(msg)
             if extracted is not None:
-                self.data.append(extracted)
+                if extracted["educts"] != [] \
+                    and extracted["educt_amounts"] \
+                        and extracted["products"] != [] \
+                        and extracted["product_amounts"] != []:
+                    self.data.append(extracted)
         self.loaded_files = ch.ld
 
     def __len__(self):
