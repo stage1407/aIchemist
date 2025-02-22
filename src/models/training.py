@@ -23,6 +23,7 @@ from data.dataloader import ReactionDataset
 from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
 from src.models.loss_function import compute_node_loss, compute_edge_loss, Chem
+import gc
 
 MOCK_ON=False
 
@@ -57,9 +58,10 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
     for data in loader:
         data = data.to(device)
         optimizer.zero_grad()
-        print(data, data.x, data.edge_index)
+        # print(data, data.x, data.edge_index)
         # Forward-Pass
         data.x = pad_missing_features(data.x, target_dim=19)
+        data.x = data.x.detach()
         node_out, edge_out = model(data.x,data.edge_index)
         
         # Loss-Berechnung
@@ -83,12 +85,18 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
         # Backward-Pass und Optimierung
         loss.backward()
         optimizer.step()
-
-        total_loss += loss.item()
+        optimizer.zero_grad(set_to_none=True)
 
         # Speicherung für Metrikberechnung
         all_preds.append(node_out.argmax(dim=1).detach().cpu())
         all_targets.append(data.node_target.cpu())
+
+        del loss, node_out, edge_out
+        torch.cuda.empty_cache()
+        gc.collect()
+
+        total_loss += loss.item()
+
 
     # Durchschnittliche Verlustfunktion
     avg_loss = total_loss / len(loader)
@@ -114,6 +122,7 @@ def validate(model, loader, device, chemical_loss_enabled=False, chemical_distan
 
             # Forward-Pass
             data.x = pad_missing_features(data.x, target_dim=19)
+            data.x = data.x.detach()
             node_out, edge_out = model(data.x, data.edge_index)
 
             # Loss-Berechnung
@@ -130,15 +139,20 @@ def validate(model, loader, device, chemical_loss_enabled=False, chemical_distan
             chem_dist_loss = 0
             if chemical_distance_loss is not None:
                 chem_dist_loss = chemical_distance_loss(generated_reaction_graph, ground_truth_reaction_graph)
-        
+
             loss += chem_dist_loss
-
-
-            total_loss += loss.item()
 
             # Speicherung für Metrikberechnung
             all_preds.append(node_out.argmax(dim=1).detach().cpu())
             all_targets.append(data.node_target.cpu())
+
+            del loss, node_out, edge_out
+            torch.cuda.empty_cache()
+            gc.collect()
+
+            total_loss += loss.item()
+
+
 
     # Durchschnittliche Verlustfunktion
     avg_loss = total_loss / len(loader)
@@ -167,8 +181,8 @@ def main(model_type : ModelType):
     train_dataset = ReactionDataset(train_mol_graphs.data, converter)
     val_dataset = ReactionDataset(val_mol_graphs.data, converter)
 
-    train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True)     # Füge hier den Trainings-Loader ein
-    val_loader = DataLoader(val_dataset, batch_size=config["batch_size"])                       # Füge hier den Validierungs-Loader ein
+    train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True, num_workers=6, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
+    val_loader = DataLoader(val_dataset, batch_size=config["batch_size"], num_workers=6, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
     if MOCK_ON:
         ####### MOCK #######
         mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)

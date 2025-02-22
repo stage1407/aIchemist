@@ -81,8 +81,6 @@ class Extractor():
     def __len__(self):
         return len(self.data)
 
-"""
-(deprecated)
 def derive_from_data(msg : Message):
     reaction_data = {
         "educts": [],
@@ -198,140 +196,113 @@ def derive_from_data(msg : Message):
         #print(reaction_data["educt_amounts"])
         pass
     return reaction_data
+
+    
 """
-
-# from rdkit import Chem
-# from rdkit.Chem import Descriptors
-# from math import gcd
-
 def derive_from_data(msg):
-    """
+    ""
     Extracts structured reaction data from an ORD message.
+    Skips invalid reactions (i.e., missing educts, products, or amounts).
 
     Parameters:
-    - msg (Message): An ORD reaction message object.
+    - msg (dict): A reaction message in ORD format.
 
     Returns:
-    - reaction_data (dict): A dictionary containing extracted reaction information.
-    
-    Raises:
-    - ValueError: If no educts or products are present.
-    """
+    - dict: Processed reaction data OR None if the message is invalid.
+    ""
 
-    # Initialize the reaction data structure
+    # Initialize reaction data structure
     reaction_data = {
         "educts": [], "educt_amounts": [],
         "products": [], "product_amounts": [],
         "solvents": [], "solvent_amounts": [],
-        "catalysts": [], "catalyst_amount": [],
         "conditions": {"temperature": None, "pressure": None, "stirring": None}
     }
 
     try:
-        # **Step 1: Extract Inputs (Educts, Solvents, Catalysts)**
-        inputs = msg.getInputs()  # Retrieve all input components
-        if inputs:
-            for key, inp_val in inputs.items():
-                role = inp_val.get("reaction_role", "").upper()  # Get reaction role (e.g., REACTANT, SOLVENT)
-                
-                # Ensure 'components' exists in the input
-                for comp in inp_val.get("components", []):
-                    identifiers = comp.get("identifiers", [])
-                    if not identifiers:
-                        continue  # Skip if no identifiers are present
+        # **Step 1: Extract Inputs (Educts, Solvents)**
+        inputs = msg.get("inputs", {})  # Retrieve all input components
+        if not inputs:
+            return None  # **Skip message if no inputs are present**
 
-                    # Extract SMILES representation
-                    smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
-                    if smiles is None:
-                        continue  # Skip if no valid SMILES found
+        for key, inp_val in inputs.items():
+            role = inp_val.get("reaction_role", "").upper()
+            for comp in inp_val.get("components", []):
+                identifiers = comp.get("identifiers", [])
+                smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
+                amount = comp.get("amount", {})
 
-                    # Extract chemical amount
-                    amount = comp.get("amount", {})
-                    if not amount:  # Skip if no amount is given
-                        continue
+                if smiles is None or not amount:
+                    continue  # Skip invalid molecules
 
-                    # Convert SMILES to RDKit Mol and calculate molecular mass
-                    mol = Chem.MolFromSmiles(smiles)
-                    molar_mass = Descriptors.MolWt(mol) if mol else None
-                    mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                mol = Chem.MolFromSmiles(smiles)
+                molar_mass = Descriptors.MolWt(mol) if mol else None
+                mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                if mol_amount is None:
+                    continue  # Skip if amount conversion fails
 
-                    if mol_amount is None:
-                        continue  # Skip molecules where conversion failed
-
-                    # **Sort input by role**
-                    if role == "REACTANT":
-                        reaction_data["educts"].append(smiles)
-                        reaction_data["educt_amounts"].append(mol_amount)
-                    elif role == "SOLVENT":
-                        reaction_data["solvents"].append(smiles)
-                        reaction_data["solvent_amounts"].append(mol_amount)
-                    elif role == "CATALYST":
-                        reaction_data["catalysts"].append(smiles)
-                        reaction_data["catalyst_amount"].append(mol_amount)
-
-        # **Step 2: Extract Reaction Conditions (Temperature, Pressure, Stirring)**
-        conditions = msg.getConditions()
-        temperature = conditions.get("temperature", {}).get("setpoint", {}).get("value", None)
-        temp_unit = conditions.get("temperature", {}).get("setpoint", {}).get("units", None)
-        
-        # Convert Celsius to Kelvin
-        if temperature is not None and temp_unit == "CELSIUS":
-            temperature += 273.15
-        reaction_data["conditions"]["temperature"] = temperature
-
-        reaction_data["conditions"]["pressure"] = conditions.get("pressure", {}).get("value", None)
-        reaction_data["conditions"]["stirring"] = conditions.get("stirring", {}).get("details", None)
-
-        # **Step 3: Extract Outcomes (Products)**
-        outcomes = msg.getOutcomes()
-        if outcomes:
-            for outcome in outcomes:
-                for product in outcome.get("products", []):
-                    identifiers = product.get("identifiers", [])
-                    smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
-                    
-                    # Ensure measurements exist
-                    measurements = product.get("measurements", [])
-                    if not measurements:
-                        continue  # Skip if no measurement data
-                    
-                    amount = measurements[0].get("amount", {})  # Extract amount
-                    if not amount:
-                        continue  # Skip if amount is missing
-                    
-                    # Convert SMILES to RDKit Mol
-                    mol = Chem.MolFromSmiles(smiles)
-                    molar_mass = Descriptors.MolWt(mol) if mol else None
-                    mol_amount = convert_to_mol(amount, molar_mass, smiles)
-
-                    if mol_amount is None:
-                        continue  # Skip if conversion fails
-                    
+                # **Educts & Solvents**
+                if role == "REACTANT":
+                    reaction_data["educts"].append(smiles)
+                    reaction_data["educt_amounts"].append(mol_amount)
+                elif role == "SOLVENT":
+                    reaction_data["educts"].append(smiles)
+                    reaction_data["educt_amounts"].append(mol_amount)
                     reaction_data["products"].append(smiles)
                     reaction_data["product_amounts"].append(mol_amount)
 
-        # **Step 4: Ensure Essential Data is Present**
+        # **Step 2: Extract Outcomes (Products)**
+        outcomes = msg.get("outcomes", [])
+        if not outcomes:
+            return None  # **Skip message if no product info is present**
+
+        for outcome in outcomes:
+            for product in outcome.get("products", []):
+                identifiers = product.get("identifiers", [])
+                smiles = next((id["value"] for id in identifiers if id["type"] == "SMILES"), None)
+                amount = product.get("measurements", [{}])[0].get("amount", {})
+
+                if smiles is None or not amount:
+                    continue  # Skip invalid products
+
+                mol = Chem.MolFromSmiles(smiles)
+                molar_mass = Descriptors.MolWt(mol) if mol else None
+                mol_amount = convert_to_mol(amount, molar_mass, smiles)
+                if mol_amount is None:
+                    continue
+
+                reaction_data["products"].append(smiles)
+                reaction_data["product_amounts"].append(mol_amount)
+
+        # **Step 3: Ensure Essential Data Exists**
         if not reaction_data["educts"] or not reaction_data["products"]:
-            raise ValueError("Reaction data is missing essential educts or products!")
+            return None  # **Skip invalid reactions**
+
+        # **Step 4: Extract Conditions**
+        conditions = msg.get("conditions", {})
+        reaction_data["conditions"]["temperature"] = (
+            conditions.get("temperature", {}).get("setpoint", {}).get("value", None)
+        )
+        reaction_data["conditions"]["pressure"] = conditions.get("pressure", {}).get("value", None)
+        reaction_data["conditions"]["stirring"] = conditions.get("stirring", {}).get("details", None)
 
         # **Step 5: Downscale Number of Molecules**
         all_amounts = reaction_data["educt_amounts"] + reaction_data["product_amounts"]
-
         if all(x == 0 for x in all_amounts):
-            downscale_factor = 1  # Avoid division by zero
-        else:
-            downscale_factor = max(1, gcd(*all_amounts))  # Compute GCD to simplify proportions
+            return None  # **Skip reaction if all amounts are zero**
 
+        downscale_factor = max(1, gcd(*all_amounts))  # Compute GCD to simplify proportions
         downscale = lambda y: [max(1, x // downscale_factor) for x in y]
         reaction_data["educt_amounts"] = downscale(reaction_data["educt_amounts"])
         reaction_data["product_amounts"] = downscale(reaction_data["product_amounts"])
 
     except Exception as e:
-        print(f"Error in derive_from_data: {e}")
-        raise  # Reraise the exception so the caller can handle it properly
+        print(f"⚠ Error in derive_from_data: {e}")
+        return None  # **Skip reactions that failed parsing**
 
     return reaction_data
 
+"""
 
     
 def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> float:

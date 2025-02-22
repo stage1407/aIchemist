@@ -396,13 +396,14 @@ class reaction_graph(nx.Graph):
                     [reactant, product],
                     bondCompare=rdFMCS.BondCompare.CompareOrder,
                     atomCompare=rdFMCS.AtomCompare.CompareElements,
-                    timeout=8,
+                    timeout=20,
                     completeRingsOnly=False
                 )
 
-
                 if not mcs_result.numAtoms:
                     continue
+                else:
+                    print("Found")
 
                 mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
 
@@ -431,6 +432,8 @@ class reaction_graph(nx.Graph):
 
                 chi_mapping = next(chi.subgraph_isomorphisms_iter(), None)
                 psi_mapping = next(psi.subgraph_isomorphisms_iter(), None)
+
+                print("Subgraphs were found")
 
                 if chi_mapping is None or psi_mapping is None:
                     continue
