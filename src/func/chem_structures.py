@@ -391,13 +391,13 @@ class reaction_graph(nx.Graph):
             counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
                 print(f"Comparing Reactant {i} with Product {j}...")
-
                 # Compute Maximal Common Substructure
                 mcs_result = rdFMCS.FindMCS(
                     [reactant, product],
                     bondCompare=rdFMCS.BondCompare.CompareOrder,
                     atomCompare=rdFMCS.AtomCompare.CompareElements,
-                    timeout=10
+                    timeout=8,
+                    completeRingsOnly=False
                 )
 
 
@@ -405,8 +405,6 @@ class reaction_graph(nx.Graph):
                     continue
 
                 mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
-                Chem.SanitizeMol(mcs_mol)
-                mcs_mol = Chem.AddHs(mcs_mol)
 
                 bond_sum = 0
 
@@ -544,25 +542,24 @@ class reaction_graph(nx.Graph):
         # print((list(self.products.edges),list(map(lambda x: self.get_edge_data(x[0],x[1]),self.products.edges))))
         for idx1, idx2 in times(atom_mapping.keys(),atom_mapping.keys()):
             if idx1 < idx2: # Prevent (v,u) if (u,v) is already captured
-                if True:
-                    # print(idx1, idx2)
-                    # print(atom_mapping)
-                    # print(self.products.edges)
-                    prod_n1,prod_n2 = atom_mapping[idx1],atom_mapping[idx2]
-                    ed_n1,ed_n2 = idx1,idx2
-                    # print(self.products.get_edge_data(prod_n1,prod_n2))
-                    # print(self.educts.get_bond_features(ed_n1,ed_n2))
-                    # TODO: Debug (No balance : Just added bonds No removals)
-                    print(self.products)
-                    ed_type = self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"] \
-                        if self.educts.has_edge(ed_n1, ed_n2) else 0
-                    prod_type = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] \
-                        if self.products.has_edge(prod_n1,prod_n2) else 0
-                    diff = prod_type - ed_type
-                    print(diff)
-                    if diff != 0:
-                        e = (idx1,idx2)
-                        bond_changes[e] = diff
+                # print(idx1, idx2)
+                # print(atom_mapping)
+                # print(self.products.edges)
+                prod_n1,prod_n2 = atom_mapping[idx1],atom_mapping[idx2]
+                ed_n1,ed_n2 = idx1,idx2
+                # print(self.products.get_edge_data(prod_n1,prod_n2))
+                # print(self.educts.get_bond_features(ed_n1,ed_n2))
+                # TODO: Debug (No balance : Just added bonds No removals)
+                print(self.products)
+                ed_type = self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"] \
+                    if self.educts.has_edge(ed_n1, ed_n2) else 0
+                prod_type = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] \
+                    if self.products.has_edge(prod_n1,prod_n2) else 0
+                diff = prod_type - ed_type
+                print(diff)
+                if diff != 0:
+                    e = (idx1,idx2)
+                    bond_changes[e] = diff
                 #except:
                 #    print("Shit happens")
                 #    pass
