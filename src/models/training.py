@@ -24,7 +24,7 @@ from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
-from src.models.loss_function import compute_node_loss, compute_edge_loss, Chem
+from src.models.loss_function import compute_graph_loss
 import gc
 
 MOCK_ON=False
@@ -51,38 +51,24 @@ def pad_missing_features(data_x, target_dim=19):
 
 
 # Trainingsfunktion
-def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemical_distance_loss=None):
+def train(model, loader, optimizer, device):
     # TODO: Maybe weight valence rule violations much higher than chemical distance loss and structural loss.
     model.train()
     total_loss = 0
     all_preds = []
     all_targets = []
-    for data in loader:
-        data = data.to(device)
+    for educt_graph, react_graph in loader:
+        educt_graph = educt_graph.to(device)
+        react_graph = react_graph.to(device)
         optimizer.zero_grad()
         # print(data, data.x, data.edge_index)
         # Forward-Pass
-        data.x = pad_missing_features(data.x, target_dim=19)
-        data.x = data.x.detach()
-        node_out, edge_out = model(data.x,data.edge_index)
+        # data.x = pad_missing_features(data.x, target_dim=19)
+        #data.x = data.x.detach()
+        predicted_reaction = model(educt_graph)
         
         # Loss-Berechnung
-        node_loss = compute_node_loss(node_out, data.node_target)
-        edge_loss = compute_edge_loss(edge_out, data.edge_target)
-
-        loss = node_loss + edge_loss
-
-        if chemical_loss_enabled:
-            loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
-
-        generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data["input_graph"])
-        ground_truth_reaction_graph = reaction_graph(graph=data.target_graph)
-
-        chem_dist_loss = 0
-        if chemical_distance_loss is not None:
-            chem_dist_loss = chemical_distance_loss(generated_reaction_graph, ground_truth_reaction_graph)
-        
-        loss += chem_dist_loss
+        loss = compute_graph_loss(predicted_reaction, react_graph)
 
         # Backward-Pass und Optimierung
         loss.backward()
@@ -90,14 +76,14 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
         optimizer.zero_grad(set_to_none=True)
 
         # Speicherung für Metrikberechnung
-        all_preds.append(node_out.argmax(dim=1).detach().cpu())
-        all_targets.append(data.node_target.cpu())
-
-        del loss, node_out, edge_out
-        torch.cuda.empty_cache()
-        gc.collect()
+        all_preds.append(predicted_reaction.argmax(dim=1).detach().cpu())
+        all_targets.append(educt_graph.node_target.cpu())
 
         total_loss += loss.item()
+
+        del loss, predicted_reaction
+        torch.cuda.empty_cache()
+        gc.collect()
 
 
     # Durchschnittliche Verlustfunktion
@@ -112,47 +98,34 @@ def train(model, loader, optimizer, device, chemical_loss_enabled=False, chemica
     return avg_loss, acc, f1
 
 # Validierungsfunktion
-def validate(model, loader, device, chemical_loss_enabled=False, chemical_distance_loss=None):
+def validate(model, loader, device):
     model.eval()
     total_loss = 0
     all_preds = []
     all_targets = []
 
     with torch.no_grad():
-        for data in loader:
+        for data, react_graph in loader:
             data = data.to(device)
 
             # Forward-Pass
             data.x = pad_missing_features(data.x, target_dim=19)
             data.x = data.x.detach()
-            node_out, edge_out = model(data.x, data.edge_index)
+            predicted_reaction = model(data.x, data.edge_index)
 
             # Loss-Berechnung
-            node_loss = compute_node_loss(node_out, data.node_target)
-            edge_loss = compute_edge_loss(edge_out, data.edge_target)
-            loss = node_loss + edge_loss
-
-            if chemical_loss_enabled:
-                loss += Chem.compute_chemical_loss(data.edge_index, data.edge_attr, data.x)
-
-            generated_reaction_graph = reaction_graph(mol_products=node_out, mol_educts=data.input_graph)
-            ground_truth_reaction_graph = reaction_graph(graph=data.target_graph)
-
-            chem_dist_loss = 0
-            if chemical_distance_loss is not None:
-                chem_dist_loss = chemical_distance_loss(generated_reaction_graph, ground_truth_reaction_graph)
-
-            loss += chem_dist_loss
+            loss = compute_graph_loss(predicted_reaction, react_graph)
 
             # Speicherung für Metrikberechnung
-            all_preds.append(node_out.argmax(dim=1).detach().cpu())
+            all_preds.append(predicted_reaction.argmax(dim=1).detach().cpu())
             all_targets.append(data.node_target.cpu())
 
-            del loss, node_out, edge_out
+            total_loss += loss.item()
+
+            del loss, predicted_reaction
             torch.cuda.empty_cache()
             gc.collect()
 
-            total_loss += loss.item()
 
 
 
@@ -174,8 +147,8 @@ class ModelType(Enum):
     VGAE = 3
 
 def custom_collate(batch):
-    data_list = [from_networkx(graph) for graph in batch]
-    return Batch.from_data_list(data_list)
+    educt_list, reaction_list = zip(*batch)
+    return Batch.from_data_list(educt_list), Batch.from_data_list(reaction_list)
 
 # Haupttrainingspipeline
 def main(model_type : ModelType):
@@ -213,8 +186,8 @@ def main(model_type : ModelType):
     optimizer = Adam(model.parameters(), lr=config["learning_rate"])
 
     for epoch in range(config["epochs"]):
-        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, config["device"],chemical_loss_enabled=True, chemical_distance_loss=Chem.ChemicalDistanceLoss(weight=0.5,mode="ratio"))
-        val_loss, val_acc, val_f1 = validate(model, val_loader, config["device"], chemical_loss_enabled=True, chemical_distance_loss=Chem.ChemicalDistanceLoss(weight=0.5,mode="ratio"))
+        train_loss, train_acc, train_f1 = train(model, train_loader, optimizer, config["device"])
+        val_loss, val_acc, val_f1 = validate(model, val_loader, config["device"])
 
         print(f"Epoch {epoch+1}/{config['epochs']}")
         print(f"  Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.4f} | Train F1: {train_f1:.4f}")

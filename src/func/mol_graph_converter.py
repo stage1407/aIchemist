@@ -6,6 +6,7 @@ sys.path.insert(0, str(sources))
 from src.func.chem_structures import mol_graph, reaction_graph, properties
 import torch
 from torch_geometric.data import Data
+from torch_geometric.utils import from_networkx
 import numpy as np
 
 class MolGraphConverter:
@@ -104,9 +105,8 @@ class MolGraphConverter:
             x=node_features,
             edge_index=edge_index,
             edge_attr=edge_attr,
-            input_graph=educt_graph
         )
-        return data, educt_graph
+        return data, from_networkx(educt_graph)
     
     def reaction_to_data(self, react_data):
         rd = react_data

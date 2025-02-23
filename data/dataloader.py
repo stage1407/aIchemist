@@ -1,4 +1,4 @@
-from torch_geometric.data import Dataset
+from torch_geometric.data import Dataset, Data
 import torch
 
 class ReactionDataset(Dataset):
@@ -11,13 +11,14 @@ class ReactionDataset(Dataset):
         return len(self.mol_graphs)
     
     def __getitem__(self, idx):
-        reaction_data = self.mol_graphs[idx]
-        print("RD",reaction_data)
-        data, educt_graph = self.converter.reaction_to_data(reaction_data)
-        print("Data,Educt", data, educt_graph)
+        data = self.mol_graphs[idx]
+        print("RD",data)
+        reaction_data, input_data = self.converter.reaction_to_data(reaction_data)
+        print("Reaction,Educt", reaction_data, input_data)
         # TODO: Maybe they belong to this notation (target graphs instead of randomized targets) (learning the correlation between educt graph and product graph)
         # Add target attributes for node/edge labels (mock example)
-        data.node_target = torch.randint(0, 2, (data.x.size(0),))    # Binary node labels
-        data.edge_target = torch.randint(0, 3, (data.edge_index.size(1),))      # Edge change labels
+        # data.node_target = torch.randint(0, 2, (data.x.size(0),))    # Binary node labels
+        # data.edge_target = torch.randint(0, 3, (data.edge_index.size(1),))      # Edge change labels
 
-        return data, educt_graph
+        # return data
+        return input_data, reaction_data

@@ -68,3 +68,14 @@ class Chem:
 
 
     #TODO: Chemical Distance as graph theoretic loss function. (Use func.reaction_graph module)
+
+def compute_graph_loss(prediction, ground_truth, structural_weight=1, chem_rule_weight=1, chem_distance_weight=1):
+    alpha, beta, gamma = structural_weight, chem_rule_weight, chem_distance_weight
+    node_loss = compute_node_loss(prediction.x, ground_truth.x)
+    edge_loss = compute_edge_loss(prediction.edge_attr, ground_truth.edge_attr)
+    chemical_loss = Chem.compute_chemical_loss(prediction.edge_index, prediction.edge_attr, prediction.x)
+    chemical_distance = Chem.ChemicalDistanceLoss(weight=1.0, mode="ratio")
+    chemical_distance_loss = chemical_distance(prediction, ground_truth)
+    total_loss = alpha*(node_loss + edge_loss) + beta*chemical_loss + gamma*chemical_distance_loss
+    return total_loss
+
