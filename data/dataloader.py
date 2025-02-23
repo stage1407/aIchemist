@@ -13,7 +13,7 @@ class ReactionDataset(Dataset):
     def __getitem__(self, idx):
         data = self.mol_graphs[idx]
         print("RD",data)
-        reaction_data, input_data = self.converter.reaction_to_data(reaction_data)
+        reaction_data, input_data = self.converter.reaction_to_data(data)
         print("Reaction,Educt", reaction_data, input_data)
         # TODO: Maybe they belong to this notation (target graphs instead of randomized targets) (learning the correlation between educt graph and product graph)
         # Add target attributes for node/edge labels (mock example)

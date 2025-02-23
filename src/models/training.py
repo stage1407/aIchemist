@@ -83,7 +83,7 @@ def train(model, loader, optimizer, device):
 
         del loss, predicted_reaction
         torch.cuda.empty_cache()
-        gc.collect()
+        # gc.collect()
 
 
     # Durchschnittliche Verlustfunktion
@@ -124,7 +124,7 @@ def validate(model, loader, device):
 
             del loss, predicted_reaction
             torch.cuda.empty_cache()
-            gc.collect()
+            # gc.collect()
 
 
 

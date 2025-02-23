@@ -59,19 +59,22 @@ class MolGraphConverter:
             node_features.append(feature_vector)
 
         print("Tensor:", node_features)
-        try:
-            node_features = torch.stack(node_features)
-        except Exception as e:
-            def print_full_error(e):
-                tb = e.__traceback__
-                print(f"Exception Type: {type(e).__name__}")
-                print(f"Exception Message: {str(e)}")
+        if not node_features:
+            node_features = torch.zeros(1, len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))  # Safe fallback tensor
+        else:
+            try:
+                node_features = torch.stack(node_features)
+            except Exception as e:
+                def print_full_error(e):
+                    tb = e.__traceback__
+                    print(f"Exception Type: {type(e).__name__}")
+                    print(f"Exception Message: {str(e)}")
 
-                while tb:  # Walk through traceback manually
-                    print(f"    File: {tb.tb_frame.f_code.co_filename}, Line: {tb.tb_lineno}, in {tb.tb_frame.f_code.co_name}")
-                    tb = tb.tb_next
-            print_full_error(e)
-            print(f"Args: {e.args}")
+                    while tb:  # Walk through traceback manually
+                        print(f"    File: {tb.tb_frame.f_code.co_filename}, Line: {tb.tb_lineno}, in {tb.tb_frame.f_code.co_name}")
+                        tb = tb.tb_next
+                print_full_error(e)
+                print(f"Args: {e.args}")
 
         # Normalize Features if enabled
         if self.normalize_features:
