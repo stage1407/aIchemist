@@ -8,6 +8,8 @@ sys.path.insert(0, str(database))
 from enum import Enum
 import torch
 from torch_geometric.loader import DataLoader
+from torch_geometric.data import Batch
+from torch_geometric.utils import from_networkx
 from torch.optim import Adam
 from sklearn.metrics import accuracy_score, f1_score
 from src.func.chem_structures import properties
@@ -171,6 +173,10 @@ class ModelType(Enum):
     GAT = 2
     VGAE = 3
 
+def custom_collate(batch):
+    data_list = [from_networkx(graph) for graph in batch]
+    return Batch.from_data_list(data_list)
+
 # Haupttrainingspipeline
 def main(model_type : ModelType):
     train_mol_graphs = Extractor(DatasetType.TRAINING)
@@ -181,13 +187,13 @@ def main(model_type : ModelType):
     train_dataset = ReactionDataset(train_mol_graphs.data, converter)
     val_dataset = ReactionDataset(val_mol_graphs.data, converter)
 
-    train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True, num_workers=6, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
-    val_loader = DataLoader(val_dataset, batch_size=config["batch_size"], num_workers=6, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
+    train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=12, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
+    val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=12, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
     if MOCK_ON:
         ####### MOCK #######
         mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)
-        train_loader = DataLoader(mock_dataset[:80], batch_size=8, shuffle=True)
-        val_loader = DataLoader(mock_dataset[80:], batch_size=8, shuffle=False)
+        train_loader = DataLoader(mock_dataset[:80], collate_fn=custom_collate, batch_size=8, shuffle=True)
+        val_loader = DataLoader(mock_dataset[80:], collate_fn=custom_collate, batch_size=8, shuffle=False)
         ####################
     input_dim = len(properties["node_features"])
     edge_attr_dim = len(properties["edge_features"])
