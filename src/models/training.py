@@ -57,7 +57,7 @@ def train(model, loader, optimizer, device):
     total_loss = 0
     all_preds = []
     all_targets = []
-    for educt_graph, react_graph in loader:
+    for batch_idx, (educt_graph, react_graph) in enumerate(loader):
         educt_graph = educt_graph.to(device)
         react_graph = react_graph.to(device)
         optimizer.zero_grad()
@@ -83,8 +83,9 @@ def train(model, loader, optimizer, device):
 
         del loss, predicted_reaction
         torch.cuda.empty_cache()
-        # gc.collect()
 
+        if batch_idx % 100 == 0:
+            gc.collect()
 
     # Durchschnittliche Verlustfunktion
     avg_loss = total_loss / len(loader)
@@ -105,7 +106,7 @@ def validate(model, loader, device):
     all_targets = []
 
     with torch.no_grad():
-        for data, react_graph in loader:
+        for batch_idx, (data, react_graph) in enumerate(loader):
             data = data.to(device)
 
             # Forward-Pass
@@ -124,7 +125,11 @@ def validate(model, loader, device):
 
             del loss, predicted_reaction
             torch.cuda.empty_cache()
-            # gc.collect()
+
+            if batch_idx % 100 == 0:
+                gc.collect()
+
+            
 
 
 
@@ -157,11 +162,11 @@ def main(model_type : ModelType):
 
     converter = MolGraphConverter(normalize_features=True, one_hot_edges=True)
 
-    train_dataset = ReactionDataset(train_mol_graphs.data, converter)
-    val_dataset = ReactionDataset(val_mol_graphs.data, converter)
+    train_dataset = ReactionDataset(train_mol_graphs.data, converter, cache=True)
+    val_dataset = ReactionDataset(val_mol_graphs.data, converter, cache=True)
 
-    train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=12, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
-    val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=12, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
+    train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=6, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
+    val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=6, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
     if MOCK_ON:
         ####### MOCK #######
         mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)

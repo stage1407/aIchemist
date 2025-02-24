@@ -120,7 +120,8 @@ class mol_graph(nx.Graph):
                     try:
                         mol : Chem.rdchem.Mol = Chem.MolFromSmarts(smarts)
                     except:
-                        print(smiles)
+                        # print(smiles)
+                        pass
                 self.mols.append(AddHs(mol))
         else:
             self.mols = mols
@@ -262,7 +263,7 @@ class mol_graph(nx.Graph):
             deg = self.degree(v)
             elem = self.get_atom_element(v)
             if deg != valence_electrons(elem):
-                print(f"Wrong number of valence electrons on {elem}{v}!")
+                # print(f"Wrong number of valence electrons on {elem}{v}!")
                 return False            
         return True
 
@@ -331,8 +332,8 @@ class reaction_graph(nx.Graph):
         if mol_educts is not None and mol_products is not None:
             self.educts = mol_educts
             self.products = mol_products
-            print(mol_educts.smiles)
-            print(mol_products.smiles)
+            # print(mol_educts.smiles)
+            # print(mol_products.smiles)
             self.create_reaction_graph()
         elif graph is not None:
             # print("Debug1:", type(graph.nodes))
@@ -350,15 +351,15 @@ class reaction_graph(nx.Graph):
         
         # Derive atom-mapping
         atom_mapping = self.compute_atom_mapping(selected_mcs)
-        print("Atom Mapping:",atom_mapping)
+        # print("Atom Mapping:",atom_mapping)
         # Compute bond changes
         bond_changes = self.compute_bond_changes(atom_mapping)
-        print("Bond Changes:",bond_changes)
+        # print("Bond Changes:",bond_changes)
         # Create nodes and edges in reaction_graph based on bond_changes between educts and products
         # print(selected_pairs,atom_mapping,bond_changes)
         self.build_graph_from_bond_changes(bond_changes)
-        print("Nodes:",self.nodes)
-        print("Edges:",self.edges)
+        # print("Nodes:",self.nodes)
+        # print("Edges:",self.edges)
         # Save atom mapping
         self.bijection = atom_mapping
 
@@ -390,7 +391,7 @@ class reaction_graph(nx.Graph):
 
             counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
-                print(f"Comparing Reactant {i} with Product {j}...")
+                # print(f"Comparing Reactant {i} with Product {j}...")
                 # Compute Maximal Common Substructure
                 mcs_result = rdFMCS.FindMCS(
                     [reactant, product],
@@ -403,7 +404,8 @@ class reaction_graph(nx.Graph):
                 if not mcs_result.numAtoms:
                     continue
                 else:
-                    print("Found")
+                    # print("Found")
+                    pass
 
                 mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
 
@@ -426,14 +428,14 @@ class reaction_graph(nx.Graph):
 
                 mcs_size = bond_sum
 
-                print(f"MCS Size between Reactant ({i+1}/{len(r_list)}) and Product ({j+1}/{len(p_list)}): {mcs_size}")
+                # print(f"MCS Size between Reactant ({i+1}/{len(r_list)}) and Product ({j+1}/{len(p_list)}): {mcs_size}")
                 chi = GraphMatcher(reactants.cc_list[i], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
                 psi = GraphMatcher(products.cc_list[j], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
 
                 chi_mapping = next(chi.subgraph_isomorphisms_iter(), None)
                 psi_mapping = next(psi.subgraph_isomorphisms_iter(), None)
 
-                print("Subgraphs were found")
+                # print("Subgraphs were found")
 
                 if chi_mapping is None or psi_mapping is None:
                     continue
@@ -517,7 +519,7 @@ class reaction_graph(nx.Graph):
                     p_env = compute_bond_env(p_graph, p_atom)
                     cost_matrix[i,j] = len(e_env.symmetric_difference(p_env))       # Maximize Overlap
         
-        print(cost_matrix)
+        # print(cost_matrix)
 
         rows, cols = linear_sum_assignment(cost_matrix)
 
@@ -537,9 +539,9 @@ class reaction_graph(nx.Graph):
         #        atom : Chem.Atom = atom
         #        atom_indices.append(atom.GetIdx())
         if atom_mapping == {} or atom_mapping is None:
-            print("Shit happens")
+            # print("Shit happens")
             return {}                                   # TODO
-        print("Things happen...")
+        # print("Things happen...")
         # print([((atom_mapping[e[0]],atom_mapping[e[1]]), self.products.get_edge_data(atom_mapping[e[0]],atom_mapping[e[1]])) for e in self.educts.edges])
         # print([(e, self.educts.get_edge_data(e[0],e[1])) for e in self.educts.edges])
         # print((list(self.products.edges),list(map(lambda x: self.get_edge_data(x[0],x[1]),self.products.edges))))
@@ -553,13 +555,13 @@ class reaction_graph(nx.Graph):
                 # print(self.products.get_edge_data(prod_n1,prod_n2))
                 # print(self.educts.get_bond_features(ed_n1,ed_n2))
                 # TODO: Debug (No balance : Just added bonds No removals)
-                print(self.products)
+                # print(self.products)
                 ed_type = self.educts.get_edge_data(ed_n1,ed_n2)["bond_type"] \
                     if self.educts.has_edge(ed_n1, ed_n2) else 0
                 prod_type = self.products.get_edge_data(prod_n1,prod_n2)["bond_type"] \
                     if self.products.has_edge(prod_n1,prod_n2) else 0
                 diff = prod_type - ed_type
-                print(diff)
+                # print(diff)
                 if diff != 0:
                     e = (idx1,idx2)
                     bond_changes[e] = diff
@@ -615,9 +617,9 @@ def transform(G : mol_graph, omega : list, G_R : reaction_graph):
             if (omega[u],omega[v]) not in G_R.psi.keys():
                 continue
             #? Aromatic Bond, Tiple Bond, Double Bond, Simple Bond, Hydrogen Bond
-            print("Reaction between: 1. G_R.psi, 2. G.data_before, 3. G.data_after")
-            print(u,v,G_R.psi[(omega[u],omega[v])])
-            print(u,v,G.get_edge_data(u,v))
+            # print("Reaction between: 1. G_R.psi, 2. G.data_before, 3. G.data_after")
+            # print(u,v,G_R.psi[(omega[u],omega[v])])
+            # print(u,v,G.get_edge_data(u,v))
             x = -1
             if (u,v) in G.phi.keys():
                 x = G.phi[(u,v)] + G_R.psi[(omega[u],omega[v])]
@@ -629,6 +631,6 @@ def transform(G : mol_graph, omega : list, G_R : reaction_graph):
             # G[u][v]["bond_type"] = G[u][v]["bond_type"] + G_R.psi[(omega[u],omega[v])]
             if float(x) <= 0.0: # G[u][v]["bond_type"] == 0:
                 G.remove_edge(u,v)
-            print(u,v,G.get_edge_data(u,v))
+            # print(u,v,G.get_edge_data(u,v))
     G.phi = phi_
     return G

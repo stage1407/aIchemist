@@ -48,7 +48,7 @@ class MolGraphConverter:
             atom_mapping = r_graph.bijection
 
             # Get atomic properties from educt and product graphs
-            print("Feature Educt:",educt_graph.nodes[node_idx]["feature"])
+            # print("Feature Educt:",educt_graph.nodes[node_idx]["feature"])
             educt_features = torch.tensor(educt_graph.nodes[node_idx]["feature"], dtype=torch.float) \
                 if node_idx in educt_graph.nodes else torch.zeros(len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))
             product_features = torch.tensor(product_graph.nodes[atom_mapping[node_idx]]["feature"], dtype=torch.float) \
@@ -58,7 +58,7 @@ class MolGraphConverter:
             feature_vector = product_features - educt_features
             node_features.append(feature_vector)
 
-        print("Tensor:", node_features)
+        # print("Tensor:", node_features)
         if not node_features:
             node_features = torch.zeros(1, len(product_graph.nodes[next(iter(product_graph.nodes))]["feature"]))  # Safe fallback tensor
         else:
@@ -114,14 +114,14 @@ class MolGraphConverter:
     def reaction_to_data(self, react_data):
         rd = react_data
         scalar = 0
-        print("Scaling Reaction Data...")
+        # print("Scaling Reaction Data...")
         min_num = min(rd["educt_amounts"] + rd["product_amounts"] + [100])      # TODO: Catch
         scalar = 1/min(rd["educt_amounts"] + rd["product_amounts"] + [100])     # TODO: This
         list_ed = zip(list(rd["educts"]),list(rd["educt_amounts"]))
         smilies_ed = []
         for smiles,num in list_ed:
             amount = 1 if num == min_num else int(num*scalar)               #NaIve Scale
-            print(amount)
+            # print(amount)
             smilies_ed += amount*[smiles]
         ed = mol_graph(smilies=smilies_ed)
         smilies_pr = []

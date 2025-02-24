@@ -184,7 +184,7 @@ def derive_from_data(msg : Message):
         #print(reaction_data["educt_amounts"],reaction_data["product_amounts"])
         
         # Down-Scale Number of molecules
-        print(reaction_data["educt_amounts"])
+        # print(reaction_data["educt_amounts"])
         downscale_factor = max(1,gcd(*(reaction_data["educt_amounts"] + reaction_data["product_amounts"])))
         downscale = lambda y : [max(1,x // downscale_factor) for x in y]
         reaction_data["educt_amounts"] = downscale(reaction_data["educt_amounts"])
