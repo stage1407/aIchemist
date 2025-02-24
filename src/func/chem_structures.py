@@ -477,7 +477,7 @@ class reaction_graph(nx.Graph):
         total_mcs_size = 0
         for r_idx, p_idx in zip(reactant_indices, product_indices):
             for pair in pairs:
-                if reactants.cc_list[r_idx] == pair[0] and products.cc_list[p_idx] == pair[1]:
+                if reactants.mols[r_idx] == pair[0] and products.mols[p_idx] == pair[1]:
                     selected_pairs.append((pair[0],pair[1]))
                     selected_mcs_results.append(pair[2])
                     total_mcs_size += pair[3]
