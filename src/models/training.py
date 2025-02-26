@@ -165,8 +165,8 @@ def main(model_type : ModelType):
     train_dataset = ReactionDataset(train_mol_graphs.data, converter, cache=True)
     val_dataset = ReactionDataset(val_mol_graphs.data, converter, cache=True)
 
-    train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=6, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
-    val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=6, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
+    train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=4, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
+    val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=4, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
     if MOCK_ON:
         ####### MOCK #######
         mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)

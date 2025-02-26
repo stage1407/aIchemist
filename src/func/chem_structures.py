@@ -391,15 +391,17 @@ class reaction_graph(nx.Graph):
 
             counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
-                # print(f"Comparing Reactant {i} with Product {j}...")
+                print(f"Comparing Reactant {i} with Product {j}...")
                 # Compute Maximal Common Substructure
                 mcs_result = rdFMCS.FindMCS(
                     [reactant, product],
                     bondCompare=rdFMCS.BondCompare.CompareOrder,
                     atomCompare=rdFMCS.AtomCompare.CompareElements,
-                    timeout=20,
+                    timeout=15,
                     completeRingsOnly=False
                 )
+
+                print(f"✅ MCS abgeschlossen für {i} und {j}")
 
                 if not mcs_result.numAtoms:
                     continue
@@ -468,8 +470,12 @@ class reaction_graph(nx.Graph):
         if num_reactants == 0 or num_products == 0:
             print("No reactants or products available! Returning empty pairs.")
             return [], [], 0
+        
+        print("Before LinearSumAssignment")
 
         reactant_indices, product_indices = linear_sum_assignment(cost_matrix)
+
+        print("After LinearSumAssignment")
 
         # Gathering maximal MCS and their pairs
         selected_pairs = []
