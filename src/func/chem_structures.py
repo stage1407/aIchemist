@@ -401,7 +401,7 @@ class reaction_graph(nx.Graph):
                     completeRingsOnly=False
                 )
 
-                print(f"✅ MCS abgeschlossen für {i} und {j}")
+                print(f"MCS abgeschlossen für {i} und {j}")
 
                 if not mcs_result.numAtoms:
                     continue
