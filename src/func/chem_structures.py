@@ -95,6 +95,19 @@ def get_bond_properties(bond : Chem.Bond, p):
     }
     return properties[p]
 
+class CustomMCSProgress(rdFMCS.MCSProgress):
+    def __init__(self, max_calls=1_000):
+        super().__init__()
+        self.call_count = 0
+        self.max_calls = max_calls
+
+    def callback(self, stat, params):
+        self.call_count += 1
+        if self.call_count > self.max_calls:
+            print("Abbruch: Zu viele Iterationen in MCS-Berechnung")
+            return False
+        return True
+
 class mol_graph(nx.Graph):
     def __init__(self, smilies : list[str] = None, mols : Chem.RWMol = None):
         """
@@ -393,13 +406,30 @@ class reaction_graph(nx.Graph):
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
                 print(f"Comparing Reactant {i} with Product {j}...")
                 # Compute Maximal Common Substructure
-                mcs_result = rdFMCS.FindMCS(
-                    [reactant, product],
-                    bondCompare=rdFMCS.BondCompare.CompareOrder,
-                    atomCompare=rdFMCS.AtomCompare.CompareElements,
-                    timeout=15,
-                    completeRingsOnly=False
-                )
+                mcs_cache = {}
+                def get_mcs(r, p):
+                    key = (r.GetProp('_Name'), p.GetProp('_Name'))
+                    if key in mcs_cache:
+                        return mcs_cache[key]
+                    else:
+                        mcs_params = rdFMCS.MCSParameters()
+                        mcs_params.BondCompareParameters.MatchOrder = True # = rdFMCS.BondCompare.CompareOrder
+                        mcs_params.AtomCompareParameters.MatchElements = True # = rdFMCS.AtomCompare.CompareElements
+                        mcs_params.Timeout = 10
+                        mcs_params.MaximizeBonds = True
+                        mcs_params.CompleteRingsOnly = False
+                        # mcs_params.MatchStereo = True         #TODO Many more compare parameters (see https://rdkit.org/docs)
+                        mcs_params.ProgressCallback = CustomMCSProgress(mcs_calls=10_000)
+                        mcs_bond_params = rdFMCS.MCSBondCompareParameters()
+                        mcs_bond_params.CompleteRingsOnly = True
+                        mcs_params.BondTyper = mcs_bond_params
+                        mcs_result = rdFMCS.FindMCS(
+                            [r, p],
+                            mcs_params
+                        )
+                        mcs_cache[key] = mcs_result
+                        return mcs_result
+                mcs_result = get_mcs(reactant, product)
 
                 print(f"MCS abgeschlossen für {i} und {j}")
 
