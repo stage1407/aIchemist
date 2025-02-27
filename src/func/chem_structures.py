@@ -408,7 +408,9 @@ class reaction_graph(nx.Graph):
                 # Compute Maximal Common Substructure
                 mcs_cache = {}
                 def get_mcs(r, p):
-                    key = (r.GetProp('_Name'), p.GetProp('_Name'))
+                    reactant_smiles = Chem.MolToSmiles(reactant)
+                    product_smiles = Chem.MolToSmiles(product)
+                    key = (reactant_smiles, product_smiles)
                     if key in mcs_cache:
                         return mcs_cache[key]
                     else:
