@@ -101,7 +101,7 @@ class CustomMCSProgress(rdFMCS.MCSProgress):
         self.call_count = 0
         self.max_calls = max_calls
 
-    def callback(self, stat, params):
+    def __call__(self, stat, params):
         self.call_count += 1
         if self.call_count > self.max_calls:
             print("Abbruch: Zu viele Iterationen in MCS-Berechnung")
@@ -419,12 +419,9 @@ class reaction_graph(nx.Graph):
                         mcs_params.AtomCompareParameters.MatchElements = True # = rdFMCS.AtomCompare.CompareElements
                         mcs_params.Timeout = 10
                         mcs_params.MaximizeBonds = True
-                        mcs_params.CompleteRingsOnly = False
+                        mcs_params.BondCompareParameters.CompleteRingsOnly = False
                         # mcs_params.MatchStereo = True         #TODO Many more compare parameters (see https://rdkit.org/docs)
-                        mcs_params.ProgressCallback = CustomMCSProgress(mcs_calls=10_000)
-                        mcs_bond_params = rdFMCS.MCSBondCompareParameters()
-                        mcs_bond_params.CompleteRingsOnly = True
-                        mcs_params.BondTyper = mcs_bond_params
+                        mcs_params.ProgressCallback = CustomMCSProgress(max_calls=10_000)
                         mcs_result = rdFMCS.FindMCS(
                             [r, p],
                             mcs_params
