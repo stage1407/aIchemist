@@ -405,6 +405,7 @@ class reaction_graph(nx.Graph):
             counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
                 print(f"Comparing Reactant {i} with Product {j}...")
+                print(f"Reactant Size {reactant.GetAtomicNum()}", f"Product Size {product.GetAtomicNum()}")
                 # Compute Maximal Common Substructure
                 mcs_cache = {}
                 def get_mcs(r, p):
