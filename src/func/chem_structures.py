@@ -15,6 +15,7 @@ from rdkit.Chem.rdmolops import AddHs
 import periodictable
 from scipy.optimize import linear_sum_assignment
 from networkx.algorithms.isomorphism import GraphMatcher
+import multiprocessing as mp
 
 MAX_DEPTH = 10
 quantum_mechanics = False       # set True for modeling pi-electrons        #!Dummy for now
@@ -334,7 +335,26 @@ def compute_chemical_distance(graph1 : mol_graph, graph2 : mol_graph):
     return sum - 2*mcs_sum
 
 
+def mcs_worker(mols, params, queue):
+    try:
+        result = rdFMCS(mols, params)
+        queue.put(result)
+    except:
+        queue.put(None)
 
+def get_mcs_safe(mols, mcs_params, timeout=10):
+    queue = mp.Queue()
+    process = mp.Process(target = mcs_worker, args=(mols, mcs_params, queue))
+    
+    process.start()
+    process.join(timeout)
+
+    if process.is_alive():
+        print(f"MCS Timeout reached ({timeout} sec)! Terminating process...")
+        process.terminate()
+        process.join()
+        return None
+    return queue.get() if not queue.empty() else None
 
 class reaction_graph(nx.Graph):
     def __init__(self, mol_educts:mol_graph=None, mol_products:mol_graph=None, graph:nx.Graph=None):
@@ -405,7 +425,7 @@ class reaction_graph(nx.Graph):
             counter = 0
             for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
                 print(f"Comparing Reactant {i} with Product {j}...")
-                print(f"Reactant Size {reactant.GetAtomicNum()}", f"Product Size {product.GetAtomicNum()}")
+                print(f"Reactant Size {reactant.GetNumAtoms()}, {reactant.GetNumBonds()}", f"Product Size {product.GetNumAtoms()}, {product.GetNumBonds()}")
                 # Compute Maximal Common Substructure
                 mcs_cache = {}
                 def get_mcs(r, p):
@@ -423,17 +443,14 @@ class reaction_graph(nx.Graph):
                         mcs_params.BondCompareParameters.CompleteRingsOnly = False
                         # mcs_params.MatchStereo = True         #TODO Many more compare parameters (see https://rdkit.org/docs)
                         mcs_params.ProgressCallback = CustomMCSProgress(max_calls=10_000)
-                        mcs_result = rdFMCS.FindMCS(
-                            [r, p],
-                            mcs_params
-                        )
+                        mcs_result = get_mcs_safe([r,p], mcs_params, timeout=15)
                         mcs_cache[key] = mcs_result
                         return mcs_result
                 mcs_result = get_mcs(reactant, product)
 
                 print(f"MCS abgeschlossen für {i} und {j}")
 
-                if not mcs_result.numAtoms:
+                if mcs_result is None or not mcs_result.numAtoms:
                     continue
                 else:
                     # print("Found")
