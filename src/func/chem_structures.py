@@ -335,33 +335,48 @@ def compute_chemical_distance(graph1 : mol_graph, graph2 : mol_graph):
     return sum - 2*mcs_sum
 
 
-def mcs_worker(mols, params, queue):
-    try:
-        result = rdFMCS(mols, params)
-        queue.put(result)
-    except:
-        queue.put(None)
-
-def get_mcs_safe(mols, mcs_params, timeout=10):
+def mcs_worker(args):
+    r, p, timeout = args
     queue = mp.Queue()
-    process = mp.Process(target = mcs_worker, args=(mols, mcs_params, queue))
-    
+    process = mp.Process(target=run_find_mcs, args=(r, p, queue, timeout))
     process.start()
     process.join(timeout)
 
     if process.is_alive():
-        print(f"MCS Timeout reached ({timeout} sec)! Terminating process...")
         process.terminate()
         process.join()
         return None
+    
     return queue.get() if not queue.empty() else None
+
+def run_find_mcs(r,p,queue,timeout):
+    try:
+        # Define Comparison Parameters
+        mcs_params = rdFMCS.MCSParameters()
+        mcs_params.BondCompareParameters.MatchOrder = True
+        mcs_params.AtomCompareParameters.MatchElements = True
+        mcs_params.RingMatchesRingOnly = False
+        mcs_params.Timeout = timeout
+        mcs_params.MaximizeBonds = True
+
+        result = rdFMCS.FindMCS([r,p], mcs_params)
+        queue.put(result)
+    except Exception:
+        queue.put(None)
+
+def compute_mcs_parallel(reactant_list, product_list, num_workers=8, timeout=10):
+    mol_pairs = [(r,p,timeout) for r in reactant_list for p in product_list]
+    with mp.Pool(processes=num_workers) as pool:
+        results = pool.map(mcs_worker, mol_pairs)
+
+    return results
 
 class reaction_graph(nx.Graph):
     def __init__(self, mol_educts:mol_graph=None, mol_products:mol_graph=None, graph:nx.Graph=None):
         assert (mol_educts is not None and mol_products is not None) or graph is not None 
 
         super().__init__()
-
+        self.mcs_cache = {}
         if mol_educts is not None and mol_products is not None:
             self.educts = mol_educts
             self.products = mol_products
@@ -406,31 +421,64 @@ class reaction_graph(nx.Graph):
         return True
     """
 
-    def maximize_disjoint_mcs(self):
-        reactants = self.educts
-        products = self.products
+    def get_mcs_cached(self, r,p,timeout=10):
+        mcs_cache = self.mcs_cache
+        reactant_smiles = Chem.MolToSmiles(r, canonical=True)
+        product_smiles = Chem.MolToSmiles(p, canonical=True)
+        key = (reactant_smiles, product_smiles)
 
-        print("Maximizing MCS...")
-        print(f"Reactants count: {len(reactants.mols)} | Products count: {len(products.mols)}")
+        if key in mcs_cache:
+            return mcs_cache[key]
+    
+        mcs_result = mcs_worker((r,p,timeout))
 
-        def compute_mcs_sizes(r_list, p_list):
-            """
-            Computes the MCS sizes between reactants and products.
-            Returns a weight matrix and the corresponding pairs.
-            """
+        mcs_cache[key] = mcs_result
+        return mcs_result
 
-            pairs = []
-            weights = []
+    def compute_mcs_sizes(self, r_list, p_list, num_workers=8, timeout=10):
+        """
+        Computes the MCS sizes between reactants and products.
+        Returns a weight matrix and the corresponding pairs.
+        """
 
-            counter = 0
-            for (i, reactant), (j, product) in times(enumerate(r_list), enumerate(p_list)):
-                print(f"Comparing Reactant {i} with Product {j}...")
-                print(f"Reactant Size {reactant.GetNumAtoms()}, {reactant.GetNumBonds()}", f"Product Size {product.GetNumAtoms()}, {product.GetNumBonds()}")
-                # Compute Maximal Common Substructure
-                mcs_cache = {}
-                def get_mcs(r, p):
-                    reactant_smiles = Chem.MolToSmiles(reactant)
-                    product_smiles = Chem.MolToSmiles(product)
+        pairs = []
+        weights = []
+
+        mol_pairs = [(r,p) for r in r_list for p in p_list]
+        results = []
+
+        for r, p in mol_pairs:
+            cached_result = self.get_mcs_cached(r,p,timeout=timeout)
+            if cached_result is not None:
+                results.append((r,p,cached_result))
+            else:
+                results.append((r,p,None))
+
+        non_cached_pairs = [(r,p,timeout) for r,p,res in results if res is None]
+        computed_results = compute_mcs_parallel([r for r,_,_ in non_cached_pairs],
+                                                [p for _,p,_ in non_cached_pairs],
+                                                num_workers=num_workers,timeout=timeout)
+
+        idx = 0
+        final_results = []
+        for r, p, res in results:
+            if res is None:
+                res = computed_results[idx]
+                idx += 1
+            final_results.append((r,p,res))
+
+        counter = 0
+        for (r_idx,reactant), (p_idx,product) in times(enumerate(r_list),enumerate(p_list)):
+            mcs_result = final_results[counter][2]
+            counter += 1
+            if mcs_result is None or not mcs_result.numAtoms:
+                continue
+            # print(f"Comparing Pair {i} of {n}")
+            # print(f"Reactant Size {reactant.GetNumAtoms()}, {reactant.GetNumBonds()}", f"Product Size {product.GetNumAtoms()}, {product.GetNumBonds()}")
+            # Compute Maximal Common Substructure
+            """def get_mcs(r, p):
+            reactant_smiles = Chem.MolToSmiles(reactant)
+                product_smiles = Chem.MolToSmiles(product)
                     key = (reactant_smiles, product_smiles)
                     if key in mcs_cache:
                         return mcs_cache[key]
@@ -446,59 +494,67 @@ class reaction_graph(nx.Graph):
                         mcs_result = get_mcs_safe([r,p], mcs_params, timeout=15)
                         mcs_cache[key] = mcs_result
                         return mcs_result
-                mcs_result = get_mcs(reactant, product)
+                    mcs_result = get_mcs_cached(reactant, product,timeout=15)
 
-                print(f"MCS abgeschlossen für {i} und {j}")
+                    print(f"MCS abgeschlossen für {i} und {j}")
 
-                if mcs_result is None or not mcs_result.numAtoms:
+                    if mcs_result is None or not mcs_result.numAtoms:
                     continue
-                else:
+                    else:
                     # print("Found")
-                    pass
+                        pass
+                        """
 
-                mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
+            mcs_mol = Chem.MolFromSmarts(mcs_result.smartsString)
 
-                bond_sum = 0
+            bond_sum = 0
 
-                mcs_graph = nx.Graph()
-                k = counter
-                for atom in mcs_mol.GetAtoms():
-                    atom_symbol = atom.GetSymbol()
-                    #? Counter necessary?
-                    mcs_graph.add_node(atom.GetIdx() + counter, element=atom_symbol)
-                    k += 1
+            mcs_graph = nx.Graph()
+            k = counter
+            for atom in mcs_mol.GetAtoms():
+                atom_symbol = atom.GetSymbol()
+                #? Counter necessary?
+                mcs_graph.add_node(atom.GetIdx() + counter, element=atom_symbol)
+                k += 1
 
-                for bond in mcs_mol.GetBonds():
-                    u, v = bond.GetBeginAtomIdx() + counter, bond.GetEndAtomIdx() + counter
-                    bond_type = bond.GetBondTypeAsDouble()
-                    bond_sum += bond_type
-                    mcs_graph.add_edge(u,v,bond_type=bond_type)
-                counter = k
+            for bond in mcs_mol.GetBonds():
+                u, v = bond.GetBeginAtomIdx() + counter, bond.GetEndAtomIdx() + counter
+                bond_type = bond.GetBondTypeAsDouble()
+                bond_sum += bond_type
+                mcs_graph.add_edge(u,v,bond_type=bond_type)
+            counter = k
 
-                mcs_size = bond_sum
+            mcs_size = bond_sum
 
-                # print(f"MCS Size between Reactant ({i+1}/{len(r_list)}) and Product ({j+1}/{len(p_list)}): {mcs_size}")
-                chi = GraphMatcher(reactants.cc_list[i], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
-                psi = GraphMatcher(products.cc_list[j], mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
+            # print(f"MCS Size between Reactant ({i+1}/{len(r_list)}) and Product ({j+1}/{len(p_list)}): {mcs_size}")
+            chi = GraphMatcher(reactant, mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
+            psi = GraphMatcher(product, mcs_graph, node_match=lambda u,v: u["element"] == v["element"])
 
-                chi_mapping = next(chi.subgraph_isomorphisms_iter(), None)
-                psi_mapping = next(psi.subgraph_isomorphisms_iter(), None)
+            chi_mapping = next(chi.subgraph_isomorphisms_iter(), None)
+            psi_mapping = next(psi.subgraph_isomorphisms_iter(), None)
 
-                # print("Subgraphs were found")
+            # print("Subgraphs were found")
 
-                if chi_mapping is None or psi_mapping is None:
-                    continue
+            if chi_mapping is None or psi_mapping is None:
+                continue
 
-                phi_mapping = {chi_mapping[k]: psi_mapping[v] for k, v in chi_mapping.items() if v in psi_mapping}
+            phi_mapping = {chi_mapping[k]: psi_mapping[v] for k, v in chi_mapping.items() if v in psi_mapping}
 
-                # Save the pair and weight
-                if mcs_size > 0:
-                    pairs.append((reactant, product, phi_mapping, mcs_size))
-                    weights.append((i, j, mcs_size))
+            # Save the pair and weight
+            if mcs_size > 0:
+                pairs.append((reactant, product, phi_mapping, mcs_size))
+                weights.append((r_idx, p_idx, mcs_size))
 
-            return pairs, weights
+        return pairs, weights
 
-        pairs, weights = compute_mcs_sizes(reactants.mols, products.mols)
+    def maximize_disjoint_mcs(self):
+        reactants = self.educts
+        products = self.products
+
+        print("Maximizing MCS...")
+        print(f"Reactants count: {len(reactants.mols)} | Products count: {len(products.mols)}")
+
+        pairs, weights = self.compute_mcs_sizes(reactants.mols, products.mols)
 
         print(f"Found {len(pairs)} MCS pairs.")
 
