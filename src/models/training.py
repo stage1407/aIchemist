@@ -58,6 +58,9 @@ def train(model, loader, optimizer, device):
     all_preds = []
     all_targets = []
     for batch_idx, (educt_graph, react_graph) in enumerate(loader):
+        if react_graph is None or educt_graph is None:
+            print("None-Instance!")
+            continue
         educt_graph = educt_graph.to(device)
         react_graph = react_graph.to(device)
         optimizer.zero_grad()
@@ -65,7 +68,7 @@ def train(model, loader, optimizer, device):
         # Forward-Pass
         # data.x = pad_missing_features(data.x, target_dim=19)
         #data.x = data.x.detach()
-        predicted_reaction = model(educt_graph)
+        predicted_reaction = model(educt_graph.x, educt_graph.edge_index)
         
         # Loss-Berechnung
         loss = compute_graph_loss(predicted_reaction, react_graph)
@@ -107,6 +110,9 @@ def validate(model, loader, device):
 
     with torch.no_grad():
         for batch_idx, (data, react_graph) in enumerate(loader):
+            if react_graph is None or data is None:
+                print("None-Instance!")
+                continue
             data = data.to(device)
 
             # Forward-Pass

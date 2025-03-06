@@ -189,7 +189,7 @@ def derive_from_data(msg : Message):
         downscale = lambda y : [max(1,x // downscale_factor) for x in y]
         reaction_data["educt_amounts"] = downscale(reaction_data["educt_amounts"])
         reaction_data["product_amounts"] = downscale(reaction_data["product_amounts"])
-        print(reaction_data["product_amounts"])
+        # print(reaction_data["product_amounts"])
     except Exception as e:
         # print(traceback.format_exc())
         # print(f"Error occured by extracting datasets: {e}")
@@ -378,7 +378,7 @@ def convert_to_mol(amount : dict, molar_mass : float, smiles : str = None) -> fl
         # print(f"Error occured by converting dataset to mols: {e}")
         return None
 
-for v in [DatasetType.TEST, DatasetType.TRAINING, DatasetType.VALIDATION]:
+"""for v in [DatasetType.TEST, DatasetType.TRAINING, DatasetType.VALIDATION]:
     ex = Extractor(v)
     print(str(v)+ ":", str(len(ex.data)) + "/" + str(ex.loaded_files))
-    #print("Data:", ex.data)
+    #print("Data:", ex.data)"""

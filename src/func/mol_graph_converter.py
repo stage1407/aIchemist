@@ -132,6 +132,6 @@ class MolGraphConverter:
         prod = mol_graph(smilies=smilies_pr)
         #print("Scaling",smilies_ed,smilies_pr)
         react = reaction_graph(ed,prod)
-        #print("Test:",react)
+        print("ReactionGraph:",react)
         #print(self, react, ed, prod)
         return self.convert_to_data(react, ed, prod)
