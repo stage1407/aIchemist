@@ -72,7 +72,7 @@ class Extractor():
             extracted = derive_from_data(msg)
             if extracted is not None:
                 if extracted["educts"] != [] \
-                    and extracted["educt_amounts"] \
+                    and extracted["educt_amounts"] != [] \
                         and extracted["products"] != [] \
                         and extracted["product_amounts"] != []:
                     self.data.append(extracted)

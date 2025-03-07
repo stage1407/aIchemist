@@ -116,7 +116,7 @@ def validate(model, loader, device):
             data = data.to(device)
 
             # Forward-Pass
-            data.x = pad_missing_features(data.x, target_dim=19)
+            #data.x = pad_missing_features(data.x, target_dim=19)
             data.x = data.x.detach()
             predicted_reaction = model(data.x, data.edge_index)
 

@@ -9,6 +9,21 @@ from torch_geometric.data import Data
 from torch_geometric.utils import from_networkx
 import numpy as np
 
+def mol_graph_to_data(mg : mol_graph):
+    node_indices = sorted(mol_graph.nodes)
+    features = [mol_graph.nodes[i]["feature"] for i in node_indices]
+    x = torch.tensor(features, dtype=torch.float)
+    edges = list(mol_graph.edges)
+    if len(edges) > 0:
+        edge_index = torch.tensor([[u,v] for u,v,_ in edges], dtype=torch.long).t().contiguous()
+        edge_attr_list = [edge_data["feature"] for _, _, edge_data in edges]
+        edge_attr = torch.tensor(edge_attr_list, dtype=torch.float)
+    else:
+        edge_index = torch.empty((2,0), dtype=torch.long)
+        edge_attr = torch.empty((0,0),dtype=torch.float)
+    data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr)
+    return data
+
 class MolGraphConverter:
     """
     Eine Klasse, um `mol_graph`-Objekte in PyTorch Geometric `Data`-Objekte zu konvertieren.
@@ -24,16 +39,7 @@ class MolGraphConverter:
         self.normalize_features = normalize_features
         self.one_hot_edges = one_hot_edges
 
-    def convert_to_data(self, r_graph : reaction_graph, educt_graph, product_graph):
-        """
-        Converts a `r_graph` into a PyTorch Geometric `Data` object, using atomic properties
-        from the product graph MINUS the atomic properties from the educt graph.
-
-        :param reaction_graph: The `r_graph` instance representing bond changes in a reaction.
-        :param educt_graph: The `mol_graph` of the reactants.
-        :param product_graph: The `mol_graph` of the products.
-        :return: A PyTorch Geometric `Data` object.
-        """
+    """def convert_to_data(self, r_graph : reaction_graph, educt_graph, product_graph):
         # Extract Node Features (Atomic Property Changes)
         node_features = []
         node_index_map = {}  # Maps reaction graph node index to sequential index for PyTorch Geometric
@@ -109,7 +115,63 @@ class MolGraphConverter:
             edge_index=edge_index,
             edge_attr=edge_attr,
         )
-        return data, from_networkx(educt_graph)
+        return data"""
+
+    def reaction_graph_to_data(r_graph : reaction_graph, educt_graph : mol_graph, product_graph : mol_graph):
+        node_indices = sorted(r_graph.nodes)
+        node_index_map = {}
+        diff_features = []
+        for i, node in enumerate(node_indices):
+            node_index_map[node] = i
+            if node in educt_graph.nodes and r_graph.bijection.get(node) in product_graph.nodes:
+                educt_feat = torch.tensor(educt_graph.nodes[node]["feature"], dtype=torch.float)
+                prod_feat = torch.tensor(product_graph.nodes[r_graph.bijection[node]]["feature"], dtype=torch.float)
+                diff_feat = prod_feat - educt_feat
+            else:
+                # Falls keine Zuordnung existiert, Standardvektor (z.B. Nullen) verwenden
+                feat_dim = len(next(iter(educt_graph.nodes.values()))["feature"])
+                diff_feat = torch.zeros(feat_dim, dtype=torch.float)
+            diff_features.append(diff_feat)
+        x = torch.stack(diff_features)
+
+        # 2. Kanteninformationen
+        edge_index_list = []
+        edge_attr_list = []
+        for edge in r_graph.edges:
+            u, v = edge
+            # Verwende den sequenziellen Index, den wir für r_graph-Knoten vergeben haben
+            if u in node_index_map and v in node_index_map:
+                edge_index_list.append([node_index_map[u], node_index_map[v]])
+                # Nun: Falls in educt_graph und product_graph die entsprechenden Kanten existieren,
+                # berechne den Unterschied der Kantenfeatures.
+                # Hier musst du anpassen, wie deine Kantenfeatures gespeichert sind.
+                educt_edge = educt_graph.edges.get((u, v), None)
+                prod_edge = product_graph.edges.get((r_graph.bijection.get(u), r_graph.bijection.get(v)), None)
+                if educt_edge is not None and prod_edge is not None:
+                    # Beispiel: Es wird angenommen, dass in beiden Graphen unter "feature" ein Vektor steht.
+                    educt_edge_feat = educt_edge.get("feature", None)
+                    prod_edge_feat = prod_edge.get("feature", None)
+                    if educt_edge_feat is not None and prod_edge_feat is not None:
+                        # Berechne die Differenz (Elementweise)
+                        diff_edge_feat = [p - e for p, e in zip(prod_edge_feat, educt_edge_feat)]
+                    else:
+                        # Fallback: Vektor aus Nullen, Länge wie gewünscht (hier beispielhaft 1)
+                        diff_edge_feat = [0]
+                else:
+                    # Falls keine Kanten in beiden Graphen existieren, definiere einen Standard
+                    diff_edge_feat = [0]
+                edge_attr_list.append(diff_edge_feat)
+    
+        if edge_index_list:
+            edge_index = torch.tensor(edge_index_list, dtype=torch.long).t().contiguous()
+            edge_attr = torch.tensor(edge_attr_list, dtype=torch.float)
+        else:
+            edge_index = torch.empty((2, 0), dtype=torch.long)
+            edge_attr = torch.empty((0, 0), dtype=torch.float)
+
+        data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr)
+        return data
+
     
     def reaction_to_data(self, react_data):
         rd = react_data
@@ -134,4 +196,7 @@ class MolGraphConverter:
         react = reaction_graph(ed,prod)
         print("ReactionGraph:",react)
         #print(self, react, ed, prod)
-        return self.convert_to_data(react, ed, prod)
+        # return self.convert_to_data(react, ed, prod)
+        ed_data = mol_graph_to_data(ed)
+        react_data = self.reaction_graph_to_data(react, ed, prod)
+        return ed_data,react_data
