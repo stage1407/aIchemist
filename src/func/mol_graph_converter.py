@@ -10,13 +10,14 @@ from torch_geometric.utils import from_networkx
 import numpy as np
 
 def mol_graph_to_data(mg : mol_graph):
-    node_indices = sorted(mol_graph.nodes)
-    features = [mol_graph.nodes[i]["feature"] for i in node_indices]
+    node_indices = sorted(mg.nodes)
+    features = [mg.nodes[i]["feature"] for i in node_indices]
     x = torch.tensor(features, dtype=torch.float)
-    edges = list(mol_graph.edges)
+    edges = list(mg.edges)
     if len(edges) > 0:
-        edge_index = torch.tensor([[u,v] for u,v,_ in edges], dtype=torch.long).t().contiguous()
-        edge_attr_list = [edge_data["feature"] for _, _, edge_data in edges]
+        edge_index = torch.tensor([[u,v] for u,v in edges], dtype=torch.long).t().contiguous()
+        print(edges)
+        edge_attr_list = [mg.edges[e]["feature"] for e in edges]
         edge_attr = torch.tensor(edge_attr_list, dtype=torch.float)
     else:
         edge_index = torch.empty((2,0), dtype=torch.long)
@@ -198,5 +199,5 @@ class MolGraphConverter:
         #print(self, react, ed, prod)
         # return self.convert_to_data(react, ed, prod)
         ed_data = mol_graph_to_data(ed)
-        react_data = self.reaction_graph_to_data(react, ed, prod)
+        react_data = MolGraphConverter.reaction_graph_to_data(react, ed, prod)
         return ed_data,react_data

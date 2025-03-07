@@ -19,6 +19,8 @@ import signal
 import os
 from concurrent.futures import ProcessPoolExecutor, TimeoutError
 
+NUM_WORKERS = 2
+
 mp.set_start_method('spawn', force=True)
 
 def mol_to_nx(mol):
@@ -503,7 +505,7 @@ class reaction_graph(nx.Graph):
         # mol_pairs = [(r, p) for r in r_list for p in p_list]
         computed_results = compute_mcs_parallel(r_list, p_list, nw, timeout=timeout)
 
-        pairs = compute_graph_matchers_parallel(reactants, products, computed_results, 8)
+        pairs = compute_graph_matchers_parallel(reactants, products, computed_results, nw)
 
         """
         pairs = [] #[(None, None, None, None)] * num_combinations
@@ -546,7 +548,7 @@ class reaction_graph(nx.Graph):
         print("Maximizing MCS...")
         print(f"Reactants count: {len(reactants.mols)} | Products count: {len(products.mols)}")
 
-        pairs = self.compute_mcs_sizes(reactants, products, 8)
+        pairs = self.compute_mcs_sizes(reactants, products, NUM_WORKERS)
 
         #print(f"Found {len(pairs)} MCS pairs.")
 
