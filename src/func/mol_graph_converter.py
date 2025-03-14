@@ -152,17 +152,20 @@ class MolGraphConverter:
                     # Beispiel: Es wird angenommen, dass in beiden Graphen unter "feature" ein Vektor steht.
                     educt_edge_feat = educt_edge.get("feature", None)
                     prod_edge_feat = prod_edge.get("feature", None)
+                    m = len(educt_edge_feat)
+                    n = len(prod_edge_feat)
+                    assert m == n
                     if educt_edge_feat is not None and prod_edge_feat is not None:
                         # Berechne die Differenz (Elementweise)
                         diff_edge_feat = [p - e for p, e in zip(prod_edge_feat, educt_edge_feat)]
                     else:
                         # Fallback: Vektor aus Nullen, Länge wie gewünscht (hier beispielhaft 1)
-                        diff_edge_feat = [0]
+                        diff_edge_feat = [0]*n
                 else:
                     # Falls keine Kanten in beiden Graphen existieren, definiere einen Standard
-                    diff_edge_feat = [0]
+                    diff_edge_feat = [0]*10             #! Hard-Coded: Needs refactoring
                 edge_attr_list.append(diff_edge_feat)
-    
+        print(edge_attr_list)
         if edge_index_list:
             edge_index = torch.tensor(edge_index_list, dtype=torch.long).t().contiguous()
             edge_attr = torch.tensor(edge_attr_list, dtype=torch.float)

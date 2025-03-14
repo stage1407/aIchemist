@@ -24,14 +24,16 @@ from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
-from src.models.loss_function import compute_graph_loss
+from src.models.loss_function import compute_graph_loss, hungarian_loss
+import atom_mapping_predictor as amp
 import gc
 
 MOCK_ON=False
 
 # Beispielkonfiguration
 config = {
-    "hidden_dim": 32,
+    "input_dim": 18,
+    "hidden_dim": 64,
     "batch_size": 32,
     "epochs": 50,
     "learning_rate": 0.05,
@@ -68,7 +70,7 @@ def train(model, loader, optimizer, device):
         # Forward-Pass
         # data.x = pad_missing_features(data.x, target_dim=19)
         #data.x = data.x.detach()
-        predicted_reaction = model(educt_graph.x, educt_graph.edge_index)
+        predicted_reaction = model(educt_graph.x, educt_graph.edge_index, educt_graph.edge_attr)
         
         # Loss-Berechnung
         loss = compute_graph_loss(predicted_reaction, react_graph)
@@ -118,7 +120,7 @@ def validate(model, loader, device):
             # Forward-Pass
             #data.x = pad_missing_features(data.x, target_dim=19)
             data.x = data.x.detach()
-            predicted_reaction = model(data.x, data.edge_index)
+            predicted_reaction = model(data.x, data.edge_index, data.edge_attr)
 
             # Loss-Berechnung
             loss = compute_graph_loss(predicted_reaction, react_graph)
@@ -193,6 +195,9 @@ def main(model_type : ModelType):
         model = ReactionVGAE(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
 
     model.to(config["device"])
+
+#    atom_model = amp.AtomMappingGNN(input_dim=19, hidden_dim=32)        #*  Hyperparameters of
+#    atom_optimizer = torch.optim.Adam(atom_model.parameters(), lr=0.01)     #*  the AtomMappingGNN
 
     optimizer = Adam(model.parameters(), lr=config["learning_rate"])
 

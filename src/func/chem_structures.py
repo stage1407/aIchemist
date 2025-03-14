@@ -19,7 +19,7 @@ import signal
 import os
 from concurrent.futures import ProcessPoolExecutor, TimeoutError
 
-NUM_WORKERS = 2
+NUM_WORKERS = 12
 
 mp.set_start_method('spawn', force=True)
 
@@ -134,6 +134,8 @@ class mol_graph(nx.Graph):
         - mol: Optional; RDKit Mol object. If both smiles and mol are provided, mol will be used.
         """
         super().__init__()
+        self.x = None           # Node Feature Placeholder
+        self.edge_attr = None   # Edge Feature Placeholder
         if (mols is None and smilies is None) or (mols is not None and smilies is not None):
             raise ValueError("Either a valid RDKit molecule or SMILES string must be provided.")
         self.smiles = []
