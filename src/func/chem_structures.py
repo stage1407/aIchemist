@@ -693,13 +693,13 @@ class reaction_graph(nx.Graph):
     def isEmpty(self):
         return self.number_of_nodes == 0
 
-    def chemical_distance(self):
+    def chemical_distance(self, educts, products):
         """
         Computes the chemical Distance between self and other_graph.
         """
         # Sums up
-        sum_g1 = sum(data["weight"] for _,_,data in self.educts.edges(data=True))
-        sum_g2 = sum(data["weight"] for _,_,data in self.products.edges(data=True))
+        sum_g1 = sum(educts.edge_attr)
+        sum_g2 = sum(products.edge_attr)
         
         selected_pairs = self.maximize_disjoint_mcs()
         sum_mcs = 0

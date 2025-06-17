@@ -12,8 +12,8 @@ class ReactionDataset(Dataset):
             print("Preprocessing and Caching of Data...")
             self.cached_data = []
             for idx, mg in enumerate(self.mol_graphs):
-                input_data, target_data = self.converter.reaction_to_data(mg)
-                self.cached_data.append((input_data, target_data))
+                input_data, target_data, prod_data = self.converter.reaction_to_data(mg)
+                self.cached_data.append((input_data, target_data, prod_data))
                 if idx % 10 == 0:
                     print(f"{idx} von {len(self.mol_graphs)} Graphen vorverarbeitet")
         else:
@@ -28,7 +28,7 @@ class ReactionDataset(Dataset):
         else:
             data = self.mol_graphs[idx]
             # print("RD",data)
-            input_data, target_data = self.converter.reaction_to_data(data)
+            input_data, target_data, prod_data = self.converter.reaction_to_data(data)
             # print("Reaction,Educt", reaction_data, input_data)
             # TODO: Maybe they belong to this notation (target graphs instead of randomized targets) (learning the correlation between educt graph and product graph)
             # Add target attributes for node/edge labels (mock example)
@@ -36,4 +36,4 @@ class ReactionDataset(Dataset):
             # data.edge_target = torch.randint(0, 3, (data.edge_index.size(1),))      # Edge change labels
 
             # return data
-            return input_data, target_data
+            return input_data, target_data, prod_data

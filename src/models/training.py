@@ -59,7 +59,7 @@ def train(model, loader, optimizer, device):
     total_loss = 0
     all_preds = []
     all_targets = []
-    for batch_idx, (educt_graph, react_graph) in enumerate(loader):
+    for batch_idx, (educt_graph, react_graph, product_graph) in enumerate(loader):
         if react_graph is None or educt_graph is None:
             print("None-Instance!")
             continue
@@ -73,7 +73,7 @@ def train(model, loader, optimizer, device):
         predicted_reaction = model(educt_graph.x, educt_graph.edge_index, educt_graph.edge_attr)
         
         # Loss-Berechnung
-        loss = compute_graph_loss(predicted_reaction, react_graph)
+        loss = compute_graph_loss(predicted_reaction, react_graph, educt_graph, product_graph, structural_weight=0)
 
         # Backward-Pass und Optimierung
         loss.backward()
@@ -111,7 +111,7 @@ def validate(model, loader, device):
     all_targets = []
 
     with torch.no_grad():
-        for batch_idx, (data, react_graph) in enumerate(loader):
+        for batch_idx, (data, react_graph, product_graph) in enumerate(loader):
             if react_graph is None or data is None:
                 print("None-Instance!")
                 continue
@@ -123,7 +123,7 @@ def validate(model, loader, device):
             predicted_reaction = model(data.x, data.edge_index, data.edge_attr)
 
             # Loss-Berechnung
-            loss = compute_graph_loss(predicted_reaction, react_graph)
+            loss = compute_graph_loss(predicted_reaction, react_graph, data, product_graph, structural_weight=0)
 
             # Speicherung für Metrikberechnung
             all_preds.append(predicted_reaction.argmax(dim=1).detach().cpu())

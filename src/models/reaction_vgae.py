@@ -34,4 +34,5 @@ class ReactionVGAE(VGAE):
         reaction_pred = reaction_graph(graph=reaction_pred)
         reaction_pred.x = z if not self.rl else self.node_decoder(z)
         reaction_pred.edge_attr = edge_attr
+        reaction_pred.edge_index = torch.tensor(edge_index, dtype=torch.long)
         return reaction_pred

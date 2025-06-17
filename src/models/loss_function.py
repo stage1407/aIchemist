@@ -94,10 +94,10 @@ class Chem:
             self.weight = weight
             self.mode = mode
         
-        def forward(self, generated_reaction_graph : reaction_graph, ground_truth_reaction_graph : reaction_graph, eps=1e-8):
+        def forward(self, generated_reaction_graph : reaction_graph, ground_truth_reaction_graph : reaction_graph, educts, products, eps=1e-8):
             # generate the reaction_graph by output of the model.
-            cd_generated = generated_reaction_graph.chemical_distance()
-            cd_ground_truth = ground_truth_reaction_graph.chemical_distance()
+            cd_generated = generated_reaction_graph.chemical_distance(educts, products)
+            cd_ground_truth = ground_truth_reaction_graph.chemical_distance(educts, products)
 
             # ChemDistLoss berechnen
             if self.mode == "absolute":
@@ -114,16 +114,16 @@ class Chem:
 
     #TODO: Chemical Distance as graph theoretic loss function. (Use func.reaction_graph module)
 
-def compute_graph_loss(prediction, ground_truth, structural_weight=1, chem_rule_weight=1, chem_distance_weight=1, tanimoto_weight=1):
+def compute_graph_loss(prediction, ground_truth, educts, products, structural_weight=1, chem_rule_weight=1, chem_distance_weight=1, tanimoto_weight=1):
     alpha, beta, gamma, delta = structural_weight, chem_rule_weight, chem_distance_weight, tanimoto_weight
     print(prediction.x.shape)
     print(ground_truth.x.shape)
-    node_loss = compute_node_loss(prediction.x, ground_truth.x)
-    edge_loss = compute_edge_loss(prediction.edge_attr, ground_truth.edge_attr)
-    chemical_loss = Chem.compute_chemical_loss(prediction.edge_index, prediction.edge_attr, prediction.x)
+    node_loss = compute_node_loss(prediction.x, ground_truth.x) if structural_weight != 0 else 0
+    edge_loss = compute_edge_loss(prediction.edge_attr, ground_truth.edge_attr) if structural_weight != 0 else 0
+    chemical_loss = Chem.compute_chemical_loss(prediction.edge_index, prediction.edge_attr, prediction.x) if chem_rule_weight != 0 else 0
     CD = Chem.ChemicalDistanceLoss(weight=1.0, mode="ratio")
-    chemical_distance_loss = CD(prediction, ground_truth)
-    tanimoto_distance_loss = compute_tanimoto_dist(prediction, ground_truth)
+    chemical_distance_loss = CD(prediction, ground_truth, educts, products) if chem_distance_weight != 0 else 0
+    tanimoto_distance_loss = compute_tanimoto_dist(prediction, ground_truth) if tanimoto_weight != 0 else 0
     total_loss = alpha*(node_loss + edge_loss) + beta*chemical_loss + gamma*chemical_distance_loss + delta*tanimoto_distance_loss
     print("Tanimoto/CD: ", tanimoto_distance_loss, chemical_distance_loss)
     return total_loss

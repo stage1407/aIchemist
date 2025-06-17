@@ -202,5 +202,6 @@ class MolGraphConverter:
         #print(self, react, ed, prod)
         # return self.convert_to_data(react, ed, prod)
         ed_data = mol_graph_to_data(ed)
+        prod_data = mol_graph_to_data(prod)
         react_data = MolGraphConverter.reaction_graph_to_data(react, ed, prod)
-        return ed_data,react_data
+        return ed_data,react_data,prod_data

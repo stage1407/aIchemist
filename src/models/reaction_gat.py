@@ -53,4 +53,5 @@ class ReactionGAT(torch.nn.Module):
         reaction_pred = reaction_graph(graph=reaction_pred)
         reaction_pred.x = x
         reaction_pred.edge_attr = edge_out
+        reaction_pred.edge_index = torch.tensor(edge_index, dtype=torch.long)
         return reaction_pred
