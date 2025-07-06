@@ -15,7 +15,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from src.func.chem_structures import properties
 from src.func.chem_structures import reaction_graph
 # from data.dataloader import DataLoader
-from src.models.mock import generate_mock_dataset
+# from src.models.mock import generate_mock_dataset
 from src.models.reaction_gae import ReactionGAE
 from src.models.gnn_encoder import GNNEncoder
 from src.models.reaction_gat import ReactionGAT
@@ -25,7 +25,7 @@ from data.dataloader import ReactionDataset
 from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
 from src.models.loss_function import compute_graph_loss, hungarian_loss
-import atom_mapping_predictor as amp
+# import atom_mapping_predictor as amp
 import gc
 
 MOCK_ON=False
