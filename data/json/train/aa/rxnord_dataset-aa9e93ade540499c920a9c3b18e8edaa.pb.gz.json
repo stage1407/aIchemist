@@ -1,0 +1,220 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([N:9]([CH2:11][CH2:12][CH2:13][CH2:14][CH2:15][CH2:16][CH2:17][CH3:18])[CH3:10])[CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH3:8].[Cl:19][CH2:20][CH2:21][OH:22]>CC(CC)=O>[Cl-:19].[CH2:11]([N+:9]([CH2:1][CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH3:8])([CH3:10])[CH2:20][CH2:21][OH:22])[CH2:12][CH2:13][CH2:14][CH2:15][CH2:16][CH2:17][CH3:18] |f:3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylethyl ketone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-3-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 200.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5_m0": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylethyl ketone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=O)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-3-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydroxyethyl"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dioctyl methyl amine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCCCC)N(C)CCCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H37N/c1-4-6-8-10-12-14-16-18(3)17-15-13-11-9-7-5-2/h4-17H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 100.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-chloroethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H5ClO/c3-1-2-4/h4H,1-2H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 42.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Initially a hydroxyethyl quat was made by reacting 100 grams of dioctyl methyl amine with 42 mLs of 2-chloroethanol in 200 grams of methylethyl ketone solvent at reflux for 5 hours to obtain a methylethyl ketone solution of dioctyl methyl hydroxyethyl ammonium chloride. To this was added dropwise, 59.04 grams of glutaryl dichloride over a 1 hour period while sparging the mixture with nitrogen. This was held at reflux (90\u00b0 C.) for 30 minutes to give a brown solution of di(dioctyl methyl ammonium ethyl)glutarate dichloride which could be recovered by evaporation of the methylethyl ketone under vacuum."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "at reflux for 5 hours",
+            "duration": {
+                "value": 5.0,
+                "units": "HOUR"
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dioctyl methyl hydroxyethyl ammonium chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].C(CCCCCCC)[N+](CCO)(C)CCCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H42NO.ClH/c1-4-6-8-10-12-14-16-20(3,18-19-21)17-15-13-11-9-7-5-2;/h21H,4-19H2,1-3H3;1H/q+1;/p-1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04883917",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:10:20.936391"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:58:48 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:53 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-da071a234eff4381854ac0080bb84716"
+}

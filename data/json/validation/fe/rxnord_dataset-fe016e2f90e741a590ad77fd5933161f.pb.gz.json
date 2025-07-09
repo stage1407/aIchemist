@@ -1,0 +1,751 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C(O[C:9]([NH:11][C@H:12]1[CH2:17][CH2:16][CH2:15][CH2:14][C@H:13]1[CH2:18][N:19]([CH2:27][C:28]([O:30]CC)=O)[C:20]([O:22]C(C)(C)C)=O)=O)C1C=CC=CC=1.[H][H].[N:35]1([C:40]([C:42]2[CH:49]=[CH:48][C:45](C=O)=[CH:44][CH:43]=2)=[O:41])[CH2:39][CH:38]=[CH:37][CH2:36]1.C(O)(=O)C.C(O[BH-](OC(=O)C)OC(=O)C)(=O)C.[Na+].C(N(CC)CC)C.[Cl:75][C:76]1[CH:84]=[CH:83][C:79](C(Cl)=O)=[CH:78][CH:77]=1>C(OCC)(=O)C.ClCCl.C(O)C.[OH-].[Na+].Cl.O1CCOCC1.[Pd]>[Cl:75][C:76]1[CH:84]=[CH:83][C:79]([C:20]([N:19]2[CH2:18][C@@H:13]3[CH2:14][CH2:15][CH2:16][CH2:17][C@@H:12]3[N:11]([CH2:9][C:45]3[CH:44]=[CH:43][C:42]([C:40]([N:35]4[CH2:36][CH:37]=[CH:38][CH2:39]4)=[O:41])=[CH:49][CH:48]=3)[C:28](=[O:30])[CH2:27]2)=[O:22])=[CH:78][CH:77]=1 |f:4.5,11.12|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m18": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m8_m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-chlorobenzoyl chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C(C(=O)Cl)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H4Cl2O/c8-6-3-1-5(2-4-6)7(9)10/h1-4H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.062,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.14,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m22": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium triacetoxyborohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O[BH-](OC(C)=O)OC(C)=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H10BO6.Na/c1-4(8)11-7(12-5(2)9)13-6(3)10;/h7H,1-3H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 310.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m21": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m12_m13": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H][H]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl [(((1S,2S)-2-(((benzyloxy)carbonyl)amino)cyclohexyl)methyl)(t-butoxycarbonyl)-amino]acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OC(=O)N[C@@H]1[C@@H](CCCC1)CN(C(=O)OC(C)(C)C)CC(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H36N2O6/c1-5-30-21(27)16-26(23(29)32-24(2,3)4)15-19-13-9-10-14-20(19)25-22(28)31-17-18-11-7-6-8-12-18/h6-8,11-12,19-20H,5,9-10,13-17H2,1-4H3,(H,25,28)/t19-,20-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 225.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m15_m16_m17": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solution"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dioxane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCOCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m20": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m14": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-chloro-1,3-dimethylimidazonium chloride"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 84.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.14,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-(2,5-dihydro-1H-pyrrol-1-ylcarbonyl)benzaldehyde"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(CC=CC1)C(=O)C1=CC=C(C=O)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H11NO2/c14-9-10-3-5-11(6-4-10)12(15)13-7-1-2-8-13/h1-6,9H,7-8H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 121.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.065,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m19": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "palladium/carbon"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Pd"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 30.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "were stirred at room temperature for 30 minutes"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "225 mg (0.5 mmol) of ethyl [(((1S,2S)-2-(((benzyloxy)carbonyl)amino)cyclohexyl)methyl)(t-butoxycarbonyl)-amino]acetate was dissolved in 10 ml of ethyl acetate. 30 mg of 10% palladium/carbon was added to the obtained solution, and they were stirred in the presence of hydrogen at room temperature overnight. The reaction solution was filtered through Celite. The solvent was evaporated, and the obtained crude product was dissolved in 10 ml of dichloromethane. 121 mg (0.67 mmol) of 4-(2,5-dihydro-1H-pyrrol-1-ylcarbonyl)benzaldehyde and 0.065 ml (1.14 mmol) of acetic acid were added to the obtained solution, and they were stirred at room temperature for 30 minutes. 310 mg (1.4 mmol) of sodium triacetoxyborohydride was added to the reaction mixture, and they were stirred at room temperature overnight. After the treatment with dichloromethane as the extracting solvent by an ordinary method, the obtained crude product was dissolved in a mixture of 2 ml of ethanol and 2 ml of 1 N sodium hydroxide, and the obtained solution was stirred at room temperature for 4 hours. After the treatment with ethyl acetate as the extracting solvent by an ordinary method, the obtained crude product was dissolved in 5 ml of dichloromethane. 84 mg (0.5 mmol) of 2-chloro-1,3-dimethylimidazonium chloride and 0.14 ml (1.0 mmol) of triethylamine were added to the obtained solution, and they were stirred overnight. After the treatment with dichloromethane as the extracting solvent by an ordinary method, the obtained crude product was dissolved in 5 ml of 4N solution of hydrogen chloride in dioxane and the obtained solution was stirred at room temperature for 2 hours. The solvent was evaporated, and the obtained crude product was dissolved in 5 ml of dichloromethane. 0.062 ml (0.5 mmol) of 4-chlorobenzoyl chloride and 0.14 ml (1.0 mmol) of triethylamine were added to the obtained solution, and they were stirred at room temperature for 4 hours. The solvent was evaporated, and the obtained crude product was treated in the same manner as in step 3 in Example 1 to obtain the title compound."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "The reaction solution was filtered through Celite"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent was evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the obtained crude product"
+        },
+        {
+            "type": "STIRRING",
+            "details": "were stirred at room temperature overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "the obtained solution was stirred at room temperature for 4 hours",
+            "duration": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "were stirred overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "the obtained solution was stirred at room temperature for 2 hours",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent was evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the obtained crude product"
+        },
+        {
+            "type": "STIRRING",
+            "details": "were stirred at room temperature for 4 hours",
+            "duration": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The solvent was evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the obtained crude product"
+        },
+        {
+            "type": "ADDITION",
+            "details": "was treated in the same manner as in step 3 in Example 1"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(5aS,9aS)-4-(4-chlorobenzoyl)-1-[4-(2,5-dihydro-1H-pyrrol-1-ylcarbonyl)benzyl]decahydro-2H-1,4-benzo-diazepin-2-on"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C(C(=O)N2CC(N([C@@H]3[C@H](C2)CCCC3)CC3=CC=C(C=C3)C(=O)N3CC=CC3)=O)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H30ClN3O3/c29-24-13-11-22(12-14-24)28(35)31-18-23-5-1-2-6-25(23)32(26(33)19-31)17-20-7-9-21(10-8-20)27(34)30-15-3-4-16-30/h3-4,7-14,23,25H,1-2,5-6,15-19H2/t23-,25-/m0/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06825191B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:22:44.656012"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:06:44 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:05 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-1894ec1a3e5f417faa53b3067dfd210e"
+}

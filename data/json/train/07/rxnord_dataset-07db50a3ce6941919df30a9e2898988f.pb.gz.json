@@ -1,0 +1,153 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([C:6]1[C:7](=[O:27])[CH2:8][CH:9]([C:13]2[C:18]([S:19]([CH3:22])(=[O:21])=[O:20])=[C:17]([CH3:23])[C:16]([CH3:24])=[C:15]([CH3:25])[C:14]=2[CH3:26])[CH2:10][C:11]=1[OH:12])(=O)[CH2:2][CH2:3][CH3:4].Cl.[CH2:29]([O:31][NH2:32])[CH3:30]>>[CH2:29]([O:31][N:32]=[C:1]([C:6]1[C:7](=[O:27])[CH2:8][CH:9]([C:13]2[C:18]([S:19]([CH3:22])(=[O:21])=[O:20])=[C:17]([CH3:23])[C:16]([CH3:24])=[C:15]([CH3:25])[C:14]=2[CH3:26])[CH2:10][C:11]=1[OH:12])[CH2:2][CH2:3][CH3:4])[CH3:30] |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m0_m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-butyryl-3-hydroxy-5-(6-methylsulfonyl-2,3,4,5-tetramethylphenyl)cyclohex-2-en-1-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)(=O)C=1C(CC(CC1O)C1=C(C(=C(C(=C1S(=O)(=O)C)C)C)C)C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H28O5S/c1-7-8-16(22)20-17(23)9-15(10-18(20)24)19-13(4)11(2)12(3)14(5)21(19)27(6,25)26/h15,23H,7-10H2,1-6H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethoxyamine hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.C(C)ON"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H7NO.ClH/c1-2-4-3;/h2-3H2,1H3;1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( iv )"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2-[1-(Ethoxyimino)butyl]-3-hydroxy-5-(6-methylsulfonyl-2,3,4,5-tetramethylphenyl)cyclohex-2-en-1-one (57) was prepared from 2-butyryl-3-hydroxy-5-(6-methylsulfonyl-2,3,4,5-tetramethylphenyl)cyclohex-2-en-1-one and ethoxyamine hydrochloride following essentially the same procedure as that described in Example 1, part (iv). The product was characterized by proton nuclear magnetic resonance spectroscopy and the spectroscopic data is reported in Table 5, Example 37."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-[1-(Ethoxyimino)butyl]-3-hydroxy-5-(6-methylsulfonyl-2,3,4,5-tetramethylphenyl)cyclohex-2-en-1-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)ON=C(CCC)C=1C(CC(CC1O)C1=C(C(=C(C(=C1S(=O)(=O)C)C)C)C)C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H33NO5S/c1-8-10-18(24-29-9-2)22-19(25)11-17(12-20(22)26)21-15(5)13(3)14(4)16(6)23(21)30(7,27)28/h17,25H,8-12H2,1-7H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04767879",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:06:00.568822"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:51:13 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:21 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-5eb06e7eed3f4943999d3ac847ea7b64"
+}

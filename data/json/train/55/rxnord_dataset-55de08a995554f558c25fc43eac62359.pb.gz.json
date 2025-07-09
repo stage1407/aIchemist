@@ -1,0 +1,300 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "Biginelli"
+        }
+    ],
+    "inputs": {
+        "acid": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "LaCl3 heptahydrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[Cl-].[Cl-].[La+3].O.O.O.O.O.O.O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.4,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "source": {
+                        "vendor": "Aldrich",
+                        "catalog_id": "Aldrich 26207-2"
+                    }
+                }
+            ],
+            "addition_order": 2
+        },
+        "urea": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "NC(N)=O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 4.0,
+                            "units": "MILLIMOLE"
+                        }
+                    }
+                }
+            ],
+            "addition_order": 1
+        },
+        "carbonyl": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O=C(C)[N+]([O-])=O"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 4.0,
+                            "units": "MILLIMOLE"
+                        }
+                    }
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "AcOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(O)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1200.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    }
+                }
+            ],
+            "addition_order": 4
+        },
+        "aldehyde": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O=CC1=CC=CC=C1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 4.0,
+                            "units": "MILLIMOLE"
+                        }
+                    }
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCO"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 400.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    }
+                }
+            ],
+            "addition_order": 3
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "MICROWAVE_VIAL",
+            "attachments": [
+                {
+                    "type": "SEPTUM",
+                    "details": "Teflon septum"
+                },
+                {
+                    "type": "CAP",
+                    "details": "aluminum crimp cap"
+                }
+            ],
+            "volume": {
+                "value": 5.0,
+                "units": "MILLILITER"
+            }
+        },
+        "is_automated": true,
+        "automation_platform": "Smith synthesizer (PersonalChemistry AB)"
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "MICROWAVE"
+            },
+            "setpoint": {
+                "value": 100.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "SEALED"
+            },
+            "atmosphere": {
+                "type": "AIR"
+            }
+        },
+        "stirring": {
+            "type": "NONE"
+        }
+    },
+    "workups": [
+        {
+            "type": "WAIT",
+            "duration": {
+                "value": 8.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 4.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "keep_phase": "solid"
+        },
+        {
+            "type": "WASH",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CCO"
+                            },
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            }
+                        ]
+                    }
+                ],
+                "addition_temperature": {
+                    "value": 4.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "DRY_IN_VACUUM"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 15.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(N1)=C([N+]([O-])=O)C(C2=CC=CC=C2)NC1=O"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "1h nmr",
+                            "type": "IDENTITY"
+                        },
+                        {
+                            "analysis_key": "1h nmr",
+                            "type": "PURITY",
+                            "string_value": ">90%"
+                        },
+                        {
+                            "analysis_key": "isolated_yield_measurement",
+                            "type": "YIELD",
+                            "uses_internal_standard": false,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "percentage": {
+                                "value": 83.0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "analyses": {
+                "1h nmr": {
+                    "type": "NMR_1H",
+                    "details": "Bruker AMX360 or AMX500 in CDCl3 or DMSO-d6, operating at 360 or 500 MHz, respectively",
+                    "is_of_isolated_species": true,
+                    "instrument_manufacturer": "Bruker"
+                },
+                "isolated_yield_measurement": {
+                    "type": "WEIGHT",
+                    "is_of_isolated_species": true
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1021/cc010044j",
+        "publication_url": "https://pubs.acs.org/doi/full/10.1021/cc010044j",
+        "record_created": {
+            "time": {
+                "value": "04/21/2021, 16:29:13"
+            },
+            "person": {
+                "name": "Connor W. Coley",
+                "orcid": "0000-0002-8271-8723",
+                "organization": "MIT",
+                "email": "ccoley@mit.edu"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Tue Apr 27 21:52:02 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-6e0fd9cca1014e9c8e9f59d3ebf4339e"
+}

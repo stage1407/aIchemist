@@ -1,0 +1,193 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][C:2]1[CH:7]=[CH:6][C:5]([C:8]2[CH:46]=[CH:45][CH:44]=[CH:43][C:9]=2[C:10]([NH:12][C:13]2[CH:42]=[CH:41][C:16]([C:17]([N:19]3[C:25]4[CH:26]=[CH:27][CH:28]=[CH:29][C:24]=4[N:23]([CH2:30][C:31]([N:33]4[CH2:38][CH2:37][N:36]([CH3:39])[CH2:35][CH2:34]4)=[O:32])[C:22](=[O:40])[CH2:21][CH2:20]3)=[O:18])=[CH:15][CH:14]=2)=[O:11])=[CH:4][CH:3]=1.[CH3:47][I:48]>ClCCl>[I-:48].[CH3:1][C:2]1[CH:7]=[CH:6][C:5]([C:8]2[CH:46]=[CH:45][CH:44]=[CH:43][C:9]=2[C:10]([NH:12][C:13]2[CH:42]=[CH:41][C:16]([C:17]([N:19]3[C:25]4[CH:26]=[CH:27][CH:28]=[CH:29][C:24]=4[N:23]([CH2:30][C:31]([N:33]4[CH2:34][CH2:35][N+:36]([CH3:47])([CH3:39])[CH2:37][CH2:38]4)=[O:32])[C:22](=[O:40])[CH2:21][CH2:20]3)=[O:18])=[CH:15][CH:14]=2)=[O:11])=[CH:4][CH:3]=1 |f:3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-{4-[2-(4-methylphenyl)benzoylamino]benzoyl}-1-(4-methyl-1-piperazinylcarbonyl)methyl-1,3,4,5-tetrahydro-1,5-benzodiazepin-2(2H)-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=CC=C(C=C1)C1=C(C(=O)NC2=CC=C(C(=O)N3CCC(N(C4=C3C=CC=C4)CC(=O)N4CCN(CC4)C)=O)C=C2)C=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C37H37N5O4/c1-26-11-13-27(14-12-26)30-7-3-4-8-31(30)36(45)38-29-17-15-28(16-18-29)37(46)41-20-19-34(43)42(33-10-6-5-9-32(33)41)25-35(44)40-23-21-39(2)22-24-40/h3-18H,19-25H2,1-2H3,(H,38,45)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 110.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methyl iodide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CI"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3I/c1-2/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 76.1,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "was stirred at ambient temperature overnight"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 5-{4-[2-(4-methylphenyl)benzoylamino]benzoyl}-1-(4-methyl-1-piperazinylcarbonyl)methyl-1,3,4,5-tetrahydro-1,5-benzodiazepin-2(2H)-one (110 mg) and methyl iodide (76.1 mg) in dichloromethane (10 ml) was stirred at ambient temperature overnight and a precipitate was filtered to give 4-{5-{4-[2-(4-methylphenyl)benzoylamino]benzoyl}-2-oxo-1,3,4 ,5-tetrahydro-2H-1,5-benzodiazepin-1-yl) acetyl-1,1-dimethylpiperazinium iodide (118 mg)."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "a precipitate was filtered"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-{5-{4-[2-(4-methylphenyl)benzoylamino]benzoyl}-2-oxo-1,3,4 ,5-tetrahydro-2H-1,5-benzodiazepin-1-yl) acetyl-1,1-dimethylpiperazinium iodide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[I-].CC1=CC=C(C=C1)C1=C(C(=O)NC2=CC=C(C(=O)N3CCC(N(C4=C3C=CC=C4)CC(=O)N4CC[N+](CC4)(C)C)=O)C=C2)C=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C38H39N5O4.HI/c1-27-12-14-28(15-13-27)31-8-4-5-9-32(31)37(46)39-30-18-16-29(17-19-30)38(47)41-21-20-35(44)42(34-11-7-6-10-33(34)41)26-36(45)40-22-24-43(2,3)25-23-40;/h4-19H,20-26H2,1-3H3;1H"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 118.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 87.2
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05521170",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:32:04.295260"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:41:18 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:45 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-a252d20c895748b4bbfb7a4690a24ec7"
+}

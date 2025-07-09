@@ -1,0 +1,281 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "FC(F)(F)C([O-])=O.[F:8][C:9]1[CH:10]=[C:11]([CH2:16][C@H:17]([NH3+:54])[C:18](=[O:53])[NH:19][C@H:20]2[CH2:45][O:44][C:43](=[O:46])[C@H:42]3[N:38]([CH2:39][C@H:40]([CH3:47])[CH2:41]3)[C:37](=[O:48])[C@H:36]([CH3:49])[NH:35][C:34](=[O:50])[C@H:33]3[N:28]([CH2:29][CH2:30][CH2:31][CH2:32]3)[C:27](=[O:51])[C@H:26]3[N:22]([CH2:23][CH2:24][CH2:25]3)[C:21]2=[O:52])[CH:12]=[C:13]([F:15])[CH:14]=1.[CH:55]1([CH2:61][CH2:62][C:63](O)=[O:64])[CH2:60][CH2:59][CH2:58][CH2:57][CH2:56]1.CN(C(ON1N=NC2C=CC=NC1=2)=[N+](C)C)C.F[P-](F)(F)(F)(F)F.C(N(C(C)C)C(C)C)C>C(#N)C.O.CN(C)C=O>[F:15][C:13]1[CH:12]=[C:11]([CH2:16][C@H:17]([NH:54][C:63](=[O:64])[CH2:62][CH2:61][CH:55]2[CH2:60][CH2:59][CH2:58][CH2:57][CH2:56]2)[C:18](=[O:53])[NH:19][C@H:20]2[CH2:45][O:44][C:43](=[O:46])[C@H:42]3[N:38]([CH2:39][C@H:40]([CH3:47])[CH2:41]3)[C:37](=[O:48])[C@H:36]([CH3:49])[NH:35][C:34](=[O:50])[C@H:33]3[N:28]([CH2:29][CH2:30][CH2:31][CH2:32]3)[C:27](=[O:51])[C@H:26]3[N:22]([CH2:23][CH2:24][CH2:25]3)[C:21]2=[O:52])[CH:10]=[C:9]([F:8])[CH:14]=1 |f:0.1,3.4,6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetonitrile water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)#N.O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N.H2O/c1-2-3;/h1H3;1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m2_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-2-(3,5-Difluorophenyl)-1-((3S,9S,13S,15R,19S,22S)-15, 19-Dimethyl-2,8,12,18,21-pentaoxo-11-oxa-1,7,17,20-tetraaza-tetracyclo[20.4.0.03,7.013,17]hexacos-9-ylcarbamoyl)-ethylammonium 2,2,2-trifluoroacetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)[O-])(F)F.FC=1C=C(C=C(C1)F)C[C@@H](C(N[C@@H]1C(N2CCC[C@H]2C(N2CCCC[C@H]2C(N[C@H](C(N2C[C@@H](C[C@H]2C(OC1)=O)C)=O)C)=O)=O)=O)=O)[NH3+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H42F2N6O7.C2HF3O2/c1-17-10-26-32(46)47-16-23(37-27(41)22(35)13-19-11-20(33)14-21(34)12-19)30(44)39-9-5-7-25(39)31(45)38-8-4-3-6-24(38)28(42)36-18(2)29(43)40(26)15-17;3-2(4,5)1(6)7/h11-12,14,17-18,22-26H,3-10,13,15-16,35H2,1-2H3,(H,36,42)(H,37,41);(H,6,7)/t17-,18+,22+,23+,24+,25+,26+;/m1./s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 100.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-cyclohexylpropionic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CCCCC1)CCC(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H16O2/c10-9(11)7-6-8-4-2-1-3-5-8/h8H,1-7H2,(H,10,11)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 22.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HATU"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C(=[N+](C)C)ON1C2=C(C=CC=N2)N=N1.F[P-](F)(F)(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H15N6O.F6P/c1-14(2)10(15(3)4)17-16-9-8(12-13-16)6-5-7-11-9;1-7(2,3,4,5)6/h5-7H,1-4H3;/q+1;-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 54.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyldiisopropylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.025,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyldiisopropylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.05,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The reaction mixture is stirred overnight"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "100 mg (0.13 mmol) of the compound from example 29A and 22.0 mg (0.14 mmol) of 3-cyclohexylpropionic acid are introduced under argon into anhydrous dimethylformamide (1 ml) at 0\u00b0 C. and then 54.0 mg (0.14 mmol) of HATU and 0.025 ml (0.14 mmol) of ethyldiisopropylamine are added. After 30 min, a further 0.05 ml (0.29 mmol) of ethyldiisopropylamine are added to the reaction mixture. The reaction mixture is stirred overnight with slow warming to RT. The reaction solution is subjected directly to an RP-HPLC using acetonitrile/water as eluent. In the course of this, 50 mg (49% of th.) of a colorless solid are obtained."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "In the course of this, 50 mg (49% of th.) of a colorless solid are obtained"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-Cylcohexylpropanoic acid [(S)-2-(3,5-difluorophenyl)-1-((3S,9S,13S,15R,19S,22S)-15,19-Dimethyl-2,8,12,18,21-pentaoxo-11-oxa-1,7,17,20-tetraaza-tetracyclo[20.4.0.03,7.013,17] hexacos-9-ylcarbamoyl)-ethyl]-amide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC=1C=C(C=C(C1)F)C[C@@H](C(N[C@@H]1C(N2CCC[C@H]2C(N2CCCC[C@H]2C(N[C@H](C(N2C[C@@H](C[C@H]2C(OC1)=O)C)=O)C)=O)=O)=O)=O)NC(CCC1CCCCC1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C41H56F2N6O8/c1-24-17-34-41(56)57-23-31(46-36(51)30(20-27-18-28(42)21-29(43)19-27)45-35(50)14-13-26-9-4-3-5-10-26)39(54)48-16-8-12-33(48)40(55)47-15-7-6-11-32(47)37(52)44-25(2)38(53)49(34)22-24/h18-19,21,24-26,30-34H,3-17,20,22-23H2,1-2H3,(H,44,52)(H,45,50)(H,46,51)/t24-,25+,30+,31+,32+,33+,34+/m1/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07405201B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:49:32.617108"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:31:04 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:50 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-f3abb474b9b64c2ea737105e04240847"
+}

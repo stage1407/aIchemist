@@ -1,0 +1,142 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C[O:2][C:3](=[O:31])[C@@H:4]([O:28][CH2:29][CH3:30])[CH2:5][C:6]1[CH:11]=[CH:10][C:9]([O:12][CH2:13][C:14]2[N:15]=[C:16]([C:20]3[CH:25]=[CH:24][CH:23]=[CH:22][C:21]=3[CH3:26])[O:17][C:18]=2[CH3:19])=[CH:8][C:7]=1[F:27].[Li+].[OH-]>>[CH2:29]([O:28][C@@H:4]([CH2:5][C:6]1[CH:11]=[CH:10][C:9]([O:12][CH2:13][C:14]2[N:15]=[C:16]([C:20]3[CH:25]=[CH:24][CH:23]=[CH:22][C:21]=3[CH3:26])[O:17][C:18]=2[CH3:19])=[CH:8][C:7]=1[F:27])[C:3]([OH:31])=[O:2])[CH3:30] |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-2-ethoxy-3-[2-fluoro-4-(5-methyl-2-o-tolyl-oxazol-4-ylmethoxy)-phenyl]-propionic acid methyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "COC([C@H](CC1=C(C=C(C=C1)OCC=1N=C(OC1C)C1=C(C=CC=C1)C)F)OCC)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H26FNO5/c1-5-29-22(24(27)28-4)12-17-10-11-18(13-20(17)25)30-14-21-16(3)31-23(26-21)19-9-7-6-8-15(19)2/h6-11,13,22H,5,12,14H2,1-4H3/t22-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "LiOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Li+].[OH-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Li.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In analogy to the procedure described in example 1 g], (S)-2-ethoxy-3-[2-fluoro-4-(5-methyl-2-o-tolyl-oxazol-4-ylmethoxy)-phenyl]-propionic acid methyl ester was treated with LiOH to obtain (S)-2-ethoxy-3-[2-fluoro-4-(5-methyl-2-o-tolyl-oxazol-4-ylmethoxy)-phenyl]-propionic acid as colorless liquid."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-2-ethoxy-3-[2-fluoro-4-(5-methyl-2-o-tolyl-oxazol-4-ylmethoxy)-phenyl]-propionic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O[C@H](C(=O)O)CC1=C(C=C(C=C1)OCC=1N=C(OC1C)C1=C(C=CC=C1)C)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H24FNO5/c1-4-28-21(23(26)27)11-16-9-10-17(12-19(16)24)29-13-20-15(3)30-22(25-20)18-8-6-5-7-14(18)2/h5-10,12,21H,4,11,13H2,1-3H3,(H,26,27)/t21-/m0/s1"
+                        }
+                    ],
+                    "isolated_color": "colorless",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "liquid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06969725B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:28:38.406909"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:24:07 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:00 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-46f23f0c82df4231aff21379a0be9589"
+}

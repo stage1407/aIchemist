@@ -1,0 +1,141 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([O:9][CH:10]1[CH2:15][C:14]([CH3:17])([CH3:16])[N:13]([O:18][CH2:19][CH2:20][OH:21])[C:12]([CH3:23])([CH3:22])[CH2:11]1)(=O)C1C=CC=CC=1.[OH-].[K+]>>[OH:9][CH:10]1[CH2:15][C:14]([CH3:16])([CH3:17])[N:13]([O:18][CH2:19][CH2:20][OH:21])[C:12]([CH3:23])([CH3:22])[CH2:11]1 |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "4-Benzoyloxy-1-(2-hydroxyethoxy)-2,2,6,6-tetramethylpiperidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(=O)OC1CC(N(C(C1)(C)C)OCCO)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H27NO4/c1-17(2)12-15(13-18(3,4)19(17)22-11-10-20)23-16(21)14-8-6-5-7-9-14/h5-9,15,20H,10-13H2,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/K.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The title compound is prepared by heating a methanolic solution of the compound obtained in Example 69 with potassium hydroxide."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "4-Hydroxy-1-(2-hydroxyethoxy)-2,2,6,6-tetramethylpiperidine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1CC(N(C(C1)(C)C)OCCO)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H23NO3/c1-10(2)7-9(14)8-11(3,4)12(10)15-6-5-13/h9,13-14H,5-8H2,1-4H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06872832B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:24:13.516304"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:11:28 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:53 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-98d2ad77a5b843dd9f6c5f3532978e72"
+}

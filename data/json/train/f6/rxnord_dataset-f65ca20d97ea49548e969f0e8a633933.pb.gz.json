@@ -1,0 +1,113 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_SMILES",
+            "value": "[Br:1][c:2]1[cH:3][c:4]2[c:5](-[c:19]3[cH:20][cH:21][c:22]([F:25])[cH:23][cH:24]3)[c:6]([C:13]([C:14]([F:15])([F:16])[F:17])=[O:18])[c:7]([CH3:12])[n:8][c:9]2[cH:10][cH:11]1.[CH2:26]1[CH2:27][O:28][CH2:29][CH2:30][NH:31]1>>[c:2]1([N:31]2[CH2:26][CH2:27][O:28][CH2:29][CH2:30]2)[cH:3][c:4]2[c:5](-[c:19]3[cH:20][cH:21][c:22]([F:25])[cH:23][cH:24]3)[c:6]([C:13]([C:14]([F:15])([F:16])[F:17])=[O:18])[c:7]([CH3:12])[n:8][c:9]2[cH:10][cH:11]1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "from_reaction_smiles": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "Extracted from reaction SMILES",
+                            "value": "Cc1nc2ccc(Br)cc2c(-c2ccc(F)cc2)c1C(=O)C(F)(F)F"
+                        }
+                    ],
+                    "amount": {
+                        "unmeasured": {
+                            "type": "CUSTOM",
+                            "details": "Extracted from reaction SMILES"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "Extracted from reaction SMILES",
+                            "value": "C1COCCN1"
+                        }
+                    ],
+                    "amount": {
+                        "unmeasured": {
+                            "type": "CUSTOM",
+                            "details": "Extracted from reaction SMILES"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "Extracted from reaction SMILES",
+                            "value": "Cc1nc2ccc(N3CCOCC3)cc2c(-c2ccc(F)cc2)c1C(=O)C(F)(F)F"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.1039/C8SC04228D",
+        "record_created": {
+            "time": {
+                "value": "02/17/2021, 15:26:11"
+            },
+            "person": {
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Feb 17 23:08:15 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "2021-11-05 15:37:37.034278"
+                },
+                "person": {
+                    "name": "Steven Kearnes",
+                    "orcid": "0000-0003-4579-4388",
+                    "organization": "Relay Therapeutics",
+                    "email": "skearnes@relaytx.com"
+                },
+                "details": "Add inputs/outcomes from reaction SMILES; see https://github.com/open-reaction-database/ord-schema/issues/617."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:06 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-126e5eeed66c4140b9d5ba4b12278520"
+}

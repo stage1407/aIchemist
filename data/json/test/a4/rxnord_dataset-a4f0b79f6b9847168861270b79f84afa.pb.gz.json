@@ -1,0 +1,282 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([O:5][C:6]([NH:8][C@H:9]([C@@H:17]([OH:28])[CH2:18][C@@H:19]([NH2:27])[CH2:20][C:21]1[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=1)[CH2:10][C:11]1[CH:16]=[CH:15][CH:14]=[CH:13][CH:12]=1)=[O:7])([CH3:4])([CH3:3])[CH3:2].C(OC(N[C@H]([C@@H](O)C[C@H](N)CC1C=CC=CC=1)CC1C=CC=CC=1)=O)(C)(C)C.O.O.[C:59]([OH:64])(=[O:63])[C:60]([OH:62])=[O:61].C(OC(C)C)(C)C>>[C:59]([OH:64])(=[O:63])[C:60]([OH:62])=[O:61].[C:1]([O:5][C:6]([NH:8][C@H:9]([C@@H:17]([OH:28])[CH2:18][C@@H:19]([NH2:27])[CH2:20][C:21]1[CH:22]=[CH:23][CH:24]=[CH:25][CH:26]=1)[CH2:10][C:11]1[CH:12]=[CH:13][CH:14]=[CH:15][CH:16]=1)=[O:7])([CH3:4])([CH3:2])[CH3:3] |f:2.3.4,6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2S, 3S, 5R)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N[C@@H](CC1=CC=CC=C1)[C@H](C[C@@H](CC1=CC=CC=C1)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H32N2O3/c1-23(2,3)28-22(27)25-20(15-18-12-8-5-9-13-18)21(26)16-19(24)14-17-10-6-4-7-11-17/h4-13,19-21,26H,14-16,24H2,1-3H3,(H,25,27)/t19-,20+,21+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Diisopropyl ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)OC(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14O/c1-5(2)7-6(3)4/h5-6H,1-4H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 15.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "oxalic acid dihydrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O.O.C(C(=O)O)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H2O4.2H2O/c3-1(4)2(5)6;;/h(H,3,4)(H,5,6);2*1H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 83.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2S, 3S, 5S)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N[C@@H](CC1=CC=CC=C1)[C@H](C[C@H](CC1=CC=CC=C1)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H32N2O3/c1-23(2,3)28-22(27)25-20(15-18-12-8-5-9-13-18)21(26)16-19(24)14-17-10-6-4-7-11-17/h4-13,19-21,26H,14-16,24H2,1-3H3,(H,25,27)/t19-,20-,21-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2S, 3S, 5R)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N[C@@H](CC1=CC=CC=C1)[C@H](C[C@@H](CC1=CC=CC=C1)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H32N2O3/c1-23(2,3)28-22(27)25-20(15-18-12-8-5-9-13-18)21(26)16-19(24)14-17-10-6-4-7-11-17/h4-13,19-21,26H,14-16,24H2,1-3H3,(H,25,27)/t19-,20+,21+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2S, 3S, 5S)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N[C@@H](CC1=CC=CC=C1)[C@H](C[C@H](CC1=CC=CC=C1)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H32N2O3/c1-23(2,3)28-22(27)25-20(15-18-12-8-5-9-13-18)21(26)16-19(24)14-17-10-6-4-7-11-17/h4-13,19-21,26H,14-16,24H2,1-3H3,(H,25,27)/t19-,20-,21-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "(5S, 1'S)-3-Phenylmethyl-5-(1'-tert-butoxycarbonylamino-2'-phenylethyl)-2-isoxazoline (250 mg, 0.66 mmol) prepared in a manner similar to that as described in Example 6 was dissolved in methanol(10 ml). Acetic acid (0.25 ml) was added to the solution. A 3% Pt-on-carbon catalyst (25 mg, 10% by weight based on substrate) was added to the mixture. The mixture was stirred for 27 hours in a hydrogen atmosphere at atmospheric pressure. The catalyst was removed by filtration under reduced pressure, and the filtrate was concentrated under reduced pressure. The resulting oil (390 mg) was dissolved in ethyl acetate (50 ml), washed successively with saturated aqueous sodium bicarbonate and saturated brine, and then dried over anhydrous magnesium sulfate. After the desiccant was filtered off, the filtrate was concentrated under reduced pressure to obtain a foamy residue (260 mg) containing (2S, 3S, 5S)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane and (2S, 3S, 5R)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane. Analysis by 1H NMR revealed that the ratio of (2S, 3S, 5S)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane to (2S, 3S, 5R)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane was 10:1. To the residue, oxalic acid dihydrate (83 mg, 0.66 mmol) was added, and the resulting mixture was dissolved with heat while refluxing. Diisopropyl ether (15 ml) was added, and the mixture was cooled. The crystals precipitated were collected by filtration and were dried under reduced pressure to give the desired compound as colorless crystals. Yield: 216 mg (69%). Analysis by HPLC revealed that the ratio of (2S, 3S, 5S)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane and (2S, 3S, 5R)-2-tert-butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane was 97:3."
+    },
+    "workups": [
+        {
+            "type": "DISSOLUTION",
+            "details": "the resulting mixture was dissolved"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "with heat"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "while refluxing"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture was cooled"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The crystals precipitated"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "were collected by filtration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "were dried under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "desired compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(2S, 3S, 5S)-2-tert-Butoxycarbonylamino-3-hydroxy-5-amino-1,6-diphenylhexane oxalate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C(=O)O)(=O)O.C(C)(C)(C)OC(=O)N[C@@H](CC1=CC=CC=C1)[C@H](C[C@H](CC1=CC=CC=C1)N)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C23H32N2O3.C2H2O4/c1-23(2,3)28-22(27)25-20(15-18-12-8-5-9-13-18)21(26)16-19(24)14-17-10-6-4-7-11-17;3-1(4)2(5)6/h4-13,19-21,26H,14-16,24H2,1-3H3,(H,25,27);(H,3,4)(H,5,6)/t19-,20-,21-;/m0./s1"
+                        }
+                    ],
+                    "isolated_color": "colorless",
+                    "texture": {
+                        "type": "CRYSTAL",
+                        "details": "crystals"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05994558",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:50:54.609724"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:21:16 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:21 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-894bac631e5244489dfe16f82841e5d3"
+}

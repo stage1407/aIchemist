@@ -1,0 +1,249 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([O:5][C:6](=[O:14])[NH:7][C@H:8]1[CH2:12][CH2:11][NH:10][C:9]1=[O:13])([CH3:4])([CH3:3])[CH3:2].Br[CH2:16][C:17]1[CH:21]=[C:20]([C:22]#[N:23])[O:19][CH:18]=1.[H-].[Na+].CO.C(Cl)Cl>C1COCC1.CN(C=O)C>[C:1]([O:5][C:6](=[O:14])[NH:7][CH:8]1[CH2:12][CH2:11][N:10]([CH2:16][C:17]2[CH:21]=[C:20]([C:22]#[N:23])[O:19][CH:18]=2)[C:9]1=[O:13])([CH3:4])([CH3:2])[CH3:3] |f:2.3,4.5,6.7|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "MeOH CH2Cl2"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO.C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2.CH4O/c2-1-3;1-2/h1H2;2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m5_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2-oxopyrrolidin-3-(S)-yl)carbamic acid tert-butyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(N[C@@H]1C(NCC1)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H16N2O3/c1-9(2,3)14-8(13)11-6-4-5-10-7(6)12/h6H,4-5H2,1-3H3,(H,10,12)(H,11,13)/t6-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.78,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-bromomethylfuran-5-carbonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrCC1=COC(=C1)C#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H4BrNO/c7-2-5-1-6(3-8)9-4-5/h1,4H,2H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.78,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H/q+1;-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1.CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O.C3H7NO/c1-2-4-5-3-1;1-4(2)3-5/h1-4H2;3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of (2-oxopyrrolidin-3-(S)-yl)carbamic acid tert-butyl ester (0.78 g, 3.9 mmol) in 40 mL of THF:DMF (5:1) is treated with 3-bromomethylfuran-5-carbonitrile (0.78 g, 3.9 mmol) and sodium hydride (60%) (0.10 g, 4.2 mmol) as described in EXAMPLE 122, Part F. After addition, the solution is allowed to warm to ambient temperatures. Standard workup folowed by chromatography (5-10% MeOH/CH2Cl2) affords [1-(2-cyanofuran-4-ylmethyl)-2-oxopyrrolidin-3-yl]carbamic acid tert-butyl ester (1.05 g, 7.8 mmol) as a white solid. This material is treated with trimethylsilyliodide (0.844 g, 4.22 mmol) and free based with Amberlite (OH) resin to yield the title compound (0.926 g, 4.51 mmol)."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "After addition"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to warm to ambient temperatures"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "[1-(2-cyanofuran-4-ylmethyl)-2-oxopyrrolidin-3-yl]carbamic acid tert-butyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(NC1C(N(CC1)CC=1C=C(OC1)C#N)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H19N3O4/c1-15(2,3)22-14(20)17-12-4-5-18(13(12)19)8-10-6-11(7-16)21-9-10/h6,9,12H,4-5,8H2,1-3H3,(H,17,20)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 7.8,
+                                    "units": "MILLIMOLE"
+                                }
+                            }
+                        },
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 1.05,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 200.0
+                            }
+                        }
+                    ],
+                    "isolated_color": "white",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05958918",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:49:42.384339"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:18:35 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-f9bf36f5220148418d417655d2e96001"
+}

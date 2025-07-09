@@ -1,0 +1,245 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[O:1]=[C:2]1[C:11]2[CH:12]=[CH:13][C:14]([NH:16][CH2:17][C:18]3[CH:25]=[CH:24][CH:23]=[CH:22][C:19]=3[C:20]#[N:21])=[CH:15][C:10]=2[C:9]2[C:4](=[N:5][CH:6]=[CH:7][CH:8]=2)[NH:3]1.[OH-:26].[Na+].Cl>O1CCOCC1>[O:1]=[C:2]1[C:11]2[CH:12]=[CH:13][C:14]([NH:16][CH2:17][C:18]3[CH:25]=[CH:24][CH:23]=[CH:22][C:19]=3[C:20]([NH2:21])=[O:26])=[CH:15][C:10]=2[C:9]2[C:4](=[N:5][CH:6]=[CH:7][CH:8]=2)[NH:3]1 |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dioxane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCOCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "462"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-((6-oxo-5,6-dihydrobenzo[c][1,8]naphthyridin-9-ylamino)methyl)benzonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O=C1NC2=NC=CC=C2C2=C1C=CC(=C2)NCC2=C(C#N)C=CC=C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H14N4O/c21-11-13-4-1-2-5-14(13)12-23-15-7-8-17-18(10-15)16-6-3-9-22-19(16)24-20(17)25/h1-10,23H,12H2,(H,22,24,25)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 51.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HCl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.6,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 150.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred for 30 minutes at 150\u00b0 C"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "462 (51 mg, 0.16 mmol) and NaOH (1M, aqueous, 2 mL) were suspended in dioxane (2 mL), and stirred for 30 minutes at 150\u00b0 C. The reaction mixture was acidified with HCl (2M in diethyl ether, 1.6 mL), concentrated, and purified via prep-LC-MS to provide 481 (4 mg, 7% yield) as a white powder. LC-MS (M+H=345, obsd.=345). 1H NMR (400 MHz, DMSO-D6) \u03b4 8.56 (d, J=7.9, 1H), 8.43 (d, J=3.1, 1H), 8.05 (d, J=8.6, 1H), 7.94 (d, J=6.7, 1H), 7.45 (s, 1H), 7.25 (m, 3H), 6.92 (d, J=8.6, 1H), 6.66 (s, 1H), 5.98 (s, 2H)."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "purified via prep-LC-MS"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "481"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2-((6-Oxo-5,6-dihydrobenzo[c][1,8]naphthyridin-9-ylamino)methyl)benzamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O=C1NC2=NC=CC=C2C2=C1C=CC(=C2)NCC2=C(C(=O)N)C=CC=C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H16N4O2/c21-18(25)14-5-2-1-4-12(14)11-23-13-7-8-16-17(10-13)15-6-3-9-22-19(15)24-20(16)26/h1-10,23H,11H2,(H2,21,25)(H,22,24,26)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 4.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 7.0
+                            }
+                        }
+                    ],
+                    "isolated_color": "white",
+                    "texture": {
+                        "type": "POWDER",
+                        "details": "powder"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08735584B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:17:14.485980"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:58:34 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:44 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-3aff56d8b96a43f09101a20dccb11a56"
+}

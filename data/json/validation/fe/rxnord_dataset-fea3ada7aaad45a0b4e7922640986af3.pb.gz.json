@@ -1,0 +1,363 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([OH:8])[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.C(N(CC)CC)C.[CH3:16][S:17](Cl)(=[O:19])=[O:18].C(Cl)Cl>O>[CH3:16][S:17]([O:8][CH2:1][C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1)(=[O:19])=[O:18]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylene chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzyl alcohol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O/c8-6-7-4-2-1-3-5-7/h1-5,8H,6H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 129.6,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 182.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanesulfonyl chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)(=O)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3ClO2S/c1-5(2,3)4/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 150.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": -5.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Under nitrogen methylene chloride (1.4 liter), benzyl alcohol (129.6 g., 1.2 moles) and triethylamine (182 g., 1.8 moles) were combined, stirred and cooled to -5\u00b0 C. in an ice-water-acetone bath. A solution of methanesulfonyl chloride (150 g., 1.31 moles) in 100 ml. of methylene chloride was added over 49 minutes, maintaining the temperature between -5\u00b0 and 2\u00b0 C. After stirring for 10 minutes at 0\u00b0-2\u00b0 C., the reaction was diluted with 500 ml. of water, precooled to 5\u00b0 C. The organic layer was separated, washed 2\u00d7500 ml. of cold water, dried over MgSO4, filtered and evaporated in vacuo to yield title product as a light yellow oil [190 g.; 85%; 1H--NMR (CDCl3) delta (ppm): 2.9 (s, 3H), 5.2 (s, 2H), 7.4 (m, 5H); Rf 0.75 (CH2Cl 2)]. This product was refrigerated until used in the next step."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "maintaining the temperature between -5\u00b0 and 2\u00b0 C"
+        },
+        {
+            "type": "STIRRING",
+            "details": "After stirring for 10 minutes at 0\u00b0-2\u00b0 C.",
+            "duration": {
+                "value": 10.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "the reaction was diluted with 500 ml"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "precooled to 5\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 5.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The organic layer was separated"
+        },
+        {
+            "type": "WASH",
+            "details": "washed 2\u00d7500 ml"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "of cold water, dried over MgSO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "MgSO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated in vacuo"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Benzyl Methanesulfonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CS(=O)(=O)OCC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10O3S/c1-12(9,10)11-7-8-5-3-2-4-6-8/h2-6H,7H2,1H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 190.0,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 85.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 85.0
+                            }
+                        }
+                    ],
+                    "isolated_color": "light yellow",
+                    "texture": {
+                        "type": "OIL",
+                        "details": "oil"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04473704",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:55:45.448371"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:33:56 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:05 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-14b7b20a943448c8a77a7361a8103d25"
+}

@@ -1,0 +1,137 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]=[CH2:2].[C:3]1([CH3:9])[CH:8]=[CH:7][CH:6]=[CH:5][CH:4]=1>>[CH2:1]([C:6]1[CH:7]=[CH:8][C:3]([CH3:9])=[CH:4][CH:5]=1)[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4/c1-2/h1-2H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The catalyst samples as described in Examples 4 and 5 were also tested for activity and selectivity in the vapor phase alkylation of toluene with ethylene to produce p-ethyl toluene. At a WHSV of 1.0-1.2 g toluene/gm catalyst/hr and a toluene:ethylene molar ratio of 2.5-2.8:1.0 the liquid product was collected over an 8-16 hour period for each of the reaction temperatures 400\u00b0 C. and 475\u00b0 C. The data are tabulated below."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-ethyl toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)C1=CC=C(C=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H12/c1-3-9-6-4-8(2)5-7-9/h4-7H,3H2,1-2H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04721827",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:04:19.162399"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:48:23 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:09 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0ef3a37942154a8ea4ab518dd3024d41"
+}

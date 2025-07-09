@@ -1,0 +1,136 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C:2]1[CH:7]=[C:6]([O:8]CCO)[CH:5]=[CH:4][C:3]=1[C:12]1[N:17]=[C:16]([C:18]2[CH:23]=[CH:22][C:21]([O:24]CCO)=[CH:20][C:19]=2[OH:28])[N:15]=[C:14]([C:29]2[CH:34]=[CH:33][C:32]([Cl:35])=[CH:31][CH:30]=2)[N:13]=1.OC1N=C(C2C=CC(OCCO)=CC=2O)N=C(C2C=CC(C)=CC=2C)N=1>>[OH:1][C:2]1[CH:7]=[C:6]([OH:8])[CH:5]=[CH:4][C:3]=1[C:12]1[N:17]=[C:16]([C:18]2[CH:23]=[CH:22][C:21]([OH:24])=[CH:20][C:19]=2[OH:28])[N:15]=[C:14]([C:29]2[CH:34]=[CH:33][C:32]([Cl:35])=[CH:31][CH:30]=2)[N:13]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,4-bis[2-hydroxy-4-(2-hydroxyethoxy)phenyl]-6-(4-chlorophenyl)-s-triazine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=C(C=CC(=C1)OCCO)C1=NC(=NC(=N1)C1=C(C=C(C=C1)OCCO)O)C1=CC=C(C=C1)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H22ClN3O6/c26-16-3-1-15(2-4-16)23-27-24(19-7-5-17(13-21(19)32)34-11-9-30)29-25(28-23)20-8-6-18(14-22(20)33)35-12-10-31/h1-8,13-14,30-33H,9-12H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-hydroxy-4-(2-hydroxy-4-(2-hydroxyethoxy)phenyl]-6-(2,4-dimethylphenyl)-s-triazine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=NC(=NC(=N1)C1=C(C=C(C=C1)OCCO)O)C1=C(C=C(C=C1)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H19N3O4/c1-11-3-5-14(12(2)9-11)17-20-18(22-19(25)21-17)15-6-4-13(10-16(15)24)26-8-7-23/h3-6,9-10,23-24H,7-8H2,1-2H3,(H,20,21,22,25)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2,4-bis[2-hydroxy-4-(2-hydroxyethoxy)phenyl]-6-(4-chlorophenyl)-s-triazine; 2,4-bis[2-hydroxy-4-(2-hydroxy-4-(2-hydroxyethoxy)phenyl]-6-(2,4-dimethylphenyl)-s-triazine;"
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,4-bis(2,4-dihydroxyphenyl)-6-(4-chlorophenyl)-s-triazine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=C(C=CC(=C1)O)C1=NC(=NC(=N1)C1=C(C=C(C=C1)O)O)C1=CC=C(C=C1)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H14ClN3O4/c22-12-3-1-11(2-4-12)19-23-20(15-7-5-13(26)9-17(15)28)25-21(24-19)16-8-6-14(27)10-18(16)29/h1-10,26-29H"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05625090",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:37:09.754147"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:52:08 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:43 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0bd937f1d69f43ab85e5a6a3ce929eb5"
+}

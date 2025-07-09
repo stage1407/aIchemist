@@ -1,0 +1,344 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH2:1][C:2]1[O:3][CH:4]=[C:5]([C:7]([O-:9])=O)[N:6]=1.[Na+].C1C=CC2N(O)N=NC=2C=1.CCN=C=NCCCN(C)C.Cl.[NH2:33][C@H:34]([CH:53]([CH3:55])[CH3:54])[C:35]([N:37]1[CH2:42][CH2:41][C@@:40]([C:44]2[CH:49]=[CH:48][C:47]([Cl:50])=[CH:46][CH:45]=2)([OH:43])[C:39]([CH3:52])([CH3:51])[CH2:38]1)=[O:36]>CN(C=O)C>[NH2:1][C:2]1[O:3][CH:4]=[C:5]([C:7]([NH:33][C@H:34]([CH:53]([CH3:55])[CH3:54])[C:35]([N:37]2[CH2:42][CH2:41][C@@:40]([C:44]3[CH:45]=[CH:46][C:47]([Cl:50])=[CH:48][CH:49]=3)([OH:43])[C:39]([CH3:51])([CH3:52])[CH2:38]2)=[O:36])=[O:9])[N:6]=1 |f:0.1,4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(R)-2-amino-1-((S)-4-(4-chlorophenyl)-4-hydroxy-3,3-dimethylpiperidin-1-yl)-3-methylbutan-1-one hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.N[C@@H](C(=O)N1CC([C@@](CC1)(O)C1=CC=C(C=C1)Cl)(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H27ClN2O2.ClH/c1-12(2)15(20)16(22)21-10-9-18(23,17(3,4)11-21)13-5-7-14(19)8-6-13;/h5-8,12,15,23H,9-11,20H2,1-4H3;1H/t15-,18+;/m1./s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 188.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2_m3_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Sodium 2-aminooxazole-4-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NC=1OC=C(N1)C(=O)[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H4N2O3.Na/c5-4-6-2(1-9-4)3(7)8;/h1H,(H2,5,6)(H,7,8);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 75.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HOBt"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1C=CC2=C(C1)N=NN2O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H5N3O/c10-9-6-4-2-1-3-5(6)7-8-9/h1-4,10H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 67.5,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EDCI"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN=C=NCCCN(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H17N3/c1-4-9-8-10-6-5-7-11(2)3/h4-7H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 96.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred at rt for 0.5 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Sodium 2-aminooxazole-4-carboxylate (75 mg, 0.500 mmol), HOBt (67.5 mg, 0.500 mmol) and EDCI (96 mg, 0.500 mmol) were dissolved in DMF (0.5 mL). The mixture was stirred at rt for 0.5 h, then was added (R)-2-amino-1-((S)-4-(4-chlorophenyl)-4-hydroxy-3,3-dimethylpiperidin-1-yl)-3-methylbutan-1-one hydrochloride (188 mg, 0.500 mmol) and further stirred for 2 h. The reaction was quenched with water and stirred at rt for 2 h. The solids were filtered and rinsed with water to give 2-amino-N\u2014((R)-1-((S)-4-(4-chlorophenyl)-4-hydroxy-3,3-dimethylpiperidin-1-yl)-3-methyl-1-oxobutan-2-yl)oxazole-4-carboxamide (169 mg, 0.376 mmol, 75% yield)."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "further stirred for 2 h",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The reaction was quenched with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred at rt for 2 h",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The solids were filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "rinsed with water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 0.5,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-amino-N\u2014((R)-1-((S)-4-(4-chlorophenyl)-4-hydroxy-3,3-dimethylpiperidin-1-yl)-3-methyl-1-oxobutan-2-yl)oxazole-4-carboxamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NC=1OC=C(N1)C(=O)N[C@@H](C(=O)N1CC([C@@](CC1)(O)C1=CC=C(C=C1)Cl)(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H29ClN4O4/c1-13(2)17(26-18(28)16-11-31-20(24)25-16)19(29)27-10-9-22(30,21(3,4)12-27)14-5-7-15(23)8-6-14/h5-8,11,13,17,30H,9-10,12H2,1-4H3,(H2,24,25)(H,26,28)/t17-,22+/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 0.376,
+                                    "units": "MILLIMOLE"
+                                }
+                            }
+                        },
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 169.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 75.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 75.2
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07985861B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:24:56.844318"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:31:43 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:46 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-f41e4de8c7a2459f95045fca7b7ddd6f"
+}

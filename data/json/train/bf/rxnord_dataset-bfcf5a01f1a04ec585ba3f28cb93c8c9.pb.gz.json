@@ -1,0 +1,364 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[H-].[H-].[H-].[H-].[Li+].[Al+3].C(N(CC)CC)C.[Si:14]([O:21][C:22]1[CH:23]=[C:24]([CH:29]=[CH:30][CH:31]=1)[C:25]([O:27][CH3:28])=O)([C:17]([CH3:20])([CH3:19])[CH3:18])([CH3:16])[CH3:15].[CH:32]12[CH2:41][CH:36]3[CH2:37][CH:38]([CH2:40][CH:34]([CH2:35]3)[C:33]1=O)[CH2:39]2>C1COCC1.CCOCC>[Si:14]([O:21][C:22]1[CH:23]=[C:24]([CH2:25][O:27][CH:28]=[C:33]2[CH:34]3[CH2:40][CH:38]4[CH2:37][CH:36]([CH2:41][CH:32]2[CH2:39]4)[CH2:35]3)[CH:29]=[CH:30][CH:31]=1)([C:17]([CH3:20])([CH3:19])[CH3:18])([CH3:16])[CH3:15] |f:0.1.2.3.4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ether"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCOCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "LAH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H-].[H-].[H-].[H-].[Li+].[Al+3]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Al.Li.4H/q+3;+1;4*-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.8,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 12.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3_m4_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methyl 3-tert-butyldimethylsilyloxybenzoate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C)(C)(C(C)(C)C)OC=1C=C(C(=O)OC)C=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H22O3Si/c1-14(2,3)18(5,6)17-12-9-7-8-11(10-12)13(15)16-4/h7-10H,1-6H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.4,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-adamantanone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C12C(C3CC(CC(C1)C3)C2)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H14O/c11-10-8-2-6-1-7(4-8)5-9(10)3-6/h6-9H,1-5H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "with stirring"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A 500 mL three-neck flask was fitted with a reflux condenser, 125 mL addition funnel, and nitrogen line. The apparatus was dried by means of a hot air gun and nitrogen purging. Dry THF (200 mL) was added and the flask cooled in an ice bath. TiCL3 (24 g, 156 mmol) was added rapidly followed by LAH (2.8 g, 75 mmol) in portions with stirring. The cooling bath was removed and the black mixture was allowed to warm to room temperature. Triethylamine (12 mL, 86 mmol) was added to the stirred suspension and refluxed for 1 hour. After this period a solution of methyl 3-tert-butyldimethylsilyloxybenzoate (4.40 g, 16.6 mmol) and 2-adamantanone (3.0 g, 20.4 mmol) in 50 mL of dry THF was added dropwise to the refluxing mixture over 5 hours. Refluxing was continued for an additional 4 hours after which the reaction was cooled to room temperature and diluted with 100 mL of ether. The organic solution was separated and concentrated. Chromatography over silica with 1% ethyl acetate/hexane gave 1.29 g (21%) of 7b as an oil: 1H NMR (CDCl3) delta 0.196 (s, 6H), 0.985 (s, 9H), 1.78-1.97 (m, 12H), 2.628 (s, 1H, 3.23 (s, 1H), 3.29 (s, 3H), 6.75-7.20 (m, 4H); 13C NMR (CDCl3) delta -4.50, 18.19, 25.67, 28.37, 30.16, 32.28, 37.25, 38.19, 39.01, 57.51, 119.29, 121.08, 122.32, 128.87, 131.11, 136.84, 143.47, 155.37. ##STR43##"
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "A 500 mL three-neck flask was fitted with a reflux condenser, 125 mL addition funnel"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The apparatus was dried by means of a hot air gun and nitrogen purging"
+        },
+        {
+            "type": "ADDITION",
+            "details": "Dry THF (200 mL) was added",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "THF"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1CCOC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 200.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the flask cooled in an ice bath"
+        },
+        {
+            "type": "ADDITION",
+            "details": "TiCL3 (24 g, 156 mmol) was added rapidly"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The cooling bath was removed"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "refluxed for 1 hour",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "Refluxing"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "after which the reaction was cooled to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The organic solution was separated"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 4.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7b"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "[(3-tert-butyldimethylsilyloxyphenyl)methoxymethylene]adamantane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C)(C)(C(C)(C)C)OC=1C=C(C=CC1)COC=C1C2CC3CC(CC1C3)C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H36O2Si/c1-24(2,3)27(4,5)26-22-8-6-7-17(14-22)15-25-16-23-20-10-18-9-19(12-20)13-21(23)11-18/h6-8,14,16,18-21H,9-13,15H2,1-5H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 1.29,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 21.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 20.2
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "OIL",
+                        "details": "oil"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05386017",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:27:30.274466"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:32:27 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:22 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-2a8d6d7f2da44232ac7b8291c2342845"
+}

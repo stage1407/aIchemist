@@ -1,0 +1,319 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[Cl:1][C:2]1[CH:3]=[C:4]([CH:32]=[CH:33][C:34]=1[Cl:35])[C:5]([NH:7][C:8]1[CH:9]=[CH:10][C:11]([O:14][C:15]2[CH:31]=[CH:30][C:18]([C:19]([N:21]3[CH2:26][CH2:25][CH:24]([C:27](O)=[O:28])[CH2:23][CH2:22]3)=[O:20])=[CH:17][CH:16]=2)=[N:12][CH:13]=1)=[O:6].[CH2:36]([N:46]1[CH2:51][CH2:50][NH:49][CH2:48][CH2:47]1)[C:37]1[CH:45]=[CH:44][C:43]2[O:42][CH2:41][O:40][C:39]=2[CH:38]=1.O.ON1C2C=CC=CC=2N=N1.Cl.C(N=C=NCCCN(C)C)C>CN(C=O)C>[CH2:36]([N:46]1[CH2:51][CH2:50][N:49]([C:27]([CH:24]2[CH2:25][CH2:26][N:21]([C:19]([C:18]3[CH:17]=[CH:16][C:15]([O:14][C:11]4[N:12]=[CH:13][C:8]([NH:7][C:5](=[O:6])[C:4]5[CH:32]=[CH:33][C:34]([Cl:35])=[C:2]([Cl:1])[CH:3]=5)=[CH:9][CH:10]=4)=[CH:31][CH:30]=3)=[O:20])[CH2:22][CH2:23]2)=[O:28])[CH2:48][CH2:47]1)[C:37]1[CH:45]=[CH:44][C:43]2[O:42][CH2:41][O:40][C:39]=2[CH:38]=1 |f:2.3,4.5|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m5_m2_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-{4-[5-(3,4-dichlorobenzoylamino)pyridin-2-yloxy]benzoyl}piperidine-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC=1C=C(C(=O)NC=2C=CC(=NC2)OC2=CC=C(C(=O)N3CCC(CC3)C(=O)O)C=C2)C=CC1Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H21Cl2N3O5/c26-20-7-3-17(13-21(20)27)23(31)29-18-4-8-22(28-14-18)35-19-5-1-15(2-6-19)24(32)30-11-9-16(10-12-30)25(33)34/h1-8,13-14,16H,9-12H2,(H,29,31)(H,33,34)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 7.96,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-piperonylpiperazine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=2OCOC2C=C1)N1CCNCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H16N2O2/c1-2-11-12(16-9-15-11)7-10(1)8-14-5-3-13-4-6-14/h1-2,7,13H,3-6,8-9H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.75,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-hydroxybenzotriazole monohydrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O.ON1N=NC2=C1C=CC=C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H5N3O.H2O/c10-9-6-4-2-1-3-5(6)7-8-9;/h1-4,10H;1H2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.85,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.C(C)N=C=NCCCN(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H17N3.ClH/c1-4-9-8-10-6-5-7-11(2)3;/h4-7H2,1-3H3;1H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.56,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 160.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the resulting solution was stirred for overnight at room temperature"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 1-{4-[5-(3,4-dichlorobenzoylamino)pyridin-2-yloxy]benzoyl}piperidine-4-carboxylic acid (7.96 g, 15.5 mmol) in DMF (160 mL) were added 1-piperonylpiperazine (3.75 g, 17.6 mmol), 1-hydroxybenzotriazole monohydrate (2.85 g, 18.6 mmol) and 1-ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride (3.56 g, 18.6 mmol) under ice cooling, and the resulting solution was stirred for overnight at room temperature. This reaction solution was concentrated under reduced pressure. To the residue were added water and ethyl acetate, and the resulting solution was vigorously stirred. The resulting precipitates were collected by filtration and recrystallized from a dichloromethane-methanol mixed solvent, to thereby yield 7.36 g of the title compound."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "This reaction solution was concentrated under reduced pressure"
+        },
+        {
+            "type": "ADDITION",
+            "details": "To the residue were added water and ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "the resulting solution was vigorously stirred"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The resulting precipitates"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "were collected by filtration"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "recrystallized from a dichloromethane-methanol mixed solvent",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dichloromethane methanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClCCl.CO"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2.CH4O/c2-1-3;1-2/h1H2;2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-(6-{4-[4-(4-piperonylpiperazine-1-carbonyl)piperidine-1-carbonyl]phenoxy}pyridin-3-yl)-3,4-dichlorobenzamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=2OCOC2C=C1)N1CCN(CC1)C(=O)C1CCN(CC1)C(=O)C1=CC=C(OC2=CC=C(C=N2)NC(C2=CC(=C(C=C2)Cl)Cl)=O)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C37H35Cl2N5O6/c38-30-8-4-27(20-31(30)39)35(45)41-28-5-10-34(40-21-28)50-29-6-2-25(3-7-29)36(46)43-13-11-26(12-14-43)37(47)44-17-15-42(16-18-44)22-24-1-9-32-33(19-24)49-23-48-32/h1-10,19-21,26H,11-18,22-23H2,(H,41,45)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08188277B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:39:29.985543"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:10:58 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:18 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-31b832d46ed449fd829cc89ff4a8d639"
+}

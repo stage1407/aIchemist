@@ -1,0 +1,406 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]1([N:4]2[C:13]3[C:8](=[CH:9][C:10]([F:16])=[C:11](F)[C:12]=3[F:14])[C:7](=[O:17])[C:6]([C:18]([O:20]C)=[O:19])=[CH:5]2)[CH2:3][CH2:2]1.I[Si](C)(C)C.Br.Br.[CH:29]12[CH2:35][CH:32]([NH:33][CH2:34]1)[CH2:31][NH:30]2.C(#N)C>ClCCl>[CH:1]1([N:4]2[C:13]3[C:8](=[CH:9][C:10]([F:16])=[C:11]([N:30]4[CH2:31][CH:32]5[CH2:35][CH:29]4[CH2:34][NH:33]5)[C:12]=3[F:14])[C:7](=[O:17])[C:6]([C:18]([OH:20])=[O:19])=[CH:5]2)[CH2:2][CH2:3]1 |f:2.3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4_m5_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2,5-diazabicyclo[2.2.1]heptane, dihydrobromide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Br.Br.C12NCC(NC1)C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H10N2.2BrH/c1-4-2-6-5(1)3-7-4;;/h4-7H,1-3H2;2*1H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.2,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,8-diazobicyclo[5.4.0]undec-7-ene"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetonitrile"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)#N"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m7_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methyl 1-cyclopropyl-6,7,8-trifluoro-1,4-dihydro-4-oxo-3-quinolinecarboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CC1)N1C=C(C(C2=CC(=C(C(=C12)F)F)F)=O)C(=O)OC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H10F3NO3/c1-21-14(20)8-5-18(6-2-3-6)12-7(13(8)19)4-9(15)10(16)11(12)17/h4-6H,2-3H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "iodotrimethylsilane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "I[Si](C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H9ISi/c1-5(2,3)4/h1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.6,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "iodotrimethylsilane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "I[Si](C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H9ISi/c1-5(2,3)4/h1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.23,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "while stirring at room temperature under a blanket of nitrogen"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 1.0 g (3.4 mmole) of methyl 1-cyclopropyl-6,7,8-trifluoro-1,4-dihydro-4-oxo-3-quinolinecarboxylate in 25 ml dichloromethane was added 0.6 ml (0.8 g, 4.2 mmole) of iodotrimethylsilane while stirring at room temperature under a blanket of nitrogen. The reaction was warmed to reflux and stirred overnight. An additional 0.23 ml (1.6 mmole) of iodotrimethylsilane was added and the solution was refluxed for another two hours, cooled to room temperature, and concentrated. The residue was taken up in 20 ml of acetonitrile. To this solution was added a mixture of 2.2 g (8.5 mmole) of 2,5-diazabicyclo[2.2.1]heptane, dihydrobromide, 2.7 g (17.9 mmole) 1,8-diazobicyclo[5.4.0]undec-7-ene and 20 ml acetonitrile. The reaction was refluxed for 2.5 hours then cooled to room temperature. The formed precipitate was filtered, washed with acetonitrile and ethyl ether, yielding 1.13 g (92%) of the title compound, mp 288\u00b0-290\u00b0 C."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction was warmed"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to reflux"
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the solution was refluxed for another two hours",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "cooled to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "ADDITION",
+            "details": "To this solution was added"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The reaction was refluxed for 2.5 hours",
+            "duration": {
+                "value": 2.5,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "then cooled to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The formed precipitate was filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with acetonitrile and ethyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetonitrile"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "1-Cyclopropyl-7-(2,5-diazabicyclo[2.2.1]hept-2-yl)-6,8-difluoro-1,4-dihydro-4-oxo-3-quinolinecarboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CC1)N1C=C(C(C2=CC(=C(C(=C12)F)N1C2CNC(C1)C2)F)=O)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H17F2N3O3/c19-13-4-11-15(14(20)16(13)22-6-8-3-10(22)5-21-8)23(9-1-2-9)7-12(17(11)24)18(25)26/h4,7-10,21H,1-3,5-6H2,(H,25,26)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 1.13,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 92.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 92.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04578473",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:59:28.605462"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:40:07 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:01 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-b9ba5e88e1da40d784731fb8887f0ffe"
+}

@@ -1,0 +1,488 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([Li])[CH2:2][CH2:3][CH3:4].[CH3:6][CH2:7]CCCC.C1([CH2:18][CH2:19][N:20]2[C:24](Br)=[C:23]([C:26]([O:28][CH2:29][CH3:30])=[O:27])[C:22]([N:31]([CH2:69][CH2:70][CH3:71])[CH2:32][C:33]3[CH:38]=[CH:37][C:36]([C:39]4[CH:44]=[CH:43][CH:42]=[CH:41][C:40]=4[C:45]4[N:49]([C:50]([C:63]5[CH:68]=[CH:67][CH:66]=[CH:65][CH:64]=5)([C:57]5[CH:62]=[CH:61][CH:60]=[CH:59][CH:58]=5)[C:51]5[CH:56]=[CH:55][CH:54]=[CH:53][CH:52]=5)[N:48]=[N:47][N:46]=4)=[CH:35][CH:34]=3)=[N:21]2)C=CC=CC=1.C(=O)=O.CC(C)=O.I[C:80]1[CH:81]=[C:82]([CH3:86])[CH:83]=[CH:84][CH:85]=1.[Cl-].[NH4+]>[Cl-].[Zn+2].[Cl-].C1COCC1.C1C=CC([P]([Pd]([P](C2C=CC=CC=2)(C2C=CC=CC=2)C2C=CC=CC=2)([P](C2C=CC=CC=2)(C2C=CC=CC=2)C2C=CC=CC=2)[P](C2C=CC=CC=2)(C2C=CC=CC=2)C2C=CC=CC=2)(C2C=CC=CC=2)C2C=CC=CC=2)=CC=1.C1COCC1.CN1CCCN(C)C1=O>[C:4]1([CH2:18][CH2:19][N:20]2[C:24]([C:83]3[CH:84]=[CH:85][CH:80]=[CH:81][C:82]=3[CH3:86])=[C:23]([C:26]([O:28][CH2:29][CH3:30])=[O:27])[C:22]([N:31]([CH2:69][CH2:70][CH3:71])[CH2:32][C:33]3[CH:34]=[CH:35][C:36]([C:39]4[CH:44]=[CH:43][CH:42]=[CH:41][C:40]=4[C:45]4[N:49]([C:50]([C:51]5[CH:56]=[CH:55][CH:54]=[CH:53][CH:52]=5)([C:57]5[CH:62]=[CH:61][CH:60]=[CH:59][CH:58]=5)[C:63]5[CH:68]=[CH:67][CH:66]=[CH:65][CH:64]=5)[N:48]=[N:47][N:46]=4)=[CH:37][CH:38]=3)=[N:21]2)[CH:7]=[CH:6][CH:1]=[CH:2][CH:3]=1 |f:0.1,3.4,6.7,8.9.10.11,^1:100,102,121,140|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5_m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ammonium chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[NH4+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH.H3N/h1H;1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-butyl lithium hexane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)[Li].CCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14.C4H9.Li/c1-3-5-6-4-2;1-3-4-2;/h3-6H2,1-2H3;1,3-4H2,2H3;"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.23,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2_m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-[1-(2-phenylethyl)-5-bromo-4-ethoxycarbonylpyrazol-3-yl]-N-[(2'-(N-triphenylmethyl-(1H-tetrazol-5-yl))biphenyl-4-yl)methyl]-n-propylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)CCN1N=C(C(=C1Br)C(=O)OCC)N(CC1=CC=C(C=C1)C1=C(C=CC=C1)C1=NN=NN1C(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)CCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C50H46BrN7O2/c1-3-34-56(48-45(49(59)60-4-2)46(51)57(53-48)35-33-37-19-9-5-10-20-37)36-38-29-31-39(32-30-38)43-27-17-18-28-44(43)47-52-54-55-58(47)50(40-21-11-6-12-22-40,41-23-13-7-14-24-41)42-25-15-8-16-26-42/h5-32H,3-4,33-36H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 208.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3-dimethyl-3,4,5,6-tetrahydro-2(1H)-pyrimidinone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1C(N(CCC1)C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H12N2O/c1-7-4-3-5-8(2)6(7)9/h3-5H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.04,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m9_m4_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "m-iodotoluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "IC=1C=C(C=CC1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H7I/c1-6-3-2-4-7(8)5-6/h2-5H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 83.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrakis(triphenylphosphine)palladium(0)"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1C=CC(=CC1)[P](C=2C=CC=CC2)(C=3C=CC=CC3)[Pd]([P](C=4C=CC=CC4)(C=5C=CC=CC5)C=6C=CC=CC6)([P](C=7C=CC=CC7)(C=8C=CC=CC8)C=9C=CC=CC9)[P](C=1C=CC=CC1)(C=1C=CC=CC1)C=1C=CC=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4C18H15P.Pd/c4*1-4-10-16(11-5-1)19(17-12-6-2-7-13-17)18-14-8-3-9-15-18;/h4*1-15H;"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 36.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "zinc chloride THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[Zn+2].[Cl-].C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O.2ClH.Zn/c1-2-4-5-3-1;;;/h1-4H2;2*1H;/q;;;+2/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.74,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dry ice acetone"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)=O.CC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H6O.CO2/c1-3(2)4;2-1-3/h1-2H3;"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "stirred for 10 minutes"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "0.23 ml of 1.6M n-butyl lithium/hexane solution were dropwise added to THF solution (5 ml) containing 208 mg of N-[1-(2-phenylethyl)-5-bromo-4-ethoxycarbonylpyrazol-3-yl]-N-[(2'-(N-triphenylmethyl-(1H-tetrazol-5-yl))biphenyl-4-yl)methyl]-n-propylamine and 0.04 ml of 1,3-dimethyl-3,4,5,6-tetrahydro-2(1H)-pyrimidinone and stirred for 10 minutes, while cooling with dry ice-acetone. 0.74 ml of 0.5M zinc chloride/THF solution were added thereto and stirred for 30 minutes at room temperature. Then, THF solution (5 ml) containing 83 mg of m-iodotoluene and 36 mg of tetrakis(triphenylphosphine)palladium(0) were added thereto and stirred for 28 hours at 60\u00b0 C. 10 ml of ammonium chloride were added to the reaction solution, THF was distilled off under reduced pressure, and the resultant was extracted with 50 ml of dichloromethane. After dried over magnesium sulfate, the solvent was distilled off under reduced pressure. The resulting residue was subjected to silica gel column chromatography (n-hexane-ethyl acetate=5:1) to obtain 171 mg of the intended compound as a pale yellow, amorphous solid."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "stirred for 30 minutes at room temperature",
+            "duration": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "were added"
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred for 28 hours at 60\u00b0 C",
+            "duration": {
+                "value": 28.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 60.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "was distilled off under reduced pressure"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the resultant was extracted with 50 ml of dichloromethane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dichloromethane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClCCl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 50.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "After dried over magnesium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "magnesium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DISTILLATION",
+            "details": "the solvent was distilled off under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 10.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "intended compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "N-[1-(2-phenylethyl)-5-(2-methylphenyl)-4-ethoxycarbonylpyrazol-3-yl]-N-[(2'-(N-triphenylmethyl-(1H-tetrazol-5-yl))biphenyl-4-yl)methyl]-n-propylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)CCN1N=C(C(=C1C1=C(C=CC=C1)C)C(=O)OCC)N(CC1=CC=C(C=C1)C1=C(C=CC=C1)C1=NN=NN1C(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)CCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C57H53N7O2/c1-4-39-62(55-52(56(65)66-5-2)53(49-31-19-18-22-42(49)3)63(59-55)40-38-43-23-10-6-11-24-43)41-44-34-36-45(37-35-44)50-32-20-21-33-51(50)54-58-60-61-64(54)57(46-25-12-7-13-26-46,47-27-14-8-15-28-47)48-29-16-9-17-30-48/h6-37H,4-5,38-41H2,1-3H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 171.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05721264",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:41:39.957620"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:02:29 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:43 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-50b4037b337e4188afeb78f061059d38"
+}

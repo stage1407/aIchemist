@@ -70,6 +70,18 @@ properties = {
     "graph_features": list(feature_filter["graph_features"].keys())
 }
 
+with open("./src/func/functional_groups.json","r") as file:
+    FUNCTIONAL_GROUPS = json.load(file)
+
+def find_functional_groups(mol_graph):
+    matches = {}
+    for name, smarts in FUNCTIONAL_GROUPS.items():
+        patt = Chem.MolFromSmarts(smarts)
+        for mol in mol_graph.mols:
+            for match in mol.GetSubstructMatches(patt):
+                matches.setdefault(name, []).extend(match)
+    return matches
+
 def get_atom_properties(atom : Chem.Atom, property) -> float:
     node_properties = properties["node_features"]
     hybrid_num = {v: k for k,v in Chem.rdchem.HybridizationType.values.items()}
@@ -433,6 +445,34 @@ def compute_graph_matchers_parallel(reactants, products, computed_results, nw, t
 
     return graph_matcher_results
 
+def prioritized_atom_mapping(educts : mol_graph, products: mol_graph):
+    mapping = {}
+    educt_groups = find_functional_groups(educts)
+    product_groups = find_functional_groups(products)
+    used_educt_atoms = set()
+    used_product_atoms = set()
+
+    for group_name in educt_groups:
+        if group_name in product_groups:
+            educt_matches = educt_groups[group_name]
+            product_matches = product_groups[group_name]
+            for e_match, p_match in zip(educt_matches, product_matches):
+                for e_atom, p_atom in zip(e_match, p_match):
+                    if e_atom not in used_educt_atoms and p_atom not in used_product_atoms:
+                        mapping[e_atom] = p_atom
+                        used_educt_atoms.add(e_atom)
+                        used_product_atoms.add(p_atom)
+
+    educt_atoms = [a for a in educts.nodes if a not in used_educt_atoms]
+    product_atoms = [a for a in products.nodes if a not in used_product_atoms]
+    for e in educt_atoms:
+        for p in product_atoms:
+            if educts.get_atom_element(e) == products.get_atom_element(p):
+                mapping[e] = p
+                product_atoms.remove(p)
+                break
+    return mapping
+    
 class reaction_graph(nx.Graph):
     def __init__(self, mol_educts:mol_graph=None, mol_products:mol_graph=None, graph:nx.Graph=None):
         assert (mol_educts is not None and mol_products is not None) or graph is not None 
@@ -454,13 +494,16 @@ class reaction_graph(nx.Graph):
             # print("Debug4:", list(self.nodes))
         else:
             raise AttributeError("Could not create ReactionGraph by Nones as arguments")
-        
+
     def create_reaction_graph(self):
         # Bipartite maximization of MCS relation between educts and products (extended backpacking problem) #! just a heuristic approach
         selected_mcs, _ = self.maximize_disjoint_mcs()
         
         # Derive atom-mapping
         atom_mapping = self.compute_atom_mapping(selected_mcs)
+        if not validate_atom_mapping(atom_mapping, self.educts, self.products):
+            print("Fallback: Prioritized mapping is used.")
+            atom_mapping = prioritized_atom_mapping(self.educts, self.products, tolerance=0.1)
         # print("Atom Mapping:",atom_mapping)
         # Compute bond changes
         bond_changes = self.compute_bond_changes(atom_mapping)
@@ -472,16 +515,6 @@ class reaction_graph(nx.Graph):
         # print("Edges:",self.edges)
         # Save atom mapping
         self.bijection = atom_mapping
-
-    """
-    def flexible_edge_match(e1,e2):
-        bond1 = e1.get("bond_type",None)
-        bond2 = e2.get("bond_type",None)
-        assert bond1 is not None and bond2 is not None
-        if bond
-        print(bond1, bond2)
-        return True
-    """
 
     def get_mcs_cached(self, r,p,timeout=10):
         mcs_cache = self.mcs_cache
@@ -544,6 +577,10 @@ class reaction_graph(nx.Graph):
         return pairs
 
     def maximize_disjoint_mcs(self):
+        """ Maximizes the disjoint MCS between reactants and products using the Hungarian algorithm.
+        Returns a list of selected MCS pairs and the total size of the MCS.
+        """
+
         reactants = self.educts
         products = self.products
 
@@ -693,15 +730,19 @@ class reaction_graph(nx.Graph):
     def isEmpty(self):
         return self.number_of_nodes == 0
 
-    def chemical_distance(self, educts, products):
+    def chemical_distance(self, generated : bool):
         """
         Computes the chemical Distance between self and other_graph.
         """
         # Sums up
-        sum_g1 = sum(educts.edge_attr)
-        sum_g2 = sum(products.edge_attr)
-        
-        selected_pairs = self.maximize_disjoint_mcs()
+        if not generated:
+            sum_g1 = sum(self.educts.edge_attr)
+            sum_g2 = sum(self.products.edge_attr)       
+            selected_pairs = self.maximize_disjoint_mcs()
+        else:
+            selected_pairs = self.
+        # Computes the MCSy
+        #print(
         sum_mcs = 0
         for pair in selected_pairs:
             mcs_mol = Chem.MolFromSmarts(pair[1])
@@ -712,7 +753,65 @@ class reaction_graph(nx.Graph):
         chemical_distance = sum_g1 + sum_g2 - 2*sum_mcs
 
         return chemical_distance
+
+def get_max_valence(element):
+    try:
+        element = getattr(periodictable, element)
+        config = element.electrons
+        valence_shell = max(config.keys())
+        valence_electrons = config[valence_shell]
+        return valence_electrons
+    except AttributeError:
+        return 4
     
+def is_valence_allowed(element, valence):
+    max_val = get_max_valence(element)
+    return 0 < valence <= max_val
+
+def validate_atom_mapping(phi_mapping, educts, products, tolerance=0.1, valence_tolerance=3):
+    """ Validates the atom mapping between educts and products."""
+    mismatches = 0
+    for e_idx, p_idx in phi_mapping.items():
+        # Type check
+        elem_e = educts.get_atom_element(e_idx)
+        elem_p = products.get_atom_element(p_idx)
+        if elem_e != elem_p:
+            print(f"Atom mapping validation failed: Educt atom {e_idx} ({elem_e}) does not match Product atom {p_idx} ({elem_p}).")
+            mismatches += 1
+            if mismatches > tolerance*len(phi_mapping):
+                return False
+        # Valence check
+        valence_violations = 0
+        valence_e = sum(educts.edges[e_idx, nbr]["bond_type"] for nbr in educts.neighbors(e_idx))
+        valence_p = sum(products.edges[p_idx, nbr]["bond_type"] for nbr in products.neighbors(p_idx))
+        if abs(valence_e - valence_p) > valence_tolerance:
+            print(f"Atom mapping validation failed: Educt atom {e_idx} has valence {valence_e} but Product atom {p_idx} has valence {valence_p}.")
+            valence_violations += 1
+            if valence_violations > valence_tolerance:
+                return False
+        # Octet check
+        if not is_valence_allowed(elem_e, valence_e):
+            print(f"Warnung: Edukt-Atom {e_idx} ({elem_e}) hat unplausible Valenz {valence_e}.")
+            return False
+        if not is_valence_allowed(elem_p, valence_p):
+            print(f"Warnung: Produkt-Atom {p_idx} ({elem_p}) hat unplausible Valenz {valence_p}.")
+            return False
+        # Prüfe Valenzänderung wie gehabt
+        if abs(valence_e - valence_p) > valence_tolerance:
+            print(f"Atom mapping validation failed: Educt atom {e_idx} has valence {valence_e} but Product atom {p_idx} has valence {valence_p}.")
+            return False
+    # Functional groups check
+    educt_groups = find_functional_groups(educts)
+    product_groups = find_functional_groups(products)
+    for group in FUNCTIONAL_GROUPS.keys():
+        n_educt = len(educt_groups.get(group, []))
+        n_product = len(product_groups.get(group, []))
+        max_groups = max(n_educt, n_product,1)
+        diff = abs(n_educt - n_product) / max_groups
+        if diff > tolerance:
+            print(f"Functional group mismatch: {group} in educts ({n_educt}) does not match products ({n_product}).")
+            return False
+    return True
 
 def transform(G : mol_graph, omega : list, G_R : reaction_graph):
     def omega_inv(i):

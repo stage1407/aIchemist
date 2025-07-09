@@ -1,0 +1,368 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C1(C([O:14][C:15]([C:17]2[N:22]3[C:23](=[O:25])[CH2:24][C@H:21]3[S:20][C:19](NC(=O)/C=N\\OC(C3C=CC=CC=3)(C3C=CC=CC=3)C3C=CC=CC=3)(C3N=C(NC(OC(C)(C)C)=O)SC=3)[C:18]=2[CH2:64][S:65][C:66]2[N:67]([CH3:71])[N:68]=[N:69][CH:70]=2)=[S:16])C2C=CC=CC=2)C=CC=CC=1.[Cl-].[Al+3].[Cl-].[Cl-]>C1(OC)C=CC=CC=1.[N+](C)([O-])=O.Cl.O>[CH3:71][N:67]1[C:66]([S:65][CH2:64][C:18]2[CH2:19][S:20][C@@H:21]3[CH2:24][C:23](=[O:25])[N:22]3[C:17]=2[C:15]([OH:14])=[S:16])=[CH:70][N:69]=[N:68]1 |f:1.2.3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m6_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrochloric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 7.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m3_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(Z)-2-(2-t-butoxycarbonylaminothiazol -4-yl)- 2-trityloxyiminoacetamido-3-(3-methyl-1,2,3-triazol-4-yl)thiomethylthio-3-cephem-4-carboxylic acid diphenylmethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C(C1=CC=CC=C1)OC(=S)C1=C(C(S[C@H]2N1C(C2)=O)(C=2N=C(SC2)NC(=O)OC(C)(C)C)NC(\\C=N/OC(C2=CC=CC=C2)(C2=CC=CC=C2)C2=CC=CC=C2)=O)CSC=2N(N=NC2)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C53H48N8O6S4/c1-51(2,3)66-50(64)57-49-56-41(34-70-49)53(58-42(62)31-55-67-52(37-24-14-7-15-25-37,38-26-16-8-17-27-38)39-28-18-9-19-29-39)40(33-69-45-32-54-59-60(45)4)46(61-43(63)30-44(61)71-53)48(68)65-47(35-20-10-5-11-21-35)36-22-12-6-13-23-36/h5-29,31-32,34,44,47H,30,33H2,1-4H3,(H,58,62)(H,56,57,64)/b55-31-/t44-,53?/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 900.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "anisole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)OC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O/c1-8-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 4.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "nitromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[N+](=O)([O-])C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3NO2/c1-2(3)4/h1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 16.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aluminum chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[Al+3].[Cl-].[Cl-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Al.3ClH/h;3*1H/q+3;;;/p-3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 924.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "anisole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)OC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O/c1-8-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 2.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the mixture is stirred for 1 hour at -40\u00b0-30\u00b0 C"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 7\u03bc-[(Z)-2-(2-t-butoxycarbonylaminothiazol -4-yl)- 2-trityloxyiminoacetamido-3-(3-methyl-1,2,3-triazol-4-yl)thiomethylthio-3-cephem-4-carboxylic acid diphenylmethyl ester (900 mg: 0.869 mMol.) in a mixture of anisole (4 ml) and nitromethane (16 ml) is added a solution of aluminum chloride (924 mg: 6.95 mMol.) in anisole (2 ml) at -40\u00b0 C., and the mixture is stirred for 1 hour at -40\u00b0-30\u00b0 C. The reaction mixture is diluted with 1N-hydrochloric acid (7 ml) and water and washed with ethyl acetate. The aqueous layer is concentrated under reduced pressure to remove organic solvent and passed through a column of styrene-divinylbenzene copolymer adsorbent. The product is eluted with methanol-water (4:1) to give 7\u03bc-(Z)-2-(2-aminothiazol -4-yl)-2-hydroxyiminoacetamido]-3-(3-methyl-1,2,3-triazol-4-yl)thiomethylthio-3-cephem-4-carboxylic acid as pale yellow powder (366 mg). Yield: 80%."
+    },
+    "workups": [
+        {
+            "type": "WASH",
+            "details": "washed with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The aqueous layer is concentrated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to remove organic solvent"
+        },
+        {
+            "type": "WASH",
+            "details": "The product is eluted with methanol-water (4:1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "methanol water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CO.O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH4O.H2O/c1-2;/h2H,1H3;1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-(3-methyl-1,2,3-triazol-4-yl)thiomethylthio-3-cephem-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1N=NC=C1SCC=1CS[C@H]2N(C1C(=S)O)C(C2)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H12N4O2S3/c1-14-9(3-12-13-14)20-5-6-4-19-8-2-7(16)15(8)10(6)11(17)18/h3,8H,2,4-5H2,1H3,(H,17,18)/t8-/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 366.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 80.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 128.2
+                            }
+                        }
+                    ],
+                    "isolated_color": "pale yellow",
+                    "texture": {
+                        "type": "POWDER",
+                        "details": "powder"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05214037",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:21:49.062309"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:20:50 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:15 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-d90f0393aaa4433ba9d7ac65c4203e03"
+}

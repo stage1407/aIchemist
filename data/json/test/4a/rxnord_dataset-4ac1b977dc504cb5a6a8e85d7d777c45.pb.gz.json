@@ -1,0 +1,416 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([NH:20][C:21]1[S:22][CH:23]=[C:24]([C:26](=[N:60][OH:61])[C:27]([NH:29][CH:30]2[C:58](=[O:59])[N:32]3[C:33]([C:42]([O:44][CH:45]([C:52]4[CH:57]=[CH:56][CH:55]=[CH:54][CH:53]=4)[C:46]4[CH:51]=[CH:50][CH:49]=[CH:48][CH:47]=4)=[O:43])=[C:34]([CH2:37][O:38][C:39](=[O:41])[CH3:40])[CH2:35][S:36][C@H:31]23)=[O:28])[N:25]=1)([C:14]1[CH:19]=[CH:18][CH:17]=[CH:16][CH:15]=1)([C:8]1[CH:13]=[CH:12][CH:11]=[CH:10][CH:9]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.Br[CH2:63][C:64]([O:66][C:67]([CH3:70])([CH3:69])[CH3:68])=[O:65]>[Ag]=O.CN(C)C=O>[C:1]([NH:20][C:21]1[S:22][CH:23]=[C:24]([C:26](=[N:60][O:61][CH2:63][C:64]([O:66][C:67]([CH3:70])([CH3:69])[CH3:68])=[O:65])[C:27]([NH:29][CH:30]2[C:58](=[O:59])[N:32]3[C:33]([C:42]([O:44][CH:45]([C:52]4[CH:53]=[CH:54][CH:55]=[CH:56][CH:57]=4)[C:46]4[CH:51]=[CH:50][CH:49]=[CH:48][CH:47]=4)=[O:43])=[C:34]([CH2:37][O:38][C:39](=[O:41])[CH3:40])[CH2:35][S:36][C@H:31]23)=[O:28])[N:25]=1)([C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1)([C:14]1[CH:15]=[CH:16][CH:17]=[CH:18][CH:19]=1)[C:8]1[CH:9]=[CH:10][CH:11]=[CH:12][CH:13]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "diphenylmethyl 7-[2-(2-tritylamino-4-thiazolyl)-2-hydroxyimino-acetamido]-3-acetoxymethyl-ceph-3-eme-4-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)(C1=CC=CC=C1)NC=1SC=C(N1)C(C(=O)NC1[C@@H]2N(C(=C(CS2)COC(C)=O)C(=O)OC(C2=CC=CC=C2)C2=CC=CC=C2)C1=O)=NO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C47H39N5O7S2/c1-30(53)58-27-33-28-60-44-39(43(55)52(44)40(33)45(56)59-41(31-17-7-2-8-18-31)32-19-9-3-10-20-32)49-42(54)38(51-57)37-29-61-46(48-37)50-47(34-21-11-4-12-22-34,35-23-13-5-14-24-35)36-25-15-6-16-26-36/h2-26,29,39,41,44,57H,27-28H2,1H3,(H,48,50)(H,49,54)/t39?,44-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.85,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tert.-butyl bromoacetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrCC(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H11BrO2/c1-6(2,3)9-5(8)4-7/h4H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.8,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 4.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "silver oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Ag]=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Ag.O"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred for one hour"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 0.85 g of the product of Step D, 0.8 ml of tert.-butyl bromoacetate and 4 ml of dimethylformamide stood in an ice bath for 5 minutes and then 1.7 g of silver oxide were added thereto. The mixture was stirred for one hour after removal of the bath and the mixture was vacuum filtered. The filter was rinsed with ethyl acetate and 80 ml of water were added to the filtrate which was decanted. The aqueous phase was extracted twice with 20 ml of ethyl acetate and the combined organic phases were washed twice with 50 ml of aqueous sodium chloride solution, dried, treated with 80 mg of activated carbon and vacuum filtered. The filter was rinsed with ethyl acetate and the filtrate was evaporated to dryness under reduced pressure. The residue was taken up in isopropyl ether and after efflorescence, the mixture was vacuum filtered. The product was rinsed with isopropyl ether and dried to obtain 0.724 g of the syn isomer of diphenylmethyl 7-[2-(2-tritylamino-4-thiazolyl)-2-(tert.-butoxycarbonylmethyloxyimino)-acetamido]-3-acetoxymethyl-ceph-3-eme-4-carboxylate with Rf=0.34 (methylene chloride containing 5% of ether)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "after removal of the bath"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "The filter was rinsed with ethyl acetate and 80 ml of water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 80.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "were added to the filtrate which"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was decanted"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The aqueous phase was extracted twice with 20 ml of ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "the combined organic phases were washed twice with 50 ml of aqueous sodium chloride solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na/h1H;/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 50.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        },
+        {
+            "type": "ADDITION",
+            "details": "treated with 80 mg of activated carbon and vacuum"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "The filter was rinsed with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the filtrate was evaporated to dryness under reduced pressure"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "WASH",
+            "details": "The product was rinsed with isopropyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "isopropyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(C)OC(C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14O/c1-5(2)7-6(3)4/h5-6H,1-4H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 5.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "diphenylmethyl 7-[2-(2-tritylamino-4-thiazolyl)-2-(tert.-butoxycarbonylmethyloxyimino)-acetamido]-3-acetoxymethyl-ceph-3-eme-4-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)(C1=CC=CC=C1)NC=1SC=C(N1)C(C(=O)NC1[C@@H]2N(C(=C(CS2)COC(C)=O)C(=O)OC(C2=CC=CC=C2)C2=CC=CC=C2)C1=O)=NOCC(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C53H49N5O9S2/c1-34(59)64-30-37-32-68-49-44(48(62)58(49)45(37)50(63)66-46(35-20-10-5-11-21-35)36-22-12-6-13-23-36)55-47(61)43(57-65-31-42(60)67-52(2,3)4)41-33-69-51(54-41)56-53(38-24-14-7-15-25-38,39-26-16-8-17-27-39)40-28-18-9-19-29-40/h5-29,33,44,46,49H,30-32H2,1-4H3,(H,54,56)(H,55,61)/t44?,49-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04386210",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:52:42.737521"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:28:41 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:26 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-204ca85a82524f9181f17191601c3ed3"
+}

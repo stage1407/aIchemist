@@ -1,0 +1,453 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "CCC(C)[BH-](C(C)CC)C(C)CC.[Li+].[CH2:15]([C@@:18]1([CH3:45])[CH2:23][C@H:22]([C:24]2[CH:29]=[CH:28][CH:27]=[C:26]([Cl:30])[CH:25]=2)[C@@H:21]([C:31]2[CH:36]=[CH:35][C:34]([Cl:37])=[CH:33][CH:32]=2)[N:20]([C@@H:38]([CH2:42][CH3:43])[C:39](=[O:41])[CH3:40])[C:19]1=[O:44])[CH:16]=[CH2:17]>C1COCC1>[CH2:15]([C@@:18]1([CH3:45])[CH2:23][C@H:22]([C:24]2[CH:29]=[CH:28][CH:27]=[C:26]([Cl:30])[CH:25]=2)[C@@H:21]([C:31]2[CH:32]=[CH:33][C:34]([Cl:37])=[CH:35][CH:36]=2)[N:20]([C@@H:38]([CH2:42][CH3:43])[C@@H:39]([OH:41])[CH3:40])[C:19]1=[O:44])[CH:16]=[CH2:17] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3_m2_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "L-Selectride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCC([BH-](C(CC)C)C(CC)C)C.[Li+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H28B.Li/c1-7-10(4)13(11(5)8-2)12(6)9-3;/h10-13H,7-9H2,1-6H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(3S,5R,6S)-3-allyl-5-(3-chlorophenyl)-6-(4-chlorophenyl)-3-methyl-1-((S)-2-oxopentan-3-yl)piperidin-2-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C=C)[C@@]1(C(N([C@@H]([C@H](C1)C1=CC(=CC=C1)Cl)C1=CC=C(C=C1)Cl)[C@H](C(C)=O)CC)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C26H29Cl2NO2/c1-5-14-26(4)16-22(19-8-7-9-21(28)15-19)24(18-10-12-20(27)13-11-18)29(25(26)31)23(6-2)17(3)30/h5,7-13,15,22-24H,1,6,14,16H2,2-4H3/t22-,23+,24-,26+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "THF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCOC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 29.1,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The reaction was stirred for 40 min"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "L-Selectride\u2122 (1M in THF, 5.24 ml, 5.24 mmol) was added to a solution at \u221210\u00b0 C. of (3S,5R,6S)-3-allyl-5-(3-chlorophenyl)-6-(4-chlorophenyl)-3-methyl-1-((S)-2-oxopentan-3-yl)piperidin-2-one (Example 149, step A, 2 g, 4.36 mmol) in THF (29.1 ml) being careful to maintain the temperature below \u22127\u00b0 C. The reaction was stirred for 40 min then quenched into an aqueous solution of Oxone\u2122 (10.73 g, 17.45 mmol) in 60 mL water. It was noted that the temperature spiked up to 40\u00b0 C. during the addition. The reaction was cooled to RT using a water/ice bath and stirred at RT for 1 h, then diluted with ethyl acetate. The layers were separated and the aq layer was extracted with ethyl acetate. The combined organics were washed with brine and dried over MgSO4, filtered and concentrated. The crude material was dried under high vacuum overnight. Purification by column chromatography using 10-20% acetone in hexanes afforded the title compound."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "to maintain the temperature below \u22127\u00b0 C"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "then quenched into an aqueous solution of Oxone\u2122 (10.73 g, 17.45 mmol) in 60 mL water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Oxone"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "OOS(=O)[O-].[K+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/K.H2O4S/c;1-4-5(2)3/h;1H,(H,2,3)/q+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 60.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "spiked up to 40\u00b0 C. during the addition",
+            "temperature": {
+                "setpoint": {
+                    "value": 40.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred at RT for 1 h",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "diluted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The layers were separated"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the aq layer was extracted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The combined organics were washed with brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over MgSO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "MgSO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Mg+2]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/Mg.H2O4S/c;1-5(2,3)4/h;(H2,1,2,3,4)/q+2;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "The crude material was dried under high vacuum overnight",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude material"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Purification by column chromatography"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 40.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(3S,5R,6S)-3-Allyl-5-(3-chlorophenyl)-6-(4-chlorophenyl)-1-((2S,3S)-2-hydroxypentan-3-yl)-3-methylpiperidin-2-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C=C)[C@@]1(C(N([C@@H]([C@H](C1)C1=CC(=CC=C1)Cl)C1=CC=C(C=C1)Cl)[C@H]([C@H](C)O)CC)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C26H31Cl2NO2/c1-5-14-26(4)16-22(19-8-7-9-21(28)15-19)24(18-10-12-20(27)13-11-18)29(25(26)31)23(6-2)17(3)30/h5,7-13,15,17,22-24,30H,1,6,14,16H2,2-4H3/t17-,22+,23-,24+,26-/m0/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08569341B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:05:52.418769"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:25:29 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:17 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-8322535520f74940ad3b3c349ae86c62"
+}

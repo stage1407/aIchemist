@@ -1,0 +1,639 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C1C=C2C=CC(O)=C(C3C4C(=CC=CC=4)C=CC=3O)C2=CC=1.[CH:23]1([C:26]2[C:35](/[CH:36]=[CH:37]/[CH:38]=[O:39])=[C:34]([C:40]3[CH:45]=[CH:44][C:43]([F:46])=[CH:42][CH:41]=3)[C:33]3[C:28](=[CH:29][CH:30]=[CH:31][CH:32]=3)[N:27]=2)[CH2:25][CH2:24]1.[CH2:47]([O:49][C:50]([O:59][Si](C)(C)C)=[CH:51][C:52]([O:54][Si](C)(C)C)=[CH2:53])[CH3:48].FC(F)(F)C(O)=O.P(=O)(O)(O)O>CC(C)[O-].[Ti+4].CC(C)[O-].CC(C)[O-].CC(C)[O-].CCCCCC.CCOC(C)=O.O1CCCC1>[CH2:47]([O:49][C:50](=[O:59])[CH2:51][C:52](=[O:54])[CH2:53][C@H:38]([OH:39])/[CH:37]=[CH:36]/[C:35]1[C:26]([CH:23]2[CH2:25][CH2:24]2)=[N:27][C:28]2[C:33]([C:34]=1[C:40]1[CH:41]=[CH:42][C:43]([F:46])=[CH:44][CH:45]=1)=[CH:32][CH:31]=[CH:30][CH:29]=2)[CH3:48] |f:5.6.7.8.9,10.11|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m11": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "phosphoric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "P(O)(O)(O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(S)-BINOL"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=C2C(=C1)C=CC(=C2C3=C(C=CC4=CC=CC=C43)O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H14O2/c21-17-11-9-13-5-1-3-7-15(13)19(17)20-16-8-4-2-6-14(16)10-12-18(20)22/h1-12,21-22H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.44,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4A"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "compound"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 71.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-ethoxy-1,3-bis-trimethylsilanyloxy-buta-1,3-diene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(=CC(=C)O[Si](C)(C)C)O[Si](C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H26O3Si2/c1-9-13-12(15-17(6,7)8)10-11(2)14-16(3,4)5/h10H,2,9H2,1,3-8H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "silyloxy aldol adduct"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m12": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "titanium (IV) isopropoxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC([O-])C.[Ti+4].CC([O-])C.CC([O-])C.CC([O-])C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4C3H7O.Ti/c4*1-3(2)4;/h4*3H,1-2H3;/q4*-1;+4"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.49,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m14": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 210.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aldehyde"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(2E)-3-{2-cyclopropyl-4-(4-fluorophenyl)-quinolin-3-yl}-2-propenal"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(CC1)C1=NC2=CC=CC=C2C(=C1/C=C/C=O)C1=CC=C(C=C1)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H16FNO/c22-16-11-9-14(10-12-16)20-17-4-1-2-6-19(17)23-21(15-7-8-15)18(20)5-3-13-24/h1-6,9-13,15H,7-8H2/b5-3+"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 32.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trifluoroacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)O)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aldehyde"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m13": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexane EtOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCC.CCOC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14.C4H8O2/c1-3-5-6-4-2;1-3-6-4(2)5/h3-6H2,1-2H3;3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 20.0,
+                "precision": 2.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture is stirred at 20\u00b12\u00b0 C. for about 15 minutes"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Under nitrogen a dry 1,000 mL flask is charged with 1.44 g of (S)-BINOL, 14.8 g of molecular sieves 4A powder (previously stored for at least 24 hours in an ordinary convection oven at 110\u00b0 C.), and 210 mL of anhydrous tetrahydrofuran. The mixture is stirred at 20\u00b12\u00b0 C. for about 15 minutes, then 1.49 mL of titanium (IV) isopropoxide is added dropwise and the dark red mixture is warmed to 50\u00b11\u00b0 C. and stirred for 30 minutes, then cooled back to 20\u00b12\u00b0 C. 32.0 g of (2E)-3-{2-cyclopropyl-4-(4-fluorophenyl)-quinolin-3-yl}-2-propenal is added as a solid and the mixture stirred for 10 minutes. Five portions of 64.6 g (about 71 mL) of the compound of Example 2, 1-ethoxy-1,3-bis-trimethylsilanyloxy-buta-1,3-diene are then added, adding each portion over about 5 minutes (mildly exothermic) and waiting 30 minutes before adding the next portion. The internal temperature is maintained at 20\u00b12\u00b0 C. Disappearance of aldehyde is monitored by TLC (2:1 (v/v) hexane/EtOAc, Rf aldehyde=0.65). When the reaction is complete, the mixture is cooled with an ice bath and 40 mL of 20% (v/v) aqueous trifluoroacetic acid is added. The mixture is warmed to room temperature. After 30 minutes, the desilylation is judged complete by TLC (disappearance of silyloxy aldol adduct Rf=0.75, appearance of de-silylated product Rf=0.22). The mixture is cooled with an ice bath and 80 g of 25% (v/v) aqueous phosphoric acid is added (exothermic) while maintaining the internal temperature below 25\u00b0 C. The mixture is stirred for 3 hours, then the layers are separated. The aqueous layer is extracted with 210 mL of t-butyl methyl ether and the organic layers are combined and washed with 4\u00d7150 mL of 10% aqueous sodium chloride. Solvents are removed by rotoevaporation and the resulting oil is dissolved in 150 mL of n-butanol and evaporated under reduced pressure. This process is repeated with an additional 150 mL of n-butanol to form (E)-(5S)-7-[2-cyclopropyl-4-(4-fluoro-phenyl)-quinolin-3-yl]-5-hydroxy-3-oxo-hept-6-enoic acid ethyl ester in 99.3% optical purity (HPLC: Chiralpak AD; eluent, hexane/I-PrOH\u201494/6; flow rate 1 mL/min.; UV @ 254 nM). The product may be used in the next step without further purification."
+    },
+    "workups": [
+        {
+            "type": "WAIT",
+            "details": "previously stored for at least 24 hours in an ordinary convection oven at 110\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 110.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the dark red mixture is warmed to 50\u00b11\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": 50.0,
+                    "precision": 1.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred for 30 minutes",
+            "duration": {
+                "value": 30.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "cooled back to 20\u00b12\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 20.0,
+                    "precision": 2.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "the mixture stirred for 10 minutes",
+            "duration": {
+                "value": 10.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "adding each portion over about 5 minutes (mildly exothermic) and",
+            "duration": {
+                "value": 5.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "WAIT",
+            "details": "waiting 30 minutes",
+            "duration": {
+                "value": 30.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "before adding the next portion"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The internal temperature is maintained at 20\u00b12\u00b0 C",
+            "temperature": {
+                "setpoint": {
+                    "value": 20.0,
+                    "precision": 2.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture is cooled with an ice bath"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The mixture is warmed to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "WAIT",
+            "details": "After 30 minutes",
+            "duration": {
+                "value": 30.0,
+                "units": "MINUTE"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The mixture is cooled with an ice bath"
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "while maintaining the internal temperature below 25\u00b0 C"
+        },
+        {
+            "type": "STIRRING",
+            "details": "The mixture is stirred for 3 hours",
+            "duration": {
+                "value": 3.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the layers are separated"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The aqueous layer is extracted with 210 mL of t-butyl methyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "t-butyl methyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "COC(C)(C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C5H12O/c1-5(2,3)6-4/h1-4H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 210.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "washed with 4\u00d7150 mL of 10% aqueous sodium chloride",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na/h1H;/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 150.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Solvents are removed by rotoevaporation"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "the resulting oil is dissolved in 150 mL of n-butanol",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "n-butanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(CCC)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-2-3-4-5/h5H,2-4H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 150.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated under reduced pressure"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 15.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(E)-(5S)-7-[2-cyclopropyl-4-(4-fluoro-phenyl)-quinolin-3-yl]-5-hydroxy-3-oxo-hept-6-enoic acid ethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(CC(C[C@@H](\\C=C\\C=1C(=NC2=CC=CC=C2C1C1=CC=C(C=C1)F)C1CC1)O)=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C27H26FNO4/c1-2-33-25(32)16-21(31)15-20(30)13-14-23-26(17-9-11-19(28)12-10-17)22-5-3-4-6-24(22)29-27(23)18-7-8-18/h3-6,9-14,18,20,30H,2,7-8,15-16H2,1H3/b14-13+/t20-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexane I-PrOH\u201494"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06835838B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:23:02.163932"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:08:00 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:39 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-315a8190fbfe4ea18395c03b6824a6d7"
+}

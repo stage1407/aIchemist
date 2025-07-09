@@ -1,0 +1,145 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[Cl:1][C:2]1[CH:11]=[C:10]2[C:5]([CH:6]=[CH:7][C:8]([CH2:12][O:13][C:14]3[CH:15]=[C:16]([C@H:20](O)[CH2:21][CH2:22][C:23]4[CH:28]=[CH:27][CH:26]=[CH:25][C:24]=4[C:29]([O:32]C4CCCCO4)([CH3:31])[CH3:30])[CH:17]=[CH:18][CH:19]=3)=[N:9]2)=[CH:4][CH:3]=1.[SH:40][C:41]([CH3:47])([CH3:46])[CH2:42][C:43]([OH:45])=[O:44]>>[Cl:1][C:2]1[CH:11]=[C:10]2[C:5]([CH:6]=[CH:7][C:8]([CH2:12][O:13][C:14]3[CH:15]=[C:16]([C@H:20]([S:40][C:41]([CH3:47])([CH3:46])[CH2:42][C:43]([OH:45])=[O:44])[CH2:21][CH2:22][C:23]4[CH:28]=[CH:27][CH:26]=[CH:25][C:24]=4[C:29]([OH:32])([CH3:30])[CH3:31])[CH:17]=[CH:18][CH:19]=3)=[N:9]2)=[CH:4][CH:3]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "alcohol"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "1-(R)-(3-((7-chloro-2-quinolinyl)methoxy)phenyl)-3-(2-(2-(2-tetrahydropyranyloxy)-2-propyl)phenyl)propanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C2C=CC(=NC2=C1)COC=1C=C(C=CC1)[C@@H](CCC1=C(C=CC=C1)C(C)(C)OC1OCCCC1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C33H36ClNO4/c1-33(2,39-32-12-5-6-19-37-32)29-11-4-3-8-23(29)15-18-31(36)25-9-7-10-28(20-25)38-22-27-17-14-24-13-16-26(34)21-30(24)35-27/h3-4,7-11,13-14,16-17,20-21,31-32,36H,5-6,12,15,18-19,22H2,1-2H3/t31-,32?/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-mercapto-3-methylbutanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "SC(CC(=O)O)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H10O2S/c1-5(2,8)3-4(6)7/h8H,3H2,1-2H3,(H,6,7)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The title compound was prepared using the enantiomer of the alcohol of Example 6, Step 8, and 3-mercapto-3-methylbutanoic acid, following Method J."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3-((1(R)-(3-((7-chloro-2-quinolinyl)methoxy)phenyl)-3-(2-(2-hydroxy-2-propyl)phenyl)-propyl)thio)-3-methylbutanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC=C2C=CC(=NC2=C1)COC=1C=C(C=CC1)[C@@H](CCC1=C(C=CC=C1)C(C)(C)O)SC(CC(=O)O)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C33H36ClNO4S/c1-32(2,20-31(36)37)40-30(17-14-22-8-5-6-11-28(22)33(3,4)38)24-9-7-10-27(18-24)39-21-26-16-13-23-12-15-25(34)19-29(23)35-26/h5-13,15-16,18-19,30,38H,14,17,20-21H2,1-4H3,(H,36,37)/t30-/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05266568",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:23:43.751272"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:24:47 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:30 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-35770e86f6054ed789271283c3130cdb"
+}

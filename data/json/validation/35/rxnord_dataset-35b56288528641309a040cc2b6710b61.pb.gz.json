@@ -1,0 +1,258 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[C:1]([NH:4][C:5]1[C:10]([C:11]2[C:16]([CH3:17])=[CH:15][C:14]([O:18][CH2:19][C:20]3([OH:28])[CH2:25][CH2:24][S:23](=[O:27])(=[O:26])[CH2:22][CH2:21]3)=[CH:13][C:12]=2[CH3:29])=[CH:9][C:8]([CH2:30][NH:31][C:32]2[CH:37]=[CH:36][C:35]([CH2:38][CH2:39][C:40]([OH:42])=[O:41])=[C:34]([F:43])[CH:33]=2)=[CH:7][CH:6]=1)(=[O:3])[CH3:2].[OH-].[Na+].[Cl-].[Ca+2:47].[Cl-]>CO>[Ca+2:47].[C:1]([NH:4][C:5]1[C:10]([C:11]2[C:16]([CH3:17])=[CH:15][C:14]([O:18][CH2:19][C:20]3([OH:28])[CH2:21][CH2:22][S:23](=[O:27])(=[O:26])[CH2:24][CH2:25]3)=[CH:13][C:12]=2[CH3:29])=[CH:9][C:8]([CH2:30][NH:31][C:32]2[CH:37]=[CH:36][C:35]([CH2:38][CH2:39][C:40]([O-:42])=[O:41])=[C:34]([F:43])[CH:33]=2)=[CH:7][CH:6]=1)(=[O:3])[CH3:2].[C:1]([NH:4][C:5]1[C:10]([C:11]2[C:16]([CH3:17])=[CH:15][C:14]([O:18][CH2:19][C:20]3([OH:28])[CH2:21][CH2:22][S:23](=[O:27])(=[O:26])[CH2:24][CH2:25]3)=[CH:13][C:12]=2[CH3:29])=[CH:9][C:8]([CH2:30][NH:31][C:32]2[CH:37]=[CH:36][C:35]([CH2:38][CH2:39][C:40]([O-:42])=[O:41])=[C:34]([F:43])[CH:33]=2)=[CH:7][CH:6]=1)(=[O:3])[CH3:2] |f:1.2,3.4.5,7.8.9|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "calcium chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Cl-].[Ca+2].[Cl-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Ca.2ClH/h;2*1H/q+2;;/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 8.7,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m4_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "3-{4-[({6-(acetylamino)-4\u2032-[(4-hydroxy-1,1-dioxidotetrahydro-2H-thiopyran-4-yl)methoxy]-2\u2032,6\u2032-dimethylbiphenyl-3-yl}methyl)amino]-2-fluorophenyl}propanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)NC1=CC=C(C=C1C1=C(C=C(C=C1C)OCC1(CCS(CC1)(=O)=O)O)C)CNC1=CC(=C(C=C1)CCC(=O)O)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H37FN2O7S/c1-20-14-26(42-19-32(39)10-12-43(40,41)13-11-32)15-21(2)31(20)27-16-23(4-8-29(27)35-22(3)36)18-34-25-7-5-24(28(33)17-25)6-9-30(37)38/h4-5,7-8,14-17,34,39H,6,9-13,18-19H2,1-3H3,(H,35,36)(H,37,38)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 86.3,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.14,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 3-{4-[({6-(acetylamino)-4\u2032-[(4-hydroxy-1,1-dioxidotetrahydro-2H-thiopyran-4-yl)methoxy]-2\u2032,6\u2032-dimethylbiphenyl-3-yl}methyl)amino]-2-fluorophenyl}propanoic acid (86.3 mg, 0.14 mmol) in methanol (1 mL) was added 1 M sodium hydroxide solution (0.14 mL). Successively, an aqueous solution of calcium chloride (8.7 mg, 0.07 mmol) was gradually added. The precipitated solid was collected by filtration, washed with water, and vacuum dried to give the title compound (39.2 mg, yield 44%) as a colorless amorphous powder."
+    },
+    "workups": [
+        {
+            "type": "FILTRATION",
+            "details": "The precipitated solid was collected by filtration"
+        },
+        {
+            "type": "WASH",
+            "details": "washed with water, and vacuum",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "3-{4-[({6-(acetylamino)-4\u2032-[(4-hydroxy-1,1-dioxidotetrahydro-2H-thiopyran-4-yl)methoxy]-2\u2032,6\u2032-dimethylbiphenyl-3-yl}methyl)amino]-2-fluorophenyl}propanoic acid calcium salt"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Ca+2].C(C)(=O)NC1=CC=C(C=C1C1=C(C=C(C=C1C)OCC1(CCS(CC1)(=O)=O)O)C)CNC1=CC(=C(C=C1)CCC(=O)[O-])F.C(C)(=O)NC1=CC=C(C=C1C1=C(C=C(C=C1C)OCC1(CCS(CC1)(=O)=O)O)C)CNC1=CC(=C(C=C1)CCC(=O)[O-])F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/2C32H37FN2O7S.Ca/c2*1-20-14-26(42-19-32(39)10-12-43(40,41)13-11-32)15-21(2)31(20)27-16-23(4-8-29(27)35-22(3)36)18-34-25-7-5-24(28(33)17-25)6-9-30(37)38;/h2*4-5,7-8,14-17,34,39H,6,9-13,18-19H2,1-3H3,(H,35,36)(H,37,38);/q;;+2/p-2"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 39.2,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 44.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 44.3
+                            }
+                        }
+                    ],
+                    "isolated_color": "colorless amorphous",
+                    "texture": {
+                        "type": "POWDER",
+                        "details": "powder"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07786165B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:11:52.268018"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:56:40 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:00 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-7c041d2fbc3f496eb536bcd08d83ecd0"
+}

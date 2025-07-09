@@ -1,0 +1,354 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][N:2]1[C:6]([NH:7][C:8]([C:21]2[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=2)([C:15]2[CH:20]=[CH:19][CH:18]=[CH:17][CH:16]=2)[C:9]2[CH:14]=[CH:13][CH:12]=[CH:11][CH:10]=2)=[C:5]([NH:27][C:28](=O)[O:29]C2C=CC=CC=2)[CH:4]=[N:3]1.C(N(CC)CC)C.[N:44]1([C:50]([O:52][C:53]([CH3:56])([CH3:55])[CH3:54])=[O:51])[CH2:49][CH2:48][NH:47][CH2:46][CH2:45]1.O>CN(C)C=O>[CH3:1][N:2]1[C:6]([NH:7][C:8]([C:15]2[CH:16]=[CH:17][CH:18]=[CH:19][CH:20]=2)([C:21]2[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=2)[C:9]2[CH:10]=[CH:11][CH:12]=[CH:13][CH:14]=2)=[C:5]([NH:27][C:28]([N:47]2[CH2:48][CH2:49][N:44]([C:50]([O:52][C:53]([CH3:56])([CH3:55])[CH3:54])=[O:51])[CH2:45][CH2:46]2)=[O:29])[CH:4]=[N:3]1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)N(CC)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H15N/c1-4-7(5-2)6-3/h4-6H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.08,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tertbutyl 1-piperazinecarboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(CCNCC1)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H18N2O2/c1-9(2,3)13-8(12)11-6-4-10-5-7-11/h10H,4-7H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.99,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "phenyl [1-methyl-5-(tritylamino)-1H-pyrazol-4-yl]carbamate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1N=CC(=C1NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)NC(OC1=CC=CC=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H26N4O2/c1-34-28(27(22-31-34)32-29(35)36-26-20-12-5-13-21-26)33-30(23-14-6-2-7-15-23,24-16-8-3-9-17-24)25-18-10-4-11-19-25/h2-22,33H,1H3,(H,32,35)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.6,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N,N-dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 32.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The reaction mixture was stirred for 3 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a suspension of phenyl [1-methyl-5-(tritylamino)-1H-pyrazol-4-yl]carbamate (4.6 g) in N,N-dimethylformamide (32 ml) were added triethylamine (1.08 g) and tertbutyl 1-piperazinecarboxylate (1.99 g). The reaction mixture was stirred for 3 hours and poured into water. The mixture was extracted with ethyl acetate, and the organic layer was concentrated in vacuo. The residue was purified by column chromatography on silica gel (ethyl acetate\u2192ethyl acetate:ethanol=20:1) to give tert-butyl 4-({[1-methyl-5-(tritylamino)-1H-pyrazol-4-yl]amino}carbonyl)-1-piperazinecarboxylate (4.7 g)"
+    },
+    "workups": [
+        {
+            "type": "EXTRACTION",
+            "details": "The mixture was extracted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "the organic layer was concentrated in vacuo"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue was purified by column chromatography on silica gel (ethyl acetate\u2192ethyl acetate:ethanol=20:1)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 3.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tert-butyl 4-({[1-methyl-5-(tritylamino)-1H-pyrazol-4-yl]amino}carbonyl)-1-piperazinecarboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1N=CC(=C1NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1)NC(=O)N1CCN(CC1)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C33H38N6O3/c1-32(2,3)42-31(41)39-22-20-38(21-23-39)30(40)35-28-24-34-37(4)29(28)36-33(25-14-8-5-9-15-25,26-16-10-6-11-17-26)27-18-12-7-13-19-27/h5-19,24,36H,20-23H2,1-4H3,(H,35,40)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 4.7,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 85.6
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07129232B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:35:30.329390"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:45:01 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:41 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-47a6894f0d294bd9a3db2ea86671a279"
+}

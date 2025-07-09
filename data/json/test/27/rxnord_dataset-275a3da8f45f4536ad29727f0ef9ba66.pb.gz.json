@@ -1,0 +1,235 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[Cl:1][C:2]1[CH:29]=[CH:28][C:5]2[N:6]=[C:7]([NH:9][C:10]3[N:14]([CH3:15])[C:13]4[CH:16]=[CH:17][C:18]([C:20]([NH:22][C@H:23]([CH3:27])[C:24](O)=[O:25])=[O:21])=[CH:19][C:12]=4[N:11]=3)[S:8][C:4]=2[CH:3]=1.[CH3:30][N:31]1[CH2:36][CH2:35][NH:34][CH2:33][CH2:32]1.CN(C(ON1N=NC2C=CC=CC1=2)=[N+](C)C)C.F[P-](F)(F)(F)(F)F.CCN(C(C)C)C(C)C>CN(C=O)C>[CH3:27][C@@H:23]([NH:22][C:20]([C:18]1[CH:17]=[CH:16][C:13]2[N:14]([CH3:15])[C:10]([NH:9][C:7]3[S:8][C:4]4[CH:3]=[C:2]([Cl:1])[CH:29]=[CH:28][C:5]=4[N:6]=3)=[N:11][C:12]=2[CH:19]=1)=[O:21])[C:24]([N:34]1[CH2:35][CH2:36][N:31]([CH3:30])[CH2:32][CH2:33]1)=[O:25] |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DIEA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(R)-2-{[2-(6-chloro-benzothiazol-2-ylamino)-1-methyl-1H-benzoimidazole-5-carbonyl]-amino}-propionic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC2=C(N=C(S2)NC2=NC3=C(N2C)C=CC(=C3)C(=O)N[C@@H](C(=O)O)C)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H16ClN5O3S/c1-9(17(27)28)21-16(26)10-3-6-14-13(7-10)22-18(25(14)2)24-19-23-12-5-4-11(20)8-15(12)29-19/h3-9H,1-2H3,(H,21,26)(H,27,28)(H,22,23,24)/t9-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 50.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-methyl-piperazine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1CCNCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H12N2/c1-7-4-2-6-3-5-7/h6H,2-5H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 50.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HBTU"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C(=[N+](C)C)ON1C2=C(C=CC=C2)N=N1.F[P-](F)(F)(F)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H16N5O.F6P/c1-14(2)11(15(3)4)17-16-10-8-6-5-7-9(10)12-13-16;1-7(2,3,4,5)6/h5-8H,1-4H3;/q+1;-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 150.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2-(6-Chloro-benzothiazol-2-ylamino)-1-methyl-1H-benzoimidazole-5-carboxylic acid [(R)-1-methyl-2-(4-methyl-piperazin-1-yl)-2-oxo-ethyl]amide (20 mg) was prepared by following General Procedure F starting from (R)-2-{[2-(6-chloro-benzothiazol-2-ylamino)-1-methyl-1H-benzoimidazole-5-carbonyl]-amino}-propionic acid (50 mg), 1-methyl-piperazine (50 mg), HBTU (150 mg), and DIEA (100 uL) in DMF (1 mL). LC/MS: m/z 511.7. 1H NMR (DMSO-d6, 400 MHz): \u03b4 8.82-8.67 (m, 1H), 8.12 (m, 1H), 7.97 (s, 1H), 7.85-7.83 (m, 1H), 7.56-7.52 (m, 2H), 7.44-7.41 (m, 1H), 5.02-4.96 (m, 1H), 4.50-4.43 (m, 1H), 4.35-4.19 (m, 1H), 3.69 (s, 3H), 3.62-3.51 (m, 2H), 3.45 (m, 1H), 3.28 (m, 1H), 3.10 (m, 1H), 2.78-2.77 (d, 3H), 1.44-1.35 (m, 3H)\u2014NH proton signal was not observed."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(6-Chloro-benzothiazol-2-ylamino)-1-methyl-1H-benzoimidazole-5-carboxylic acid [(R)-1-methyl-2-(4-methyl-piperazin-1-yl)-2-oxo-ethyl]amide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C[C@H](C(=O)N1CCN(CC1)C)NC(=O)C1=CC2=C(N(C(=N2)NC=2SC3=C(N2)C=CC(=C3)Cl)C)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H26ClN7O2S/c1-14(22(34)32-10-8-30(2)9-11-32)26-21(33)15-4-7-19-18(12-15)27-23(31(19)3)29-24-28-17-6-5-16(25)13-20(17)35-24/h4-7,12-14H,8-11H2,1-3H3,(H,26,33)(H,27,28,29)/t14-/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 20.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 33.6
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08759535B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:18:54.855281"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:02:46 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:37 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-3b19c09aae9e45de812977d198ee34a3"
+}

@@ -1,0 +1,215 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C@@H:2]([C@H:45]([OH:52])[C@@H:46]([OH:51])[C@@H:47]([OH:50])[CH2:48][OH:49])[CH2:3][NH:4][C:5]([CH2:7][CH2:8][C@H:9]([NH:14][C:15](=[O:44])[C@@H:16]([NH:33][C:34]([O:36][CH2:37][C:38]1[CH:43]=[CH:42][CH:41]=[CH:40][CH:39]=1)=[O:35])[CH2:17][CH2:18][C:19](=[O:32])[NH:20][CH2:21][C@@H:22]([OH:31])[C@H:23]([OH:30])[C@@H:24]([OH:29])[C@@H:25]([OH:28])[CH2:26][OH:27])[C:10]([O:12]C)=[O:11])=[O:6].[OH-].[Li+]>O1CCCC1.CO>[OH:1][C@@H:2]([C@H:45]([OH:52])[C@@H:46]([OH:51])[C@@H:47]([OH:50])[CH2:48][OH:49])[CH2:3][NH:4][C:5]([CH2:7][CH2:8][C@H:9]([NH:14][C:15](=[O:44])[C@@H:16]([NH:33][C:34]([O:36][CH2:37][C:38]1[CH:43]=[CH:42][CH:41]=[CH:40][CH:39]=1)=[O:35])[CH2:17][CH2:18][C:19](=[O:32])[NH:20][CH2:21][C@@H:22]([OH:31])[C@H:23]([OH:30])[C@@H:24]([OH:29])[C@@H:25]([OH:28])[CH2:26][OH:27])[C:10]([OH:12])=[O:11])=[O:6] |f:1.2,3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "methyl (S,S)-4-(N-((R,S,S,S)-2,3,4,5,6-pentahydroxy hexyl)carbamoyl)-2-(4-(N-((R,S,S,S)-2,3,4,5,6-pentahydroxyhexyl)carbamoyl)-2-((phenylmethoxy)carbonylamino) butanoylamino)butanoate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O[C@H](CNC(=O)CC[C@@H](C(=O)OC)NC([C@H](CCC(NC[C@H]([C@@H]([C@H]([C@H](CO)O)O)O)O)=O)NC(=O)OCC1=CC=CC=C1)=O)[C@@H]([C@H]([C@H](CO)O)O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C31H50N4O17/c1-51-30(49)18(8-10-24(43)33-12-20(39)26(45)28(47)22(41)14-37)34-29(48)17(35-31(50)52-15-16-5-3-2-4-6-16)7-9-23(42)32-11-19(38)25(44)27(46)21(40)13-36/h2-6,17-22,25-28,36-41,44-47H,7-15H2,1H3,(H,32,42)(H,33,43)(H,34,48)(H,35,50)/t17-,18-,19+,20+,21-,22-,25-,26-,27-,28-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1.CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O.CH4O/c1-2-4-5-3-1;1-2/h1-4H2;2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "lithium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Li+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Li.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The product of step 11B is dissolved in tetrahydrofuran/methanol (1:1) and treated with excess 3N aqueous lithium hydroxide. The reaction is followed by HPLC for disappearance of starting material. The reaction is concentrated, diluted with additional water, and purified by passage down an-acidic ion exchange column. The product fractions are lyophilized to afford the product as a solid."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "The reaction is concentrated"
+        },
+        {
+            "type": "ADDITION",
+            "details": "diluted with additional water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "purified by passage down an-acidic ion exchange column"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S,S)-4-(N-((R,S,S,S)-2,3,4,5,6-pentahydroxyhexyl)carbamoyl)-2-(4-(N-((R,S,S,S)-2,3,4,5,6-pentahydroxyhexyl)carbamoyl)-2-((phenylmethoxy)carbonylamino) butanoylamino)butanoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O[C@H](CNC(=O)CC[C@@H](C(=O)O)NC([C@H](CCC(NC[C@H]([C@@H]([C@H]([C@H](CO)O)O)O)O)=O)NC(=O)OCC1=CC=CC=C1)=O)[C@@H]([C@H]([C@H](CO)O)O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C30H48N4O17/c35-12-20(39)26(45)24(43)18(37)10-31-22(41)8-6-16(34-30(50)51-14-15-4-2-1-3-5-15)28(47)33-17(29(48)49)7-9-23(42)32-11-19(38)25(44)27(46)21(40)13-36/h1-5,16-21,24-27,35-40,43-46H,6-14H2,(H,31,41)(H,32,42)(H,33,47)(H,34,50)(H,48,49)/t16-,17-,18+,19+,20-,21-,24-,25-,26-,27-/m0/s1"
+                        }
+                    ],
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06569402B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:13:14.359051"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:38:53 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:36 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-f2f9ca5b8e974a3a97dab991a98305bf"
+}

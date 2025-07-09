@@ -1,0 +1,324 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "Br[C:2]1[C:3]2[NH:7][C:6]([C:8]([C:32]3[CH:37]=[CH:36][CH:35]=[CH:34][CH:33]=3)=[C:9]3[N:31]=[C:12]([CH:13]=[C:14]4[NH:30][C:17](=[C:18]([C:24]5[CH:29]=[CH:28][CH:27]=[CH:26][CH:25]=5)[C:19]5[CH:20]=[CH:21][C:22]=1[N:23]=5)[CH:16]=[CH:15]4)[CH:11]=[CH:10]3)=[CH:5][CH:4]=2.[CH:38]1[CH:43]=[C:42]2[CH:44]=[CH:45][C:46]([OH:59])=[C:47]([C:48]3[C:57]4[C:52](=[CH:53][CH:54]=[CH:55][CH:56]=4)[CH:51]=[CH:50][C:49]=3[OH:58])[C:41]2=[CH:40][CH:39]=1.C1C=CC(P(C2C(OC3C(P(C4C=CC=CC=4)C4C=CC=CC=4)=CC=CC=3)=CC=CC=2)C2C=CC=CC=2)=CC=1.C([O-])([O-])=O.[Cs+].[Cs+]>C1(C)C=CC=CC=1.C1C=CC(/C=C/C(/C=C/C2C=CC=CC=2)=O)=CC=1.C1C=CC(/C=C/C(/C=C/C2C=CC=CC=2)=O)=CC=1.C1C=CC(/C=C/C(/C=C/C2C=CC=CC=2)=O)=CC=1.[Pd].[Pd].C(Cl)Cl>[C:24]1([C:18]2[C:19]3[CH:20]=[CH:21][C:22]([N:23]=3)=[C:2]([O:59][C:46]3[CH:45]=[CH:44][C:42]4[C:41](=[CH:40][CH:39]=[CH:38][CH:43]=4)[C:47]=3[C:48]3[C:49]([OH:58])=[CH:50][CH:51]=[C:52]4[C:57]=3[CH:56]=[CH:55][CH:54]=[CH:53]4)[C:3]3[NH:7][C:6]([C:8]([C:32]4[CH:37]=[CH:36][CH:35]=[CH:34][CH:33]=4)=[C:9]4[N:31]=[C:12]([CH:13]=[C:14]5[NH:30][C:17]=2[CH:16]=[CH:15]5)[CH:11]=[CH:10]4)=[CH:5][CH:4]=3)[CH:25]=[CH:26][CH:27]=[CH:28][CH:29]=1 |f:3.4.5,7.8.9.10.11|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Cs2CO3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(=O)([O-])[O-].[Cs+].[Cs+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.2Cs/c2-1(3)4;;/h(H2,2,3,4);;/q;2*+1/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 37.6,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "R-(+)-1,1\u2032-Bi-2-naphthol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=C2C(=C1)C=CC(=C2C3=C(C=CC4=CC=CC=C43)O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H14O2/c21-17-11-9-13-5-1-3-7-15(13)19(17)20-16-8-4-2-6-14(16)10-12-18(20)22/h1-12,21-22H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 14.3,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m0_m9_m7_m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexanes"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylene chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "toluene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8/c1-7-5-3-2-4-6-7/h2-6H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DPEphos"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=CC=CC=C3OC4=CC=CC=C4P(C5=CC=CC=C5)C6=CC=CC=C6"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C36H28OP2/c1-5-17-29(18-6-1)38(30-19-7-2-8-20-30)35-27-15-13-25-33(35)37-34-26-14-16-28-36(34)39(31-21-9-3-10-22-31)32-23-11-4-12-24-32/h1-28H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 10.8,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Pd2(dba)3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1C=CC(=CC1)/C=C/C(=O)/C=C/C2=CC=CC=C2.C=1C=CC(=CC1)/C=C/C(=O)/C=C/C2=CC=CC=C2.C=1C=CC(=CC1)/C=C/C(=O)/C=C/C2=CC=CC=C2.[Pd].[Pd]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/3C17H14O.2Pd/c3*18-17(13-11-15-7-3-1-4-8-15)14-12-16-9-5-2-6-10-16;;/h3*1-14H;;/b3*13-11+,14-12+;;"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 4.6,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-bromo-10,20-diphenylporphin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC=1C2=CC=C(N2)C(=C2C=CC(C=C3C=CC(=C(C=4C=CC1N4)C4=CC=CC=C4)N3)=N2)C2=CC=CC=C2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H21BrN4/c33-32-28-17-15-26(36-28)30(20-7-3-1-4-8-20)24-13-11-22(34-24)19-23-12-14-25(35-23)31(21-9-5-2-6-10-21)27-16-18-29(32)37-27/h1-19,34,37H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 54.2,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The general procedure was used to couple 5-bromo-10,20-diphenylporphin (54.2 mg, 0.1 mmol) with R-(+)-1,1\u2032-Bi-2-naphthol (14.3 mg, 0.05 mmol), using Pd2(dba)3 (4.6 mg, 0.005 mmol) and DPEphos (10.8 mg, 0.02 mmol) in the presence of Cs2CO3 (37.6 mg, 0.1 mmol). The reaction was conducted in toluene at 100\u00b0 C. for 24 h. The title compound was isolated by flash chromatography (silica gel, methylene chloride: hexanes (v/v)=8:2) as a purple-red solid (10 mg, 17%). 1H NMR (300 MHz, CDCl3) \u03b4 10.12 (s, 1H), 9.27 (d, J=4.8 Hz, 4H), 8.97 (d, J=4.8 Hz, 4H), 8.78 (d, J=4.8 Hz, 4H), 8.17 (m, 4H), 7.99 (d, J=9.0 Hz, 1H), 7.94 (d, J=7.5 Hz, 1H), 7.86 (d, J=8.7 Hz, 1H), 7.74 (m, 6H), 7.40-7.66 (m, 8H), 6.42 (d, J=9.6 Hz, 1H), \u22122.83 (s, 2H). 13C NMR (75 MHz, CDCl3): \u03b4 141.2, 134.7, 131.6, 131.0, 130.8, 130.4, 129.5, 128.6, 128.3, 127.9, 127.8, 127.6, 126.9, 125.2, 124.9, 124.6, 123.7, 119.8, 117.8, 117.2, 104.7, 88.5. UV-vis (CH2Cl2, \u03bbmax, nm): 414, 511, 545, 586, 641. HRMS-EI ([M]+): calcd for C52H34N4O2, 746.2682, found 746.2680."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "2\u2032-(10,20-Diphenyl-porphyrin-5-yloxy)-[1,1\u2032]binaphthalenyl-2-ol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC=C1)C=1C=2C=CC(=C(C3=CC=C(N3)C(=C3C=CC(C=C4C=CC1N4)=N3)C3=CC=CC=C3)OC3=C(C4=CC=CC=C4C=C3)C=3C(=CC=C4C=CC=CC34)O)N2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C52H34N4O2/c57-46-29-19-32-11-7-9-17-38(32)50(46)51-39-18-10-8-12-33(39)20-30-47(51)58-52-44-27-25-42(55-44)48(34-13-3-1-4-14-34)40-23-21-36(53-40)31-37-22-24-41(54-37)49(35-15-5-2-6-16-35)43-26-28-45(52)56-43/h1-31,53,56-57H"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solid"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 10.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 17.0
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07417142B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:50:03.647544"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:33:18 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:12 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0a3bb1358df548d4993d683b9e372d9d"
+}

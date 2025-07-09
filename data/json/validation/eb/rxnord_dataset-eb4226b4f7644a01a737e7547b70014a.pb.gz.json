@@ -1,0 +1,750 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[BH4-].[Na+].[CH:3](=[N:6][N:7]1[C:15]2[C:10](=[CH:11][CH:12]=[CH:13][CH:14]=2)[CH:9]=[CH:8]1)[CH2:4][CH3:5].C(O)(=O)C.[H][H]>CN1C(=O)CCC1.CCCCCCC.O>[CH2:3]([NH:6][N:7]1[C:15]2[C:10](=[CH:11][CH:12]=[CH:13][CH:14]=2)[CH:9]=[CH:8]1)[CH2:4][CH3:5] |f:0.1|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m13": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "LITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium borohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[BH4-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/BH4.Na/h1H4;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2_m3_m11_m10": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-(propylidene)-1H-indol-1-amine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC)=NN1C=CC2=CC=CC=C12"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H12N2/c1-2-8-12-13-9-7-10-5-3-4-6-11(10)13/h3-9H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 31.9,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "solution"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-Heptane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 7.7,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-heptane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 36.5,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m12": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrogen"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[H][H]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m4_m9": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.32,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-heptane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.8,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium borohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[BH4-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/BH4.Na/h1H4;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.83,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NMP"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1CCCC1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H9NO/c1-6-4-2-3-5(6)7/h2-4H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 16.6,
+                            "units": "KILOGRAM"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 30.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "Stir the reaction mixture at 30\u00b0 C."
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Prepare a solution of 0.83 kg (21.9 mol) sodium borohydride in 16.6 kg NMP. Add 31.9 kg N-(propylidene)-1H-indol-1-amine as a 19.7% solution in n-heptane (36.5 mol) and additional 7.7 kg n-Heptane. Prepare a solution of 1.32 kg (21.9 mol) glacial acetic acid in 2.8 kg n-heptane. Add the acetic acid solution over a period of about 30 min at 30\u00b0 C. to the sodium borohydride solution using a pump. Immediately hydrogen evolution will occur. Rinse the pump with 2 kg n-heptane. Stir the reaction mixture at 30\u00b0 C. until completion of the reaction (\u02dc1 h). The reaction mixture is then worked-up by adding 20 L water. No or only minimal foaming is observed during the addition of water. Stir the mixture over night and separate the phases. Add 0.9 kg HCl (30%) and 3.4 kg water to the n-heptane phase, check whether the pH is below 1. Add additional amounts of HCl if necessary to adjust the pH around 1. Heat this mixture to 75\u00b0 C. internal temperature for \u02dc2 h. Cool the mixture to 25\u00b0 C. in order to control the residual hydrogen that is evolved. If no more residual hydrogen is evolved, add additional 20.3 kg water, and adjust pH to a level >7 with NaOH (33%). Separate the phases and wash the n-heptane phase with 20.3 kg water. Evaporate the n-heptane phase to dryness. This results in 5.84 kg N-propyl-1H-indol-1-amine (82.6%) as a brown liquid."
+    },
+    "workups": [
+        {
+            "type": "WASH",
+            "details": "Rinse the pump with 2 kg n-heptane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "n-heptane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 2.0,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "until completion of the reaction (\u02dc1 h)",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "Stir the mixture over night"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "separate the phases"
+        },
+        {
+            "type": "ADDITION",
+            "details": "Add 0.9 kg HCl (30%) and 3.4 kg water to the n-heptane phase",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "HCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 0.9,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 3.4,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "n-heptane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "Add additional amounts of HCl if necessary",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "HCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "Heat this mixture to 75\u00b0 C. internal temperature for \u02dc2 h",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 75.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "Cool the mixture to 25\u00b0 C. in order",
+            "temperature": {
+                "setpoint": {
+                    "value": 25.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "add additional 20.3 kg water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 20.3,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Separate the phases"
+        },
+        {
+            "type": "WASH",
+            "details": "wash the n-heptane phase with 20.3 kg water",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "n-heptane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 20.3,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Evaporate the n-heptane phase to dryness",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "n-heptane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H16/c1-3-5-7-6-4-2/h3-7H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "This results in 5.84 kg N-propyl-1H-indol-1-amine (82.6%) as a brown liquid",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "N-propyl-1H-indol-1-amine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(CC)NN1C=CC2=CC=CC=C12"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C11H14N2/c1-2-8-12-13-9-7-10-5-3-4-6-11(10)13/h3-7,9,12H,2,8H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "mass": {
+                                "value": 5.84,
+                                "units": "KILOGRAM"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-propyl-1H-indol-1-amine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CC)NN1C=CC2=CC=CC=C12"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C11H14N2/c1-2-8-12-13-9-7-10-5-3-4-6-11(10)13/h3-7,9,12H,2,8H2,1H3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07112682B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:34:15.194536"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:42:06 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:56 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-196cfbf63199449e96f02d467a042e60"
+}

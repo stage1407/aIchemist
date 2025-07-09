@@ -1,0 +1,341 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([O:8][C:9]([NH:11][C@H:12]1[CH2:17][CH2:16][C@@H:15]([NH:18][C:19](=[O:25])[O:20][C:21]([CH3:24])([CH3:23])[CH3:22])[CH2:14][C@H:13]1[C:26](=[S:28])[NH2:27])=[O:10])[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.Cl[CH2:30][C:31](=O)[CH2:32][CH3:33]>C1C=CC=CC=1>[CH2:1]([O:8][C:9]([NH:11][C@H:12]1[CH2:17][CH2:16][C@@H:15]([NH:18][C:19](=[O:25])[O:20][C:21]([CH3:24])([CH3:23])[CH3:22])[CH2:14][C@H:13]1[C:26]1[S:28][CH:30]=[C:31]([CH2:32][CH3:33])[N:27]=1)=[O:10])[C:2]1[CH:3]=[CH:4][CH:5]=[CH:6][CH:7]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tert-butyl (1R,3R,4S)-4-((benzyloxycarbonyl)amino)-3-carbamothioylcyclohexylcarbamate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OC(=O)N[C@@H]1[C@@H](C[C@@H](CC1)NC(OC(C)(C)C)=O)C(N)=S"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H29N3O4S/c1-20(2,3)27-19(25)22-14-9-10-16(15(11-14)17(21)28)23-18(24)26-12-13-7-5-4-6-8-13/h4-8,14-16H,9-12H2,1-3H3,(H2,21,28)(H,22,25)(H,23,24)/t14-,15-,16+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.5,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-chloro-butan-2-one"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCC(CC)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H7ClO/c1-2-4(6)3-5/h2-3H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.42,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "benzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 75.0,
+                "units": "CELSIUS"
+            }
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of tert-butyl (1R,3R,4S)-4-((benzyloxycarbonyl)amino)-3-carbamothioylcyclohexylcarbamate (0.5 g, 0.0012 mol, see Example 12f, Step 2) in dry benzene (20 ml) under nitrogen was added 1-chloro-butan-2-one (0.42 g, 0.0039 mol) of and the reaction mixture was heated at 75\u00b0 C. for over night. Benzene was removed under vaccum and the crude product was extracted with ethyl acetate. The organic layer was washed with brine, concentrated, and purified by recrystallization from ether to give 0.2 g (35%) of tert-butyl (1R,3R,4S)-4-((benzyloxycarbonyl)amino)-3-(4-ethylthiazol-2-yl)cyclohexylcarbamate as a white solid obtained. 1H NMR (400 MHz, CDCl3) \u03b4 1.27 (t, 3H), 1.44 (s, 9H), 1.62 (m, 2H), 1.81 (m, 3 H), 2.22 (m, 2H), 2.78 (q, 2H), 3.50 (bs, 1H), 3.72 (bs, 1H), 4.12 (bs, 1H), 5.04 (s, 2H), 5.40 (bs, 1H), 5.74 (s, 1H), 7.33 (m, 5H); 13H NMR (400 MHz, CDCl3) 13.45, 24.7, 28.0, 28.24, 28.4, 33.3, 42.3, 47.0, 50.4, 61.0, 66.5, 79.0, 111.6, 127.9, 128.0, 128.4, 136.5, 155.2, 155.8, 158.8, 169.8. MS found: (M+H)+=460."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "Benzene was removed under vaccum",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Benzene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1=CC=CC=C1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the crude product was extracted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "The organic layer was washed with brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "purified by recrystallization from ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tert-butyl (1R,3R,4S)-4-((benzyloxycarbonyl)amino)-3-(4-ethylthiazol-2-yl)cyclohexylcarbamate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)OC(=O)N[C@@H]1[C@@H](C[C@@H](CC1)NC(OC(C)(C)C)=O)C=1SC=C(N1)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H33N3O4S/c1-5-17-15-32-21(25-17)19-13-18(26-23(29)31-24(2,3)4)11-12-20(19)27-22(28)30-14-16-9-7-6-8-10-16/h6-10,15,18-20H,5,11-14H2,1-4H3,(H,26,29)(H,27,28)/t18-,19-,20+/m1/s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 0.2,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 35.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 36.3
+                            }
+                        }
+                    ],
+                    "isolated_color": "white",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07378409B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:48:05.702254"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:26:51 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:12 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-389c812a531c475eb4c360b38a129bbd"
+}

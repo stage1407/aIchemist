@@ -1,0 +1,346 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH:1](C(OC(C)(C)C)=O)[CH2:2][C:3]([NH:5][C@@H:6]([C:14]([NH:16][CH2:17][C:18]([NH:20][C@H:21]([C:26]([NH:28][C@H:29]([C:37]([NH:39][C@H:40]([C:44]([O:46]C)=[O:45])[CH:41]([CH3:43])[CH3:42])=[O:38])[CH2:30][C:31]1[CH:36]=[CH:35][CH:34]=[CH:33][CH:32]=1)=[O:27])[CH2:22][C:23](=[O:25])[OH:24])=[O:19])=[O:15])[CH2:7][CH2:8][CH2:9][NH:10][C:11](=[NH:13])[NH2:12])=[O:4].[OH-].[Na+]>CO>[NH2:1][CH2:2][C:3]([NH:5][C@@H:6]([C:14]([NH:16][CH2:17][C:18]([NH:20][C@H:21]([C:26]([NH:28][C@H:29]([C:37]([NH:39][C@H:40]([C:44]([OH:46])=[O:45])[CH:41]([CH3:43])[CH3:42])=[O:38])[CH2:30][C:31]1[CH:36]=[CH:35][CH:34]=[CH:33][CH:32]=1)=[O:27])[CH2:22][C:23](=[O:24])[OH:25])=[O:19])=[O:15])[CH2:7][CH2:8][CH2:9][NH:10][C:11](=[NH:12])[NH2:13])=[O:4] |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "BOC-Gly-D-Arg-Gly-Asp-Phe-Val-OMe"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N(CC(=O)N[C@H](CCCNC(N)=N)C(=O)NCC(=O)N[C@@H](CC(O)=O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](C(C)C)C(=O)OC)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C34H53N9O11/c1-19(2)27(31(51)53-6)43-30(50)22(15-20-11-8-7-9-12-20)42-29(49)23(16-26(46)47)41-24(44)17-38-28(48)21(13-10-14-37-32(35)36)40-25(45)18-39-33(52)54-34(3,4)5/h7-9,11-12,19,21-23,27H,10,13-18H2,1-6H3,(H,38,48)(H,39,52)(H,40,45)(H,41,44)(H,42,49)(H,43,50)(H,46,47)(H4,35,36,37)/t21-,22+,23+,27+/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 60.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 20.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The admixture was then stirred for 3 hours at 20 degrees C"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Two grams (g) of BOC-Gly-D-Arg-Gly-Asp-Phe-Val-OMe (SEQ ID NO 1) were first dissolved in 60 milliliters (ml) of methanol to which was added 1.5 ml of 2 N sodium hydroxide solution to form an admixture. The admixture was then stirred for 3 hours at 20 degrees C. (20 C.). After evaporation, the residue was taken up in water, acidified to pH 3 with diluted HCl and extracted with ethyl acetate. The extract was dried over Na2SO4, evaporated again and the resultant BOC-Gly-D-Arg-Gly-Asp-Phe-Val-OH (SEQ ID NO 2) was stirred at 20 C. for 2 hours with 20 ml of 2 N HCl in dioxane. The resultant admixture was evaporated to obtain H-Gly-D-Arg-Gly-Asp-Phe-Val-OH (SEQ ID NO 3) that was subsequently dissolved in a mixture of 1800 ml of dichloromethane and 200 ml of dimethylformamide (DMF) followed by cooling to 0 C. Thereafter, 0.5 g of dicyclohexylcarbodiimide (DCCI), 0.3 g of 1-hydroxybenzotriazole (HOBt) and 0.23 ml of N-methylmorpholine were added successively with stirring."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "to form an admixture"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "After evaporation"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "The extract was dried over Na2SO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated again"
+        },
+        {
+            "type": "STIRRING",
+            "details": "the resultant BOC-Gly-D-Arg-Gly-Asp-Phe-Val-OH (SEQ ID NO 2) was stirred at 20 C",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "BOC-Gly-D-Arg-Gly-Asp-Phe-Val-OH"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "N(CC(=O)N[C@H](CCCNC(N)=N)C(=O)NCC(=O)N[C@@H](CC(O)=O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](C(C)C)C(=O)O)C(=O)OC(C)(C)C"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C33H51N9O11/c1-18(2)26(30(50)51)42-29(49)21(14-19-10-7-6-8-11-19)41-28(48)22(15-25(45)46)40-23(43)16-37-27(47)20(12-9-13-36-31(34)35)39-24(44)17-38-32(52)53-33(3,4)5/h6-8,10-11,18,20-22,26H,9,12-17H2,1-5H3,(H,37,47)(H,38,52)(H,39,44)(H,40,43)(H,41,48)(H,42,49)(H,45,46)(H,50,51)(H4,34,35,36)/t20-,21+,22+,26+/m1/s1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WAIT",
+            "details": "for 2 hours with 20 ml of 2 N HCl in dioxane",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "HCl"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "dioxane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O1CCOCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-2-6-4-3-5-1/h1-4H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The resultant admixture was evaporated"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 3.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "H-Gly-D-Arg-Gly-Asp-Phe-Val-OH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "NCC(=O)N[C@H](CCCNC(N)=N)C(=O)NCC(=O)N[C@@H](CC(O)=O)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](C(C)C)C(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C28H43N9O9/c1-15(2)23(27(45)46)37-26(44)18(11-16-7-4-3-5-8-16)36-25(43)19(12-22(40)41)35-21(39)14-33-24(42)17(34-20(38)13-29)9-6-10-32-28(30)31/h3-5,7-8,15,17-19,23H,6,9-14,29H2,1-2H3,(H,33,42)(H,34,38)(H,35,39)(H,36,43)(H,37,44)(H,40,41)(H,45,46)(H4,30,31,32)/t17-,18+,19+,23+/m1/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US06500924B1",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:10:37.132390"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 17:29:46 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:37 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-6843a99bab7c4a7d8cc46fdaf56f3c7a"
+}

@@ -1,0 +1,398 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[Br:1][C:2]1[CH:7]=[CH:6][C:5](I)=[C:4]([CH2:9][CH3:10])[CH:3]=1.C([Li])CCC.CN(C)[CH:18]=[O:19].Cl>O1CCCC1>[Br:1][C:2]1[CH:7]=[CH:6][C:5]([CH:18]=[O:19])=[C:4]([CH2:9][CH3:10])[CH:3]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrochloric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N,N-dimethylformamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 70.7,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m5_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-bromo-2-ethyl-1-iodobenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=CC(=C(C=C1)I)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H8BrI/c1-2-6-5-7(9)3-4-8(6)10/h3-5H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 75.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "n-butyl lithium"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCC)[Li]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H9.Li/c1-3-4-2;/h1,3-4H2,2H3;"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 196.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 375.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": -75.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "is stirred at \u221275\u00b0 C. for an additional 30 minutes"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of 4-bromo-2-ethyl-1-iodobenzene (75 g, 0.24 mol) in tetrahydrofuran (375 ml) at \u221275\u00b0 C. is added n-butyl lithium (1.6 M in hexanes, 196 ml, 0.31 mol) dropwise, maintaining the temperature of the reaction mixture below \u221270\u00b0 C. When the addition is complete the mixture is stirred at \u221275\u00b0 C. for an additional 30 minutes and then N,N-dimethylformamide (70.7 g, 0.97 mol) is added dropwise. After the addition is complete the reaction is stirred at \u221275\u00b0 C. for 2 hours, then allowed to warm to room temperature for 2 hours. The mixture is cooled in an ice bath and acidified with 0.5 N aqueous hydrochloric acid. The mixture is extracted with ethyl acetate (3\u00d7500 ml) and the organic fractions are combined, washed with brine, and dried over anhydrous sodium sulphate. The mixture is filtered and the filtrate is evaporated under reduced pressure. The residue is purified by column chromatography on silica gel to give 4-bromo-2-ethylbenzaldehyde (48 g) as an oil."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "maintaining the temperature of the reaction mixture below \u221270\u00b0 C"
+        },
+        {
+            "type": "ADDITION",
+            "details": "When the addition"
+        },
+        {
+            "type": "ADDITION",
+            "details": "After the addition"
+        },
+        {
+            "type": "STIRRING",
+            "details": "is stirred at \u221275\u00b0 C. for 2 hours",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": -75.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "to warm to room temperature for 2 hours",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "The mixture is cooled in an ice bath"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "The mixture is extracted with ethyl acetate (3\u00d7500 ml)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 500.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "washed with brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over anhydrous sodium sulphate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulphate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The mixture is filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the filtrate is evaporated under reduced pressure"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue is purified by column chromatography on silica gel"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-bromo-2-ethylbenzaldehyde"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "BrC1=CC(=C(C=O)C=C1)CC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H9BrO/c1-2-7-5-9(10)4-3-8(7)6-11/h3-6H,2H2,1H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 48.0,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 93.9
+                            }
+                        }
+                    ],
+                    "texture": {
+                        "type": "OIL",
+                        "details": "oil"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08895761B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:29:04.973597"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:30:27 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:40 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-168a041df191467580a2b6487df0aa77"
+}

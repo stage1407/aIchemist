@@ -1,0 +1,200 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH:1]([C:24]([O:26][C:27]([CH3:30])([CH3:29])[CH3:28])=[O:25])[CH2:2][C:3]([NH:5][CH2:6][C:7]([NH:9][CH2:10][C:11]([NH:13][C@H:14]([C:16]([NH:18][CH2:19][C:20](OC)=[O:21])=[O:17])[CH3:15])=[O:12])=[O:8])=[O:4].O.[NH2:32][NH2:33]>CO>[C:27]([O:26][C:24]([NH:1][CH2:2][C:3]([NH:5][CH2:6][C:7]([NH:9][CH2:10][C:11]([NH:13][C@H:14]([C:16]([NH:18][CH2:19][C:20]([NH:32][NH2:33])=[O:21])=[O:17])[CH3:15])=[O:12])=[O:8])=[O:4])=[O:25])([CH3:30])([CH3:29])[CH3:28] |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Boc-Gly-Gly-Gly-Ala-Gly-OMe"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N(CC(=O)NCC(=O)NCC(=O)N[C@@H](C)C(=O)NCC(=O)OC)C(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C17H29N5O8/c1-10(15(27)20-9-14(26)29-5)22-13(25)8-19-11(23)6-18-12(24)7-21-16(28)30-17(2,3)4/h10H,6-9H2,1-5H3,(H,18,24)(H,19,23)(H,20,27)(H,21,28)(H,22,25)/t10-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 1.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrazine hydrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O.NN"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H4N2.H2O/c1-2;/h1-2H2;1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of Boc-Gly-Gly-Gly-Ala-Gly-OMe (1.0 g, 2.32 mmole, described in Example 16) and hydrazine hydrate (1 ml, 23.2 mmole) in methanol (30 ml) is stirred at 0\u00b0 C for 4 hr. After evaporation the residue is triturated with diethyl ether and dried to give the title compound, mp 221\u00b0 - 223\u00b0 C."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "After evaporation the residue"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "is triturated with diethyl ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "diethyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "dried"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "title compound"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "t-Butyloxycarbonyl-glycyl-glycyl-glycyl-alanyl-glycine Hydrazide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)NCC(=O)NCC(=O)NCC(=O)N[C@@H](C)C(=O)NCC(=O)NN"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H29N7O7/c1-9(14(28)20-8-13(27)23-17)22-12(26)7-19-10(24)5-18-11(25)6-21-15(29)30-16(2,3)4/h9H,5-8,17H2,1-4H3,(H,18,25)(H,19,24)(H,20,28)(H,21,29)(H,22,26)(H,23,27)/t9-/m0/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04081530",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:40:16.478905"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:08:26 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:56 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-88c7288a76b64689a4435e07571d9a4c"
+}

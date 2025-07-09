@@ -1,0 +1,697 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "1-octene Mizoroki-Heck"
+        }
+    ],
+    "inputs": {
+        "1-octene": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-octene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "C=CCCCCCC"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.075,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false,
+                    "preparations": [
+                        {
+                            "type": "SPARGED",
+                            "details": "nitrogen"
+                        }
+                    ],
+                    "source": {
+                        "vendor": "Sigma-Aldrich"
+                    }
+                }
+            ],
+            "addition_order": 5
+        },
+        "Base": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "triethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CCN(CC)CC"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.1,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT",
+                    "preparations": [
+                        {
+                            "type": "SPARGED",
+                            "details": "nitrogen"
+                        }
+                    ],
+                    "source": {
+                        "vendor": "Sigma-Aldrich"
+                    }
+                }
+            ],
+            "addition_order": 4
+        },
+        "Ligand": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O6c1c(cccc1P(c2ccccc2)c3ccccc3)C(c7cccc(P(c4ccccc4)c5ccccc5)c67)(C)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.006,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ],
+            "addition_order": 1
+        },
+        "Metal": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "O=C(/C=C/C1=CC=CC=C1)/C=C/C2=CC=CC=C2.O=C(/C=C/C3=CC=CC=C3)/C=C/C4=CC=CC=C4.O=C(/C=C/C5=CC=CC=C5)/C=C/C6=CC=CC=C6.[Pd].[Pd]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0025,
+                            "units": "MILLIMOLE"
+                        }
+                    }
+                }
+            ],
+            "addition_order": 2
+        },
+        "Solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 500.0,
+                            "units": "MICROLITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 3
+        },
+        "Halide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "c1ccc(cc1)I"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.05,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                }
+            ],
+            "addition_order": 6
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "material": {
+                "type": "GLASS"
+            },
+            "attachments": [
+                {
+                    "type": "MAT"
+                }
+            ],
+            "volume": {
+                "value": 1.2,
+                "units": "MILLILITER"
+            }
+        },
+        "is_automated": false,
+        "environment": {
+            "type": "GLOVE_BOX",
+            "details": "nitrogen atmosphere"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "DRY_ALUMINUM_PLATE"
+            },
+            "setpoint": {
+                "value": 85.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR",
+            "rate": {
+                "type": "MEDIUM"
+            }
+        },
+        "reflux": false,
+        "conditions_are_dynamic": false
+    },
+    "notes": {
+        "is_heterogeneous": false,
+        "is_exothermic": false,
+        "offgasses": false,
+        "is_sensitive_to_moisture": true,
+        "is_sensitive_to_oxygen": true
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "1,3,5-trimethoxybenzene"
+                            },
+                            {
+                                "type": "SMILES",
+                                "details": "NAME resolved by the PubChem API",
+                                "value": "COc1cc(OC)cc(OC)c1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.025,
+                                "units": "MILLIMOLE"
+                            }
+                        },
+                        "reaction_role": "INTERNAL_STANDARD"
+                    }
+                ]
+            },
+            "keep_phase": "Filtrate",
+            "is_automated": true
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 16.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3,5-trimethoxybenzene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "COc1cc(OC)cc(OC)c1"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C9H12O3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "uses_internal_standard": true,
+                            "is_normalized": false,
+                            "uses_authentic_standard": false,
+                            "float_value": {
+                                "value": 44634940.0
+                            },
+                            "retention_time": {
+                                "value": 6.84,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "INTERNAL_STANDARD"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Linear"
+                        },
+                        {
+                            "type": "MOLBLOCK",
+                            "details": "Drawn with Ketcher",
+                            "value": "\n  Ketcher  5232316122D 1   1.00000     0.00000     0\n\n 14 14  0  0  0  0            999 V2000\n    2.9848   -3.5501    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.7152   -3.5496    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8516   -3.0500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    4.7152   -4.5505    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.9848   -4.5550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    3.8538   -5.0500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.5814   -3.0500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.4472   -3.5504    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.3135   -3.0508    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.1793   -3.5512    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.0455   -3.0516    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.9113   -3.5520    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.7776   -3.0524    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.6434   -3.5528    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  3  1  2  0     0  0\n  4  2  2  0     0  0\n  1  5  1  0     0  0\n  2  3  1  0     0  0\n  5  6  2  0     0  0\n  6  4  1  0     0  0\n  2  7  1  0     0  0\n  7  8  2  0     0  0\n  8  9  1  0     0  0\n  9 10  1  0     0  0\n 10 11  1  0     0  0\n 11 12  1  0     0  0\n 12 13  1  0     0  0\n 13 14  1  0     0  0\nM  END\n"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "Drawn with Ketcher",
+                            "value": "CCCCCC/C=C/c1ccccc1"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 54286936.0
+                            },
+                            "retention_time": {
+                                "value": 8.4,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Branched"
+                        },
+                        {
+                            "type": "MOLBLOCK",
+                            "details": "Drawn with Ketcher",
+                            "value": "\n  Ketcher  5232316162D 1   1.00000     0.00000     0\n\n 14 14  0  0  0  0            999 V2000\n    5.3848   -3.9501    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1152   -3.9496    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2516   -3.4500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.1152   -4.9505    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    5.3848   -4.9550    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.2538   -5.4500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9814   -3.4500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8472   -3.9504    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.9819   -2.4500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.8467   -4.9504    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7125   -5.4508    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.7121   -6.4508    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5779   -6.9512    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.5774   -7.9512    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  3  1  2  0     0  0\n  4  2  2  0     0  0\n  1  5  1  0     0  0\n  2  3  1  0     0  0\n  5  6  2  0     0  0\n  6  4  1  0     0  0\n  2  7  1  0     0  0\n  7  8  1  0     0  0\n  7  9  2  0     0  0\n  8 10  1  0     0  0\n 10 11  1  0     0  0\n 11 12  1  0     0  0\n 12 13  1  0     0  0\n 13 14  1  0     0  0\nM  END\n"
+                        },
+                        {
+                            "type": "SMILES",
+                            "details": "Drawn with Ketcher",
+                            "value": "C=C(CCCCCC)c1ccccc1"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 4398543.0
+                            },
+                            "retention_time": {
+                                "value": 7.16,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 1"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 12238684.0
+                            },
+                            "retention_time": {
+                                "value": 7.9,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 2"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 19441652.0
+                            },
+                            "retention_time": {
+                                "value": 7.6,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 3"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 7.75,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 4"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 6.5,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 5"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 7290154.0
+                            },
+                            "retention_time": {
+                                "value": 6.73,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 6"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C12H10"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 8.1,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 7"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "is_desired_product": false,
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 8.6,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 8"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 7.3,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 9"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 6.5,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Regioisomer 10"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C14H20"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 6.8,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "biphenyl"
+                        },
+                        {
+                            "type": "MOLBLOCK",
+                            "details": "Drawn with Ketcher",
+                            "value": "\n  Ketcher  5232316342D 1   1.00000     0.00000     0\n\n 12 13  0  0  0  0            999 V2000\n    8.6652   -5.7499    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9348   -5.7504    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7984   -6.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    6.9348   -4.7495    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    8.6652   -4.7450    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    7.7962   -4.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.5297   -4.2425    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.3935   -2.7432    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    9.5293   -3.2418    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.2606   -3.2431    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   10.4004   -4.7444    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   11.2632   -4.2387    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  3  1  2  0     0  0\n  4  2  2  0     0  0\n  1  5  1  0     0  0\n  2  3  1  0     0  0\n  5  6  2  0     0  0\n  6  4  1  0     0  0\n  5  7  1  0     0  0\n  9  7  2  0     0  0\n 10  8  2  0     0  0\n  7 11  1  0     0  0\n  8  9  1  0     0  0\n 11 12  2  0     0  0\n 12 10  1  0     0  0\nM  END\n"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Molecular formula",
+                            "value": "C12H10"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "analysis_key": "GC-FID (slow)",
+                            "type": "AREA",
+                            "float_value": {
+                                "value": 0.0
+                            },
+                            "retention_time": {
+                                "value": 6.6,
+                                "units": "MINUTE"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "GC-FID (slow)": {
+                    "type": "GC",
+                    "details": "Ran a special GC-FID method for this plate with a slower temperature ramp. As a result, retention times vary to the other plates.",
+                    "is_of_isolated_species": false
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "experimenter": {
+            "name": "Eric Isbrandt",
+            "email": "eisbr094@uottawa.ca"
+        },
+        "city": "Ottawa",
+        "record_created": {
+            "time": {
+                "value": "5/17/2023, 6:01:47 PM"
+            },
+            "person": {
+                "name": "Eric Isbrandt",
+                "organization": "uOttawa",
+                "email": "eisbr094@uottawa.ca"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Sat Jun 10 23:28:31 2023"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-6557db795fb64c6fbcf8afc4827a44bd"
+}

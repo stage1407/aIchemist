@@ -1,0 +1,391 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][N:2]([C@H:16]1[CH2:21][CH2:20][C@H:19]([O:22][CH2:23][CH2:24][CH2:25][C:26](=O)[CH3:27])[CH2:18][CH2:17]1)[S:3]([C:6]1[CH:11]=[CH:10][C:9]([C:12]([F:15])([F:14])[F:13])=[CH:8][CH:7]=1)(=[O:5])=[O:4].[CH3:29][NH:30][CH3:31].[BH3-]C#N.[Na+].O>C(O)C.CC([O-])C.CC([O-])C.CC([O-])C.CC([O-])C.[Ti+4]>[CH3:29][N:30]([CH3:31])[CH:26]([CH3:27])[CH2:25][CH2:24][CH2:23][O:22][C@H:19]1[CH2:20][CH2:21][C@H:16]([N:2]([CH3:1])[S:3]([C:6]2[CH:11]=[CH:10][C:9]([C:12]([F:15])([F:14])[F:13])=[CH:8][CH:7]=2)(=[O:5])=[O:4])[CH2:17][CH2:18]1 |f:2.3,6.7.8.9.10|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.35,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trans-N-Methyl-N-[4-(4-oxo-pentyloxy)-cyclohexyl]-4-trifluoromethyl-benzenesulfonamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(S(=O)(=O)C1=CC=C(C=C1)C(F)(F)F)[C@@H]1CC[C@H](CC1)OCCCC(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H26F3NO4S/c1-14(24)4-3-13-27-17-9-7-16(8-10-17)23(2)28(25,26)18-11-5-15(6-12-18)19(20,21)22/h5-6,11-12,16-17H,3-4,7-10,13H2,1-2H3/t16-,17-"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 70.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CNC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H7N/c1-3-2/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.17,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetraisopropyl orthotitanate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)[O-].CC(C)[O-].CC(C)[O-].CC(C)[O-].[Ti+4]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4C3H7O.Ti/c4*1-3(2)4;/h4*3H,1-2H3;/q4*-1;+4"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.17,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m3_m8": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dimethylamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CNC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H7N/c1-3-2/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.17,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetraisopropyl orthotitanate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)[O-].CC(C)[O-].CC(C)[O-].CC(C)[O-].[Ti+4]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/4C3H7O.Ti/c4*1-3(2)4;/h4*3H,1-2H3;/q4*-1;+4"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.17,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        },
+        "m6_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaCNBH3"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[BH3-]C#N.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3BN.Na/c2-1-3;/h2H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 7.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.7,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The solution was stirred at RT for 18 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "70 mg (0.17 mmol) trans-N-Methyl-N-[4-(4-oxo-pentyloxy)-cyclohexyl]-4-trifluoromethyl-benzenesulfonamide were treated with 31 \u03bcM (30% in ethanol, 0.17 mmol) dimethylamine and 61 \u03bcM (0.17 mmol) tetraisopropyl orthotitanate. The solution was stirred at RT for 18 h, additional 31 \u03bcM (30% in ethanol, 0.17 mmol) dimethylamine and 61 \u03bcM (0.17 mmol) tetraisopropyl orthotitanate were added and stirring was continued for 2 h. The mixture was diluted with 1.7 ml ethanol and 7 mg (0.1 mmol) NaCNBH3 were added, and stirring was continued over night. 0.35 ml water was added and the suspension filtered and evaporated. The residue was purified by column chromatography with CH2Cl2/MeOH 9:1 to give 13.2 mg (18%) trans-N-[4-(4-Dimethylamino-pentyloxy)-cyclohexyl]-N-methyl-4-trifluoromethyl-benzenesulfonamide as colorless oil, MS: 451 (MH+)."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "stirring"
+        },
+        {
+            "type": "WAIT",
+            "details": "was continued for 2 h",
+            "duration": {
+                "value": 2.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "were added"
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirring"
+        },
+        {
+            "type": "WAIT",
+            "details": "was continued over night"
+        },
+        {
+            "type": "FILTRATION",
+            "details": "the suspension filtered"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue was purified by column chromatography with CH2Cl2/MeOH 9:1",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "CH2Cl2 MeOH"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)Cl.CO"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2.CH4O/c2-1-3;1-2/h1H2;2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trans-N-[4-(4-Dimethylamino-pentyloxy)-cyclohexyl]-N-methyl-4-trifluoromethyl-benzenesulfonamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C(CCCO[C@@H]1CC[C@H](CC1)N(S(=O)(=O)C1=CC=C(C=C1)C(F)(F)F)C)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H33F3N2O3S/c1-16(25(2)3)6-5-15-29-19-11-9-18(10-12-19)26(4)30(27,28)20-13-7-17(8-14-20)21(22,23)24/h7-8,13-14,16,18-19H,5-6,9-12,15H2,1-4H3/t16?,18-,19-"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 13.2,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 18.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 17.2
+                            }
+                        }
+                    ],
+                    "isolated_color": "colorless",
+                    "texture": {
+                        "type": "OIL",
+                        "details": "oil"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07335687B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:46:09.341346"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:20:30 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:34 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0fbfba0047a9409f877496ace3a3ebda"
+}

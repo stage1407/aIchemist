@@ -1,0 +1,334 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "DIFLUOROMETHYLATION"
+        },
+        {
+            "type": "REACTION_SMILES",
+            "value": "[CH3:1][C:2]([O:5][C:6]([N:8]1[CH2:25][c:24]([c:11]2[CH2:10][CH2:9]1)[c:15]([O:16][CH2:17][c:18]3[cH:23][cH:22][cH:21][cH:20][cH:19]3)[cH:14][c:13](Br)[cH:12]2)=[O:7])([CH3:4])[CH3:3].C[Si]([CH:26]([F:28])[F:27])(C)C>>[CH3:1][C:2]([O:5][C:6]([N:8]1[CH2:25][c:24]([c:11]2[CH2:10][CH2:9]1)[c:15]([O:16][CH2:17][c:18]3[cH:23][cH:22][cH:21][cH:20][cH:19]3)[cH:14][c:13]([CH:26]([F:28])[F:27])[cH:12]2)=[O:7])([CH3:4])[CH3:3]"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "ReactionClass",
+            "value": "Untagged"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "SCREEN_ID",
+            "value": "SCRN_97"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "NOTEBOOK_ID",
+            "value": "00119131-2438"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "EXPT_REACTION_ID",
+            "value": "RKB-03769117"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "ReactionGroup",
+            "value": "Other Functionalization"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "yie_react",
+            "value": "0__PF-06880213__MFCD19381658__"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "Notebook_End",
+            "value": "2438"
+        }
+    ],
+    "inputs": {
+        "solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "NAME resolved by the PubChem API",
+                            "value": "CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Toluene"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "solvent name before it was parsed",
+                            "value": "Toluene"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 100.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "reagent_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "details": "manual NAME resolution by Ben Deadman",
+                            "value": "[Li+].CC(C)(C)[O-]  "
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "LiOBut"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Reagent_1_ID",
+                            "value": "MFCD00050479"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Name of reagent 1 mixture",
+                            "value": "LiOBut"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0025,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ]
+        },
+        "internal_standard": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "c1ccc(cc1)-c2c3ccccc3cc4ccccc24"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "9-Phenylanthracene"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 1.0,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "INTERNAL_STANDARD"
+                }
+            ]
+        },
+        "reactant_1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "c1c(cc2c(c1OCc1ccccc1)CN(CC2)C(OC(C)(C)C)=O)Br"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Reactant_1_ID",
+                            "value": "PF-06880213"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.001,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                }
+            ]
+        },
+        "reactant_2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[Si](C(F)F)(C)(C)C"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Reactant_2_ID",
+                            "value": "MFCD19381658"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.002,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "catalyst_2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[Pd].C(P(C(C)(C)C)C(C)(C)C)(C)(C)C.C(P(C(C)(C)C)C(C)(C)C)(C)(C)C"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Pd(P(tBu)3)2"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "Catalyst_2_ID",
+                            "value": "MFCD03094580"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.000125,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ]
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "material": {
+                "type": "GLASS",
+                "details": "glass with a pre-dispensed stirrer bar"
+            }
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 80.0,
+                "units": "CELSIUS"
+            }
+        }
+    },
+    "notes": {
+        "is_sensitive_to_moisture": true,
+        "is_sensitive_to_oxygen": true
+    },
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 18.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C)(C)OC(=O)N1CCc2cc(cc(OCc3ccccc3)c2C1)C(F)F"
+                        },
+                        {
+                            "type": "CUSTOM",
+                            "details": "PCAT_CMPD_ID",
+                            "value": "PF-06923239"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "LCMS",
+                            "type": "COUNTS",
+                            "is_normalized": false,
+                            "float_value": {
+                                "value": 0.0
+                            }
+                        },
+                        {
+                            "analysis_key": "LCMS",
+                            "type": "CUSTOM",
+                            "details": "LC area percent",
+                            "is_normalized": true,
+                            "percentage": {
+                                "value": 0.0
+                            },
+                            "wavelength": {
+                                "value": 250.0,
+                                "units": "NANOMETER"
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "LCMS": {
+                    "type": "LCMS",
+                    "details": "Agilent 1200 UPLC 1200Bar with ES+ MS.LC/MS analysis used a Waters Acquity UPLC BEH, C18, 1.7um 2.1x30 mm column with A: 0.1% AcOH/NH4COOH/H2O, B: MeCN/0.1% AcOH/NH4COOH/H2O linear gradient over 0.8minutes running from 5%B/A-95%B/A at 100C at a flow rate of 2.5ml/min and a detection wavelength of 210-360nm. 0.5uL injections were made directly from diluted reaction mixtures and ionization monitored in just positive mode.",
+                    "data": {
+                        "product selectivity": {
+                            "float_value": "NaN"
+                        },
+                        "product mass ion count": {
+                            "float_value": 0.0
+                        },
+                        "product LC area percent in UV": {
+                            "float_value": 0.0
+                        }
+                    },
+                    "instrument_manufacturer": "Agilent"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "city": "La Jolla, CA",
+        "doi": "10.1038/s41557",
+        "publication_url": "https://www.nature.com/articles/s41557-023-01393-w",
+        "record_created": {
+            "time": {
+                "value": "07/06/2024, 23:25:41"
+            },
+            "person": {
+                "name": "Emma King-Smith",
+                "orcid": "0000-0002-2999-0955",
+                "organization": "University of Cambridge",
+                "email": "esk34@cam.ac.uk"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Thu Jul 11 12:04:50 2024"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ],
+        "reaction_metadata": {
+            "dataset assembly notes": {
+                "string_value": "some names and smiles strings assigned by Benjamin Deadman, Open Reaction Database, ben@open-reaction-database.org, orcid=0000-0001-8463-8199"
+            }
+        }
+    },
+    "reaction_id": "ord-a0de79e75f464a13addd7f3e8b2a7ae5"
+}

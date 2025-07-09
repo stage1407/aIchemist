@@ -1,0 +1,307 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C:2]1[CH:3]=[C:4]2[C:9](=[CH:10][CH:11]=1)[CH:8]=[C:7]([CH:12]([CH3:16])[C:13]([OH:15])=[O:14])[CH:6]=[CH:5]2.[C:17](OC(=O)C)(=[O:19])[CH3:18].C1(C)C=CC(S(O)(=O)=O)=CC=1>>[C:17]([O:1][C:2]1[CH:3]=[C:4]2[C:9](=[CH:10][CH:11]=1)[CH:8]=[C:7]([CH:12]([CH3:16])[C:13]([OH:15])=[O:14])[CH:6]=[CH:5]2)(=[O:19])[CH3:18]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "6-hydroxy-2-naphthyl-\u03b1-methylacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC=1C=C2C=CC(=CC2=CC1)C(C(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C13H12O3/c1-8(13(15)16)9-2-3-11-7-12(14)5-4-10(11)6-9/h2-8,14H,1H3,(H,15,16)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic anhydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OC(C)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H6O3/c1-3(5)7-4(2)6/h1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-toluenesulfonic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=C(C=C1)S(=O)(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O3S/c1-6-2-4-7(5-3-6)11(8,9)10/h2-5H,1H3,(H,8,9,10)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A mixture of 2.2 g. of 6-hydroxy-2-naphthyl-\u03b1-methylacetic acid, 50 ml. of acetic anhydride, and 100 mg. of p-toluenesulfonic acid is stirred for four hours at 50\u00b0C. The mixture is evaporated, water is added, and the mixture is extracted with diethyl ether which is washed with water to neutrality, dried over sodium sulfate, and evaporated to yield 6-acetoxy-2-naphthyl-\u03b1-methylacetic acid."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "A mixture of 2.2 g"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The mixture is evaporated"
+        },
+        {
+            "type": "ADDITION",
+            "details": "water is added",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the mixture is extracted with diethyl ether which",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "diethyl ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O/c1-3-5-4-2/h3-4H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "is washed with water to neutrality",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried over sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "6-acetoxy-2-naphthyl-\u03b1-methylacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OC=1C=C2C=CC(=CC2=CC1)C(C(=O)O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H14O4/c1-9(15(17)18)11-3-4-13-8-14(19-10(2)16)6-5-12(13)7-11/h3-9H,1-2H3,(H,17,18)"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US03978124",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:35:53.757119"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:00:40 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:57 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-eddee398af6f40c2b01bd074a250b43d"
+}

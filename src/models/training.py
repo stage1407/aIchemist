@@ -1,3 +1,7 @@
+# pylint: disable=import-error
+# pylint: disable=unused-import
+# pylint: disable=wrong-import-position
+
 import sys
 from pathlib import Path
 project_dir = Path(__file__).resolve().parent.parent.parent
@@ -9,11 +13,11 @@ from enum import Enum
 import torch
 from torch_geometric.loader import DataLoader
 from torch_geometric.data import Batch
-from torch_geometric.utils import from_networkx
+# from torch_geometric.utils import from_networkx
 from torch.optim import Adam
 from sklearn.metrics import accuracy_score, f1_score
 from src.func.chem_structures import properties
-from src.func.chem_structures import reaction_graph
+# from src.func.chem_structures import reaction_graph
 # from data.dataloader import DataLoader
 # from src.models.mock import generate_mock_dataset
 from src.models.reaction_gae import ReactionGAE
@@ -24,7 +28,7 @@ from data.extract import Extractor, DatasetType
 from data.dataloader import ReactionDataset
 from src.func.mol_graph_converter import MolGraphConverter
 #from src.func.reaction_graph import reaction_graph
-from src.models.loss_function import compute_graph_loss, hungarian_loss
+from src.models.loss_function import compute_graph_loss #, hungarian_loss
 # import atom_mapping_predictor as amp
 import gc
 
@@ -41,6 +45,16 @@ config = {
 }
 
 def pad_missing_features(data_x, target_dim=19):
+    """
+    Pads the input feature tensor to ensure it has the target dimension.
+    If the input tensor has fewer dimensions than target_dim, it pads with zeros.
+    If it has more dimensions, it truncates the extra dimensions.
+    Args:
+        data_x (torch.Tensor): Input feature tensor.
+        target_dim (int): Target dimension to pad or truncate to.
+    Returns:
+        torch.Tensor: Padded or truncated feature tensor.
+    """
     current_dim = data_x.shape[1]
 
     if current_dim < target_dim:
@@ -54,6 +68,17 @@ def pad_missing_features(data_x, target_dim=19):
 
 # Trainingsfunktion
 def train(model, loader, optimizer, device):
+    """ Trains the model for one epoch.
+    Args:
+        model: The model to train.
+        loader: DataLoader for the training data.
+        optimizer: Optimizer for the model.
+        device: Device to run the model on (CPU or GPU).
+    Returns:
+        avg_loss: Average loss over the epoch.
+        acc: Accuracy of the model on the training data.
+        f1: F1 score of the model on the training data.
+    """
     # TODO: Maybe weight valence rule violations much higher than chemical distance loss and structural loss.
     model.train()
     total_loss = 0
@@ -105,6 +130,16 @@ def train(model, loader, optimizer, device):
 
 # Validierungsfunktion
 def validate(model, loader, device):
+    """ Validates the model on the validation set.
+    Args:
+        model: The model to validate.
+        loader: DataLoader for the validation data.
+        device: Device to run the model on (CPU or GPU).
+    Returns:
+        avg_loss: Average loss over the validation set.
+        acc: Accuracy of the model on the validation data.
+        f1: F1 score of the model on the validation data.
+    """
     model.eval()
     total_loss = 0
     all_preds = []
@@ -154,17 +189,30 @@ def validate(model, loader, device):
     return avg_loss, acc, f1
 
 class ModelType(Enum):
+    """ Enum for different model types. """
     ENC = 0
     GAE = 1
     GAT = 2
     VGAE = 3
 
 def custom_collate(batch):
+    """ 
+    Custom collate function to handle batches of educts and reactions.
+    Args:
+        batch: List of tuples containing educt and reaction data.
+    Returns:
+        Tuple of two Batches: one for educts and one for reactions.
+    """
     educt_list, reaction_list = zip(*batch)
     return Batch.from_data_list(educt_list), Batch.from_data_list(reaction_list)
 
 # Haupttrainingspipeline
 def main(model_type : ModelType):
+    """ 
+    Main function to run the training and validation pipeline.
+    Args:
+        model_type: Type of the model to train (ENC, GAE, GAT, VGAE).
+    """
     train_mol_graphs = Extractor(DatasetType.TRAINING)
     val_mol_graphs = Extractor(DatasetType.VALIDATION)
 
@@ -175,11 +223,11 @@ def main(model_type : ModelType):
 
     train_loader = DataLoader(train_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], shuffle=True, num_workers=4, pin_memory=True) #TODO Local Settings   # Füge hier den Trainings-Loader ein
     val_loader = DataLoader(val_dataset, collate_fn=custom_collate, batch_size=config["batch_size"], num_workers=4, pin_memory=True) #TODO Local Settings                      # Füge hier den Validierungs-Loader ein
-    if MOCK_ON:
+    # if MOCK_ON:
         ####### MOCK #######
-        mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)
-        train_loader = DataLoader(mock_dataset[:80], collate_fn=custom_collate, batch_size=8, shuffle=True)
-        val_loader = DataLoader(mock_dataset[80:], collate_fn=custom_collate, batch_size=8, shuffle=False)
+    #    mock_dataset = generate_mock_dataset(num_graphs=100, num_nodes=15, num_edges=30, feature_dim=8, edge_attr_dim=4)
+    #    train_loader = DataLoader(mock_dataset[:80], collate_fn=custom_collate, batch_size=8, shuffle=True)
+    #    val_loader = DataLoader(mock_dataset[80:], collate_fn=custom_collate, batch_size=8, shuffle=False)
         ####################
     input_dim = len(properties["node_features"])
     edge_attr_dim = len(properties["edge_features"])
@@ -188,11 +236,13 @@ def main(model_type : ModelType):
     if model_type == ModelType.ENC:
         model = GNNEncoder(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
     elif model_type == ModelType.GAE:
-        model = ReactionGAE(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
+        # model = ReactionGAE(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
+        pass
     elif model_type == ModelType.GAT:
         model = ReactionGAT(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
     elif model_type == ModelType.VGAE:
-        model = ReactionVGAE(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
+        # model = ReactionVGAE(input_dim=input_dim, hidden_dim=config["hidden_dim"], edge_attr_dim=edge_attr_dim)
+        pass
 
     model.to(config["device"])
 

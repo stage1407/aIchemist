@@ -1,0 +1,318 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C(OC([N:8]1[CH2:13][CH2:12][CH:11]([C:14]2[CH:19]=[CH:18][C:17]([NH:20][C:21]3[N:26]=[CH:25][C:24]4=[CH:27][CH:28]=[C:29]([C:30]5[CH:35]=[CH:34][C:33]([S:36]([CH3:39])(=[O:38])=[O:37])=[CH:32][CH:31]=5)[N:23]4[N:22]=3)=[CH:16][CH:15]=2)[CH2:10][CH2:9]1)=O)(C)(C)C.[F:40][C:41]([F:46])([F:45])[C:42]([OH:44])=[O:43].C(Cl)Cl>>[F:40][C:41]([F:46])([F:45])[C:42]([OH:44])=[O:43].[CH3:39][S:36]([C:33]1[CH:34]=[CH:35][C:30]([C:29]2[N:23]3[C:24]([CH:25]=[N:26][C:21]([NH:20][C:17]4[CH:18]=[CH:19][C:14]([CH:11]5[CH2:12][CH2:13][NH:8][CH2:9][CH2:10]5)=[CH:15][CH:16]=4)=[N:22]3)=[CH:27][CH:28]=2)=[CH:31][CH:32]=1)(=[O:37])=[O:38] |f:3.4|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-{4-[7-(4-Methanesulfonyl-phenyl)-pyrrolo[2,1-f][1,2,4]-triazin-2ylamino)-phenyl}-piperidine-1-carboxylic acid tert butyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N1CCC(CC1)C1=CC=C(C=C1)NC1=NN2C(C=N1)=CC=C2C2=CC=C(C=C2)S(=O)(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C29H33N5O4S/c1-29(2,3)38-28(35)33-17-15-21(16-18-33)20-5-9-23(10-6-20)31-27-30-19-24-11-14-26(34(24)32-27)22-7-12-25(13-8-22)39(4,36)37/h5-14,19,21H,15-18H2,1-4H3,(H,31,32)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.762,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Trifluoroacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)O)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DCM"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred at room temperature for 1 h"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a round bottom flask 4-{4-[7-(4-Methanesulfonyl-phenyl)-pyrrolo[2,1-f][1,2,4]-triazin-2ylamino)-phenyl}-piperidine-1-carboxylic acid tert butyl ester (7-% pure, 0.762 g, 0.00135 mol) and 3.0 M Trifluoroacetic acid in DCM (10 mL, 0.030 mol) were added. The mixture was stirred at room temperature for 1 h then the solvent was removed by rotary evaporation. The crude product was purified via HPLC reverse phase chromatography with 0.1% TFA in Water and 0.1% TFA in ACN. The collected fractions were lyophilized to give [7-(4-Methanesulfonyl-phenyl)-pyrrolo[2,1-f][1,2,4]triazin-2-yl]-(4-piperidin-4-yl-phenyl)-amine; compound with trifluoro-acetic acid as a yellow fluffy solid (0.06 g, 10%). LCMS (E/I+) 448.1 (M+H). NMR 1H (CDCl3/DSMO-d6)-9.97 (s, 1H), 9.50 (s, 1H), 8.41 (d, 2H, J=8.52 Hz), 8.20 (s, 1H), 8.02 (d, 2H, J=8.51 Hz), 7.67 (d, 2H, J=8.67 Hz), 7.20 (d, 2H, J=7.6 Hz), 7.11 (d, 1H, J=4.90 Hz), 6.88 (d, 1H, J=4.88 Hz), 3.54 (d, 2H, J=12.06 Hz), 3.14 (s, 3H), 3.02 (m, 3H), 2.59 (m, 2H), 2.05 (m, 4H)."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "the solvent was removed by rotary evaporation"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The crude product was purified via HPLC reverse phase chromatography with 0.1% TFA in Water and 0.1% TFA in ACN",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "crude product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "TFA"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(=O)(C(F)(F)F)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "TFA"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(=O)(C(F)(F)F)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ACN"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)#N"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H3N/c1-2-3/h1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 1.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "[7-(4-Methanesulfonyl-phenyl)-pyrrolo[2,1-f][1,2,4]triazin-2-yl]-(4-piperidin-4-yl-phenyl)-amine; compound with trifluoro-acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)O)(F)F.CS(=O)(=O)C1=CC=C(C=C1)C1=CC=C2C=NC(=NN21)NC2=CC=C(C=C2)C2CCNCC2"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C24H25N5O2S.C2HF3O2/c1-32(30,31)22-9-4-19(5-10-22)23-11-8-21-16-26-24(28-29(21)23)27-20-6-2-17(3-7-20)18-12-14-25-15-13-18;3-2(4,5)1(6)7/h2-11,16,18,25H,12-15H2,1H3,(H,27,28);(H,6,7)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 0.06,
+                                    "units": "GRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 10.0
+                            }
+                        }
+                    ],
+                    "isolated_color": "yellow fluffy",
+                    "texture": {
+                        "type": "CUSTOM",
+                        "details": "solid"
+                    },
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US08471005B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:59:15.609141"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:07:17 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:19 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-afabce67ac044c61aa786bd57ac613f9"
+}

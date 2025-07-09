@@ -1,0 +1,314 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "FC(F)(F)C([NH:5][C@H:6]([C:26]([C:28]([C:44](=[O:72])[C@H:45]([CH2:53][C:54]1[CH:61]=[C:59]([I:60])[C:58]([O:62][C:63]2[CH:70]=[C:68]([I:69])[C:67]([OH:71])=[C:65]([I:66])[CH:64]=2)=[C:56]([I:57])[CH:55]=1)[NH:46]C(=O)C(F)(F)F)([CH2:32][O:33][CH2:34][CH2:35][CH2:36][CH2:37][O:38][CH2:39][CH2:40][C:41]([NH2:43])=[O:42])[C:29]([NH2:31])=[O:30])=[O:27])[CH2:7][C:8]1[CH:15]=[C:13]([I:14])[C:12]([O:16][C:17]2[CH:24]=[C:22]([I:23])[C:21]([OH:25])=[C:19]([I:20])[CH:18]=2)=[C:10]([I:11])[CH:9]=1)=O.[OH-].[Na+].[ClH:77]>CO.C(O)C>[ClH:77].[ClH:77].[NH2:5][C@H:6]([C:26]([C:28]([C:44](=[O:72])[C@H:45]([CH2:53][C:54]1[CH:55]=[C:56]([I:57])[C:58]([O:62][C:63]2[CH:64]=[C:65]([I:66])[C:67]([OH:71])=[C:68]([I:69])[CH:70]=2)=[C:59]([I:60])[CH:61]=1)[NH2:46])([CH2:32][O:33][CH2:34][CH2:35][CH2:36][CH2:37][O:38][CH2:39][CH2:40][C:41]([NH2:43])=[O:42])[C:29]([NH2:31])=[O:30])=[O:27])[CH2:7][C:8]1[CH:9]=[C:10]([I:11])[C:12]([O:16][C:17]2[CH:18]=[C:19]([I:20])[C:21]([OH:25])=[C:22]([I:23])[CH:24]=2)=[C:13]([I:14])[CH:15]=1 |f:1.2,6.7.8|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Bis-(trifluoroacetyl-L-thyroxyl)-4,9-dioxadodecane-1,12-diamide"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "bis-(trifluoroacetyl-L-thyroxyl)-4,9-dioxa-1,12-dodecanediamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)N[C@@H](CC1=CC(I)=C(C(I)=C1)OC1=CC(I)=C(C(I)=C1)O)C(=O)C(C(=O)N)(COCCCCOCCC(=O)N)C([C@@H](NC(C(F)(F)F)=O)CC1=CC(I)=C(C(I)=C1)OC1=CC(I)=C(C(I)=C1)O)=O)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C44H36F6I8N4O12/c45-43(46,47)40(69)61-30(11-18-7-26(55)35(27(56)8-18)73-20-13-22(51)33(64)23(52)14-20)37(66)42(39(60)68,17-72-5-2-1-4-71-6-3-32(59)63)38(67)31(62-41(70)44(48,49)50)12-19-9-28(57)36(29(58)10-19)74-21-15-24(53)34(65)25(54)16-21/h7-10,13-16,30-31,64-65H,1-6,11-12,17H2,(H2,59,63)(H2,60,68)(H,61,69)(H,62,70)/t30-,31-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydroxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[OH-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/Na.H2O/h;1H2/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hydrochloric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "with stirring"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Bis-(trifluoroacetyl-L-thyroxyl)-4,9-dioxadodecane-1,12-diamide (example 8A), 0.34 g, was dissolved in 3ml methanol. 1M sodium hydroxide was added with stirring and the reaction was allowed to go at room temperature for 40 hours. The reaction mixture was diluted into 20 ml of cold 1M hydrochloric acid to give a fine suspension of product. The suspension was centrifuged and the pellet was dissolved in ethanol. The ethanol solution was evaporated to a solid residue of crude product. The product was recrystallized from methanol/ether to obtain 0.18 g of bis-(L-thyroxyl)-4,9-dioxa-1,12-dodecanediamide, dihydrochloride salt."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "to give"
+        },
+        {
+            "type": "ADDITION",
+            "details": "a fine suspension of product"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The ethanol solution was evaporated to a solid residue of crude product",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethanol"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The product was recrystallized from methanol/ether",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "methanol ether"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CO.CCOCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H10O.CH4O/c1-3-5-4-2;1-2/h3-4H2,1-2H3;2H,1H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 40.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "bis-(L-thyroxyl)-4,9-dioxa-1,12-dodecanediamide, dihydrochloride salt"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl.Cl.N[C@@H](CC1=CC(I)=C(C(I)=C1)OC1=CC(I)=C(C(I)=C1)O)C(=O)C(C(=O)N)(COCCCCOCCC(=O)N)C([C@@H](N)CC1=CC(I)=C(C(I)=C1)OC1=CC(I)=C(C(I)=C1)O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C40H38I8N4O10.2ClH/c41-22-13-20(14-23(42)33(22)54)61-35-26(45)7-18(8-27(35)46)11-30(49)37(56)40(39(52)58,17-60-5-2-1-4-59-6-3-32(51)53)38(57)31(50)12-19-9-28(47)36(29(48)10-19)62-21-15-24(43)34(55)25(44)16-21;;/h7-10,13-16,30-31,54-55H,1-6,11-12,17,49-50H2,(H2,51,53)(H2,52,58);2*1H/t30-,31-;;/m0../s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 0.18,
+                                    "units": "GRAM"
+                                }
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04760142",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:05:44.255118"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:50:48 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:33 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-34de0accb5f3495ea052d8ac4a17122c"
+}

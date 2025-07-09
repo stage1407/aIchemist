@@ -1,0 +1,410 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "value": "Nickel-catalyzed reductive cross-coupling"
+        }
+    ],
+    "inputs": {
+        "alkenyl bromide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Br/C=C/c1ccc(OC)cc1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.6,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ],
+            "addition_order": 1
+        },
+        "benzylic chloride": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cl[C@H](C)c1c(OC)cccc1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.6,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ],
+            "addition_order": 5,
+            "addition_speed": {
+                "type": "ALL_AT_ONCE"
+            },
+            "addition_device": {
+                "type": "SYRINGE"
+            }
+        },
+        "ligand": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1(C2(C3=N[C@H](c4ccccc4C5)[C@H]5O3)CC2)=N[C@H]6[C@H](Cc7ccccc76)O1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.12,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ],
+            "addition_order": 2
+        },
+        "solvent": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CC(N(C)C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT",
+                    "source": {
+                        "vendor": "Aldrich"
+                    }
+                }
+            ],
+            "addition_order": 4,
+            "addition_speed": {
+                "type": "ALL_AT_ONCE"
+            },
+            "addition_device": {
+                "type": "SYRINGE"
+            }
+        },
+        "nickel_ii_chloride": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cl[Ni]Cl.COCCOC"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.06,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                }
+            ],
+            "addition_order": 2
+        },
+        "sodium_iodide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "[Na+].[I-]"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.6,
+                            "units": "MILLIMOLE"
+                        }
+                    },
+                    "reaction_role": "REAGENT"
+                }
+            ],
+            "addition_order": 3
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "ELECTROCHEMICAL_CELL",
+            "attachments": [
+                {
+                    "type": "SEPTUM",
+                    "details": "Rubber septum"
+                }
+            ],
+            "volume": {
+                "value": 7.0,
+                "units": "MILLILITER"
+            }
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 0.0,
+                "units": "CELSIUS"
+            }
+        },
+        "pressure": {
+            "control": {
+                "type": "SEALED"
+            },
+            "atmosphere": {
+                "type": "ARGON"
+            }
+        },
+        "stirring": {
+            "type": "STIR_BAR"
+        },
+        "electrochemistry": {
+            "type": "CONSTANT_CURRENT",
+            "current": {
+                "value": 10.0,
+                "units": "MILLIAMPERE"
+            },
+            "anode_material": "zinc",
+            "cathode_material": "reticulated vitreous carbon foam",
+            "cell": {
+                "type": "CUSTOM",
+                "details": " Using a razor blade, a 5 mL (6 mL) NORM-JECT Luer Centric plastic syringe (a) was cut at the 1 mL mark to give a ~9 mm segment (b). The Luer tip was cut off (c). Using a 16 G (1.6 mm x 40 mm) needle, a ~3 mm in diameter hole was punctured next to the edge of the end of the syringe (d). A segment of 1/8\u201d diameter zinc wire (99.9% pure, Rotometals) was pushed through the newly-created hole to widen it slightly (e). A 4 mm segment was cut from a rubber septum (for 14/20 joints, Ace Glass) (f, g). Using the same 16 G needle, several holes were poked through the septum (h). These holes were then punctured with the zinc wire (i). The septum was  pushed into the syringe, with the wire going through side hole in the syringe. A ~4 mm segment was cut from the Luer tip and slid onto the zinc wire ~5 mm from the top (j). Directly across from the zinc wire, the syringe and septum were punctured with a 21 G (0.8 mm x 40 mm) needle (k). A piece of stainless steel wire was pushed through the needle (l). The needle was removed, leaving behind the wire (m). The lower end of the wire was bent into a hook shape (n). A 6 mm x 6 mm x 2 cm segment of reticulated vitreous carbon foam was cut using a razor blade (ERG Duocel, 100 PPI) (o). The RVC foam was punctured with the hook-shaped wire (p). The threaded top was cut off a 2-dram glass vial (before and after cutting shown, (q)). The electrode assembly was inserted into the vial (r). The septum was folded over the vial (s). The septum was sealed to the vial with electrical tape (t). Note: during operation, alligator clips from the potentiostat are connected directly to the wires. A needle for sparging is inserted through the center of the septum, then through the hole in the plastic (where the Luer tip used to be). "
+            }
+        }
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "keep_phase": "organic"
+        },
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "keep_phase": "organic"
+        },
+        {
+            "type": "ADDITION",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CCOCC"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "keep_phase": "organic"
+        },
+        {
+            "type": "WASH",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "[Li+].[Cl-]"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "[Mg+2].[O-]S([O-])(=O)=O"
+                            }
+                        ],
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "keep_phase": "filtrate"
+        },
+        {
+            "type": "CONCENTRATION"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 3.25,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "COc1ccc(/C=C/[C@H](C)c2ccccc2OC)cc1"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "isolated_yield_measurement",
+                            "type": "YIELD",
+                            "uses_internal_standard": false,
+                            "is_normalized": true,
+                            "uses_authentic_standard": false,
+                            "percentage": {
+                                "value": 73.0
+                            }
+                        },
+                        {
+                            "analysis_key": "enantiomeric_excess_measurement",
+                            "type": "SELECTIVITY",
+                            "uses_internal_standard": false,
+                            "uses_authentic_standard": false,
+                            "percentage": {
+                                "value": 90.0
+                            },
+                            "selectivity": {
+                                "type": "EE"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "analyses": {
+                "enantiomeric_excess_measurement": {
+                    "type": "SFC",
+                    "details": "Analytical chiral SFC was performed with a Mettler SFC supercritical CO2 analytical chromatography system (CO2 = 1450 psi, column temperature = 40 \u00b0C) with Chiralcel AD-H, OD-H, AS-H, OB-H, and OJ-H columns (4.6 mm x 25 cm).",
+                    "is_of_isolated_species": true
+                },
+                "isolated_yield_measurement": {
+                    "type": "WEIGHT",
+                    "is_of_isolated_species": true
+                },
+                "specific_rotation": {
+                    "type": "CUSTOM",
+                    "details": "Optical rotations were measured on a Jasco P-2000 polarimeter using a 100 mm path-length cell at 589 nm. Measurements are taken at 25\u00b0C.",
+                    "is_of_isolated_species": true,
+                    "data": {
+                        "specific_rotation": {
+                            "float_value": -100.0
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "doi": "10.1021/acscatal.9b01785",
+        "publication_url": "https://pubs.acs.org/doi/abs/10.1021/acscatal.9b01785",
+        "record_created": {
+            "time": {
+                "value": "07/24/2021, 07:48:43"
+            },
+            "person": {
+                "name": "Brian Kihoon Lee",
+                "orcid": "0000-0002-0920-3520",
+                "organization": "Google Research",
+                "email": "brianklee@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Wed Jul 28 21:07:39 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-8bfa0e57bc21432e90048d6913f56a3f"
+}

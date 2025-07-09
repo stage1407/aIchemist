@@ -1,0 +1,309 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C([O:4][C:5]1[C:6]([CH3:27])=[C:7]2[C:12](=[C:13]([CH3:16])[C:14]=1[CH3:15])[O:11][C:10]([C:18](=[O:26])[NH:19][CH2:20][CH2:21][CH2:22][CH2:23][CH2:24][CH3:25])([CH3:17])[CH2:9][CH2:8]2)(=O)C.C[O-].[Na+].Cl.CCOC(C)=O>CO.O>[CH2:20]([NH:19][C:18]([C:10]1([CH3:17])[CH2:9][CH2:8][C:7]2[C:12](=[C:13]([CH3:16])[C:14]([CH3:15])=[C:5]([OH:4])[C:6]=2[CH3:27])[O:11]1)=[O:26])[CH2:21][CH2:22][CH2:23][CH2:24][CH3:25] |f:1.2|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCOC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 10.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HCl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.5,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m5_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(hexylcarbamoyl)-2,5,7,8-tetramethylchroman-6-yl acetate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)OC=1C(=C2CCC(OC2=C(C1C)C)(C)C(NCCCCCC)=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H33NO4/c1-7-8-9-10-13-23-21(25)22(6)12-11-18-16(4)19(26-17(5)24)14(2)15(3)20(18)27-22/h7-13H2,1-6H3,(H,23,25)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 187.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "NaOMe"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C[O-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3O.Na/c1-2;/h1H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 33.7,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "MeOH"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH4O/c1-2/h2H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.25,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "let stir overnight"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Crude 2-(hexylcarbamoyl)-2,5,7,8-tetramethylchroman-6-yl acetate (187 mg, 0.25 mmol) in 1.25 mL MeOH was treated with 33.7 mg (0.625 mmol) NaOMe and let stir overnight. The stirred brown solution then was diluted with water (10 mL), neutralized with 2.5 M HCl (1.5 mL) and 10 mL EtOAc added. The layers were separated and the organics dried over Na2SO4 and concentrated. Flash chromatography yielded 90 mg of N-hexyl-6-hydroxy-2,5,7,8-tetramethylchroman-2-carboxamide."
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "added"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The layers were separated"
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "the organics dried over Na2SO4",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-hexyl-6-hydroxy-2,5,7,8-tetramethylchroman-2-carboxamide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCC)NC(=O)C1(OC2=C(C(=C(C(=C2CC1)C)O)C)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C20H31NO3/c1-6-7-8-9-12-21-19(23)20(5)11-10-16-15(4)17(22)13(2)14(3)18(16)24-20/h22H,6-12H2,1-5H3,(H,21,23)"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 90.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 108.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US09169196B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:50:09.769133"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:27:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:58 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-d7b36cb24aff4af893c5f0daee125b63"
+}

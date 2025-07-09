@@ -1,0 +1,179 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]1[C:6]([OH:7])=[CH:5][CH:4]=[C:3]([CH3:8])[CH:2]=1.S(=O)(=O)(O)O.[CH3:14][C:15]([C:17]1[CH:22]=[CH:21][CH:20]=[CH:19][CH:18]=1)=[CH2:16]>>[CH3:14][C:15]([C:1]1[CH:2]=[C:3]([CH3:8])[CH:4]=[CH:5][C:6]=1[OH:7])([CH3:16])[C:17]1[CH:22]=[CH:21][CH:20]=[CH:19][CH:18]=1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "paracresol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC(=CC=C1O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8O/c1-6-2-4-7(8)5-3-6/h2-5,8H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sulfuric acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "S(O)(O)(=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O4S/c1-5(2,3)4/h(H2,1,2,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "\u03b1-methyl styrene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(=C)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H10/c1-8(2)9-6-4-3-5-7-9/h3-7H,1H2,2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "with stirring"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "Two hundreds and sixteen grams of paracresol is placed in a 500 ml. four-necked flask equipped with a stirrer, a thermometer, a reflux condenser and a dropping funnel. 4 g. of sulfuric acid is added therein and 236 g. of \u03b1-methyl styrene is dropped gradually at 60\u00b0C. with stirring. The dropping speed is adjusted to complete dropping in about 20 hours. Thus, 2-(\u03b1, \u03b1-dimethylbenzyl)-4-methylphenol is obtained. The resulting material is dissolved in 500 ml. of xylene and water is azeotropically removed with dropping an aqueous solution containing 80 g. of caustic sodium. The solution is transferred to an autoclave having a capacity of 1000 ml., and treated by the same way as in Example 9, to yield about 300 g. of 3-(\u03b1, \u03b1-dimethylbenzyl)-5-methylsalicylic acid. By same treatments as in each Example, 900 ml. of a composition containing 100 g. of 3-(\u03b1, \u03b1-dimethylbenzyl)-5-methylsalicylic acid zinc, 20 g. of styrene-butadiene copolymer, 15 g. of acrylamide-methylol acrylamide copolymer, 0.3 g. of a sulfonic acid salt type surface active agent and water is prepared. About 5~15 g. of the composition is applied to 1m2 of the surface of a sheet and dried to form the support of a dyestuff acceptor."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "four-necked flask equipped with a stirrer"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 20.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "2-(\u03b1, \u03b1-dimethylbenzyl)-4-methylphenol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC(C1=CC=CC=C1)(C)C1=C(C=CC(=C1)C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H18O/c1-12-9-10-15(17)14(11-12)16(2,3)13-7-5-4-6-8-13/h4-11,17H,1-3H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US03983292",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:36:06.961795"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:01:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-7597d336852443f9b8ab04da34c65e3b"
+}

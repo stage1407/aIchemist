@@ -1,0 +1,329 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH2:1]([O:3][C:4]([C:6]1[C:15]2[C:10](=[CH:11][C:12]([O:18][CH3:19])=[C:13]([O:16][CH3:17])[CH:14]=2)[C:9]([CH2:20][C:21]2[CH:26]=[CH:25][CH:24]=[CH:23][CH:22]=2)=[N:8][CH:7]=1)=[O:5])[CH3:2].[Se](=O)=[O:28]>C(O)(=O)C>[CH2:1]([O:3][C:4]([C:6]1[C:15]2[C:10](=[CH:11][C:12]([O:18][CH3:19])=[C:13]([O:16][CH3:17])[CH:14]=2)[C:9]([C:20](=[O:28])[C:21]2[CH:22]=[CH:23][CH:24]=[CH:25][CH:26]=2)=[N:8][CH:7]=1)=[O:5])[CH3:2]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m1_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-benzyl-6,7-dimethoxyisoquinoline-4-carboxylic acid ethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(=O)C1=CN=C(C2=CC(=C(C=C12)OC)OC)CC1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H21NO4/c1-4-26-21(23)17-13-22-18(10-14-8-6-5-7-9-14)16-12-20(25-3)19(24-2)11-15(16)17/h5-9,11-13H,4,10H2,1-3H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 77.1,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 5.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "selenium dioxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Se](=O)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/O2Se/c1-3-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 36.6,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The above 1-benzyl-6,7-dimethoxyisoquinoline-4-carboxylic acid ethyl ester (77.1 mg, 0.22 mmol) was dissolved in 5 ml of acetic acid. Then selenium dioxide (36.6 mg, 1.50 eq) was added and the mixture was refluxed for 1 hr until no more starting material was left. The mixture was evaporated to dryness and the residue was extracted with ethyl acetate and sodium bicarbonate solution. The organic layer was dried over sodium sulfate and then concentrated. The residue was dissolved in 5 ml of ethyl acetate and the solution was passed through a layer of silica gel. The solution was concentrated go give a pure 1-benzoyl-6,7-dimethoxyisoquinoline-4-carboxylic acid ethyl ester (70 mg, 87%)."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture was refluxed for 1 hr until",
+            "duration": {
+                "value": 1.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "WAIT",
+            "details": "was left"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The mixture was evaporated to dryness"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "the residue was extracted with ethyl acetate and sodium bicarbonate solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium bicarbonate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C([O-])(O)=O.[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "The organic layer was dried over sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "DISSOLUTION",
+            "details": "The residue was dissolved in 5 ml of ethyl acetate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "ethyl acetate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(C)(=O)OCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 5.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The solution was concentrated go"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1-benzoyl-6,7-dimethoxyisoquinoline-4-carboxylic acid ethyl ester"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(=O)C1=CN=C(C2=CC(=C(C=C12)OC)OC)C(C1=CC=CC=C1)=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H19NO5/c1-4-27-21(24)16-12-22-19(20(23)13-8-6-5-7-9-13)15-11-18(26-3)17(25-2)10-14(15)16/h5-12H,4H2,1-3H3"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "MASS",
+                            "amount": {
+                                "mass": {
+                                    "value": 70.0,
+                                    "units": "MILLIGRAM"
+                                }
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 87.0
+                            }
+                        },
+                        {
+                            "type": "YIELD",
+                            "details": "CALCULATEDPERCENTYIELD",
+                            "percentage": {
+                                "value": 87.1
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07067529B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 18:32:21.262996"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 18:35:05 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:35 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-3168b03b7ebe45f1b45790c5e180d747"
+}

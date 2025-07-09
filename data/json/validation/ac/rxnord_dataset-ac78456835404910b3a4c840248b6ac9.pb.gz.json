@@ -1,0 +1,374 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_TYPE",
+            "details": "C-N Photochemistry Coupling",
+            "value": "Nano C-N"
+        }
+    ],
+    "inputs": {
+        "Photocatalyst": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "MOLBLOCK",
+                            "value": "\n  Chemistry0 -OEChem-06162117042D\n\n 43 46  0     0  0  0  0  0  0999 V2000\n   -2.1434    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1434   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -0.8250    0.0000 N   0  3  0  0  0  0  0  0  0  0  0  0\n    0.7145   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4289   -0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1434   -0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1434    0.4125    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4289    0.8250    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    1.6500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -1.6500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145   -2.0625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145   -2.8875    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000   -3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145   -2.8875    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145   -2.0625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145    2.0625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7145    2.8875    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145    2.8875    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7145    2.0625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.8811   -1.3818    0.0000 Cl  0  5  0  0  0  0  0  0  0  0  0  0\n    1.0164   -4.0145    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4289   -3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1434   -3.7125    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8414   -2.5855    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.8414   -2.5855    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289   -3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1434   -3.7125    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0164   -4.0145    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0164    4.0145    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4289    3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.1434    3.7125    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.8414    2.5855    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n    1.8414    2.5855    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4289    3.3000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.1434    3.7125    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n    1.0164    4.0145    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0  0  0  0\n  2  3  1  0  0  0  0\n  3  4  2  0  0  0  0\n  4  5  1  0  0  0  0\n  5  6  2  0  0  0  0\n  1  6  1  0  0  0  0\n  4  7  1  0  0  0  0\n  7  8  2  0  0  0  0\n  8  9  1  0  0  0  0\n  9 10  2  0  0  0  0\n  5 10  1  0  0  0  0\n  8 11  1  0  0  0  0\n 11 12  2  0  0  0  0\n 12 13  1  0  0  0  0\n 13 14  2  0  0  0  0\n  9 14  1  0  0  0  0\n 10 15  1  0  0  0  0\n  7 16  1  0  0  0  0\n 16 17  2  0  0  0  0\n 17 18  1  0  0  0  0\n 18 19  2  0  0  0  0\n 19 20  1  0  0  0  0\n 20 21  2  0  0  0  0\n 16 21  1  0  0  0  0\n 15 22  2  0  0  0  0\n 22 23  1  0  0  0  0\n 23 24  2  0  0  0  0\n 24 25  1  0  0  0  0\n 25 26  2  0  0  0  0\n 15 26  1  0  0  0  0\n 28 29  1  0  0  0  0\n 29 30  1  0  0  0  0\n 29 31  1  0  0  0  0\n 20 29  1  0  0  0  0\n 32 33  1  0  0  0  0\n 33 34  1  0  0  0  0\n 33 35  1  0  0  0  0\n 18 33  1  0  0  0  0\n 36 37  1  0  0  0  0\n 37 38  1  0  0  0  0\n 37 39  1  0  0  0  0\n 25 37  1  0  0  0  0\n 40 41  1  0  0  0  0\n 41 42  1  0  0  0  0\n 41 43  1  0  0  0  0\n 23 41  1  0  0  0  0\nM  CHG  2   7   1  27  -1\nM  END\n"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.05,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 3
+        },
+        "Aryl Halide": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1cc2c(cc1Cl)C3(CCN(CC3)C(=O)OC(C)(C)C)C[C@H]2C(C)(C)NC(=O)C"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 100.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": true
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT",
+                    "preparations": [
+                        {
+                            "type": "DRIED",
+                            "details": "Solvent Evaporated in Vacuo"
+                        }
+                    ]
+                }
+            ],
+            "addition_order": 1
+        },
+        "Piperidine": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1CCNCC1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 300.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT",
+                    "is_limiting": false
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "C1CN2CCN1CC2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 180.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "COCCOC.Cl[Ni]Cl"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 5.0,
+                            "units": "NANOMOLE"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "CS(C)=O"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MICROLITER"
+                        },
+                        "volume_includes_solutes": true
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ],
+            "addition_order": 2
+        }
+    },
+    "setup": {
+        "vessel": {
+            "type": "WELL_PLATE",
+            "details": "Corning EchoTM qualified, Cat. No. 3730",
+            "material": {
+                "type": "CUSTOM",
+                "details": "Cyclic Olefin-Copolymer"
+            },
+            "preparations": [
+                {
+                    "type": "PURGED",
+                    "details": "Nitrogen"
+                }
+            ],
+            "volume": {
+                "value": 12.5,
+                "units": "MICROLITER"
+            }
+        },
+        "is_automated": true,
+        "environment": {
+            "type": "CUSTOM",
+            "details": "Vacuum Oven"
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "CUSTOM",
+                "details": "Vacuum Oven"
+            },
+            "setpoint": {
+                "value": 55.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "NONE"
+        },
+        "illumination": {
+            "type": "LED",
+            "details": "H150W tuna blue Kessil lamp P/N: H150-blue",
+            "peak_wavelength": {
+                "value": 495.0,
+                "units": "NANOMETER"
+            },
+            "color": "Blue"
+        },
+        "reflux": false
+    },
+    "workups": [
+        {
+            "type": "ADDITION",
+            "details": "The samples was moved from a 1536 well plate into a 384 well plate. The 384 well plate contained 75 microliter of 1% Acetic acid in DMSO solution with 0.003M trimethoxybenzene. The reaction plate was rinsed three times with the same solution to make a total addition volume of ~90 microliters",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 89.1,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": true
+                        },
+                        "reaction_role": "SOLVENT"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 0.9,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": true
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "COc1cccc(OC)c1OC"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 270.0,
+                                "units": "NANOMOLE"
+                            }
+                        },
+                        "reaction_role": "INTERNAL_STANDARD"
+                    }
+                ]
+            },
+            "is_automated": true
+        },
+        {
+            "type": "ALIQUOT",
+            "details": "25 microliter of quenched reaction mixture was taken",
+            "amount": {
+                "volume": {
+                    "value": 25.0,
+                    "units": "MICROLITER"
+                }
+            },
+            "is_automated": true
+        },
+        {
+            "type": "ADDITION",
+            "details": "To the 25 microliter aliquot 50 microliter of DMSO was added. If the original reaction concentration was 0.05 M (wrt limiting reagent). This would make a final analytical concentration of 0.36 mM which is in line with typical analytical concentrations from this group.",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "SMILES",
+                                "value": "CS(C)=O"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 50.0,
+                                "units": "MICROLITER"
+                            },
+                            "volume_includes_solutes": true
+                        },
+                        "reaction_role": "SOLVENT"
+                    }
+                ]
+            },
+            "is_automated": true
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 16.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "SMILES",
+                            "value": "Cc1cc2c(cc1N3CCCCC3)C4(CCN(CC4)C(=O)OC(C)(C)C)C[C@H]2C(C)(C)NC(=O)C"
+                        }
+                    ],
+                    "is_desired_product": true,
+                    "measurements": [
+                        {
+                            "analysis_key": "UPLC-MS",
+                            "type": "YIELD",
+                            "uses_internal_standard": true,
+                            "uses_authentic_standard": true,
+                            "percentage": {
+                                "value": 0.0
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ],
+            "analyses": {
+                "UPLC-MS": {
+                    "type": "LCMS",
+                    "details": "Reactions were monitored using a Waters Acquity UPLC I-Class system (Waters Corp., Milford, MA, USA) equipped with a binary pump, a FTN sampler, column manager, a photodiode array detector, SQD detector 2 with electrospray ionization (ESI) source in the positive mode and MassLynx\u00ae\nsoftware. Separations were performed on a Waters CORTECS UPLC C18+ column (30 \u00d7 2.1mm, 1.6\u00b5m).\nMobile phase A = 90% ACN in H2O (2 mM HCOONH4) and B = H2O (2 mM HCOONH4). Gradient: 0-1.8 min\n10-100% A, 1.8-2.0 min 100%A. Flow rate 0.7 mL/min; T = 40 \u00baC.",
+                    "instrument_manufacturer": "Waters"
+                }
+            }
+        }
+    ],
+    "provenance": {
+        "experimenter": {
+            "name": "Spencer Dreher",
+            "orcid": "0000-0002-5094-1218",
+            "organization": "Merck",
+            "email": "spencer_dreher@merck.com"
+        },
+        "city": "Kenilworth, NJ",
+        "doi": "10.1021/acs.accounts.0c00760",
+        "publication_url": "https://pubs.acs.org/doi/abs/10.1021/acs.accounts.0c00760",
+        "record_created": {
+            "time": {
+                "value": "6/16/2021, 9:09:20 AM"
+            },
+            "person": {
+                "name": "Michael Wleklinski",
+                "orcid": "0000-0001-6735-4696",
+                "organization": "Merck",
+                "email": "michael.wleklinski@merck.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Tue Jul 13 21:49:29 2021"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            }
+        ]
+    },
+    "reaction_id": "ord-7a1b514c28f840fa8d6ed222a494fb9f"
+}

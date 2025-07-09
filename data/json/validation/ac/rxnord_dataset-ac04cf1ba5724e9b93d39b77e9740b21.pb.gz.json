@@ -1,0 +1,300 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[K:1].[CH:2]1[C:11]2[C:6](=[CH:7][CH:8]=[CH:9][CH:10]=2)[CH:5]=[CH:4][CH:3]=1>O1CCCC1>[CH:10]1[C:11]2[C:6](=[CH:5][CH:4]=[CH:3][CH:2]=2)[CH:7]=[CH:8][CH:9]=1.[K:1] |f:3.4,^1:0,26|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m0_m1_m2_m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[K]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/K"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 110.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "naphthalene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC2=CC=CC=C12"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H8/c1-2-6-10-8-4-3-7-9(10)5-1/h1-8H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 400.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrahydrofuran"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O1CCCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O/c1-2-4-5-3-1/h1-4H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 40.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "arene"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": -111.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "the reaction mixture, at -111\u00b0 C. was vigorously agitated throughout the addition"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "A solution of potassium naphthalene was prepared from potassium (110 mg) and naphthalene (400 mg), in tetrahydrofuran (40 ml). This was added to a suspension of [(Ph2CH3P)2RuCl]2H (780 mg) in 40 ml of tetrahydrofuran, cooled to -111\u00b0 C. The reducing metal arene solution was added slowly, and the reaction mixture, at -111\u00b0 C. was vigorously agitated throughout the addition. The solution was then warmed to -80\u00b0 C., and stirred for 18 hours at this temperature, then slowly warmed to room temperature. The resultant solution was filtered and evaporated to dryness giving a dark brown solid. The latter gave a broad metal-hydride absorption band in the infrared region at 1800 cm-1. On the basis of the elemental analyses of this crude product, we regard the composition as being [(Ph2CH3P)3RuH]-K+."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "The solution was then warmed to -80\u00b0 C.",
+            "temperature": {
+                "setpoint": {
+                    "value": -80.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "stirred for 18 hours at this temperature",
+            "duration": {
+                "value": 18.0,
+                "units": "HOUR"
+            }
+        },
+        {
+            "type": "TEMPERATURE",
+            "details": "slowly warmed to room temperature",
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "The resultant solution was filtered",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "resultant solution"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated to dryness"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "giving a dark brown solid"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The latter gave"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "a broad metal-hydride absorption band in the infrared region at 1800 cm-1",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "metal-hydride"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium naphthalene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1=CC=CC2=CC=CC=C12.[K]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H8.K/c1-2-6-10-8-4-3-7-9(10)5-1;/h1-8H;"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04418227",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:53:50.973512"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:30:36 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:15 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-14ce496bf3994918a22328ad63f6768d"
+}

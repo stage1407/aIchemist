@@ -1,0 +1,146 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]12[CH2:12][CH:7]([CH:8](CO)[CH2:9]1)[CH:6]1[CH:2]2[CH2:3][CH:4](CO)[CH2:5]1>C(O)CO>[CH3:8][CH2:9][CH2:1][CH2:2][CH2:3][CH2:4][CH2:5][CH2:6][CH2:7][CH3:12]",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tricyclo[5,2,1,02,6 ]decane-4,8-dimethanol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C12C3CC(CC3C(C(C1)CO)C2)CO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C12H20O2/c13-5-7-1-10-8-3-9(6-14)11(4-8)12(10)2-7/h7-14H,1-6H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethylene glycol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O2/c3-1-2-4/h3-4H,1-2H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The same procedure as in Example 1 was repeated except that 6.2 parts of ethylene glycol was replaced with 19.6 parts of tricyclo[5,2,1,02,6 ]decane-4,8-dimethanol, thereby obtaining 55.9 parts of 4,8-bis[N-(3-isopropenyl-\u03b1,\u03b1-dimethylbezyl)carbamoyloxymethyl]tricyclo]5,2,1,02,6 ]decane in the form of a colorless transparent liquid."
+    },
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "55.9"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "decane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCCCCCCCCC"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H22/c1-3-5-7-9-10-8-6-4-2/h3-10H2,1-2H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05084538",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:17:20.437095"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 20:11:56 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:52 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-37831513450e468b961c3bd5a6e019fe"
+}

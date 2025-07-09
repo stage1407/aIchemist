@@ -1,0 +1,268 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[OH:1][C:2]1[CH:7]=[CH:6][C:5]([C:8]([C:11]2[CH:16]=[CH:15][C:14]([OH:17])=[CH:13][CH:12]=2)([CH3:10])[CH3:9])=[CH:4][CH:3]=1.[CH2:18]1[O:21][CH:19]1C.C(O)CCO.C(O)(=O)CCCCC(O)=O>>[OH:1][C:2]1[CH:3]=[CH:4][C:5]([C:8]([C:11]2[CH:12]=[CH:13][C:14]([OH:17])=[CH:15][CH:16]=2)([CH3:10])[CH3:9])=[CH:6][CH:7]=1.[CH2:19]1[O:21][CH2:18]1",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "propylene oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1C(C)O1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H6O/c1-3-2-4-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 2.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "adipic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCCCC(=O)O)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H10O4/c7-5(8)3-1-2-4-6(9)10/h1-4H2,(H,7,8)(H,9,10)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m0_m1_m2_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3-propylene glycol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H8O2/c4-2-1-3-5/h4-5H,1-3H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,3-propylene glycol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(CCO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H8O2/c4-2-1-3-5/h4-5H,1-3H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "bisphenol A"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=CC=C(C=C1)C(C)(C)C1=CC=C(C=C1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H16O2/c1-15(2,11-3-7-13(16)8-4-11)12-5-9-14(17)10-6-12/h3-10,16-17H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "An adduct of bisphenol A with 2 mols of propylene oxide, 1,3-propylene glycol, terephtaric acid, and adipic acid were placed in a reaction container equipped with a thermocouple, a stirrer, a dewatering tube, and a nitrogen-introducing tube in such a manner that the molar ratio ([OH]/[COOH]) of a hydroxy group to a carboxylic group was 1.4. Diol was formed of 90% by mol of bisphenol A with 2 mols of ethylene oxide and 10% by mol of 1,3-propylene glycol. Dicarboxylic acid was formed of 80% by mol of terephtaric acid and 20% by mol of adipic acid. 500 ppm of titanium tetraisopropoxide was added to all of the monomers. Next, reaction was conducted at 230\u00b0 C. for eight hours and continued with a reduced pressure of from 10 mmHg to 15 mmHG for four hours. Furthermore, trilmellitic anhydride was added to be 1% by mol to the total of monomers followed by three hour reaction at 180\u00b0 C. to obtain [Linear non-crystalline polyester E-2]. [Linear non-crystalline polyester E-2] had a weight average molecular weight of 5,600 and a glass transition temperature of 61\u00b0 C."
+    },
+    "workups": [
+        {
+            "type": "CUSTOM",
+            "details": "equipped with a thermocouple, a stirrer, a dewatering tube"
+        },
+        {
+            "type": "ADDITION",
+            "details": "a nitrogen-introducing tube in such a manner that the molar ratio ([OH]/[COOH]) of a hydroxy group to a carboxylic group"
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Diol"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "bisphenol A"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "OC1=CC=C(C=C1)C(C)(C)C1=CC=C(C=C1)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C15H16O2/c1-15(2,11-3-7-13(16)8-4-11)12-5-9-14(17)10-6-12/h3-10,16-17H,1-2H3"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethylene oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1CO1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O/c1-2-3-1/h1-2H2"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "AMOUNT",
+                            "details": "AMOUNT",
+                            "amount": {
+                                "moles": {
+                                    "value": 2.0,
+                                    "units": "MOLE"
+                                }
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US09042802B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 20:41:11.103087"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:02:13 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:33 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-47b62429b0d149c4877616b69b62f5a7"
+}

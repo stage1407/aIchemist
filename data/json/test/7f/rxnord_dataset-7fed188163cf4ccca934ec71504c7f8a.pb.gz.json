@@ -1,0 +1,507 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "C(O[C:6]([NH:8][C@@H:9]([CH2:30][CH2:31][S:32]([CH3:35])(=[O:34])=[O:33])[CH2:10][N:11]([C:20]([O:22][CH2:23]C1C=CC=CC=1)=[O:21])[CH2:12][C:13]1[CH:18]=[CH:17][CH:16]=[C:15]([Cl:19])[CH:14]=1)=O)(C)(C)C.F[C:37](F)(F)[C:38](O)=O.C(O[BH-](O[C:53](=O)[CH3:54])OC(=O)C)(=O)C.[Na+].[C:57]1([CH2:67][NH:68][CH2:69][C@@H:70]([NH:75][C:76](OC(C)(C)C)=O)[C@@H](C)CC)[C:66]2[C:61](=CC=CC=2)[CH:60]=[CH:59][CH:58]=1.[CH3:83][N:84]1CCOCC1.[CH3:90][CH2:91]OC(C)=O>ClCCl>[C:83]([C:60]1[CH:59]=[CH:58][C:57]([CH2:67][N:68]2[C:69]([CH2:6][NH:8][C@@H:9]([CH2:30][CH2:31][S:32]([CH3:35])(=[O:34])=[O:33])[CH2:10][N:11]([C:20]([O:22][CH2:23][C:38]3[CH:37]=[CH:54][CH:53]=[CH:91][CH:90]=3)=[O:21])[CH2:12][C:13]3[CH:18]=[CH:17][CH:16]=[C:15]([Cl:19])[CH:14]=3)=[CH:70][N:75]=[CH:76]2)=[CH:66][CH:61]=1)#[N:84] |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "aldehyde"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "N-Naphth-1-ylmethyl-2(S)-(t-butoxycarbonyl)amino-3(S)-methylpentanamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C1(=CC=CC2=CC=CC=C12)CNC[C@H]([C@H](CC)C)NC(=O)OC(C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C22H32N2O2/c1-6-16(2)20(24-21(25)26-22(3,4)5)15-23-14-18-12-9-11-17-10-7-8-13-19(17)18/h7-13,16,20,23H,6,14-15H2,1-5H3,(H,24,25)/t16-,20+/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 159.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "EtOAc"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCOC(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C4H8O2/c1-3-6-4(2)5/h3H2,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m7_m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-2-(tert-Butoxycarbonylamino)-N-(benzyloxycarbonyl)-N-(3-chlorobenzyl)-4-(methanesulfonyl)butanamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(C)(C)OC(=O)N[C@H](CN(CC1=CC(=CC=C1)Cl)C(=O)OCC1=CC=CC=C1)CCS(=O)(=O)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C25H33ClN2O6S/c1-25(2,3)34-23(29)27-22(13-14-35(4,31)32)17-28(16-20-11-8-12-21(26)15-20)24(30)33-18-19-9-6-5-7-10-19/h5-12,15,22H,13-14,16-18H2,1-4H3,(H,27,29)/t22-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 360.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "trifluoroacetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "FC(C(=O)O)(F)F"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "dichloromethane"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClCCl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 6.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-methylmorpholine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN1CCOCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C5H11NO/c1-6-2-4-7-5-3-6/h2-5H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.076,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium triacetoxyborohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O[BH-](OC(C)=O)OC(C)=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H10BO6.Na/c1-4(8)11-7(12-5(2)9)13-6(3)10;/h7H,1-3H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 363.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The reaction was stirred overnight"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of the product from Step E (360 mg, 0.686 mmol) in 6 mL of dichloromethane was added at room temperature dropwise 3 mL of trifluoroacetic acid. After 30 minutes, the solution was concentrated in vacuo. The resulting product was reconcentrated from benzene three times to remove excess trifluoroacetic acid. To a solution of the amine salt in 4.2 mL of 1,2-dichloroethane at 0\u00b0 C. was added 4 \u212b powdered molecular sieves, followed by sodium triacetoxyborohydride (363 mg, 1.71 mmol). The aldehyde from Step E of Example 1 (159 mg, 0.754 mmol) was added at 0\u00b0 C., followed by N-methylmorpholine (0.076 mL, 0.69 mmol). The reaction was stirred overnight, allowing it to warm to room temperature. The reaction was poured into EtOAc, washed with sat. aq. NaHCO3 and brine, dried (Na2SO4), filtered, and concentrated in vacuo. The resulting product was purified by silica gel chromatography (50-75% acetone/hexane) to provide the desired product. A portion of this was taken up in CH2Cl2 and treated with excess HCl/Et2O, then stripped to provide the titled compound."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "the solution was concentrated in vacuo"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to remove excess trifluoroacetic acid",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "trifluoroacetic acid"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "FC(C(=O)O)(F)F"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2HF3O2/c3-2(4,5)1(6)7/h(H,6,7)"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ADDITION",
+            "details": "To a solution of the amine salt in 4.2 mL of 1,2-dichloroethane at 0\u00b0 C. was added 4 \u212b",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "amine"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "1,2-dichloroethane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "ClCCCl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C2H4Cl2/c3-1-2-4/h1-2H2"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 4.2,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            },
+            "temperature": {
+                "setpoint": {
+                    "value": 0.0,
+                    "units": "CELSIUS"
+                }
+            }
+        },
+        {
+            "type": "WASH",
+            "details": "washed with sat. aq. NaHCO3 and brine",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "NaHCO3"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(=O)(O)[O-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "dried (Na2SO4)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "Na2SO4"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[O-]S(=O)(=O)[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated in vacuo"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The resulting product was purified by silica gel chromatography (50-75% acetone/hexane)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "acetone hexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "CC(=O)C.CCCCCC"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C6H14.C3H6O/c1-3-5-6-4-2;1-3(2)4/h3-6H2,1-2H3;1-2H3"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "desired product"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "(S)-2-[(1-(4-cyanobenzyl)-5-imidazolylmethyl)amino]-N-(benzyloxycarbonyl)-N-(3-chlorobenzyl)-4-(methanesulfonyl)butanamine"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(#N)C1=CC=C(CN2C=NC=C2CN[C@H](CN(CC2=CC(=CC=C2)Cl)C(=O)OCC2=CC=CC=C2)CCS(=O)(=O)C)C=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C32H34ClN5O4S/c1-43(40,41)15-14-30(36-19-31-18-35-24-38(31)20-26-12-10-25(17-34)11-13-26)22-37(21-28-8-5-9-29(33)16-28)32(39)42-23-27-6-3-2-4-7-27/h2-13,16,18,24,30,36H,14-15,19-23H2,1H3/t30-/m0/s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US05756528",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:43:07.357851"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 21:05:27 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:49 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-0eef85d0856a40648df339d85d6e1fdf"
+}

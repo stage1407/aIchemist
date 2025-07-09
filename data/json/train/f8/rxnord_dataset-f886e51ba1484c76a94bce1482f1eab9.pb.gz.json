@@ -1,0 +1,400 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "CC1C(=[O:8])[C@@H](O)CC(C)(C)C=1/C=C/C(/C)=C/C=C/C(/C)=C/C=C/C=C(\\C)/C=C/C=C(\\C)/C=C/C1C(C)(C)C[C@H](O)C(=O)C=1C.CCN(C(C)C)C(C)C.Cl[C:55]([O:57]C(Cl)C(Cl)(Cl)Cl)=[O:56].[CH2:64]([OH:75])[C@H:65]([C@H:67]([C@@H:69]([C@@H:71]([CH2:73][OH:74])[OH:72])[OH:70])[OH:68])[OH:66]>C(Cl)Cl.CN(C1C=CN=CC=1)C.CN(C=O)C>[C:55](=[O:56])([OH:8])[OH:57].[CH2:73]([OH:74])[C@H:71]([C@H:69]([C@@H:67]([C@@H:65]([CH2:64][OH:75])[OH:66])[OH:68])[OH:70])[OH:72] |f:7.8|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4_m8_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "(D)-mannitol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4-,5-,6-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.306,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMAP"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=1C=CN=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H10N2/c1-9(2)7-3-5-8-6-4-7/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.2052,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DMF"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN(C)C=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H7NO/c1-4(2)3-5/h3H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 3.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DCM"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m5_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "astaxanthin"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Astaxanthin"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=C(C(C[C@@H](C1=O)O)(C)C)/C=C/C(=C/C=C/C(=C/C=C/C=C(/C=C/C=C(/C=C/C2=C(C(=O)[C@H](CC2(C)C)O)C)\\C)\\C)/C)/C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C40H52O4/c1-27(17-13-19-29(3)21-23-33-31(5)37(43)35(41)25-39(33,7)8)15-11-12-16-28(2)18-14-20-30(4)22-24-34-32(6)38(44)36(42)26-40(34,9)10/h11-24,35-36,41-42H,25-26H2,1-10H3/b12-11+,17-13+,18-14+,23-21+,24-22+,27-15+,28-16+,29-19+,30-20+/t35-,36-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.1,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DIPEA"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CCN(C(C)C)C(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H19N/c1-6-9(7(2)3)8(4)5/h7-8H,6H2,1-5H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.585,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "1,2,2,2-tetrachloroethyl chloroformate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC(=O)OC(C(Cl)(Cl)Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3HCl5O2/c4-1(3(6,7)8)10-2(5)9/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.103,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "DCM"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 4.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "setpoint": {
+                "value": 0.0,
+                "units": "CELSIUS"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The reaction mixture was stirred at 0\u00b0 C. for 2 hours"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "To a solution of astaxanthin 2E (0.100 g, 0.168 mmol) in DCM (4 mL) at 0\u00b0 C. was added DIPEA (0.585 mL, 3.36 mmol), and 1,2,2,2-tetrachloroethyl chloroformate (0.103 mL, 0.672 mmol). The reaction mixture was stirred at 0\u00b0 C. for 2 hours, then at room temperature for 1.5 hours, at which time (D)-mannitol (0.3060 g, 1.68 mmol), DMF (3 mL), and DMAP (0.2052 g, 1.68 mmol) were added to the reaction. The reaction mixture was stirred at room temperature for 24 hours, at which time the reaction was diluted with DCM, quenched with brine (20 mL), and then extracted with DCM. The combined organic layers were concentrated to yield mannitol monocarbonate (LVII) (10.19%) HPLC retention time: 9.474 min., 10.19% (AUC); LRMS (ESI) m/z (relative intensity): 827 (M++Na) (50), 804 (M+) (25), 725 (58), 613 (100), and astaxanthin 2E (53.73%)."
+    },
+    "workups": [
+        {
+            "type": "WAIT",
+            "details": "at room temperature for 1.5 hours",
+            "duration": {
+                "value": 1.5,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "STIRRING",
+            "details": "The reaction mixture was stirred at room temperature for 24 hours, at which time the reaction",
+            "duration": {
+                "value": 24.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "quenched with brine (20 mL)",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "brine"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+].O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na.H2O/h1H;;1H2/q;+1;/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "volume": {
+                                "value": 20.0,
+                                "units": "MILLILITER"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with DCM",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "DCM"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "The combined organic layers were concentrated"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 2.0,
+                "units": "HOUR"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "mannitol monocarbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(O)(O)=O.C([C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C6H14O6.CH2O3/c7-1-3(9)5(11)6(12)4(10)2-8;2-1(3)4/h3-12H,1-2H2;(H2,2,3,4)/t3-,4-,5-,6-;/m1./s1"
+                        }
+                    ],
+                    "measurements": [
+                        {
+                            "type": "YIELD",
+                            "details": "PERCENTYIELD",
+                            "percentage": {
+                                "value": 10.19
+                            }
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US07763649B2",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 19:10:28.337806"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 16:53:34 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:39 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-d4890103dc8747b896b953c38170efaa"
+}

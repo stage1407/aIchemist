@@ -1,0 +1,331 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH:1]([O:14][C:15]([C:17]1([O:21]/[N:22]=[C:23](/[C:54]2[N:55]=[C:56]([NH:59][C:60]([C:73]3[CH:78]=[CH:77][CH:76]=[CH:75][CH:74]=3)([C:67]3[CH:72]=[CH:71][CH:70]=[CH:69][CH:68]=3)[C:61]3[CH:66]=[CH:65][CH:64]=[CH:63][CH:62]=3)[S:57][CH:58]=2)\\[C:24]([NH:26][CH:27]2[C:52](=[O:53])[N:29]3[C:30]([C:36]([O:38][CH:39]([C:46]4[CH:51]=[CH:50][CH:49]=[CH:48][CH:47]=4)[C:40]4[CH:45]=[CH:44][CH:43]=[CH:42][CH:41]=4)=[O:37])=[C:31]([CH2:34][Cl:35])[CH2:32][S:33][C@H:28]23)=[O:25])[CH2:20][CH2:19][CH2:18]1)=[O:16])([C:8]1[CH:13]=[CH:12][CH:11]=[CH:10][CH:9]=1)[C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1.ClC1C=CC=C(C(OO)=[O:87])C=1.C(=O)(O)[O-].[Na+]>C(Cl)Cl>[CH:1]([O:14][C:15]([C:17]1([O:21]/[N:22]=[C:23](/[C:54]2[N:55]=[C:56]([NH:59][C:60]([C:61]3[CH:62]=[CH:63][CH:64]=[CH:65][CH:66]=3)([C:67]3[CH:68]=[CH:69][CH:70]=[CH:71][CH:72]=3)[C:73]3[CH:78]=[CH:77][CH:76]=[CH:75][CH:74]=3)[S:57][CH:58]=2)\\[C:24]([NH:26][CH:27]2[C:52](=[O:53])[N:29]3[C:30]([C:36]([O:38][CH:39]([C:40]4[CH:45]=[CH:44][CH:43]=[CH:42][CH:41]=4)[C:46]4[CH:47]=[CH:48][CH:49]=[CH:50][CH:51]=4)=[O:37])=[C:31]([CH2:34][Cl:35])[CH2:32][S:33](=[O:87])[C@H:28]23)=[O:25])[CH2:18][CH2:19][CH2:20]1)=[O:16])([C:2]1[CH:7]=[CH:6][CH:5]=[CH:4][CH:3]=1)[C:8]1[CH:13]=[CH:12][CH:11]=[CH:10][CH:9]=1 |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylene chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 50.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m5_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium bi-carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])(O)=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "methylene chloride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(Cl)Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 30.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "( A )"
+                        },
+                        {
+                            "type": "NAME",
+                            "value": "Benzhydryl 7-[(Z)-2-(1-benzhydryloxycarbonyl-1-cyclobutoxyimino)-2-(2-tritylaminothiazol-4-yl)acetamido]-3-chloromethyl-3-cephem-4-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)OC(=O)C1(CCC1)O\\N=C(/C(=O)NC1[C@@H]2N(C(=C(CS2)CCl)C(=O)OC(C2=CC=CC=C2)C2=CC=CC=C2)C1=O)\\C=1N=C(SC1)NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C63H52ClN5O7S2/c64-39-46-40-77-58-52(57(71)69(58)53(46)59(72)74-54(42-23-8-1-9-24-42)43-25-10-2-11-26-43)66-56(70)51(68-76-62(37-22-38-62)60(73)75-55(44-27-12-3-13-28-44)45-29-14-4-15-30-45)50-41-78-61(65-50)67-63(47-31-16-5-17-32-47,48-33-18-6-19-34-48)49-35-20-7-21-36-49/h1-21,23-36,41,52,54-55,58H,22,37-40H2,(H,65,67)(H,66,70)/b68-51-/t52?,58-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m2": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "m-chloroperbenzoic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "ClC1=CC(=CC=C1)C(=O)OO"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H5ClO3/c8-6-3-1-2-5(4-6)7(9)11-10/h1-4,10H"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 620.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture was stirred for 20 minutes"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "The residue obtained in (A) was dissolved in 50 ml of methylene chloride, and 620 mg (2.87 mmol) of m-chloroperbenzoic acid (purity: 80%) was added. The mixture was stirred for 20 minutes. To the reaction solution, 30 ml of methylene chloride and a 5% sodium bi-carbonate aqueous solution were added. Then, the organic layer was distributed and washed with water and with a saturated sodium chloride aqueous solution. Then, it was dried over anhydrous sodium sulfate, and concentrated to obtain a residue of the above-identified compound. The residue of the compound thus obtained was employed for the next reaction without purification."
+    },
+    "workups": [
+        {
+            "type": "WASH",
+            "details": "washed with water and with a saturated sodium chloride aqueous solution",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "water"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "O"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/H2O/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "[Cl-].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/ClH.Na/h1H;/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "Then, it was dried over anhydrous sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CONCENTRATION",
+            "details": "concentrated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "to obtain a residue of the above-identified compound"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "The residue of the compound thus obtained"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "was employed for the next reaction without purification"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 20.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "Benzhydryl 7[(Z)-2-(1-benzhydryloxycarbonyl-1-cyclobutoxyimino)-2-(2-tritylaminothiazol-4-yl)acetamido]-3-chloromethyl-3-cephem-4-carboxylate 1-oxide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C1=CC=CC=C1)(C1=CC=CC=C1)OC(=O)C1(CCC1)O\\N=C(/C(=O)NC1[C@@H]2N(C(=C(CS2=O)CCl)C(=O)OC(C2=CC=CC=C2)C2=CC=CC=C2)C1=O)\\C=1N=C(SC1)NC(C1=CC=CC=C1)(C1=CC=CC=C1)C1=CC=CC=C1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C63H52ClN5O8S2/c64-39-46-41-79(74)58-52(57(71)69(58)53(46)59(72)75-54(42-23-8-1-9-24-42)43-25-10-2-11-26-43)66-56(70)51(68-77-62(37-22-38-62)60(73)76-55(44-27-12-3-13-28-44)45-29-14-4-15-30-45)50-40-78-61(65-50)67-63(47-31-16-5-17-32-47,48-33-18-6-19-34-48)49-35-20-7-21-36-49/h1-21,23-36,40,52,54-55,58H,22,37-39,41H2,(H,65,67)(H,66,70)/b68-51-/t52?,58-,79?/m1/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04677100",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 17:02:58.358167"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:46:00 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:35 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-deee3baab0b44f3b94d593cc47c28b89"
+}

@@ -1,0 +1,336 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[NH2:1][C@H:2]([C:4]([N:6]1[CH2:13][CH2:12][CH2:11][C@H:7]1[C:8]([OH:10])=[O:9])=[O:5])[CH3:3].O=[C:15]([CH2:21][CH2:22][C:23]1[S:24][CH:25]=[CH:26][CH:27]=1)[C:16]([O:18][CH2:19][CH3:20])=[O:17].C([BH3-])#N.[Na+].C(O)(=O)C>C(O)C>[CH2:19]([O:18][C:16]([CH:15]([NH:1][C@H:2]([C:4]([N:6]1[CH2:13][CH2:12][CH2:11][C@H:7]1[C:8]([OH:10])=[O:9])=[O:5])[CH3:3])[CH2:21][CH2:22][C:23]1[S:24][CH:25]=[CH:26][CH:27]=1)=[O:17])[CH3:20] |f:2.3|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "acetic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)(=O)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m1_m2_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "L-alanyl-L-proline"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N[C@@H](C)C(=O)N1[C@H](C(=O)O)CCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H14N2O3/c1-5(9)7(11)10-4-2-3-6(10)8(12)13/h5-6H,2-4,9H2,1H3,(H,12,13)/t5-,6-/m0/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.93,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl 2-oxo-4-(2-thienyl)-butyrate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O=C(C(=O)OCC)CCC=1SC=CC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C10H12O3S/c1-2-13-10(12)9(11)6-5-8-4-3-7-14-8/h3-4,7H,2,5-6H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 3.18,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl alcohol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 25.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium cyanoborohydride"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(#N)[BH3-].[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH3BN.Na/c2-1-3;/h2H3;/q-1;+1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.785,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "ethyl alcohol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C2H6O/c1-2-3/h3H,2H2,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 15.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "temperature": {
+            "control": {
+                "type": "AMBIENT"
+            }
+        },
+        "stirring": {
+            "type": "CUSTOM",
+            "details": "The mixture is stirred for 45 minutes at room temperature"
+        },
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "4 g of type 4 A molecular sieves (powdered) are added to a mixture of L-alanyl-L-proline (0.93 g) and ethyl 2-oxo-4-(2-thienyl)-butyrate (3.18 g) in 25 ml of anhydrous ethyl alcohol. The mixture is stirred for 45 minutes at room temperature, followed by slow addition (3.5 hours) of a solution of sodium cyanoborohydride (0.785 g) in 15 ml of anhydrous ethyl alcohol and stirring overnight at room temperature. The reaction mixture is made just slightly acidic with glacial acetic acid, filtered and the filtrate conc. in vacuo to an orange oil. Extraction of a chloroform solution of this oil with 10% potassium bicarbonate, followed by re-extraction of the acidified (pH 3) bicarbonate extracts with chloroform provide, after drying and evaporation of solvent, 400 mg of the desired substituted dipeptide. The nmr spectrum (CDCl3) shows the thienyl proton as multiplet at 7.0 ppm, two active protons in broad singlet at 6.2 ppm, six methyl protons as broad multiplet 1.22-1.43 ppm range, and a series of ill-defined multiplets ranging 1.8-4.4 ppm."
+    },
+    "workups": [
+        {
+            "type": "STIRRING",
+            "details": "stirring overnight at room temperature",
+            "duration": {
+                "value": 8.0,
+                "precision": 8.0,
+                "units": "HOUR"
+            },
+            "temperature": {
+                "control": {
+                    "type": "AMBIENT"
+                }
+            }
+        },
+        {
+            "type": "FILTRATION",
+            "details": "filtered"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "Extraction of a chloroform solution of this oil with 10% potassium bicarbonate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "chloroform"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CHCl3/c2-1(3)4/h1H"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    },
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "potassium bicarbonate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C([O-])(O)=O.[K+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2O3.K/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "followed by re-extraction of the"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "provide"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "after drying"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporation of solvent, 400 mg of the"
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 45.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "N-[1-Ethoxycarbonyl-3-(2-thienyl)-propyl]L-alanyl-L-proline"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(C)OC(=O)C(CCC=1SC=CC1)N[C@@H](C)C(=O)N1[C@H](C(=O)O)CCC1"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C18H26N2O5S/c1-3-25-18(24)14(9-8-13-6-5-11-26-13)19-12(2)16(21)20-10-4-7-15(20)17(22)23/h5-6,11-12,14-15,19H,3-4,7-10H2,1-2H3,(H,22,23)/t12-,14?,15-/m0/s1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04374829",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:52:05.342501"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:27:56 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:39:47 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-32b5ec34b6f04fb69dde0b5435af0fe0"
+}

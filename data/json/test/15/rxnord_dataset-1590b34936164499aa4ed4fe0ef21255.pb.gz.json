@@ -1,0 +1,232 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[SH:1][C:2]1[S:6][C:5]([CH3:7])=[N:4][N:3]=1.C(=O)([O-])O.[Na+:12].[N:13]1([CH2:18][C:19]([NH:21][C@@H:22]2[C:51](=[O:52])[N:24]3[C:25]([C:48]([OH:50])=[O:49])=[C:26]([CH2:29]OC(=O)C4C=CC=CC=4S(=O)(=O)NC(OCC)=O)[CH2:27][S:28][C@H:23]23)=[O:20])[CH:17]=[N:16][N:15]=[N:14]1>P([O-])([O-])([O-])=O>[N:13]1([CH2:18][C:19]([NH:21][C@@H:22]2[C:51](=[O:52])[N:24]3[C:25]([C:48]([O-:50])=[O:49])=[C:26]([CH2:29][S:1][C:2]4[S:6][C:5]([CH3:7])=[N:4][N:3]=4)[CH2:27][S:28][C@H:23]23)=[O:20])[CH:17]=[N:16][N:15]=[N:14]1.[Na+:12] |f:1.2,5.6|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "resultant solution"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m5_m1_m2_m3": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "5-mercapto-2-methyl-1,3,4-thiadiazole"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "SC1=NN=C(S1)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C3H4N2S2/c1-2-4-5-3(6)7-2/h1H3,(H,5,6)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 79.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium hydrogen carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C(O)([O-])=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.Na/c2-1(3)4;/h(H2,2,3,4);/q;+1/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 92.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "7\u03b2-(1H-tetrazol-1-yl)acetamido-3-[2-(N-carboethoxysulfamoyl)benzoyloxy]methyl-3-cephem-4-carboxylic acid"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(N=NN=C1)CC(=O)N[C@H]1[C@@H]2N(C(=C(CS2)COC(C2=C(C=CC=C2)S(NC(=O)OCC)(=O)=O)=O)C(=O)O)C1=O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C21H21N7O10S2/c1-2-37-21(34)24-40(35,36)13-6-4-3-5-12(13)20(33)38-8-11-9-39-18-15(17(30)28(18)16(11)19(31)32)23-14(29)7-27-10-22-25-26-27/h3-6,10,15,18H,2,7-9H2,1H3,(H,23,29)(H,24,34)(H,31,32)/t15-,18-/m1/s1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 298.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "phosphate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "P(=O)([O-])([O-])[O-]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-3"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "In a phosphate buffer solution of pH 6.4 (3 ml) are dissolved 5-mercapto-2-methyl-1,3,4-thiadiazole (79 mg), sodium hydrogen carbonate (92 mg) and 7\u03b2-(1H-tetrazol-1-yl)acetamido-3-[2-(N-carboethoxysulfamoyl)benzoyloxy]methyl-3-cephem-4-carboxylic acid (298 mg) and the resultant solution is heated at 60\u00b0 C. for one hour. Then, the mixture is concentrated and the residue is subjected to column chromatography on Sephadex LH-20, elution being carried out with water. The fractions containing the desired product are pooled and lyophilized. The procedure provides sodium 7\u03b2-(1H-tetrazol-1-yl)acetamido-3-(2-methyl-1,3,4-thiadiazol-5-yl)thiomethyl-3-cephem-4-carboxylate. This product is in good agreement with the authentic sample in NMR spectrum."
+    },
+    "workups": [
+        {
+            "type": "CONCENTRATION",
+            "details": "Then, the mixture is concentrated"
+        },
+        {
+            "type": "WASH",
+            "details": "the residue is subjected to column chromatography on Sephadex LH-20, elution"
+        },
+        {
+            "type": "ADDITION",
+            "details": "The fractions containing the desired product",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "desired product"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "sodium 7\u03b2-(1H-tetrazol-1-yl)acetamido-3-(2-methyl-1,3,4-thiadiazol-5-yl)thiomethyl-3-cephem-4-carboxylate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "N1(N=NN=C1)CC(=O)N[C@H]1[C@@H]2N(C(=C(CS2)CSC2=NN=C(S2)C)C(=O)[O-])C1=O.[Na+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C14H14N8O4S3.Na/c1-6-17-18-14(29-6)28-4-7-3-27-12-9(11(24)22(12)10(7)13(25)26)16-8(23)2-21-5-15-19-20-21;/h5,9,12H,2-4H2,1H3,(H,16,23)(H,25,26);/q;+1/p-1/t9-,12-;/m1./s1"
+                        }
+                    ],
+                    "reaction_role": "PRODUCT"
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04166178",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:43:52.960019"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:14:22 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:38:49 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-33b5df6cb4fd4e98814297962d885158"
+}

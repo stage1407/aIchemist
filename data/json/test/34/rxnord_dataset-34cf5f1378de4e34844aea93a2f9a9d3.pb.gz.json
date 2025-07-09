@@ -1,0 +1,391 @@
+{
+    "identifiers": [
+        {
+            "type": "REACTION_CXSMILES",
+            "value": "[CH3:1][N:2]=[C:3]([OH:17])[C:4]1[C:5](=[C:9]([Cl:16])[C:10](Cl)=[C:11]([Cl:14])[C:12]=1[Cl:13])[C:6]([OH:8])=[O:7].C(=O)([O-])[O-].[K+].[K+].[CH3:24][C:25]1[CH:30]=[CH:29][C:28]([SH:31])=[CH:27][CH:26]=1.Cl>C1(C)C(C)=CC=CC=1.[Br-].C([N+](C)(C)C)CCCCCCCCCCCCCCC.O>[CH3:1][N:2]=[C:3]([OH:17])[C:4]1[C:5](=[C:9]([Cl:16])[C:10]([S:31][C:28]2[CH:29]=[CH:30][C:25]([CH3:24])=[CH:26][CH:27]=2)=[C:11]([Cl:14])[C:12]=1[Cl:13])[C:6]([OH:8])=[O:7] |f:1.2.3,7.8|",
+            "is_mapped": true
+        }
+    ],
+    "inputs": {
+        "m4": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "HCl"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "Cl"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/ClH/h1H"
+                        }
+                    ],
+                    "amount": {
+                        "moles": {
+                            "value": 0.0,
+                            "precision": 1.0,
+                            "units": "MOLE"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                }
+            ]
+        },
+        "m8_m2_m6": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "potassium carbonate"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C([O-])([O-])=O.[K+].[K+]"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/CH2O3.2K/c2-1(3)4;;/h(H2,2,3,4);;/q;2*+1/p-2"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.95,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "hexadecyltrimethylammonium bromide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "[Br-].C(CCCCCCCCCCCCCCC)[N+](C)(C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C19H42N.BrH/c1-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20(2,3)4;/h5-19H2,1-4H3;1H/q+1;/p-1"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 120.0,
+                            "units": "MILLIGRAM"
+                        }
+                    },
+                    "reaction_role": "CATALYST"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "water"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/H2O/h1H2"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 0.86,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m3_m7": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "p-thiocresol"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CC1=CC=C(C=C1)S"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C7H8S/c1-6-2-4-7(8)5-3-6/h2-5,8H,1H3"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 0.86,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "xylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1(C(=CC=CC1)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 1.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        },
+        "m1_m5": {
+            "components": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "tetrachlorophthalic acid N-methylimide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN=C(C=1C(C(=O)O)=C(C(=C(C1Cl)Cl)Cl)Cl)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C9H5Cl4NO3/c1-14-8(15)2-3(9(16)17)5(11)7(13)6(12)4(2)10/h1H3,(H,14,15)(H,16,17)"
+                        }
+                    ],
+                    "amount": {
+                        "mass": {
+                            "value": 2.0,
+                            "units": "GRAM"
+                        }
+                    },
+                    "reaction_role": "REACTANT"
+                },
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "xylene"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "C=1(C(=CC=CC1)C)C"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3"
+                        }
+                    ],
+                    "amount": {
+                        "volume": {
+                            "value": 20.0,
+                            "units": "MILLILITER"
+                        }
+                    },
+                    "reaction_role": "SOLVENT"
+                }
+            ]
+        }
+    },
+    "conditions": {
+        "conditions_are_dynamic": true,
+        "details": "See reaction.notes.procedure_details."
+    },
+    "notes": {
+        "procedure_details": "2 g (6.69 millimols) of tetrachlorophthalic acid N-methylimide are dissolved in 20 ml of xylene at 100\u00b0 C.; 0.86 ml of water, 0.95 g of potassium carbonate and 120 mg of hexadecyltrimethylammonium bromide are added and a solution of 0.86 g (6.89 millimols) of p-thiocresol in 1 ml of xylene is added dropwise at 100\u00b0 C. After 30 minutes, the mixture is cooled, acidified with 2N HCl solution and extracted with methylene chloride. The solution is dried with sodium sulfate and evaporated and the residue is recrystallised from toluene/cyclohexane. This yields 0.69 g (27%) of the title compound; melting point 212\u00b0-216\u00b0."
+    },
+    "workups": [
+        {
+            "type": "TEMPERATURE",
+            "details": "the mixture is cooled"
+        },
+        {
+            "type": "EXTRACTION",
+            "details": "extracted with methylene chloride",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "methylene chloride"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C(Cl)Cl"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/CH2Cl2/c2-1-3/h1H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "DRY_WITH_MATERIAL",
+            "details": "The solution is dried with sodium sulfate",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "sodium sulfate"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "S(=O)(=O)([O-])[O-].[Na+].[Na+]"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/2Na.H2O4S/c;;1-5(2,3)4/h;;(H2,1,2,3,4)/q2*+1;/p-2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "CUSTOM",
+            "details": "evaporated"
+        },
+        {
+            "type": "CUSTOM",
+            "details": "the residue is recrystallised from toluene/cyclohexane",
+            "input": {
+                "components": [
+                    {
+                        "identifiers": [
+                            {
+                                "type": "NAME",
+                                "value": "toluene cyclohexane"
+                            },
+                            {
+                                "type": "SMILES",
+                                "value": "C1(=CC=CC=C1)C.C1CCCCC1"
+                            },
+                            {
+                                "type": "INCHI",
+                                "value": "InChI=1S/C7H8.C6H12/c1-7-5-3-2-4-6-7;1-2-4-6-5-3-1/h2-6H,1H3;1-6H2"
+                            }
+                        ],
+                        "amount": {
+                            "moles": {
+                                "value": 0.0,
+                                "precision": 1.0,
+                                "units": "MOLE"
+                            }
+                        },
+                        "reaction_role": "WORKUP"
+                    }
+                ]
+            }
+        }
+    ],
+    "outcomes": [
+        {
+            "reaction_time": {
+                "value": 30.0,
+                "units": "MINUTE"
+            },
+            "products": [
+                {
+                    "identifiers": [
+                        {
+                            "type": "NAME",
+                            "value": "4-(p-Tolylthio)-3,5,6-trichlorophthalic acid N-methylimide"
+                        },
+                        {
+                            "type": "SMILES",
+                            "value": "CN=C(C=1C(C(=O)O)=C(C(=C(C1Cl)Cl)SC1=CC=C(C=C1)C)Cl)O"
+                        },
+                        {
+                            "type": "INCHI",
+                            "value": "InChI=1S/C16H12Cl3NO3S/c1-7-3-5-8(6-4-7)24-14-12(18)10(16(22)23)9(15(21)20-2)11(17)13(14)19/h3-6H,1-2H3,(H,20,21)(H,22,23)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "provenance": {
+        "doi": "10.6084/m9.figshare.5104873.v1",
+        "patent": "US04537977",
+        "record_created": {
+            "time": {
+                "value": "2022-12-02 16:58:01.764935"
+            },
+            "person": {
+                "username": "skearnes",
+                "name": "Steven Kearnes",
+                "orcid": "0000-0003-4579-4388",
+                "organization": "Google LLC",
+                "email": "kearnes@google.com"
+            }
+        },
+        "record_modified": [
+            {
+                "time": {
+                    "value": "Mon Dec  5 19:37:39 2022"
+                },
+                "person": {
+                    "username": "github-actions",
+                    "email": "github-actions@github.com"
+                },
+                "details": "Automatic updates from the submission pipeline."
+            },
+            {
+                "time": {
+                    "value": "Fri Oct 18 17:40:01 2024"
+                },
+                "person": {
+                    "username": "skearnes",
+                    "email": "skearnes@gmail.com"
+                },
+                "details": "Set is_mined=True for USPTO data."
+            }
+        ],
+        "is_mined": true
+    },
+    "reaction_id": "ord-a4debe35dc694d7fbe04d4cbe760aea6"
+}
